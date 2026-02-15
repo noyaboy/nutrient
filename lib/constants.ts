@@ -1,0 +1,41 @@
+export const UI = {
+  appName: '健康長壽追蹤器',
+  login: {
+    title: '登入',
+    passwordLabel: '請輸入密碼',
+    passwordPlaceholder: '密碼',
+    submit: '登入',
+    error: '密碼錯誤，請重試',
+  },
+  dashboard: {
+    dailyTitle: '今日計畫',
+    weeklyTitle: '本週目標',
+    progress: '今日進度',
+    empty: '尚未設定計畫項目',
+    addFirst: '前往設定新增計畫',
+  },
+  settings: {
+    title: '計畫管理',
+    dailyTab: '每日計畫',
+    weeklyTab: '每週計畫',
+    addItem: '新增項目',
+    editItem: '編輯項目',
+    deleteConfirm: '確定要刪除此項目嗎？相關的完成紀錄也會一併刪除。',
+    save: '儲存',
+    cancel: '取消',
+    titleLabel: '標題',
+    descriptionLabel: '說明（選填）',
+    categoryLabel: '分類',
+    frequencyLabel: '頻率',
+  },
+  categories: ['運動', '飲食', '睡眠', '心理', '補充品', '一般'] as const,
+  frequency: {
+    daily: '每日',
+    weekly: '每週',
+  },
+  nav: {
+    dashboard: '首頁',
+    settings: '設定',
+    logout: '登出',
+  },
+} as const;
