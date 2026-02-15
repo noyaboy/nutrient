@@ -49,7 +49,7 @@ export default function TaskItem({ item, targetDate }: TaskItemProps) {
           {item.title}
         </p>
         {item.description && (
-          <p className="text-sm text-gray-500 truncate">{item.description}</p>
+          <p className="text-sm text-gray-500">{item.description}</p>
         )}
       </div>
       <span className={`flex-shrink-0 text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
