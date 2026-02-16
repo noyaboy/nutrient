@@ -145,7 +145,7 @@ const iherbItems: ShoppingItem[] = [
     name: '乳清蛋白 Gold Standard Whey（ON 雙倍巧克力 2.27kg）',
     description: '每份 24g 蛋白 + 5.5g BCAA + 4g 麩醯胺酸。WPI 為主要成分',
     usage: '訓練前/後各 1 份（25-30g），或加餐補足蛋白目標',
-    url: 'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-2-lb-907-g/27497',
+    url: 'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-5-lbs-2-27-kg/27509',
     store: 'iHerb',
   },
   {
