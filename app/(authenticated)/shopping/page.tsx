@@ -154,7 +154,7 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '咖啡豆 / 研磨咖啡',
-    description: '訓練前 200-300mg 咖啡因，提升力量輸出 3-5%。多酚抗氧化',
+    description: '起床 60-90 分鐘後飲用，咖啡因 200-300mg。多酚抗氧化、增強專注力',
     usage: '每日 1-2 杯，08:30-13:00 之間',
     url: 'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
     store: 'Costco',
