@@ -73,7 +73,7 @@ export default function PlanItemList({ items, frequency }: PlanItemListProps) {
               <div className="flex-1 min-w-0">
                 <p className="text-base font-medium text-gray-900">{item.title}</p>
                 {item.description && (
-                  <p className="text-sm text-gray-500 truncate">{item.description}</p>
+                  <p className="text-sm text-gray-500 line-clamp-2">{item.description}</p>
                 )}
               </div>
               <span className={`flex-shrink-0 text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>

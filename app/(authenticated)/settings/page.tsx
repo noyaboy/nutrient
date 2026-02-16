@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase';
+import { logout } from '@/app/actions/auth';
 import { UI } from '@/lib/constants';
 import type { PlanItem } from '@/lib/types';
 import PlanItemList from '@/components/PlanItemList';
@@ -20,6 +21,15 @@ export default async function SettingsPage() {
       <h1 className="text-xl font-bold text-gray-900">{UI.settings.title}</h1>
       <PlanItemList items={dailyItems} frequency="daily" />
       <PlanItemList items={weeklyItems} frequency="weekly" />
+
+      <form action={logout} className="pt-4 border-t border-gray-200">
+        <button
+          type="submit"
+          className="w-full py-3 text-sm text-gray-500 hover:text-red-600 transition-colors"
+        >
+          登出帳號
+        </button>
+      </form>
     </div>
   );
 }

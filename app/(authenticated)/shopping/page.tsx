@@ -1,4 +1,6 @@
-import { UI } from '@/lib/constants';
+'use client';
+
+import { useState } from 'react';
 
 interface ShoppingItem {
   name: string;
@@ -370,16 +372,51 @@ function TimingTable() {
 }
 
 export default function ShoppingPage() {
+  const [search, setSearch] = useState('');
+
+  function filterItems(items: ShoppingItem[]): ShoppingItem[] {
+    if (!search) return items;
+    const q = search.toLowerCase();
+    return items.filter(item =>
+      item.name.toLowerCase().includes(q) ||
+      item.description.toLowerCase().includes(q)
+    );
+  }
+
+  const filteredCostco = filterItems(costcoItems);
+  const filteredCostcoFood = filterItems(costcoFoodItems);
+  const filteredIherb = filterItems(iherbItems);
+  const filteredEquipment = filterItems(equipmentItems);
+  const hasResults = filteredCostco.length + filteredCostcoFood.length + filteredIherb.length + filteredEquipment.length > 0;
+
   return (
     <div className="space-y-8">
       <h1 className="text-xl font-bold text-gray-900">採購清單</h1>
+
+      <TimingTable />
+
+      <div className="sticky top-12 z-[5] -mx-4 px-4 bg-gray-50 pb-3 pt-1">
+        <input
+          type="search"
+          placeholder="搜尋品項..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-sm bg-white"
+        />
+      </div>
+
       <p className="text-sm text-gray-500">點擊任一項目可直接開啟產品頁面</p>
 
-      <ShoppingSection title="Costco 好市多 — 保健品" items={costcoItems} />
-      <ShoppingSection title="Costco 好市多 — 食材" items={costcoFoodItems} />
-      <ShoppingSection title="iHerb — 專業補充品" items={iherbItems} />
-      <ShoppingSection title="其他 — 設備" items={equipmentItems} />
-      <TimingTable />
+      {hasResults ? (
+        <>
+          {filteredCostco.length > 0 && <ShoppingSection title="Costco 好市多 — 保健品" items={filteredCostco} />}
+          {filteredCostcoFood.length > 0 && <ShoppingSection title="Costco 好市多 — 食材" items={filteredCostcoFood} />}
+          {filteredIherb.length > 0 && <ShoppingSection title="iHerb — 專業補充品" items={filteredIherb} />}
+          {filteredEquipment.length > 0 && <ShoppingSection title="其他 — 設備" items={filteredEquipment} />}
+        </>
+      ) : (
+        <p className="text-center text-gray-400 py-8">找不到符合的品項</p>
+      )}
     </div>
   );
 }

@@ -75,7 +75,7 @@ export default function WeeklyTaskItem({ item, weekDates, today }: WeeklyTaskIte
                 {DAY_LABELS[i]}
               </span>
               <div
-                className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
                   isDone
                     ? 'bg-emerald-500'
                     : isToday
@@ -86,7 +86,7 @@ export default function WeeklyTaskItem({ item, weekDates, today }: WeeklyTaskIte
                 }`}
               >
                 {isDone && (
-                  <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 )}

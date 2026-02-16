@@ -2,7 +2,7 @@ import { supabase } from '@/lib/supabase';
 import { getToday, getMondayOfWeek, getSundayOfWeek, getWeekDates, getWeeklyTargetCount, formatDateChinese } from '@/lib/utils';
 import { UI } from '@/lib/constants';
 import type { PlanItemWithCompletion, WeeklyItemWithCompletions, Completion } from '@/lib/types';
-import TaskItem from '@/components/TaskItem';
+import DailySection from '@/components/DailySection';
 import WeeklyTaskItem from '@/components/WeeklyTaskItem';
 import ProgressBar from '@/components/ProgressBar';
 import Link from 'next/link';
@@ -80,11 +80,7 @@ export default async function DashboardPage() {
           {dailyItems.length > 0 && (
             <section className="space-y-3">
               <ProgressBar completed={dailyCompleted} total={dailyItems.length} label={UI.dashboard.dailyTitle} />
-              <div className="space-y-2">
-                {dailyItems.map(item => (
-                  <TaskItem key={item.id} item={item} targetDate={today} />
-                ))}
-              </div>
+              <DailySection items={dailyItems} targetDate={today} />
             </section>
           )}
 
