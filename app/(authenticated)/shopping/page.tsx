@@ -10,31 +10,17 @@ interface ShoppingItem {
 
 const costcoItems: ShoppingItem[] = [
   {
-    name: '魚油 Omega-3（Kirkland 野生魚油 1400mg）',
-    description: 'EPA + DHA 支持心血管與 BDNF 腦部健康',
-    usage: '每日隨餐 2-3 顆（EPA > 1g, DHA 1-2g）',
-    url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Kirkland-Signature-Pure-Alaska-Omega-Wild-Alaskan-Fish-Oil-1400-mg-X-230-Softgel/p/113415',
-    store: 'Costco',
-  },
-  {
     name: '緩釋魚油（Kirkland 新型緩釋 Omega-3）',
-    description: '高濃度 EPA/DHA，緩釋不易打嗝',
-    usage: '替代上方魚油，每日 2 顆',
+    description: '高濃度 EPA 419mg + DHA 281mg，緩釋不打嗝',
+    usage: '每日隨餐 2-3 顆',
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Kirkland-Signature-Enteric-Omega-3-Fish-Oil-180-Softgel/p/240669',
     store: 'Costco',
   },
   {
-    name: '鈣 + D3 + K2（Nature Made）',
+    name: '鈣 + D3 + K2（Nature Made 250 錠）',
     description: '鈣調節三位一體，防骨鬆 + 防動脈鈣化',
     usage: '每日隨餐，D3 2000-5000 IU + K2 100-200mcg',
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
-    store: 'Costco',
-  },
-  {
-    name: '鈣鎂鋅複合錠（Kirkland）',
-    description: '基礎鎂 + 鋅補充',
-    usage: '每日 1-2 錠',
-    url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Kirkland-Signature-Calcium-Magnesium-Zinc-300-Tablets/p/408393',
     store: 'Costco',
   },
 ];
