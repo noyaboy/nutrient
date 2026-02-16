@@ -50,15 +50,11 @@ export function getDayOfWeekLabel(dateStr: string): string {
 
 export function getWeeklyTargetCount(title: string): number {
   const targets: [string, number][] = [
-    ['Zone 2', 4],
+    ['Zone 2', 3],
     ['肌力訓練', 4],
     ['VO2 Max', 1],
-    ['穩定性訓練', 7],
-    ['Quercetin', 3],
-    ['碳水循環', 7],
     ['學習新技能', 3],
     ['每週回顧', 1],
-    ['FMD', 1],
     ['健康檢測', 1],
   ];
   for (const [keyword, count] of targets) {

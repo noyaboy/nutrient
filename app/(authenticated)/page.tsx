@@ -49,17 +49,15 @@ export default async function DashboardPage() {
 
   const weeklyItems: WeeklyItemWithCompletions[] = (planItems || [])
     .filter(item => item.frequency === 'weekly')
-    .map(item => {
-      const targetCount = getWeeklyTargetCount(item.title);
-      return {
-        ...item,
-        completions: weeklyCompletionsByItem.get(item.id) || [],
-        targetCount,
-      };
-    });
+    .map(item => ({
+      ...item,
+      completions: weeklyCompletionsByItem.get(item.id) || [],
+      targetCount: item.target_count ?? getWeeklyTargetCount(item.title),
+    }));
 
   const dailyCompleted = dailyItems.filter(i => i.completion).length;
-  const weeklyCompleted = weeklyItems.filter(i => i.completions.length >= i.targetCount).length;
+  const trackableWeeklyItems = weeklyItems.filter(i => i.targetCount > 0);
+  const weeklyCompleted = trackableWeeklyItems.filter(i => i.completions.length >= i.targetCount).length;
 
   return (
     <div className="space-y-6">
@@ -92,7 +90,7 @@ export default async function DashboardPage() {
 
           {weeklyItems.length > 0 && (
             <section className="space-y-3">
-              <ProgressBar completed={weeklyCompleted} total={weeklyItems.length} label={UI.dashboard.weeklyTitle} />
+              <ProgressBar completed={weeklyCompleted} total={trackableWeeklyItems.length} label={UI.dashboard.weeklyTitle} />
               <div className="space-y-2">
                 {weeklyItems.map(item => (
                   <WeeklyTaskItem key={item.id} item={item} weekDates={weekDates} today={today} />

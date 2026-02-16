@@ -67,6 +67,19 @@ export default function PlanItemForm({ item, defaultFrequency, onClose }: PlanIt
           {!item && (
             <input type="hidden" name="frequency" value={defaultFrequency} />
           )}
+          {(item ? item.frequency === 'weekly' : defaultFrequency === 'weekly') && (
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">每週目標次數</label>
+              <input
+                name="target_count"
+                type="number"
+                min={1}
+                max={7}
+                defaultValue={item?.target_count ?? 1}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none text-base"
+              />
+            </div>
+          )}
           <div className="flex gap-3 pt-2">
             <button
               type="button"

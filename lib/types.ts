@@ -6,6 +6,7 @@ export interface PlanItem {
   category: string;
   sort_order: number;
   is_active: boolean;
+  target_count?: number | null;
   created_at: string;
   updated_at: string;
 }

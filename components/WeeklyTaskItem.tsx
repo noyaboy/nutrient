@@ -64,10 +64,10 @@ export default function WeeklyTaskItem({ item, weekDates, today }: WeeklyTaskIte
               key={date}
               type="button"
               onClick={() => handleDayToggle(date)}
-              disabled={isPending}
-              className={`flex flex-col items-center gap-1 flex-1 py-1.5 rounded-lg transition-all active:scale-95 ${
-                isToday ? 'ring-2 ring-emerald-400 ring-offset-1' : ''
-              }`}
+              disabled={isPending || isFuture}
+              className={`flex flex-col items-center gap-1 flex-1 py-1.5 rounded-lg transition-all ${
+                isFuture ? 'cursor-not-allowed' : 'active:scale-95'
+              } ${isToday ? 'ring-2 ring-emerald-400 ring-offset-1' : ''}`}
             >
               <span className={`text-xs font-medium ${
                 isToday ? 'text-emerald-700' : isFuture ? 'text-gray-300' : 'text-gray-500'

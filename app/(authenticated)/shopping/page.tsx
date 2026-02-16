@@ -126,7 +126,7 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '燕麥（Quaker 大包裝）',
-    description: 'β-葡聚醣降膽固醇，優質碳水+膳食纖維 8g/份。訓練後快速碳水搭配乳清蛋白',
+    description: 'β-葡聚醣降膽固醇，優質碳水+膳食纖維 8g/份。訓練後碳水補充搭配乳清蛋白（GI~55，中升糖）',
     usage: '每日 1 份（80g），訓練後或早餐',
     url: 'https://www.costco.com.tw/Food-Dining/Drinks/Powdered-Drink-Mix-Cereal-Oats/Quaker-Organic-Whole-Oats-935-g-X-2-Count/p/116958',
     store: 'Costco',
@@ -138,13 +138,34 @@ const costcoFoodItems: ShoppingItem[] = [
     url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
     store: 'Costco',
   },
+  {
+    name: '雞胸肉（冷凍大包裝）',
+    description: '高蛋白低脂，每 100g 約 31g 蛋白質。增肌期核心蛋白來源',
+    usage: '每週 1-2kg',
+    url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/c/90802',
+    store: 'Costco',
+  },
+  {
+    name: '白米 / 糙米',
+    description: '基礎碳水來源。冷卻後產生抗性澱粉（益生元）。糙米額外提供膳食纖維與鎂',
+    usage: '每日適量，訓練日增加碳水攝取',
+    url: 'https://www.costco.com.tw/Food-Dining/Groceries/Rice-Noodles-Dried-Goods/c/90701',
+    store: 'Costco',
+  },
+  {
+    name: '咖啡豆 / 研磨咖啡',
+    description: '訓練前 200-300mg 咖啡因，提升力量輸出 3-5%。多酚抗氧化',
+    usage: '每日 1-2 杯，08:30-13:00 之間',
+    url: 'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
+    store: 'Costco',
+  },
 ];
 
 const iherbItems: ShoppingItem[] = [
   {
     name: '乳清蛋白 Gold Standard Whey（ON 雙倍巧克力 2.27kg）',
     description: '每份 24g 蛋白 + 5.5g BCAA + 4g 麩醯胺酸。WPI 為主要成分',
-    usage: '訓練前/後各 1 份（25-30g），或加餐補足蛋白目標',
+    usage: '訓練前 1 份（30g 粉 ≈ 24g 蛋白），訓練後 1.5 份（~40g 粉 ≈ 33g 蛋白）',
     url: 'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-5-lbs-2-27-kg/27509',
     store: 'iHerb',
   },
@@ -164,7 +185,7 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '甘胺酸鎂 Mg Glycinate（NOW Foods 100mg × 180 錠）',
-    description: '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率',
+    description: '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率。搭配蘇糖酸鎂每日補充鎂總量約 344mg（接近補充劑 UL 350mg，如有腸胃不適可減量）',
     usage: '睡前 2 錠（200mg），搭配蘇糖酸鎂',
     url: 'https://tw.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819',
     store: 'iHerb',
@@ -200,21 +221,21 @@ const iherbItems: ShoppingItem[] = [
   {
     name: '銅 Copper Bisglycinate（Solaray 2mg × 100 顆）',
     description: '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅，鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷。100 顆裝省 13%/顆',
-    usage: '每日 1 顆隨午餐（與鋅間隔 4hr+）',
+    usage: '每日 1 顆隨午餐或午後（與 EGCG 間隔 2hr+，與鋅間隔 4hr+）',
     url: 'https://tw.iherb.com/pr/solaray-copper-2-mg-100-vegcaps/70102',
     store: 'iHerb',
   },
   {
     name: '維他命 D3 5000IU（Doctor\'s Best 360 顆）',
-    description: '鈣+D3+K2 複合錠僅含 1000IU D3，不足。額外補充至每日共 5000IU，目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
+    description: '鈣+D3+K2 複合錠含 1000IU D3，額外補充 5000IU，每日總計約 6000IU。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
     usage: '每日 1 顆隨早餐（需搭配油脂吸收）',
     url: 'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
     store: 'iHerb',
   },
   {
     name: '酪蛋白 Casein-FX（ALLMAX 巧克力 907g）',
-    description: '100% 酪蛋白，睡前 40g 增加 22% 夜間肌蛋白合成（Res et al. 2012）。每份 25g 酪蛋白，8-10hr 緩釋。比 ON 同級省 ~10%',
-    usage: '睡前 30 分鐘，40g 配水或牛奶',
+    description: '100% 酪蛋白，睡前攝取 40g 蛋白質可增加 22% 夜間肌蛋白合成（Trommelen et al.）。每份（32g 粉）含 25g 蛋白質，8-10hr 緩釋。比 ON 同級省 ~10%',
+    usage: '睡前 30 分鐘，約 2 份（~64g 粉末 ≈ 50g 蛋白質）配水或牛奶',
     url: 'https://tw.iherb.com/pr/allmax-nutrition-caseinfx-100-casein-micellar-protein-chocolate-2-lbs-907-g/67639',
     store: 'iHerb',
   },
@@ -227,8 +248,8 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '紅景天 Rhodiola Rosea（NOW Foods 500mg × 120 顆）',
-    description: 'Ashwagandha 停用期的替代適應原。抗疲勞、提升專注力，3% rosavins 標準化。120 顆裝比 60 顆裝省 26%/顆',
-    usage: 'Ashwagandha 停用 4 週期間，每日早上 1 顆',
+    description: 'Ashwagandha 停用期的替代適應原。抗疲勞、提升專注力，3% rosavins 標準化。500mg 在有效範圍（200-600mg）。120 顆裝比 60 顆裝省 26%/顆',
+    usage: 'Ashwagandha 停用 4 週期間，每日早上 1 顆（500mg）',
     url: 'https://tw.iherb.com/pr/now-foods-rhodiola-500-mg-120-veg-capsules/123463',
     store: 'iHerb',
   },
@@ -247,6 +268,20 @@ const equipmentItems: ShoppingItem[] = [
     description: '阻擋 400-550nm 藍光，保護褪黑激素分泌',
     usage: '20:00 後佩戴',
     url: 'https://www.amazon.com/amber-blue-light-blocking-glasses/s?k=amber+blue+light+blocking+glasses',
+    store: 'Amazon',
+  },
+  {
+    name: '食品電子秤',
+    description: '精準測量蛋白粉、食材重量，確保每日蛋白質攝取達標',
+    usage: '每餐使用，精度 0.1-1g',
+    url: 'https://www.amazon.com/digital-kitchen-food-scale/s?k=digital+kitchen+food+scale',
+    store: 'Amazon',
+  },
+  {
+    name: '全遮光窗簾',
+    description: '確保臥室全黑環境，維持褪黑激素正常分泌。配合 22:00 入睡方案',
+    usage: '安裝於臥室窗戶',
+    url: 'https://www.amazon.com/100-percent-blackout-curtains/s?k=100+percent+blackout+curtains',
     store: 'Amazon',
   },
 ];
@@ -302,13 +337,13 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 function TimingTable() {
   const rows = [
     { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
-    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 25g + 咖啡 200-300mg' },
-    { time: '09:00 訓練後', items: '乳清蛋白 40g + 快速碳水 60-80g（香蕉+燕麥）' },
-    { time: '10:00 第一餐', items: '肌酸 5g、D3 5000IU+K2+魚油+葉黃素+維他命C' },
-    { time: '11:00 兩餐間', items: '綠茶 EGCG（餐後 1hr+，13:00 前）' },
-    { time: '12:00 午餐', items: '銅 2mg、蘿蔔硫素 BroccoMax' },
+    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 30g（咖啡 200-300mg 於 08:30 後）' },
+    { time: '09:00 訓練後', items: '乳清蛋白 40g + 碳水 60-80g + 肌酸 5g、D3 ~6000IU+K2+魚油+葉黃素+維他命C' },
+    { time: '11:00 兩餐間', items: '綠茶 EGCG（訓練後餐 2hr+，13:00 前）' },
+    { time: '13:00 午餐', items: '蛋白質 40-50g + 蘿蔔硫素 BroccoMax' },
+    { time: '14:00 午後', items: '銅 2mg（與 EGCG 間隔 3hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
-    { time: '21:00 睡前', items: '酪蛋白 40g+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
+    { time: '21:00 睡前', items: '酪蛋白 ~64g 粉（≈50g 蛋白）+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 
   return (

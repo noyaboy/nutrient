@@ -76,9 +76,13 @@ export default async function HistoryPage({ searchParams }: Props) {
     ? Math.round((dailyRates.reduce((a, b) => a + b, 0) / dailyRates.length) * 100)
     : 0;
 
-  const weeklyGoalsMet = weeklyItems.filter(item => {
+  const trackableWeeklyItems = weeklyItems.filter(item => {
+    const tc = item.target_count ?? getWeeklyTargetCount(item.title);
+    return tc > 0;
+  });
+  const weeklyGoalsMet = trackableWeeklyItems.filter(item => {
     const comps = weeklyCompletionsByItem.get(item.id) || [];
-    return comps.length >= getWeeklyTargetCount(item.title);
+    return comps.length >= (item.target_count ?? getWeeklyTargetCount(item.title));
   }).length;
 
   return (
@@ -94,7 +98,7 @@ export default async function HistoryPage({ searchParams }: Props) {
           <p className="text-xs text-gray-500 mt-1">每日平均完成率</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-          <p className="text-3xl font-bold text-emerald-600">{weeklyGoalsMet}/{weeklyItems.length}</p>
+          <p className="text-3xl font-bold text-emerald-600">{weeklyGoalsMet}/{trackableWeeklyItems.length}</p>
           <p className="text-xs text-gray-500 mt-1">每週目標達成</p>
         </div>
       </div>
@@ -149,7 +153,7 @@ export default async function HistoryPage({ searchParams }: Props) {
             {weeklyItems.map(item => {
               const comps = weeklyCompletionsByItem.get(item.id) || [];
               const completedDates = new Set(comps.map(c => c.target_date));
-              const targetCount = getWeeklyTargetCount(item.title);
+              const targetCount = item.target_count ?? getWeeklyTargetCount(item.title);
               const isGoalMet = completedDates.size >= targetCount;
 
               return (

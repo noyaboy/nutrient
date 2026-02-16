@@ -9,6 +9,7 @@ export async function createPlanItem(formData: FormData) {
   const description = (formData.get('description') as string) || '';
   const frequency = formData.get('frequency') as string;
   const category = formData.get('category') as string;
+  const targetCount = formData.get('target_count') ? Number(formData.get('target_count')) : 1;
 
   const { data: maxOrder } = await supabase
     .from('plan_items')
@@ -26,6 +27,7 @@ export async function createPlanItem(formData: FormData) {
     frequency,
     category,
     sort_order: sortOrder,
+    ...(frequency === 'weekly' ? { target_count: targetCount } : {}),
   });
 
   revalidatePath('/settings');
@@ -36,6 +38,7 @@ export async function updatePlanItem(id: string, formData: FormData) {
   const title = formData.get('title') as string;
   const description = (formData.get('description') as string) || '';
   const category = formData.get('category') as string;
+  const targetCount = formData.get('target_count') ? Number(formData.get('target_count')) : undefined;
 
   await supabase
     .from('plan_items')
@@ -43,6 +46,7 @@ export async function updatePlanItem(id: string, formData: FormData) {
       title,
       description,
       category,
+      ...(targetCount !== undefined ? { target_count: targetCount } : {}),
       updated_at: new Date().toISOString(),
     })
     .eq('id', id);
