@@ -100,24 +100,10 @@ const costcoFoodItems: ShoppingItem[] = [
 
 const iherbItems: ShoppingItem[] = [
   {
-    name: 'NMN（CGN 175mg × 180 顆）',
-    description: '提升 NAD+ 支持 DNA 修復與 Sirtuins，有癌症者避免',
-    usage: '早晨空腹 6 顆（1050mg）',
-    url: 'https://tw.iherb.com/pr/california-gold-nutrition-nmn-175-mg-180-veggie-capsules/126768',
-    store: 'iHerb',
-  },
-  {
-    name: '白藜蘆醇 Resveratrol（NOW Foods 200mg × 120 顆）',
-    description: '脂溶性，需搭配油脂吸收。激活 Sirtuins 抗氧化抗衰老',
-    usage: '隨第一餐服用 2-3 顆（600mg），搭配油脂吸收',
-    url: 'https://tw.iherb.com/pr/now-foods-natural-resveratrol-200-mg-120-veg-capsules/16093',
-    store: 'iHerb',
-  },
-  {
-    name: 'TMG 三甲基甘氨酸（Nutricost 750mg × 120 顆）',
-    description: '搭配 NMN 防止甲基耗竭',
-    usage: '每日 2 顆（1500mg），與 NMN 保持 1:1 比例',
-    url: 'https://tw.iherb.com/pr/nutricost-tmg-750-mg-120-capsules/139428',
+    name: '乳清蛋白 Gold Standard Whey（ON 雙倍巧克力 2.27kg）',
+    description: '每份 24g 蛋白 + 5.5g BCAA + 4g 麩醯胺酸。WPI 為主要成分',
+    usage: '訓練前/後各 1 份（25-30g），或加餐補足蛋白目標',
+    url: 'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-2-lb-907-g/27497',
     store: 'iHerb',
   },
   {
@@ -146,20 +132,6 @@ const iherbItems: ShoppingItem[] = [
     description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 2 週停循環使用',
     usage: '睡前 1 顆 600mg',
     url: 'https://tw.iherb.com/pr/now-foods-ksm-66-ashwagandha-600-mg-90-veg-capsules/145913',
-    store: 'iHerb',
-  },
-  {
-    name: 'Quercetin 槲皮素（CGN 500mg × 180 顆）',
-    description: '抗氧化與抗發炎，輔助清除衰老細胞，比 NOW 省 50%',
-    usage: '每週 2-3 天，每次 500mg',
-    url: 'https://tw.iherb.com/pr/california-gold-nutrition-quercetin-500-mg-180-veggie-capsules/101511',
-    store: 'iHerb',
-  },
-  {
-    name: 'Fisetin 漆黃素（CGN 100mg × 90 顆）',
-    description: '搭配 Quercetin 抗氧化抗發炎，比 Doctor\'s Best 省 62%',
-    usage: '每週 2-3 天，每次 100mg',
-    url: 'https://tw.iherb.com/pr/california-gold-nutrition-fisetin-100-mg-90-veggie-capsules/142030',
     store: 'iHerb',
   },
   {
@@ -245,11 +217,10 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 
 function TimingTable() {
   const rows = [
-    { time: '早晨空腹', items: 'NMN + TMG' },
-    { time: '10:00 第一餐', items: '肌酸 5g、D3+K2+魚油+葉黃素+維他命C+白藜蘆醇' },
+    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 25g（訓練日）' },
+    { time: '10:00 第一餐', items: '肌酸 5g、D3+K2+魚油+葉黃素+維他命C' },
     { time: '13:00+ 兩餐間', items: '綠茶 EGCG、蘿蔔硫素（間隔第一餐 2hr+）' },
     { time: '18:00 晚餐', items: '鋅（避開鈣與 EGCG）' },
-    { time: '每週 2-3 天', items: 'Quercetin + Fisetin' },
     { time: '睡前 21:00', items: '蘇糖酸鎂、甘胺酸鎂、Ashwagandha（8週/2週循環）' },
   ];
 
