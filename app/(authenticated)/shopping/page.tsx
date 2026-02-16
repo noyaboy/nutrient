@@ -39,14 +39,14 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '有機雞蛋 / 放牧蛋',
     description: '高蛋白第一餐，富含亮氨酸 Leucine',
     usage: '每日 3-4 顆',
-    url: 'https://www.costco.com.tw/Chilled-Fresh-Foods/Cheese-Dairy-Eggs/c/90903',
+    url: 'https://www.costco.com.tw/Warehouse-Only/Food-Beverages/Chilled/QUAN-YOU-FARM-Cage-Free-Eggs-LL-30-Count/p/128970',
     store: 'Costco',
   },
   {
     name: '冷凍鮭魚排',
     description: '優質蛋白 + Omega-3 來源',
     usage: '每週 3-4 份',
-    url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/c/90802',
+    url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/Kirkland-Signature-Frozen-Atlantic-Salmon-136-kg/p/1286092',
     store: 'Costco',
   },
   {
@@ -74,14 +74,14 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '綠茶 / 抹茶粉',
     description: 'EGCG + L-theanine 天然組合。抗氧化、促進專注。須在餐後 1hr+ 飲用避免螯合礦物質',
     usage: '每日 2-3 杯（13:00 前，避免咖啡因影響睡眠）',
-    url: 'https://www.costco.com.tw/Food-Dining/Drinks/Tea/c/90207',
+    url: 'https://www.costco.com.tw/Food/Drinks/Powdered-Drink-Mix-Cereal-Oats/Itoen-Matcha-Green-Tea-Unsweetened-Powder-340-g/p/2185751',
     store: 'Costco',
   },
   {
     name: '碘鹽（取代一般海鹽）',
     description: '早晨電解質補充。海鹽/玫瑰鹽碘含量極低，十字花科蔬菜攝取量高時需確保碘攝取',
     usage: '日常用鹽，每日少許',
-    url: 'https://www.costco.com.tw/Food-Dining/Groceries/Cooking-Oil-Sauces/c/90702',
+    url: 'https://www.costco.com.tw/Food-Dining/Groceries/Cooking-Oil-Sauces/Uni-President-Iodized-Solar-Sea-Salt-2-kg/p/283283',
     store: 'Costco',
   },
   {
@@ -95,7 +95,7 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '綜合堅果（Kirkland）',
     description: '健康脂肪、鎂、鋅來源',
     usage: '每日一把',
-    url: 'https://www.costco.com.tw/Food-Dining/Snacks/Nuts-Jerky/c/90104',
+    url: 'https://www.costco.com.tw/Food-Dining/Snacks/Nuts-Jerky/Kirkland-Signature-Mixed-Nuts-113-kg/p/1669722',
     store: 'Costco',
   },
   {
@@ -144,7 +144,7 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '雞胸肉（冷凍大包裝）',
     description: '高蛋白低脂，每 100g 約 31g 蛋白質。增肌期核心蛋白來源',
     usage: '每週 1-2kg',
-    url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/c/90802',
+    url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/DaChan-Taiwan-Frozen-Chicken-Breast-25-kg-X-2-Count/p/133602',
     store: 'Costco',
   },
   {
