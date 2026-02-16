@@ -12,7 +12,7 @@ const costcoItems: ShoppingItem[] = [
   {
     name: '緩釋魚油（Kirkland 新型緩釋 Omega-3）',
     description: '高濃度 EPA 419mg + DHA 281mg，緩釋不打嗝',
-    usage: '每日隨餐 2-3 顆',
+    usage: '每日隨餐 3 顆（EPA+DHA 共 2100mg）',
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Kirkland-Signature-Enteric-Omega-3-Fish-Oil-180-Softgel/p/240669',
     store: 'Costco',
   },
@@ -84,7 +84,7 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '檸檬',
-    description: '早晨補水，平衡 pH 值',
+    description: '早晨補水，促進消化',
     usage: '每日半顆',
     url: 'https://www.costco.com.tw/Fresh-Food/Fruits/c/cos_1.2',
     store: 'Costco',
@@ -108,15 +108,15 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '白藜蘆醇 Resveratrol（NOW Foods 200mg × 120 顆）',
-    description: '搭配 NMN 激活 Sirtuins，抗氧化抗衰老',
-    usage: '早晨空腹 3-5 顆（600-1000mg）',
+    description: '脂溶性，需搭配油脂吸收。激活 Sirtuins 抗氧化抗衰老',
+    usage: '隨第一餐服用 2-3 顆（600mg），搭配油脂吸收',
     url: 'https://tw.iherb.com/pr/now-foods-natural-resveratrol-200-mg-120-veg-capsules/16093',
     store: 'iHerb',
   },
   {
     name: 'TMG 三甲基甘氨酸（Nutricost 750mg × 120 顆）',
     description: '搭配 NMN 防止甲基耗竭',
-    usage: '每日 1-2 顆',
+    usage: '每日 2 顆（1500mg），與 NMN 保持 1:1 比例',
     url: 'https://tw.iherb.com/pr/nutricost-tmg-750-mg-120-capsules/139428',
     store: 'iHerb',
   },
@@ -150,14 +150,14 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: 'Quercetin 槲皮素（CGN 500mg × 180 顆）',
-    description: 'Senolytic 清除衰老殭屍細胞，比 NOW 省 50%',
+    description: '抗氧化與抗發炎，輔助清除衰老細胞，比 NOW 省 50%',
     usage: '每週 2-3 天，每次 500mg',
     url: 'https://tw.iherb.com/pr/california-gold-nutrition-quercetin-500-mg-180-veggie-capsules/101511',
     store: 'iHerb',
   },
   {
     name: 'Fisetin 漆黃素（CGN 100mg × 90 顆）',
-    description: 'Senolytic 搭配 Quercetin，比 Doctor\'s Best 省 62%',
+    description: '搭配 Quercetin 抗氧化抗發炎，比 Doctor\'s Best 省 62%',
     usage: '每週 2-3 天，每次 100mg',
     url: 'https://tw.iherb.com/pr/california-gold-nutrition-fisetin-100-mg-90-veggie-capsules/142030',
     store: 'iHerb',
@@ -174,6 +174,13 @@ const iherbItems: ShoppingItem[] = [
     description: '沉積於視網膜黃斑部，保護眼睛抵禦藍光與氧化傷害',
     usage: '每日 1 顆隨餐（需搭配油脂吸收）',
     url: 'https://tw.iherb.com/pr/california-gold-nutrition-lutein-with-zeaxanthin-from-marigold-extract-120-veggie-softgels/94824',
+    store: 'iHerb',
+  },
+  {
+    name: '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
+    description: '多酚類（Quercetin、EGCG）會螯合鋅，需額外補充。免疫與睪固酮合成必需',
+    usage: '每日 1 顆隨晚餐（避開鈣與 EGCG）',
+    url: 'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
     store: 'iHerb',
   },
 ];
@@ -238,12 +245,12 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 
 function TimingTable() {
   const rows = [
-    { time: '早晨空腹', items: 'NMN + 白藜蘆醇 + TMG' },
-    { time: '早上隨餐', items: '蘋果酸鎂、肌酸 5g' },
-    { time: '10:00 第一餐', items: 'D3 + K2 + 魚油 + 葉黃素 + 維他命C' },
-    { time: '兩餐之間', items: '綠茶 EGCG、蘿蔔硫素' },
+    { time: '早晨空腹', items: 'NMN + TMG' },
+    { time: '10:00 第一餐', items: '蘋果酸鎂、肌酸 5g、D3+K2+魚油+葉黃素+維他命C+白藜蘆醇' },
+    { time: '13:00+ 兩餐間', items: '綠茶 EGCG、蘿蔔硫素（間隔第一餐 2hr+）' },
+    { time: '18:00 晚餐', items: '鋅（避開鈣與 EGCG）' },
     { time: '每週 2-3 天', items: 'Quercetin + Fisetin' },
-    { time: '睡前 21:00', items: '蘇糖酸鎂、Ashwagandha' },
+    { time: '睡前 21:00', items: '蘇糖酸鎂、Ashwagandha（8週/2週循環）' },
   ];
 
   return (
@@ -252,7 +259,7 @@ function TimingTable() {
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
         {rows.map((row, i) => (
           <div key={i} className={`flex px-4 py-3 ${i !== rows.length - 1 ? 'border-b border-gray-100' : ''}`}>
-            <span className="text-sm font-medium text-emerald-700 w-28 flex-shrink-0">{row.time}</span>
+            <span className="text-sm font-medium text-emerald-700 w-32 flex-shrink-0">{row.time}</span>
             <span className="text-sm text-gray-700">{row.items}</span>
           </div>
         ))}
