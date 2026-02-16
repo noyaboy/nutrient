@@ -254,6 +254,13 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
+    name: 'L-Theanine（NOW Foods Double Strength 200mg × 120 顆）',
+    description: '搭配咖啡的最強 nootropic 組合（A 級證據）。促進專注 + 放鬆，消除咖啡因焦慮感。120 顆大包裝更划算',
+    usage: '每日 1 顆（200mg）搭配早晨咖啡',
+    url: 'https://tw.iherb.com/pr/now-foods-double-strength-l-theanine-200-mg-120-veg-capsules/54096',
+    store: 'iHerb',
+  },
+  {
     name: '電解質粉 Nutricost Electrolytes（綜合口味 40 包）',
     description: '含 7 種維生素礦物質（鈉、鉀、鈣、鎂等），Stevia 天然甜味。40 包比 BPN 30 包省 ~50%/份',
     usage: '有氧訓練日，運動中沖泡飲用',
@@ -337,7 +344,7 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 function TimingTable() {
   const rows = [
     { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
-    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 30g（咖啡 200-300mg 於 08:30 後）' },
+    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 30g（咖啡 200-300mg + L-Theanine 200mg 於 08:30 後）' },
     { time: '09:00 訓練後', items: '乳清蛋白 40g + 碳水 60-80g + 肌酸 5g、D3 ~6000IU+K2+魚油+葉黃素+維他命C' },
     { time: '11:00 兩餐間', items: '綠茶 EGCG（訓練後餐 2hr+，13:00 前）' },
     { time: '13:00 午餐', items: '蛋白質 40-50g + 蘿蔔硫素 BroccoMax' },
