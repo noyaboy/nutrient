@@ -25,7 +25,7 @@ const costcoItems: ShoppingItem[] = [
   },
   {
     name: '維他命 C（Kirkland 500mg × 500 錠）',
-    description: '抗氧化、膠原蛋白合成、增強鐵吸收，與 Quercetin 協同',
+    description: '抗氧化、膠原蛋白合成、增強鐵吸收',
     usage: '每日 1-2 錠（500-1000mg）',
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Multi-Letter-Vitamins/Kirkland-Signature-Vitamin-C-500-mg-500-Tablet/p/684654',
     store: 'Costco',
@@ -56,8 +56,8 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '地瓜',
-    description: '晚餐原型碳水，助色氨酸→血清素→褪黑激素',
-    usage: '晚餐適量',
+    description: '原型碳水來源。訓練前能量補充，晚餐助色氨酸→血清素→褪黑激素。冷卻後產生抗性澱粉（益生元）',
+    usage: '訓練前/晚餐適量',
     url: 'https://www.costco.com.tw/Fresh-Food/Vegetables/c/cos_1.3',
     store: 'Costco',
   },
@@ -70,15 +70,15 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '綠茶 / 抹茶粉',
-    description: 'EGCG 來源，抑制 mTOR 促進自噬',
-    usage: '每日 2-3 杯',
+    description: 'EGCG + L-theanine 天然組合。抗氧化、促進專注。須在餐後 1hr+ 飲用避免螯合礦物質',
+    usage: '每日 2-3 杯（13:00 前，避免咖啡因影響睡眠）',
     url: 'https://www.costco.com.tw/Grocery/Tea-Coffee-Cocoa/Tea/c/cos_2.2.1',
     store: 'Costco',
   },
   {
-    name: '海鹽 / 玫瑰鹽',
-    description: '早晨電解質補充',
-    usage: '每日少許',
+    name: '碘鹽（取代一般海鹽）',
+    description: '早晨電解質補充。海鹽/玫瑰鹽碘含量極低，十字花科蔬菜攝取量高時需確保碘攝取',
+    usage: '日常用鹽，每日少許',
     url: 'https://www.costco.com.tw/Grocery/Oils-Vinegar-Seasonings/Salts-Seasonings/c/cos_2.6.2',
     store: 'Costco',
   },
@@ -94,6 +94,48 @@ const costcoFoodItems: ShoppingItem[] = [
     description: '健康脂肪、鎂、鋅來源',
     usage: '每日一把',
     url: 'https://www.costco.com.tw/Grocery/Nuts-Seeds/c/cos_2.8',
+    store: 'Costco',
+  },
+  {
+    name: '希臘優格（FAGE 或 Kirkland）',
+    description: '活菌培養（嗜酸乳桿菌、雙歧桿菌）+ 高蛋白。Stanford 研究：發酵食物增加腸道多樣性、降低 19 種發炎蛋白',
+    usage: '每日 200-300g',
+    url: 'https://www.costco.com.tw/Grocery/Dairy-Eggs-Bread/Yogurt/c/cos_2.4.2',
+    store: 'Costco',
+  },
+  {
+    name: '泡菜 / 酸菜（冷藏未殺菌）',
+    description: '活性乳酸菌來源，增強腸道微生物多樣性。選冷藏區（非罐頭）確保活菌',
+    usage: '每日 50-100g 隨餐',
+    url: 'https://www.costco.com.tw/Grocery/Canned-Jarred-Food/c/cos_2.1',
+    store: 'Costco',
+  },
+  {
+    name: '酪梨',
+    description: '修復鉀缺口（每顆 ~700mg 鉀）+ 健康單元不飽和脂肪 + 膳食纖維 7g',
+    usage: '每日半顆至一顆',
+    url: 'https://www.costco.com.tw/Fresh-Food/Fruits/c/cos_1.2',
+    store: 'Costco',
+  },
+  {
+    name: '菠菜（冷凍或新鮮）',
+    description: '鉀、鎂、鐵、葉酸來源。搭配維他命C增強鐵吸收',
+    usage: '每日 100-150g 入菜',
+    url: 'https://www.costco.com.tw/Fresh-Food/Vegetables/c/cos_1.3',
+    store: 'Costco',
+  },
+  {
+    name: '燕麥（Quaker 大包裝）',
+    description: 'β-葡聚醣降膽固醇，優質碳水+膳食纖維 8g/份。訓練後快速碳水搭配乳清蛋白',
+    usage: '每日 1 份（80g），訓練後或早餐',
+    url: 'https://www.costco.com.tw/Grocery/Breakfast-Cereals-Spreads/Cereals-Porridge/c/cos_2.3.1',
+    store: 'Costco',
+  },
+  {
+    name: '香蕉',
+    description: '訓練前後快速碳水，富含鉀。青香蕉含抗性澱粉（益生元）',
+    usage: '每日 1-2 根（訓練前後）',
+    url: 'https://www.costco.com.tw/Fresh-Food/Fruits/c/cos_1.2',
     store: 'Costco',
   },
 ];
@@ -129,7 +171,7 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: 'Ashwagandha KSM-66（NOW Foods 600mg）',
-    description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 2 週停循環使用',
+    description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 4 週停循環使用（停用期改服紅景天）',
     usage: '睡前 1 顆 600mg',
     url: 'https://tw.iherb.com/pr/now-foods-ksm-66-ashwagandha-600-mg-90-veg-capsules/145913',
     store: 'iHerb',
@@ -150,9 +192,51 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-    description: '多酚類（Quercetin、EGCG）會螯合鋅，需額外補充。免疫與睪固酮合成必需',
-    usage: '每日 1 顆隨晚餐（避開鈣與 EGCG）',
+    description: 'EGCG 會螯合鋅，需額外補充。免疫與睪固酮合成必需。每日 25mg（半顆），搭配銅 2mg 維持平衡',
+    usage: '每日半顆（25mg）隨晚餐（避開鈣與 EGCG，與銅間隔 4hr+）',
     url: 'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
+    store: 'iHerb',
+  },
+  {
+    name: '銅 Copper Glycinate（Solgar 2mg × 100 錠）',
+    description: '長期補鋅必須搭配銅。鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷',
+    usage: '每日 1 顆隨午餐（與鋅間隔 4hr+）',
+    url: 'https://tw.iherb.com/pr/solgar-copper-2-mg-100-tablets/52557',
+    store: 'iHerb',
+  },
+  {
+    name: '維他命 D3 5000IU（NOW Foods 240 顆）',
+    description: '鈣+D3+K2 複合錠僅含 1000IU D3，不足。額外補充至每日共 5000IU，目標血清 40-60 ng/mL',
+    usage: '每日 1 顆隨早餐（需搭配油脂吸收）',
+    url: 'https://tw.iherb.com/pr/now-foods-vitamin-d-3-high-potency-125-mcg-5-000-iu-240-softgels/10421',
+    store: 'iHerb',
+  },
+  {
+    name: '酪蛋白 Gold Standard Casein（ON 巧克力 1.82kg）',
+    description: '緩釋蛋白，睡前 40g 增加 22% 夜間肌蛋白合成（Res et al. 2012）',
+    usage: '睡前 30 分鐘，40g 配水或牛奶',
+    url: 'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-casein-chocolate-supreme-4-lb-1-82-kg/68620',
+    store: 'iHerb',
+  },
+  {
+    name: '甘胺酸粉 Glycine Powder（NOW Foods 454g）',
+    description: '抑制性神經傳導物質，降低核心體溫助眠，促進膠原蛋白合成',
+    usage: '睡前 3g（約半匙），搭配酪蛋白一起服用',
+    url: 'https://tw.iherb.com/pr/now-foods-glycine-pure-powder-1-lb-454-g/480',
+    store: 'iHerb',
+  },
+  {
+    name: '紅景天 Rhodiola Rosea（NOW Foods 500mg × 60 顆）',
+    description: 'Ashwagandha 停用期的替代適應原。抗疲勞、提升專注力，3% rosavins 標準化',
+    usage: 'Ashwagandha 停用 4 週期間，每日早上 1 顆',
+    url: 'https://tw.iherb.com/pr/now-foods-rhodiola-500-mg-60-veg-capsules/44264',
+    store: 'iHerb',
+  },
+  {
+    name: '電解質粉 LMNT（綜合口味 30 包）',
+    description: '運動員每小時流失 ~900mg 鈉。Zone 2 有氧 >45 分鐘時補充電解質',
+    usage: '有氧訓練日，運動中沖泡飲用',
+    url: 'https://tw.iherb.com/pr/lmnt-recharge-electrolyte-drink-mix-variety-pack-30-sticks/130757',
     store: 'iHerb',
   },
 ];
@@ -217,11 +301,14 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 
 function TimingTable() {
   const rows = [
-    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 25g（訓練日）' },
-    { time: '10:00 第一餐', items: '肌酸 5g、D3+K2+魚油+葉黃素+維他命C' },
-    { time: '13:00+ 兩餐間', items: '綠茶 EGCG、蘿蔔硫素（間隔第一餐 2hr+）' },
-    { time: '18:00 晚餐', items: '鋅（避開鈣與 EGCG）' },
-    { time: '睡前 21:00', items: '蘇糖酸鎂、甘胺酸鎂、Ashwagandha（8週/2週循環）' },
+    { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
+    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 25g + 咖啡 200-300mg' },
+    { time: '09:00 訓練後', items: '乳清蛋白 40g + 快速碳水 60-80g（香蕉+燕麥）' },
+    { time: '10:00 第一餐', items: '肌酸 5g、D3 5000IU+K2+魚油+葉黃素+維他命C' },
+    { time: '11:00 兩餐間', items: '綠茶 EGCG（餐後 1hr+，13:00 前）' },
+    { time: '12:00 午餐', items: '銅 2mg、蘿蔔硫素 BroccoMax' },
+    { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
+    { time: '21:00 睡前', items: '酪蛋白 40g+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 
   return (
@@ -230,7 +317,7 @@ function TimingTable() {
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
         {rows.map((row, i) => (
           <div key={i} className={`flex px-4 py-3 ${i !== rows.length - 1 ? 'border-b border-gray-100' : ''}`}>
-            <span className="text-sm font-medium text-emerald-700 w-32 flex-shrink-0">{row.time}</span>
+            <span className="text-sm font-medium text-emerald-700 w-28 flex-shrink-0">{row.time}</span>
             <span className="text-sm text-gray-700">{row.items}</span>
           </div>
         ))}
