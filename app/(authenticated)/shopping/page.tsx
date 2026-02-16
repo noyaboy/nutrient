@@ -135,15 +135,15 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
-    name: '蘋果酸鎂 Mg Malate（Nutricost 700mg × 180 顆）',
-    description: '白天能量支持，同價多 22% 鎂含量',
-    usage: '早上 1-2 顆',
-    url: 'https://tw.iherb.com/pr/nutricost-magnesium-malate-180-capsules-700-mg-per-capsule/132246',
+    name: '甘胺酸鎂 Mg Glycinate（NOW Foods 100mg × 180 錠）',
+    description: '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率',
+    usage: '睡前 2 錠（200mg），搭配蘇糖酸鎂',
+    url: 'https://tw.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819',
     store: 'iHerb',
   },
   {
     name: 'Ashwagandha KSM-66（NOW Foods 600mg）',
-    description: '調節 HPA 軸，降皮質醇 14-28%，助眠',
+    description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 2 週停循環使用',
     usage: '睡前 1 顆 600mg',
     url: 'https://tw.iherb.com/pr/now-foods-ksm-66-ashwagandha-600-mg-90-veg-capsules/145913',
     store: 'iHerb',
@@ -246,11 +246,11 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 function TimingTable() {
   const rows = [
     { time: '早晨空腹', items: 'NMN + TMG' },
-    { time: '10:00 第一餐', items: '蘋果酸鎂、肌酸 5g、D3+K2+魚油+葉黃素+維他命C+白藜蘆醇' },
+    { time: '10:00 第一餐', items: '肌酸 5g、D3+K2+魚油+葉黃素+維他命C+白藜蘆醇' },
     { time: '13:00+ 兩餐間', items: '綠茶 EGCG、蘿蔔硫素（間隔第一餐 2hr+）' },
     { time: '18:00 晚餐', items: '鋅（避開鈣與 EGCG）' },
     { time: '每週 2-3 天', items: 'Quercetin + Fisetin' },
-    { time: '睡前 21:00', items: '蘇糖酸鎂、Ashwagandha（8週/2週循環）' },
+    { time: '睡前 21:00', items: '蘇糖酸鎂、甘胺酸鎂、Ashwagandha（8週/2週循環）' },
   ];
 
   return (
