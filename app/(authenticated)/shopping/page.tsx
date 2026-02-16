@@ -23,6 +23,13 @@ const costcoItems: ShoppingItem[] = [
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
     store: 'Costco',
   },
+  {
+    name: '維他命 C（Kirkland 500mg × 500 錠）',
+    description: '抗氧化、膠原蛋白合成、增強鐵吸收，與 Quercetin 協同',
+    usage: '每日 1-2 錠（500-1000mg）',
+    url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Multi-Letter-Vitamins/Kirkland-Signature-Vitamin-C-500-mg-500-Tablet/p/684654',
+    store: 'Costco',
+  },
 ];
 
 const costcoFoodItems: ShoppingItem[] = [
@@ -162,6 +169,13 @@ const iherbItems: ShoppingItem[] = [
     url: 'https://tw.iherb.com/pr/jarrow-formulas-vegan-broccomax-35-mg-120-veggie-capsules/68704',
     store: 'iHerb',
   },
+  {
+    name: '葉黃素 + 玉米黃素（CGN 20mg × 120 顆）',
+    description: '沉積於視網膜黃斑部，保護眼睛抵禦藍光與氧化傷害',
+    usage: '每日 1 顆隨餐（需搭配油脂吸收）',
+    url: 'https://tw.iherb.com/pr/california-gold-nutrition-lutein-with-zeaxanthin-from-marigold-extract-120-veggie-softgels/94824',
+    store: 'iHerb',
+  },
 ];
 
 const equipmentItems: ShoppingItem[] = [
@@ -226,7 +240,7 @@ function TimingTable() {
   const rows = [
     { time: '早晨空腹', items: 'NMN + 白藜蘆醇 + TMG' },
     { time: '早上隨餐', items: '蘋果酸鎂、肌酸 5g' },
-    { time: '10:00 第一餐', items: 'D3 + K2 + 魚油' },
+    { time: '10:00 第一餐', items: 'D3 + K2 + 魚油 + 葉黃素 + 維他命C' },
     { time: '兩餐之間', items: '綠茶 EGCG、蘿蔔硫素' },
     { time: '每週 2-3 天', items: 'Quercetin + Fisetin' },
     { time: '睡前 21:00', items: '蘇糖酸鎂、Ashwagandha' },
