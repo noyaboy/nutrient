@@ -28,3 +28,31 @@ export interface WeeklyItemWithCompletions extends PlanItem {
   completions: Completion[];
   targetCount: number;
 }
+
+export interface RecipeIngredient {
+  name: string;
+  amount: string;
+}
+
+export interface Recipe {
+  id: string;
+  name: string;
+  mealSlot: 'post-workout' | 'lunch' | 'dinner';
+  cookingMethod: '電鍋' | '電子鍋' | '免煮';
+  prepTime: number;
+  macros: {
+    protein: number;
+    carbs: number;
+    fat: number;
+    calories: number;
+  };
+  ingredients: RecipeIngredient[];
+  steps: string[];
+  tips?: string;
+}
+
+export interface DailyRecipes {
+  postWorkout: Recipe;
+  lunch: Recipe;
+  dinner: Recipe;
+}

@@ -6,11 +6,13 @@ import DailySection from '@/components/DailySection';
 import WeeklyTaskItem from '@/components/WeeklyTaskItem';
 import ProgressBar from '@/components/ProgressBar';
 import Link from 'next/link';
+import { getTodayRecipes } from '@/lib/recipes';
 
 export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
   const today = getToday();
+  const todayRecipes = getTodayRecipes(today);
   const monday = getMondayOfWeek(today);
   const sunday = getSundayOfWeek(monday);
   const weekDates = getWeekDates(monday);
@@ -80,7 +82,7 @@ export default async function DashboardPage() {
           {dailyItems.length > 0 && (
             <section className="space-y-3">
               <ProgressBar completed={dailyCompleted} total={dailyItems.length} label={UI.dashboard.dailyTitle} />
-              <DailySection items={dailyItems} targetDate={today} />
+              <DailySection items={dailyItems} targetDate={today} recipes={todayRecipes} />
             </section>
           )}
 

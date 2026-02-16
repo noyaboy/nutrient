@@ -3,11 +3,21 @@
 import { useState, useTransition } from 'react';
 import { toggleCompletion } from '@/app/actions/completions';
 import TaskItem from './TaskItem';
-import type { PlanItemWithCompletion } from '@/lib/types';
+import RecipeCard from './RecipeCard';
+import type { PlanItemWithCompletion, DailyRecipes, Recipe } from '@/lib/types';
 
 interface DailySectionProps {
   items: PlanItemWithCompletion[];
   targetDate: string;
+  recipes?: DailyRecipes | null;
+}
+
+function getRecipeForItem(item: PlanItemWithCompletion, recipes: DailyRecipes | null | undefined): Recipe | null {
+  if (!recipes) return null;
+  if (item.title.includes('訓練後')) return recipes.postWorkout;
+  if (item.title.includes('午餐')) return recipes.lunch;
+  if (item.title.includes('晚餐')) return recipes.dinner;
+  return null;
 }
 
 interface TimeGroup {
@@ -89,7 +99,7 @@ function AllDayItem({ item, targetDate }: { item: PlanItemWithCompletion; target
   );
 }
 
-export default function DailySection({ items, targetDate }: DailySectionProps) {
+export default function DailySection({ items, targetDate, recipes }: DailySectionProps) {
   const groups = groupItems(items);
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set());
 
@@ -140,9 +150,15 @@ export default function DailySection({ items, targetDate }: DailySectionProps) {
                 </div>
               ) : (
                 <div className="space-y-2 mt-1">
-                  {group.items.map(item => (
-                    <TaskItem key={item.id} item={item} targetDate={targetDate} />
-                  ))}
+                  {group.items.map(item => {
+                    const recipe = getRecipeForItem(item, recipes);
+                    return (
+                      <div key={item.id} className="space-y-2">
+                        <TaskItem item={item} targetDate={targetDate} />
+                        {recipe && <RecipeCard recipe={recipe} />}
+                      </div>
+                    );
+                  })}
                 </div>
               )
             )}
