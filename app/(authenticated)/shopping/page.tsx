@@ -74,7 +74,7 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '綠茶 / 抹茶粉',
     description: 'EGCG + L-theanine 天然組合。抗氧化、促進專注。須在餐後 1hr+ 飲用避免螯合礦物質',
     usage: '每日 2-3 杯（13:00 前，避免咖啡因影響睡眠）',
-    url: 'https://www.costco.com.tw/Food/Drinks/Powdered-Drink-Mix-Cereal-Oats/Itoen-Matcha-Green-Tea-Unsweetened-Powder-340-g/p/2185751',
+    url: 'https://www.costco.com.tw/Food-Dining/Drinks/Powdered-Drink-Mix-Cereal-Oats/Itoen-Matcha-Green-Tea-Unsweetened-Powder-340-g/p/2185751',
     store: 'Costco',
   },
   {

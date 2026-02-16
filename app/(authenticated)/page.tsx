@@ -5,8 +5,9 @@ import type { PlanItemWithCompletion, WeeklyItemWithCompletions, Completion } fr
 import DailySection from '@/components/DailySection';
 import WeeklyTaskItem from '@/components/WeeklyTaskItem';
 import ProgressBar from '@/components/ProgressBar';
+import AllRecipesSection from '@/components/AllRecipesSection';
 import Link from 'next/link';
-import { getTodayRecipes } from '@/lib/recipes';
+import { getTodayRecipes, postWorkoutRecipes, lunchRecipes, dinnerRecipes } from '@/lib/recipes';
 
 export const dynamic = 'force-dynamic';
 
@@ -98,6 +99,27 @@ export default async function DashboardPage() {
           )}
         </>
       )}
+
+      <Link
+        href="/health"
+        className="block p-4 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl border border-emerald-200 hover:border-emerald-300 transition-colors"
+      >
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm font-bold text-gray-900">健康優化計劃</p>
+            <p className="text-xs text-gray-500 mt-0.5">訓練計劃 · 抗老化策略 · 補充品時間表</p>
+          </div>
+          <svg className="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </Link>
+
+      <AllRecipesSection
+        postWorkout={postWorkoutRecipes}
+        lunch={lunchRecipes}
+        dinner={dinnerRecipes}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { Recipe, DailyRecipes } from './types';
 
 // ─── 訓練後食譜（碳水為主，搭配乳清蛋白搖搖杯）───
+// 巨量營養素不含乳清蛋白（另外用搖搖杯喝）
 
 export const postWorkoutRecipes: Recipe[] = [
   {
@@ -9,7 +10,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '電鍋',
     prepTime: 30,
-    macros: { protein: 6, carbs: 75, fat: 4, calories: 360 },
+    macros: { protein: 12, carbs: 104, fat: 4, calories: 476 },
     ingredients: [
       { name: '地瓜', amount: '250g（約1中條）' },
       { name: '燕麥', amount: '40g' },
@@ -31,7 +32,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '電子鍋',
     prepTime: 15,
-    macros: { protein: 8, carbs: 72, fat: 6, calories: 374 },
+    macros: { protein: 18, carbs: 96, fat: 12, calories: 529 },
     ingredients: [
       { name: '燕麥', amount: '80g' },
       { name: '香蕉', amount: '1.5根' },
@@ -53,7 +54,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '電鍋',
     prepTime: 35,
-    macros: { protein: 4, carbs: 80, fat: 2, calories: 354 },
+    macros: { protein: 6, carbs: 87, fat: 1, calories: 363 },
     ingredients: [
       { name: '地瓜', amount: '300g' },
       { name: '香蕉', amount: '1根' },
@@ -74,7 +75,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '電子鍋',
     prepTime: 40,
-    macros: { protein: 7, carbs: 78, fat: 3, calories: 367 },
+    macros: { protein: 12, carbs: 87, fat: 4, calories: 419 },
     ingredients: [
       { name: '燕麥', amount: '50g' },
       { name: '地瓜', amount: '200g' },
@@ -95,7 +96,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '免煮',
     prepTime: 5,
-    macros: { protein: 10, carbs: 70, fat: 8, calories: 390 },
+    macros: { protein: 16, carbs: 97, fat: 13, calories: 535 },
     ingredients: [
       { name: '燕麥', amount: '60g' },
       { name: '香蕉', amount: '2根' },
@@ -117,7 +118,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '電鍋',
     prepTime: 45,
-    macros: { protein: 12, carbs: 76, fat: 7, calories: 415 },
+    macros: { protein: 20, carbs: 94, fat: 9, calories: 530 },
     ingredients: [
       { name: '地瓜', amount: '200g' },
       { name: '燕麥', amount: '60g' },
@@ -140,7 +141,7 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '免煮',
     prepTime: 5,
-    macros: { protein: 16, carbs: 68, fat: 8, calories: 408 },
+    macros: { protein: 25, carbs: 79, fat: 11, calories: 497 },
     ingredients: [
       { name: '燕麥', amount: '70g' },
       { name: '希臘優格', amount: '100g' },
@@ -153,13 +154,14 @@ export const postWorkoutRecipes: Recipe[] = [
       '前晚：燕麥 + 希臘優格 + 水放入密封罐冷藏',
       '早上取出，拌入香蕉片和堅果',
       '直接食用（冷吃或微波加熱皆可）',
-      '肌酸加入乳清搖搖杯',
+      '肌酸加入乳清蛋白搖搖杯',
     ],
     tips: '前晚準備，訓練後零等待。優格提供額外蛋白質和益生菌',
   },
 ];
 
-// ─── 午餐食譜（40-50g 蛋白 + 十字花科蔬菜）───
+// ─── 午餐食譜（高蛋白 + 十字花科蔬菜）───
+// 糙米為生重（100g 生重 ≈ 300g 熟飯）
 
 export const lunchRecipes: Recipe[] = [
   {
@@ -168,7 +170,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電子鍋',
     prepTime: 45,
-    macros: { protein: 45, carbs: 50, fat: 6, calories: 434 },
+    macros: { protein: 58, carbs: 83, fat: 9, calories: 665 },
     ingredients: [
       { name: '雞胸肉', amount: '150g' },
       { name: '冷凍綠花椰菜', amount: '150g' },
@@ -191,7 +193,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 42, carbs: 48, fat: 12, calories: 468 },
+    macros: { protein: 41, carbs: 80, fat: 24, calories: 713 },
     ingredients: [
       { name: '冷凍鮭魚排', amount: '150g' },
       { name: '菠菜', amount: '100g' },
@@ -214,7 +216,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 35,
-    macros: { protein: 42, carbs: 50, fat: 16, calories: 508 },
+    macros: { protein: 39, carbs: 94, fat: 23, calories: 740 },
     ingredients: [
       { name: '雞蛋', amount: '4顆' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -229,7 +231,7 @@ export const lunchRecipes: Recipe[] = [
       '水煮蛋剝殼切半，鋪在糙米飯上',
       '花椰菜、洋蔥鋪旁邊',
     ],
-    tips: '4顆全蛋提供28g蛋白+花椰菜的植物蛋白補足目標',
+    tips: '4顆全蛋提供約25g蛋白+花椰菜和糙米的植物蛋白補足目標',
   },
   {
     id: 'lunch-chicken-cauliflower-bowl',
@@ -237,7 +239,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 48, carbs: 35, fat: 5, calories: 377 },
+    macros: { protein: 61, carbs: 63, fat: 9, calories: 587 },
     ingredients: [
       { name: '雞胸肉', amount: '160g' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -259,7 +261,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 40, carbs: 52, fat: 10, calories: 454 },
+    macros: { protein: 34, carbs: 47, fat: 18, calories: 489 },
     ingredients: [
       { name: '冷凍鮭魚排', amount: '130g' },
       { name: '冷凍綠花椰菜', amount: '150g' },
@@ -281,7 +283,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電子鍋',
     prepTime: 45,
-    macros: { protein: 50, carbs: 48, fat: 10, calories: 482 },
+    macros: { protein: 60, carbs: 81, fat: 18, calories: 743 },
     ingredients: [
       { name: '雞胸肉', amount: '120g' },
       { name: '雞蛋', amount: '2顆' },
@@ -304,7 +306,7 @@ export const lunchRecipes: Recipe[] = [
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 43, carbs: 45, fat: 18, calories: 510 },
+    macros: { protein: 40, carbs: 72, fat: 38, calories: 797 },
     ingredients: [
       { name: '冷凍鮭魚排', amount: '120g' },
       { name: '雞蛋', amount: '1顆' },
@@ -325,7 +327,7 @@ export const lunchRecipes: Recipe[] = [
   },
 ];
 
-// ─── 晚餐食譜（40-50g 蛋白 + 纖維→蛋白→碳水順序）───
+// ─── 晚餐食譜（高蛋白 + 纖維→蛋白→碳水順序）───
 
 export const dinnerRecipes: Recipe[] = [
   {
@@ -334,7 +336,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 45,
-    macros: { protein: 46, carbs: 50, fat: 5, calories: 429 },
+    macros: { protein: 60, carbs: 86, fat: 9, calories: 686 },
     ingredients: [
       { name: '雞胸肉', amount: '150g' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -356,7 +358,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 42, carbs: 48, fat: 12, calories: 468 },
+    macros: { protein: 44, carbs: 86, fat: 24, calories: 742 },
     ingredients: [
       { name: '冷凍鮭魚排', amount: '150g' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -377,7 +379,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 35,
-    macros: { protein: 40, carbs: 55, fat: 16, calories: 520 },
+    macros: { protein: 41, carbs: 65, fat: 25, calories: 640 },
     ingredients: [
       { name: '雞蛋', amount: '5顆' },
       { name: '菠菜', amount: '150g' },
@@ -399,7 +401,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 48, carbs: 42, fat: 5, calories: 405 },
+    macros: { protein: 62, carbs: 77, fat: 9, calories: 658 },
     ingredients: [
       { name: '雞胸肉', amount: '160g' },
       { name: '冷凍綠花椰菜', amount: '100g' },
@@ -421,7 +423,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 40,
-    macros: { protein: 41, carbs: 40, fat: 20, calories: 500 },
+    macros: { protein: 42, carbs: 79, fat: 37, calories: 807 },
     ingredients: [
       { name: '冷凍鮭魚排', amount: '140g' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -444,7 +446,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電子鍋',
     prepTime: 35,
-    macros: { protein: 42, carbs: 50, fat: 14, calories: 490 },
+    macros: { protein: 38, carbs: 87, fat: 23, calories: 726 },
     ingredients: [
       { name: '雞蛋', amount: '4顆' },
       { name: '冷凍綠花椰菜', amount: '200g' },
@@ -465,7 +467,7 @@ export const dinnerRecipes: Recipe[] = [
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 45,
-    macros: { protein: 47, carbs: 48, fat: 5, calories: 425 },
+    macros: { protein: 58, carbs: 82, fat: 10, calories: 665 },
     ingredients: [
       { name: '雞胸肉', amount: '150g' },
       { name: '泡菜', amount: '80g' },
