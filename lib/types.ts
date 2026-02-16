@@ -22,3 +22,8 @@ export interface Completion {
 export interface PlanItemWithCompletion extends PlanItem {
   completion: Completion | null;
 }
+
+export interface WeeklyItemWithCompletions extends PlanItem {
+  completions: Completion[];
+  targetCount: number;
+}

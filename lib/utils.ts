@@ -24,6 +24,49 @@ export function formatDateChinese(dateStr?: string): string {
   });
 }
 
+export function getSundayOfWeek(mondayStr: string): string {
+  const date = new Date(mondayStr + 'T00:00:00');
+  date.setDate(date.getDate() + 6);
+  return date.toLocaleDateString('sv-SE');
+}
+
+export function getWeekDates(mondayStr: string): string[] {
+  const dates: string[] = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(mondayStr + 'T00:00:00');
+    d.setDate(d.getDate() + i);
+    dates.push(d.toLocaleDateString('sv-SE'));
+  }
+  return dates;
+}
+
+const DAY_LABELS = ['一', '二', '三', '四', '五', '六', '日'];
+
+export function getDayOfWeekLabel(dateStr: string): string {
+  const d = new Date(dateStr + 'T00:00:00');
+  const day = d.getDay(); // 0=Sun, 1=Mon...
+  return DAY_LABELS[day === 0 ? 6 : day - 1];
+}
+
+export function getWeeklyTargetCount(title: string): number {
+  const targets: [string, number][] = [
+    ['Zone 2', 4],
+    ['肌力訓練', 3],
+    ['VO2 Max', 1],
+    ['穩定性訓練', 7],
+    ['Quercetin', 3],
+    ['碳水循環', 7],
+    ['學習新技能', 3],
+    ['每週回顧', 1],
+    ['FMD', 1],
+    ['健康檢測', 1],
+  ];
+  for (const [keyword, count] of targets) {
+    if (title.includes(keyword)) return count;
+  }
+  return 1;
+}
+
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
     '運動': 'bg-green-100 text-green-800',

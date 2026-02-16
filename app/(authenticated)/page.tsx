@@ -1,8 +1,9 @@
 import { supabase } from '@/lib/supabase';
-import { getToday, getMondayOfWeek, formatDateChinese } from '@/lib/utils';
+import { getToday, getMondayOfWeek, getSundayOfWeek, getWeekDates, getWeeklyTargetCount, formatDateChinese } from '@/lib/utils';
 import { UI } from '@/lib/constants';
-import type { PlanItemWithCompletion } from '@/lib/types';
+import type { PlanItemWithCompletion, WeeklyItemWithCompletions, Completion } from '@/lib/types';
 import TaskItem from '@/components/TaskItem';
+import WeeklyTaskItem from '@/components/WeeklyTaskItem';
 import ProgressBar from '@/components/ProgressBar';
 import Link from 'next/link';
 
@@ -11,6 +12,8 @@ export const dynamic = 'force-dynamic';
 export default async function DashboardPage() {
   const today = getToday();
   const monday = getMondayOfWeek(today);
+  const sunday = getSundayOfWeek(monday);
+  const weekDates = getWeekDates(monday);
 
   const [{ data: planItems }, { data: dailyCompletions }, { data: weeklyCompletions }] = await Promise.all([
     supabase
@@ -25,7 +28,8 @@ export default async function DashboardPage() {
     supabase
       .from('completions')
       .select('*')
-      .eq('target_date', monday),
+      .gte('target_date', monday)
+      .lte('target_date', sunday),
   ]);
 
   const dailyItems: PlanItemWithCompletion[] = (planItems || [])
@@ -35,15 +39,27 @@ export default async function DashboardPage() {
       completion: (dailyCompletions || []).find(c => c.plan_item_id === item.id) || null,
     }));
 
-  const weeklyItems: PlanItemWithCompletion[] = (planItems || [])
+  // Group weekly completions by plan_item_id
+  const weeklyCompletionsByItem = new Map<string, Completion[]>();
+  for (const c of (weeklyCompletions || [])) {
+    const list = weeklyCompletionsByItem.get(c.plan_item_id) || [];
+    list.push(c);
+    weeklyCompletionsByItem.set(c.plan_item_id, list);
+  }
+
+  const weeklyItems: WeeklyItemWithCompletions[] = (planItems || [])
     .filter(item => item.frequency === 'weekly')
-    .map(item => ({
-      ...item,
-      completion: (weeklyCompletions || []).find(c => c.plan_item_id === item.id) || null,
-    }));
+    .map(item => {
+      const targetCount = getWeeklyTargetCount(item.title);
+      return {
+        ...item,
+        completions: weeklyCompletionsByItem.get(item.id) || [],
+        targetCount,
+      };
+    });
 
   const dailyCompleted = dailyItems.filter(i => i.completion).length;
-  const weeklyCompleted = weeklyItems.filter(i => i.completion).length;
+  const weeklyCompleted = weeklyItems.filter(i => i.completions.length >= i.targetCount).length;
 
   return (
     <div className="space-y-6">
@@ -79,7 +95,7 @@ export default async function DashboardPage() {
               <ProgressBar completed={weeklyCompleted} total={weeklyItems.length} label={UI.dashboard.weeklyTitle} />
               <div className="space-y-2">
                 {weeklyItems.map(item => (
-                  <TaskItem key={item.id} item={item} targetDate={monday} />
+                  <WeeklyTaskItem key={item.id} item={item} weekDates={weekDates} today={today} />
                 ))}
               </div>
             </section>
