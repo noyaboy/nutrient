@@ -35,6 +35,7 @@ export const UI = {
   },
   nav: {
     dashboard: '首頁',
+    shopping: '採購',
     settings: '設定',
     logout: '登出',
   },
