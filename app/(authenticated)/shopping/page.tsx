@@ -151,7 +151,7 @@ const costcoFoodItems: ShoppingItem[] = [
     name: '白米 / 糙米',
     description: '基礎碳水來源。冷卻後產生抗性澱粉（益生元）。糙米額外提供膳食纖維與鎂',
     usage: '每日適量，訓練日增加碳水攝取',
-    url: 'https://www.costco.com.tw/Food-Dining/Groceries/Rice-Noodles-Dried-Goods/c/90701',
+    url: 'https://www.costco.com.tw/Food-Dining/Groceries/Rice-Noodles/Greenme-Organic-Brown-Rice-3-kg/p/124095',
     store: 'Costco',
   },
   {
