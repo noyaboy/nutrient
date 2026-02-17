@@ -56,7 +56,7 @@ function Tag({ children, color = 'gray' }: { children: React.ReactNode; color?: 
 }
 
 function WorkoutTab() {
-  const age = new Date().getFullYear() - 2001;
+  const age = new Date().getFullYear() - 2002;
   const hrMax = 220 - age;
   const zone2Low = Math.round(hrMax * 0.6);
   const zone2High = Math.round(hrMax * 0.7);
@@ -370,7 +370,7 @@ function SupplementsTab() {
               <p>乳清蛋白 ~40g 粉（≈31g 蛋白）+ 肌酸 5g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
               <p>維他命 D3 5000 IU</p>
-              <p>鈣 + D3 + K2</p>
+              <p>鈣 + D3 + K2（1 錠）</p>
               <p>維他命 C 500-1000mg</p>
               <p>葉黃素 20mg</p>
             </div>
@@ -401,7 +401,7 @@ function SupplementsTab() {
         <div className="text-xs text-gray-700 space-y-2">
           <div className="bg-red-50 rounded-lg p-3">
             <p className="font-semibold text-red-800 mb-1">注意：維他命 D3 重複攝取</p>
-            <p className="text-red-700">鈣+D3+K2 每錠含 150 IU D3（每日 2-3 錠 = 300-450 IU）+ 額外 5000 IU = 每日約 5,300-5,450 IU。建議驗血 25(OH)D，目標 40-60 ng/mL，如正常可減量。</p>
+            <p className="text-red-700">鈣+D3+K2 每錠含 150 IU D3（每日 1 錠 = 150 IU）+ 額外 5000 IU = 每日約 5,150 IU。超過 IOM UL（4000 IU）但低於內分泌學會安全上限（10,000 IU）。建議驗血 25(OH)D，目標 40-60 ng/mL，如正常可減至 1000-2000 IU 維持劑量。</p>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鈣 vs 鋅</Tag>
@@ -472,7 +472,7 @@ export default function HealthPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-bold text-gray-900">健康優化計劃</h1>
-      <p className="text-sm text-gray-500">{new Date().getFullYear() - 2001} 歲男性 · 180cm · 73kg · 重訓為主 · 兼顧長壽</p>
+      <p className="text-sm text-gray-500">{new Date().getFullYear() - 2001} 歲男性 · 182cm · 73kg · 重訓為主 · 兼顧長壽</p>
 
       <div className="flex gap-2">
         {tabs.map(({ key, label }) => (
