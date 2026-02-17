@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useTransition } from 'react';
 import { createPlanItem, updatePlanItem } from '@/app/actions/plan-items';
 import { UI } from '@/lib/constants';
 import type { PlanItem } from '@/lib/types';
@@ -13,14 +13,17 @@ interface PlanItemFormProps {
 
 export default function PlanItemForm({ item, defaultFrequency, onClose }: PlanItemFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
+  const [isPending, startTransition] = useTransition();
 
-  async function handleSubmit(formData: FormData) {
-    if (item) {
-      await updatePlanItem(item.id, formData);
-    } else {
-      await createPlanItem(formData);
-    }
-    onClose();
+  function handleSubmit(formData: FormData) {
+    startTransition(async () => {
+      if (item) {
+        await updatePlanItem(item.id, formData);
+      } else {
+        await createPlanItem(formData);
+      }
+      onClose();
+    });
   }
 
   return (
@@ -90,9 +93,10 @@ export default function PlanItemForm({ item, defaultFrequency, onClose }: PlanIt
             </button>
             <button
               type="submit"
-              className="flex-1 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors text-base"
+              disabled={isPending}
+              className="flex-1 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-400 text-white font-medium rounded-lg transition-colors text-base"
             >
-              {UI.settings.save}
+              {isPending ? '儲存中...' : UI.settings.save}
             </button>
           </div>
         </form>

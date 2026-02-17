@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "健康長壽追蹤器",
   description: "每日與每週健康計畫追蹤",
   manifest: "/manifest.json",
+  robots: { index: false, follow: false },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

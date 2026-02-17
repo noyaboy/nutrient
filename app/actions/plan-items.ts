@@ -2,8 +2,6 @@
 
 import { supabase } from '@/lib/supabase';
 import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
-
 export async function createPlanItem(formData: FormData) {
   const title = formData.get('title') as string;
   const description = (formData.get('description') as string) || '';
@@ -56,6 +54,11 @@ export async function updatePlanItem(id: string, formData: FormData) {
 }
 
 export async function deletePlanItem(id: string) {
+  await supabase
+    .from('completions')
+    .delete()
+    .eq('plan_item_id', id);
+
   await supabase
     .from('plan_items')
     .delete()

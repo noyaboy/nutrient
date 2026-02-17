@@ -215,7 +215,7 @@ function AntiAgingTab() {
         </div>
       </Section>
 
-      <Section title="晨光與書夜節律">
+      <Section title="晨光與晝夜節律">
         <div className="text-xs text-gray-700 space-y-1">
           <p>起床後 30-60 分鐘內<span className="font-semibold">到戶外曝曬陽光</span>（不要隔著玻璃）</p>
           <p>晴天：5 分鐘 / 陰天：10 分鐘 / 多雲：20-30 分鐘</p>
@@ -261,7 +261,7 @@ function AntiAgingTab() {
           <div className="bg-amber-50 rounded-lg p-3 mt-2">
             <p className="font-semibold text-amber-800 mb-1">抗發炎食物（已在採購清單中）</p>
             <ul className="space-y-0.5 text-amber-700">
-              <li>十字花科蔬菜（花椰菜、菠菜）— Nrf2 活化</li>
+              <li>十字花科蔬菜（花椰菜）— Nrf2 活化</li>
               <li>鮭魚（EPA/DHA Omega-3）</li>
               <li>發酵食物（希臘優格、泡菜）— 腸道多樣性</li>
               <li>堅果 — 抗發炎脂肪和礦物質</li>
@@ -344,42 +344,45 @@ function SupplementsTab() {
         <div className="text-xs text-gray-700 space-y-3">
           <div>
             <p className="font-semibold text-amber-700 mb-1">06:30 空腹</p>
-            <p>BroccoMax 蘿蔔硫素（2 顆）— 需空腹通過胃酸才能在小腸釋放</p>
+            <p>BroccoMax 蘿蔔硫素（2 顆）— 空腹提升蘿蔔硫素轉化率</p>
           </div>
           <div>
-            <p className="font-semibold text-amber-700 mb-1">07:00 早餐（含油脂）</p>
+            <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
+            <p>L-Theanine 200mg（起床 60-90 分鐘後，配咖啡）</p>
+          </div>
+          <div>
+            <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
             <div className="space-y-0.5">
+              <p>肌酸 5g + 乳清蛋白 24g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
-              <p>維他命 D3 5000 IU（從睡前移至早餐）</p>
+              <p>維他命 D3 5000 IU</p>
               <p>鈣 + D3 + K2</p>
               <p>維他命 C 500mg</p>
-              <p>紅景天 500mg</p>
-              <p>L-Theanine 200mg（配咖啡）</p>
-              <p>銅 2mg</p>
-            </div>
-          </div>
-          <div>
-            <p className="font-semibold text-amber-700 mb-1">訓練後（搖搖杯）</p>
-            <div className="space-y-0.5">
-              <p>肌酸 5g</p>
-              <p>乳清蛋白 24g</p>
+              <p>葉黃素 20mg</p>
               <p>電解質（訓練日）</p>
             </div>
           </div>
           <div>
-            <p className="font-semibold text-amber-700 mb-1">21:00 睡前（先服鋅）</p>
-            <p>鋅 25mg — 提前 30 分鐘服用，避免酪蛋白中的鈣競爭吸收</p>
+            <p className="font-semibold text-amber-700 mb-1">14:00 午後</p>
+            <p>銅 2mg（與 EGCG 間隔 3hr+）</p>
           </div>
           <div>
-            <p className="font-semibold text-amber-700 mb-1">21:30 搭配酪蛋白奶昔</p>
+            <p className="font-semibold text-amber-700 mb-1">18:00 晚餐</p>
+            <p>鋅 25mg（與銅間隔 4hr+，隨餐服用避免噁心）</p>
+          </div>
+          <div>
+            <p className="font-semibold text-amber-700 mb-1">21:00 睡前（搭配酪蛋白奶昔）</p>
             <div className="space-y-0.5">
               <p>酪蛋白 ~50g 蛋白</p>
               <p>蘇糖酸鎂 3 顆</p>
               <p>甘胺酸鎂 200mg</p>
               <p>甘胺酸粉 3g</p>
               <p>Ashwagandha KSM-66 600mg</p>
-              <p>葉黃素 20mg</p>
             </div>
+          </div>
+          <div className="bg-amber-50 rounded-lg p-3 mt-1">
+            <p className="font-semibold text-amber-800 mb-1">Ashwagandha 停用期（每 8 週停 4 週）</p>
+            <p className="text-amber-700">早上加服紅景天 500mg 替代</p>
           </div>
         </div>
       </Section>
@@ -392,15 +395,15 @@ function SupplementsTab() {
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鈣 vs 鋅</Tag>
-            <span className="flex-1">鈣和鋅競爭吸收 — 已分開（鈣早上/鋅睡前）</span>
+            <span className="flex-1">鈣和鋅競爭吸收 — 已分開（鈣訓練後/鋅晚餐）</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鈣 vs 鎂</Tag>
-            <span className="flex-1">高劑量鈣抑制鎂吸收 — 已分開（鈣早上/鎂睡前）</span>
+            <span className="flex-1">高劑量鈣抑制鎂吸收 — 已分開（鈣訓練後/鎂睡前）</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鋅 vs 銅</Tag>
-            <span className="flex-1">鋅誘導金屬硫蛋白阻擋銅吸收 — 已分開 12+ 小時</span>
+            <span className="flex-1">鋅誘導金屬硫蛋白阻擋銅吸收 — 已分開 4+ 小時（銅午後/鋅晚餐）</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="green">D3 + K2</Tag>
@@ -465,7 +468,7 @@ export default function HealthPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-bold text-gray-900">健康優化計劃</h1>
-      <p className="text-sm text-gray-500">24 歲男性 · 180cm · 73kg · 重訓為主 · 兼顧長壽</p>
+      <p className="text-sm text-gray-500">{new Date().getFullYear() - 2001} 歲男性 · 180cm · 73kg · 重訓為主 · 兼顧長壽</p>
 
       <div className="flex gap-2">
         {tabs.map(({ key, label }) => (

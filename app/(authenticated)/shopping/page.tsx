@@ -345,13 +345,14 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 
 function TimingTable() {
   const rows = [
+    { time: '06:30 空腹', items: 'BroccoMax 蘿蔔硫素 2 顆（空腹提升轉化率）' },
     { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
-    { time: '07:05 補水', items: '500ml 室溫水 + 少許碘鹽 + 檸檬汁（可搭配晨光曝曬）' },
+    { time: '07:05 補水', items: '500ml 室溫水 + 少許碘鹽 + 檸檬汁' },
     { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）' },
-    { time: '08:30 咖啡', items: '咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）' },
+    { time: '08:30 咖啡', items: '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）' },
     { time: '09:00 訓練後', items: '乳清蛋白 ~40g 粉（≈33g 蛋白）+ 碳水 60-80g + 肌酸 5g、D3 ~6000IU+K2+魚油+葉黃素+維他命C' },
     { time: '11:00 兩餐間', items: '綠茶 EGCG（訓練後餐 2hr+，13:00 前）' },
-    { time: '13:00 午餐', items: '蛋白質 40-50g + 蘿蔔硫素 BroccoMax' },
+    { time: '13:00 午餐', items: '蛋白質 40-50g' },
     { time: '14:00 午後', items: '銅 2mg（與 EGCG 間隔 3hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
     { time: '21:00 睡前', items: '酪蛋白 ~64g 粉（≈50g 蛋白）+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },

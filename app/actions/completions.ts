@@ -22,6 +22,7 @@ export async function toggleCompletion(planItemId: string, targetDate: string, i
   }
 
   revalidatePath('/');
+  revalidatePath('/history');
 }
 
 export async function toggleWeeklyDayCompletion(planItemId: string, date: string, isCurrentlyCompleted: boolean) {
@@ -43,4 +44,5 @@ export async function toggleWeeklyDayCompletion(planItemId: string, date: string
   }
 
   revalidatePath('/');
+  revalidatePath('/history');
 }
