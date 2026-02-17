@@ -56,7 +56,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'NATURE MADE 萊萃美',
   '美國',
   $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處，開封後請置於冰箱儲存。","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
-  $${"calcium":"500mg","vitamin_d3":"1000IU","vitamin_k2":"MK-7型"}$$::jsonb,
+  $${"calcium":"500mg/錠","vitamin_d3":"3.75mcg (150IU)/錠","vitamin_k2":"10mcg (MK-7型)/錠"}$$::jsonb,
   2
 );
 
@@ -448,7 +448,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, sort_order) VALUES (
   '維他命 D3 5000IU（Doctor''s Best 360 顆）',
-  '鈣+D3+K2 複合錠含 1000IU D3，額外補充 5000IU，每日總計約 6000IU。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
+  '鈣+D3+K2 複合錠每錠含 150IU D3（每日 2-3 錠 = 300-450IU），額外補充 5000IU，每日總計約 5,300-5,450IU。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
   '每日 1 顆隨訓練後餐（需搭配油脂吸收）',
   'NT$457 / 360 顆',
   'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',

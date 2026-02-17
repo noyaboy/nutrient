@@ -378,7 +378,7 @@ function SupplementsTab() {
         <div className="text-xs text-gray-700 space-y-2">
           <div className="bg-red-50 rounded-lg p-3">
             <p className="font-semibold text-red-800 mb-1">注意：維他命 D3 重複攝取</p>
-            <p className="text-red-700">鈣+D3+K2 含約 600-1000 IU D3 + 額外 5000 IU = 每日約 6000 IU。建議驗血 25(OH)D，目標 40-60 ng/mL，如正常可減量。</p>
+            <p className="text-red-700">鈣+D3+K2 每錠含 150 IU D3（每日 2-3 錠 = 300-450 IU）+ 額外 5000 IU = 每日約 5,300-5,450 IU。建議驗血 25(OH)D，目標 40-60 ng/mL，如正常可減量。</p>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鈣 vs 鋅</Tag>
