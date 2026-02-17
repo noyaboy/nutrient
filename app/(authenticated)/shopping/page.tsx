@@ -51,7 +51,7 @@ const costcoFoodItems: ShoppingItem[] = [
   },
   {
     name: '冷凍綠花椰菜',
-    description: '十字花科蔬菜，富含蘿蔔硫素 Sulforaphane（Nrf2 激活劑）',
+    description: '十字花科蔬菜，富含蘿蔔硫素 Sulforaphane（Nrf2 激活劑）。切碎後靜置 40 分鐘可最大化黑芥子酶轉化',
     usage: '每日一份',
     url: 'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Fruits-Vegetables/Natures-Touch-Frozen-Broccoli-454-g-X-4-Pack/p/122199',
     store: 'Costco',
@@ -179,16 +179,9 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
-    name: '蘇糖酸鎂 Mg L-Threonate（Life Extension Neuro-Mag）',
-    description: '唯一穿透血腦屏障的鎂，上調 NR2B 增強記憶',
-    usage: '睡前 3 顆',
-    url: 'https://tw.iherb.com/pr/life-extension-neuro-mag-magnesium-l-threonate-90-vegetarian-capsules-48-mg-per-capsule/40244',
-    store: 'iHerb',
-  },
-  {
     name: '甘胺酸鎂 Mg Glycinate（NOW Foods 100mg × 180 錠）',
-    description: '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率。搭配蘇糖酸鎂每日補充鎂總量約 344mg（接近補充劑 UL 350mg，如有腸胃不適可減量）',
-    usage: '睡前 2 錠（200mg），搭配蘇糖酸鎂',
+    description: '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率，每日補充鎂 200mg',
+    usage: '睡前 2 錠（200mg）',
     url: 'https://tw.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819',
     store: 'iHerb',
   },
@@ -197,13 +190,6 @@ const iherbItems: ShoppingItem[] = [
     description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 4 週停循環使用（停用期改服紅景天）',
     usage: '睡前 1 顆 600mg',
     url: 'https://tw.iherb.com/pr/now-foods-ksm-66-ashwagandha-600-mg-90-veg-capsules/145913',
-    store: 'iHerb',
-  },
-  {
-    name: '蘿蔔硫素 BroccoMax（Jarrow Formulas 60 顆）',
-    description: '最強 Nrf2 激活劑，含黑芥子酶（myrosinase）確保轉化。每顆 17.5mg SGS（2 顆 = 35mg）',
-    usage: '每日 2 顆（空腹 06:30）',
-    url: 'https://tw.iherb.com/pr/jarrow-formulas-vegan-broccomax-60-veggie-capsules-17-50-mg-per-capsule/4297',
     store: 'iHerb',
   },
   {
@@ -331,7 +317,6 @@ function ShoppingSection({ title, items }: { title: string; items: ShoppingItem[
 
 function TimingTable() {
   const rows = [
-    { time: '06:30 空腹', items: 'BroccoMax 蘿蔔硫素 2 顆（空腹提升轉化率）' },
     { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
     { time: '07:05 補水', items: '500ml 室溫水 + 少許碘鹽 + 檸檬汁' },
     { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）' },
@@ -341,7 +326,7 @@ function TimingTable() {
     { time: '13:00 午餐', items: '蛋白質 40-50g' },
     { time: '14:00 午後', items: '銅 2mg（與 EGCG 間隔 3hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
-    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
+    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸 3g+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 
   return (

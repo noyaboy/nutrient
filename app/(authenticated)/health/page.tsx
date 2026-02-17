@@ -343,10 +343,6 @@ function SupplementsTab() {
       <Section title="最佳服用時間表">
         <div className="text-xs text-gray-700 space-y-3">
           <div>
-            <p className="font-semibold text-amber-700 mb-1">06:30 空腹</p>
-            <p>BroccoMax 蘿蔔硫素（2 顆）— 空腹提升蘿蔔硫素轉化率</p>
-          </div>
-          <div>
             <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
             <p>L-Theanine 200mg（起床 60-90 分鐘後，配咖啡）</p>
           </div>
@@ -373,7 +369,6 @@ function SupplementsTab() {
             <p className="font-semibold text-amber-700 mb-1">21:00 睡前（搭配希臘優格）</p>
             <div className="space-y-0.5">
               <p>希臘優格 300g（~30g 蛋白）</p>
-              <p>蘇糖酸鎂 3 顆</p>
               <p>甘胺酸鎂 200mg</p>
               <p>甘胺酸粉 3g</p>
               <p>Ashwagandha KSM-66 600mg</p>
