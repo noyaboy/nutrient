@@ -16,11 +16,11 @@ export default function Icon() {
           background: '#059669',
           borderRadius: '22%',
           color: 'white',
-          fontSize: 22,
+          fontSize: 20,
           fontWeight: 700,
         }}
       >
-        健
+        N
       </div>
     ),
     { ...size }

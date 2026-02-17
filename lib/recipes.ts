@@ -212,7 +212,7 @@ export const lunchRecipes: Recipe[] = [
   },
   {
     id: 'lunch-egg-broccoli-rice',
-    name: '三蛋花椰菜蓋飯',
+    name: '四蛋花椰菜蓋飯',
     mealSlot: 'lunch',
     cookingMethod: '電鍋',
     prepTime: 35,
@@ -397,7 +397,7 @@ export const dinnerRecipes: Recipe[] = [
   },
   {
     id: 'dinner-chicken-dual-cruciferous',
-    name: '雞胸雙花蔬菜盤',
+    name: '雞胸花椰菠菜盤',
     mealSlot: 'dinner',
     cookingMethod: '電鍋',
     prepTime: 40,

@@ -151,7 +151,7 @@ function WorkoutTab() {
             <div className="text-xs text-gray-700 space-y-0.5">
               <p>方式：Peter Attia 4×4 法 — 4 分鐘全力 + 4 分鐘恢復，重複 4 組</p>
               <p>心率：最大心率 90-95%（約 170-186 bpm）</p>
-              <p>方式：衝刺飛輪、划船機或上坡跑</p>
+              <p>器材：衝刺飛輪、划船機或上坡跑</p>
               <p>總時間：含暖身和收操約 45 分鐘</p>
             </div>
           </div>

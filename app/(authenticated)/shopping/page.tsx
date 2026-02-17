@@ -202,7 +202,7 @@ const iherbItems: ShoppingItem[] = [
   {
     name: '蘿蔔硫素 BroccoMax（Jarrow Formulas 60 顆）',
     description: '最強 Nrf2 激活劑，含肌紅素酶確保轉化。每顆 17.5mg SGS（2 顆 = 35mg）',
-    usage: '每日 1-2 顆',
+    usage: '每日 2 顆（空腹 06:30）',
     url: 'https://tw.iherb.com/pr/jarrow-formulas-vegan-broccomax-60-veggie-capsules-17-50-mg-per-capsule/4297',
     store: 'iHerb',
   },
@@ -230,7 +230,7 @@ const iherbItems: ShoppingItem[] = [
   {
     name: '維他命 D3 5000IU（Doctor\'s Best 360 顆）',
     description: '鈣+D3+K2 複合錠含 1000IU D3，額外補充 5000IU，每日總計約 6000IU。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
-    usage: '每日 1 顆隨早餐（需搭配油脂吸收）',
+    usage: '每日 1 顆隨訓練後餐（需搭配油脂吸收）',
     url: 'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
     store: 'iHerb',
   },
