@@ -27,7 +27,7 @@ export default async function SettingsPage() {
           type="submit"
           className="w-full py-3 text-sm text-gray-500 hover:text-red-600 transition-colors"
         >
-          登出帳號
+          {UI.nav.logout}
         </button>
       </form>
     </div>

@@ -2,7 +2,7 @@
 
 import { useTransition } from 'react';
 import { toggleWeeklyDayCompletion } from '@/app/actions/completions';
-import { getCategoryColor } from '@/lib/utils';
+import { getCategoryColor, DAY_LABELS } from '@/lib/utils';
 import type { WeeklyItemWithCompletions } from '@/lib/types';
 
 interface WeeklyTaskItemProps {
@@ -10,8 +10,6 @@ interface WeeklyTaskItemProps {
   weekDates: string[];
   today: string;
 }
-
-const DAY_LABELS = ['一', '二', '三', '四', '五', '六', '日'];
 
 export default function WeeklyTaskItem({ item, weekDates, today }: WeeklyTaskItemProps) {
   const [isPending, startTransition] = useTransition();

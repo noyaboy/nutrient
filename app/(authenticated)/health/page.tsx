@@ -56,6 +56,13 @@ function Tag({ children, color = 'gray' }: { children: React.ReactNode; color?: 
 }
 
 function WorkoutTab() {
+  const age = new Date().getFullYear() - 2001;
+  const hrMax = 220 - age;
+  const zone2Low = Math.round(hrMax * 0.6);
+  const zone2High = Math.round(hrMax * 0.7);
+  const vo2Low = Math.round(hrMax * 0.9);
+  const vo2High = Math.round(hrMax * 0.95);
+
   return (
     <div className="space-y-4">
       <Section title="週計劃總覽">
@@ -141,7 +148,7 @@ function WorkoutTab() {
             <p className="text-xs font-semibold text-blue-700 mb-1">Zone 2 有氧（3次/週：週二晚、週三、週五晚）</p>
             <div className="text-xs text-gray-700 space-y-0.5">
               <p>時間：45-60 分鐘持續運動</p>
-              <p>心率：最大心率 60-70%（約 118-137 bpm）</p>
+              <p>心率：最大心率 60-70%（約 {zone2Low}-{zone2High} bpm）</p>
               <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
               <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
             </div>
@@ -150,7 +157,7 @@ function WorkoutTab() {
             <p className="text-xs font-semibold text-red-700 mb-1">VO2 Max 訓練（1次/週：週六）</p>
             <div className="text-xs text-gray-700 space-y-0.5">
               <p>方式：Peter Attia 4×4 法 — 4 分鐘全力 + 4 分鐘恢復，重複 4 組</p>
-              <p>心率：最大心率 90-95%（約 170-186 bpm）</p>
+              <p>心率：最大心率 90-95%（約 {vo2Low}-{vo2High} bpm）</p>
               <p>器材：衝刺飛輪、划船機或上坡跑</p>
               <p>總時間：含暖身和收操約 45 分鐘</p>
             </div>
@@ -342,19 +349,35 @@ function SupplementsTab() {
       <Section title="最佳服用時間表">
         <div className="text-xs text-gray-700 space-y-3">
           <div>
+            <p className="font-semibold text-amber-700 mb-1">07:00 起床</p>
+            <p>晨光曝曬 10-20 分鐘（不戴太陽眼鏡）</p>
+          </div>
+          <div>
+            <p className="font-semibold text-amber-700 mb-1">07:05 補水</p>
+            <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁</p>
+          </div>
+          <div>
+            <p className="font-semibold text-amber-700 mb-1">07:15 訓練前</p>
+            <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）</p>
+          </div>
+          <div>
             <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
-            <p>L-Theanine 200mg（起床 60-90 分鐘後，配咖啡）</p>
+            <p>咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
             <div className="space-y-0.5">
-              <p>肌酸 5g + 乳清蛋白 24g</p>
+              <p>乳清蛋白 ~40g 粉（≈33g 蛋白）+ 肌酸 5g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
               <p>維他命 D3 5000 IU</p>
               <p>鈣 + D3 + K2</p>
               <p>維他命 C 500mg</p>
               <p>葉黃素 20mg</p>
             </div>
+          </div>
+          <div>
+            <p className="font-semibold text-amber-700 mb-1">13:00 午餐</p>
+            <p>蛋白質 40-50g</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">14:00 午後</p>
@@ -402,7 +425,7 @@ function SupplementsTab() {
           </div>
           <div className="flex items-start gap-2">
             <Tag color="green">L-Theanine + 咖啡</Tag>
-            <span className="flex-1">2:1 比例是最佳認知增強組合（200mg:100mg）</span>
+            <span className="flex-1">L-Theanine 緩衝咖啡因焦慮副作用，搭配 200-300mg 咖啡因皆有效</span>
           </div>
         </div>
       </Section>

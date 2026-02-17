@@ -1,11 +1,9 @@
 import { supabase } from '@/lib/supabase';
-import { getToday, getMondayOfWeek, getSundayOfWeek, getWeekDates, getWeeklyTargetCount, getCategoryColor } from '@/lib/utils';
+import { getToday, getMondayOfWeek, getSundayOfWeek, getWeekDates, getWeeklyTargetCount, getCategoryColor, DAY_LABELS } from '@/lib/utils';
 import type { Completion } from '@/lib/types';
 import WeekSelector from '@/components/WeekSelector';
 
 export const dynamic = 'force-dynamic';
-
-const DAY_LABELS = ['一', '二', '三', '四', '五', '六', '日'];
 
 interface Props {
   searchParams: Promise<{ week?: string }>;

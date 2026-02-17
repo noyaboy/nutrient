@@ -40,13 +40,7 @@ export function getWeekDates(mondayStr: string): string[] {
   return dates;
 }
 
-const DAY_LABELS = ['一', '二', '三', '四', '五', '六', '日'];
-
-export function getDayOfWeekLabel(dateStr: string): string {
-  const d = new Date(dateStr + 'T00:00:00');
-  const day = d.getDay(); // 0=Sun, 1=Mon...
-  return DAY_LABELS[day === 0 ? 6 : day - 1];
-}
+export const DAY_LABELS = ['一', '二', '三', '四', '五', '六', '日'];
 
 export function getWeeklyTargetCount(title: string): number {
   const targets: [string, number][] = [

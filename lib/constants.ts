@@ -6,6 +6,7 @@ export const UI = {
     passwordPlaceholder: '密碼',
     submit: '登入',
     error: '密碼錯誤，請重試',
+    tagline: '延長健康壽命，從每天開始',
   },
   dashboard: {
     dailyTitle: '今日計畫',
@@ -38,6 +39,6 @@ export const UI = {
     history: '歷史',
     shopping: '採購',
     settings: '設定',
-    logout: '登出',
+    logout: '登出帳號',
   },
 } as const;
