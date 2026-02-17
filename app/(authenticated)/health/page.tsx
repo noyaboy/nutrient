@@ -369,12 +369,7 @@ function SupplementsTab() {
             <div className="space-y-0.5">
               <p>希臘優格 300g（~30g 蛋白）</p>
               <p>甘胺酸鎂 200mg</p>
-              <p>Ashwagandha KSM-66 600mg</p>
             </div>
-          </div>
-          <div className="bg-amber-50 rounded-lg p-3 mt-1">
-            <p className="font-semibold text-amber-800 mb-1">Ashwagandha 停用期（每 8 週停 4 週）</p>
-            <p className="text-amber-700">早上加服紅景天 500mg 替代</p>
           </div>
         </div>
       </Section>
@@ -412,12 +407,6 @@ function SupplementsTab() {
         </div>
       </Section>
 
-      <Section title="Ashwagandha 循環建議">
-        <div className="text-xs text-gray-700 space-y-1">
-          <p><span className="font-semibold">8 週使用 / 4 週停用</span>（避免受體脫敏）</p>
-          <p>停用期間改用<span className="font-semibold">紅景天 Rhodiola 500mg</span>（早上服用）作為替代適應原</p>
-        </div>
-      </Section>
 
       <Section title="建議新增補充品">
         <div className="text-xs text-gray-700 space-y-2">

@@ -179,13 +179,6 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
-    name: 'Ashwagandha KSM-66（NOW Foods 600mg）',
-    description: '調節 HPA 軸，降皮質醇 14-28%，助眠。建議 8 週用 / 4 週停循環使用（停用期改服紅景天）',
-    usage: '睡前 1 顆 600mg',
-    url: 'https://tw.iherb.com/pr/now-foods-ksm-66-ashwagandha-600-mg-90-veg-capsules/145913',
-    store: 'iHerb',
-  },
-  {
     name: '葉黃素 + 玉米黃素（CGN 20mg × 120 顆）',
     description: '沉積於視網膜黃斑部，保護眼睛抵禦藍光與氧化傷害',
     usage: '每日 1 顆隨餐（需搭配油脂吸收）',
@@ -211,13 +204,6 @@ const iherbItems: ShoppingItem[] = [
     description: '鈣+D3+K2 複合錠含 1000IU D3，額外補充 5000IU，每日總計約 6000IU。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
     usage: '每日 1 顆隨訓練後餐（需搭配油脂吸收）',
     url: 'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
-    store: 'iHerb',
-  },
-  {
-    name: '紅景天 Rhodiola Rosea（NOW Foods 500mg × 120 顆）',
-    description: 'Ashwagandha 停用期的替代適應原。抗疲勞、提升專注力，3% rosavins 標準化。500mg 在有效範圍（200-600mg）。120 顆裝比 60 顆裝省 26%/顆',
-    usage: 'Ashwagandha 停用 4 週期間，每日早上 1 顆（500mg）',
-    url: 'https://tw.iherb.com/pr/now-foods-rhodiola-500-mg-120-veg-capsules/123463',
     store: 'iHerb',
   },
   {
@@ -311,7 +297,7 @@ function TimingTable() {
     { time: '13:00 午餐', items: '蛋白質 40-50g' },
     { time: '14:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+）' },
-    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
+    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸鎂 200mg' },
   ];
 
   return (
