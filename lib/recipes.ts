@@ -141,9 +141,9 @@ export const postWorkoutRecipes: Recipe[] = [
     mealSlot: 'post-workout',
     cookingMethod: '免煮',
     prepTime: 5,
-    macros: { protein: 25, carbs: 79, fat: 11, calories: 497 },
+    macros: { protein: 26, carbs: 82, fat: 11, calories: 515 },
     ingredients: [
-      { name: '燕麥', amount: '70g' },
+      { name: '燕麥', amount: '75g' },
       { name: '希臘優格', amount: '100g' },
       { name: '水', amount: '80ml' },
       { name: '香蕉', amount: '1根' },

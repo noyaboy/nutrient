@@ -377,7 +377,7 @@ function SupplementsTab() {
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">13:00 午餐</p>
-            <p>蛋白質 40-50g</p>
+            <p>蛋白質 40-50g + 十字花科蔬菜</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">14:00 午後</p>
