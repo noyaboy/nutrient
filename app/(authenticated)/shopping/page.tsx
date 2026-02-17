@@ -235,16 +235,9 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
-    name: '酪蛋白 Casein-FX（ALLMAX 巧克力 907g）',
-    description: '100% 酪蛋白，睡前攝取 40g 蛋白質可增加 22% 夜間肌蛋白合成（Trommelen et al.）。每份（32g 粉）含 25g 蛋白質，8-10hr 緩釋。比 ON 同級省 ~10%',
-    usage: '睡前 30 分鐘，約 2 份（~64g 粉末 ≈ 50g 蛋白質）配水或牛奶',
-    url: 'https://tw.iherb.com/pr/allmax-nutrition-caseinfx-100-casein-micellar-protein-chocolate-2-lbs-907-g/67639',
-    store: 'iHerb',
-  },
-  {
     name: '甘胺酸粉 Glycine Powder（NOW Foods 454g）',
     description: '抑制性神經傳導物質，降低核心體溫助眠，促進膠原蛋白合成',
-    usage: '睡前 3g（約半匙），搭配酪蛋白一起服用',
+    usage: '睡前 3g（約半匙），搭配希臘優格一起服用',
     url: 'https://tw.iherb.com/pr/now-foods-glycine-pure-powder-1-lb-454-g/615',
     store: 'iHerb',
   },
@@ -260,13 +253,6 @@ const iherbItems: ShoppingItem[] = [
     description: '搭配咖啡的最強 nootropic 組合（A 級證據）。促進專注 + 放鬆，消除咖啡因焦慮感。120 顆大包裝更划算',
     usage: '每日 1 顆（200mg）搭配早晨咖啡',
     url: 'https://tw.iherb.com/pr/now-foods-double-strength-l-theanine-200-mg-120-veg-capsules/54096',
-    store: 'iHerb',
-  },
-  {
-    name: '電解質粉 Nutricost Electrolytes（綜合口味 40 包）',
-    description: '含 7 種維生素礦物質（鈉、鉀、鈣、鎂等），Stevia 天然甜味。40 包比 BPN 30 包省 ~50%/份',
-    usage: '有氧訓練日，運動中沖泡飲用',
-    url: 'https://tw.iherb.com/pr/nutricost-electrolytes-advanced-hydration-complex-variety-pack-40-stick-packs-0-14-oz-4-g-each/147238',
     store: 'iHerb',
   },
 ];
@@ -355,7 +341,7 @@ function TimingTable() {
     { time: '13:00 午餐', items: '蛋白質 40-50g' },
     { time: '14:00 午後', items: '銅 2mg（與 EGCG 間隔 3hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
-    { time: '21:00 睡前', items: '酪蛋白 ~64g 粉（≈50g 蛋白）+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
+    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 
   return (

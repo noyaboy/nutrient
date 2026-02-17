@@ -359,7 +359,6 @@ function SupplementsTab() {
               <p>鈣 + D3 + K2</p>
               <p>維他命 C 500mg</p>
               <p>葉黃素 20mg</p>
-              <p>電解質（訓練日）</p>
             </div>
           </div>
           <div>
@@ -371,9 +370,9 @@ function SupplementsTab() {
             <p>鋅 25mg（與銅間隔 4hr+，隨餐服用避免噁心）</p>
           </div>
           <div>
-            <p className="font-semibold text-amber-700 mb-1">21:00 睡前（搭配酪蛋白奶昔）</p>
+            <p className="font-semibold text-amber-700 mb-1">21:00 睡前（搭配希臘優格）</p>
             <div className="space-y-0.5">
-              <p>酪蛋白 ~50g 蛋白</p>
+              <p>希臘優格 300g（~30g 蛋白）</p>
               <p>蘇糖酸鎂 3 顆</p>
               <p>甘胺酸鎂 200mg</p>
               <p>甘胺酸粉 3g</p>
