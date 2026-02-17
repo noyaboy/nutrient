@@ -21,7 +21,7 @@ const costcoItems: ShoppingItem[] = [
   {
     name: '鈣 + D3 + K2（Nature Made 250 錠）',
     description: '鈣調節三位一體，防骨鬆 + 防動脈鈣化',
-    usage: '每日隨餐，D3 2000-5000 IU + K2 100-200mcg',
+    usage: '每日隨訓練後餐（09:00），D3+K2 協同作用',
     url: 'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
     store: 'Costco',
   },
@@ -201,7 +201,7 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '蘿蔔硫素 BroccoMax（Jarrow Formulas 60 顆）',
-    description: '最強 Nrf2 激活劑，含肌紅素酶確保轉化。每顆 17.5mg SGS（2 顆 = 35mg）',
+    description: '最強 Nrf2 激活劑，含黑芥子酶（myrosinase）確保轉化。每顆 17.5mg SGS（2 顆 = 35mg）',
     usage: '每日 2 顆（空腹 06:30）',
     url: 'https://tw.iherb.com/pr/jarrow-formulas-vegan-broccomax-60-veggie-capsules-17-50-mg-per-capsule/4297',
     store: 'iHerb',
@@ -381,7 +381,8 @@ export default function ShoppingPage() {
     const q = search.toLowerCase();
     return items.filter(item =>
       item.name.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q)
+      item.description.toLowerCase().includes(q) ||
+      item.usage.toLowerCase().includes(q)
     );
   }
 
