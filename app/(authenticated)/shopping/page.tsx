@@ -214,13 +214,6 @@ const iherbItems: ShoppingItem[] = [
     store: 'iHerb',
   },
   {
-    name: '甘胺酸粉 Glycine Powder（NOW Foods 454g）',
-    description: '抑制性神經傳導物質，降低核心體溫助眠，促進膠原蛋白合成',
-    usage: '睡前 3g（約半匙），搭配希臘優格一起服用',
-    url: 'https://tw.iherb.com/pr/now-foods-glycine-pure-powder-1-lb-454-g/615',
-    store: 'iHerb',
-  },
-  {
     name: '紅景天 Rhodiola Rosea（NOW Foods 500mg × 120 顆）',
     description: 'Ashwagandha 停用期的替代適應原。抗疲勞、提升專注力，3% rosavins 標準化。500mg 在有效範圍（200-600mg）。120 顆裝比 60 顆裝省 26%/顆',
     usage: 'Ashwagandha 停用 4 週期間，每日早上 1 顆（500mg）',
@@ -318,7 +311,7 @@ function TimingTable() {
     { time: '13:00 午餐', items: '蛋白質 40-50g' },
     { time: '14:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
     { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+）' },
-    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸 3g+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
+    { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 
   return (

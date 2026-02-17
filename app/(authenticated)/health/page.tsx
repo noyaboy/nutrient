@@ -369,7 +369,6 @@ function SupplementsTab() {
             <div className="space-y-0.5">
               <p>希臘優格 300g（~30g 蛋白）</p>
               <p>甘胺酸鎂 200mg</p>
-              <p>甘胺酸粉 3g</p>
               <p>Ashwagandha KSM-66 600mg</p>
             </div>
           </div>
