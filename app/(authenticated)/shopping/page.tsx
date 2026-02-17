@@ -71,13 +71,6 @@ const costcoFoodItems: ShoppingItem[] = [
     store: 'Costco',
   },
   {
-    name: '綠茶 / 抹茶粉',
-    description: 'EGCG + L-theanine 天然組合。抗氧化、促進專注。須在餐後 1hr+ 飲用避免螯合礦物質',
-    usage: '每日 2-3 杯（13:00 前，避免咖啡因影響睡眠）',
-    url: 'https://www.costco.com.tw/Food-Dining/Drinks/Powdered-Drink-Mix-Cereal-Oats/Itoen-Matcha-Green-Tea-Unsweetened-Powder-340-g/p/2185751',
-    store: 'Costco',
-  },
-  {
     name: '碘鹽（取代一般海鹽）',
     description: '早晨電解質補充。海鹽/玫瑰鹽碘含量極低，十字花科蔬菜攝取量高時需確保碘攝取',
     usage: '日常用鹽，每日少許',
@@ -201,15 +194,15 @@ const iherbItems: ShoppingItem[] = [
   },
   {
     name: '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-    description: 'EGCG 會螯合鋅，需額外補充。免疫與睪固酮合成必需。每日 25mg（半顆），搭配銅 2mg 維持平衡',
-    usage: '每日半顆（25mg）隨晚餐（避開鈣與 EGCG，與銅間隔 4hr+）',
+    description: '免疫與睪固酮合成必需。每日 25mg（半顆），搭配銅 2mg 維持平衡',
+    usage: '每日半顆（25mg）隨晚餐（避開鈣，與銅間隔 4hr+）',
     url: 'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
     store: 'iHerb',
   },
   {
     name: '銅 Copper Bisglycinate（Solaray 2mg × 100 顆）',
     description: '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅，鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷。100 顆裝省 13%/顆',
-    usage: '每日 1 顆隨午餐或午後（與 EGCG 間隔 2hr+，與鋅間隔 4hr+）',
+    usage: '每日 1 顆隨午餐或午後（與鋅間隔 4hr+）',
     url: 'https://tw.iherb.com/pr/solaray-copper-2-mg-100-vegcaps/70102',
     store: 'iHerb',
   },
@@ -322,10 +315,9 @@ function TimingTable() {
     { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）' },
     { time: '08:30 咖啡', items: '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）' },
     { time: '09:00 訓練後', items: '乳清蛋白 ~40g 粉（≈33g 蛋白）+ 碳水 60-80g + 肌酸 5g、D3 ~6000IU+K2+魚油+葉黃素+維他命C' },
-    { time: '11:00 兩餐間', items: '綠茶 EGCG（訓練後餐 2hr+，13:00 前）' },
     { time: '13:00 午餐', items: '蛋白質 40-50g' },
-    { time: '14:00 午後', items: '銅 2mg（與 EGCG 間隔 3hr+）' },
-    { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+，避開 EGCG）' },
+    { time: '14:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
+    { time: '18:00 晚餐', items: '鋅 25mg（與銅間隔 4hr+）' },
     { time: '21:00 睡前', items: '希臘優格 300g（≈30g 蛋白）+甘胺酸 3g+甘胺酸鎂+Ashwagandha（8週/4週循環）' },
   ];
 

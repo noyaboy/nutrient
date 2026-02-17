@@ -265,7 +265,6 @@ function AntiAgingTab() {
               <li>鮭魚（EPA/DHA Omega-3）</li>
               <li>發酵食物（希臘優格、泡菜）— 腸道多樣性</li>
               <li>堅果 — 抗發炎脂肪和礦物質</li>
-              <li>綠茶 — 兒茶素 EGCG 抗氧化</li>
             </ul>
           </div>
         </div>
@@ -359,7 +358,7 @@ function SupplementsTab() {
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">14:00 午後</p>
-            <p>銅 2mg（與 EGCG 間隔 3hr+）</p>
+            <p>銅 2mg（與鋅間隔 4hr+）</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">18:00 晚餐</p>
