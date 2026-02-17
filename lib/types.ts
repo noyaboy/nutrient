@@ -56,3 +56,26 @@ export interface DailyRecipes {
   lunch: Recipe;
   dinner: Recipe;
 }
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  usage: string;
+  price: string;
+  url: string;
+  store: string;
+  category: string;
+  brand: string | null;
+  image_url: string | null;
+  rating: number | null;
+  review_count: number | null;
+  sku: string | null;
+  origin: string | null;
+  specs: Record<string, unknown>;
+  nutrition: Record<string, unknown>;
+  sort_order: number;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
