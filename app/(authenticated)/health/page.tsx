@@ -367,11 +367,11 @@ function SupplementsTab() {
           <div>
             <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
             <div className="space-y-0.5">
-              <p>乳清蛋白 ~40g 粉（≈33g 蛋白）+ 肌酸 5g</p>
+              <p>乳清蛋白 ~40g 粉（≈31g 蛋白）+ 肌酸 5g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
               <p>維他命 D3 5000 IU</p>
               <p>鈣 + D3 + K2</p>
-              <p>維他命 C 500mg</p>
+              <p>維他命 C 500-1000mg</p>
               <p>葉黃素 20mg</p>
             </div>
           </div>
@@ -390,7 +390,7 @@ function SupplementsTab() {
           <div>
             <p className="font-semibold text-amber-700 mb-1">21:00 睡前（搭配希臘優格）</p>
             <div className="space-y-0.5">
-              <p>希臘優格 300g（~30g 蛋白）</p>
+              <p>希臘優格 300g（~28g 蛋白）</p>
               <p>甘胺酸鎂 200mg</p>
             </div>
           </div>

@@ -48,7 +48,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, sort_order) VALUES (
   '鈣 + D3 + K2（Nature Made 250 錠）',
   '碳酸鈣 + 檸檬酸鈣雙鈣源，K2 為 MK-7 型（納豆來源）。防骨鬆 + 防動脈鈣化。產地美國',
-  '每日隨訓練後餐（09:00），D3+K2 協同作用',
+  '每日 2-3 錠隨訓練後餐（09:00），D3+K2 協同作用',
   'NT$759 / 250 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
   'Costco',
@@ -341,7 +341,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, sort_order) VALUES (
   '乳清蛋白 Gold Standard Whey（ON 雙倍巧克力 2.29kg）',
   '每份 31g 粉：24g 蛋白、120kcal、1.5g 脂肪、3g 碳水、130mg 鈣。WPI（分離乳清蛋白）為主要成分，5.5g BCAA',
-  '訓練前 1 份（30g 粉 ≈ 24g 蛋白），訓練後 1.5 份（~40g 粉 ≈ 33g 蛋白）',
+  '訓練前 1 份（~30g 粉 ≈ 24g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 31g 蛋白）',
   'NT$3,268 / 2.29kg',
   'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-5-lbs-2-27-kg/27509',
   'iHerb',
