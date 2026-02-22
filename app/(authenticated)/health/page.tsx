@@ -472,7 +472,7 @@ export default function HealthPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-bold text-gray-900">健康優化計劃</h1>
-      <p className="text-sm text-gray-500">{new Date().getFullYear() - 2001} 歲男性 · 182cm · 73kg · 重訓為主 · 兼顧長壽</p>
+      <p className="text-sm text-gray-500">{new Date().getFullYear() - 2002} 歲男性 · 182cm · 73kg · 重訓為主 · 兼顧長壽</p>
 
       <div className="flex gap-2">
         {tabs.map(({ key, label }) => (
