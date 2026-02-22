@@ -261,7 +261,7 @@ function AntiAgingTab() {
 
       <Section title="營養策略">
         <div className="text-xs text-gray-700 space-y-2">
-          <p><span className="font-semibold">蛋白質目標：~2g/kg = ~146g/天</span>（Peter Attia 認為蛋白質是最重要的長壽巨量營養素）</p>
+          <p><span className="font-semibold">蛋白質目標：~2.7g/kg = ~200g/天</span>（Peter Attia 長壽最低建議 1.6g/kg；增肌期以 2.5-2.7g/kg 為目標）</p>
           <p>採用溫和熱量盈餘（+200-300 kcal），避免極端增/減脂循環</p>
           <p>體脂維持在 10-18% 以減少慢性發炎</p>
           <p>蛋白質分配：每餐 30-50g，每日 3-4 餐</p>
