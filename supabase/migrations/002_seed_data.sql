@@ -26,7 +26,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('VO2 Max 訓練 1 次', 'Peter Attia 4×4 法 — 4 分鐘全力（90-95% HRmax）+ 4 分鐘恢復 × 4 組。週六進行', 'weekly', '運動', 3, 1);
 
 ------------------------------------------------------------
--- Costco 保健品 (3 items)
+-- Costco 保健品 (4 items)
 ------------------------------------------------------------
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -66,6 +66,20 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"vitamin_c":"500mg/錠"}$$::jsonb,
   '線上可訂（常溫配送）。每日 1-2 錠，500 錠可用 8-16 個月，每錠不到 $1。',
   3
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, origin, specs, nutrition, purchase_note, sort_order) VALUES (
+  'Tryall 無調味分離乳清蛋白 2kg',
+  '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每份 25g 含 ~24g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
+  '訓練前 1 份（~30g 粉 ≈ 24g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 31g 蛋白）',
+  '約 NT$1,899~2,199 / 2kg',
+  'https://www.costco.com.tw/Health-Beauty/Supplements/Sports-Performance/Tryall-Whey-Protein-Isolate-Unflavored-2-kg/p/155648',
+  'Costco', 'costco_supplement', 'Tryall',
+  NULL, NULL, NULL, '155648', '台灣（品牌）/ 美國（乳源）',
+  '{"ingredients":"分離乳清蛋白（美國乳源）","form":"無調味粉末","weight":"2kg","features":"無添加糖、甜味劑、人工色素、香料"}'::jsonb,
+  '{"serving_size":"25g","calories":"~120kcal","protein":"~24g","fat":"~2g","carbs":"~4g","bcaa":"~4.7g","protein_pct":"約90%"}'::jsonb,
+  'Costco 線上可訂。每日 ~70g，2kg 約 28 天，每月補貨。無調味可搭配咖啡、黑芝麻粉等調味。',
+  4
 );
 
 ------------------------------------------------------------
@@ -287,22 +301,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 ------------------------------------------------------------
--- iHerb 專業補充品 (8 items)
+-- iHerb 專業補充品 (7 items)
 ------------------------------------------------------------
-
-INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  'Tryall 無調味分離乳清蛋白 2kg',
-  '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每份 25g 含 ~24g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
-  '訓練前 1 份（~30g 粉 ≈ 24g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 31g 蛋白）',
-  '約 NT$1,899~2,199 / 2kg',
-  'https://www.costco.com.tw/Health-Beauty/Supplements/Sports-Performance/Tryall-Whey-Protein-Isolate-Unflavored-2-kg/p/155648',
-  'Costco', 'costco_supplement', 'Tryall',
-  NULL, NULL, NULL, '155648', '台灣（品牌）/ 美國（乳源）',
-  '{"ingredients":"分離乳清蛋白（美國乳源）","form":"無調味粉末","weight":"2kg","features":"無添加糖、甜味劑、人工色素、香料"}'::jsonb,
-  '{"serving_size":"25g","calories":"~120kcal","protein":"~24g","fat":"~2g","carbs":"~4g","bcaa":"~4.7g","protein_pct":"約90%"}'::jsonb,
-  'Costco 線上可訂。每日 ~70g，2kg 約 28 天，每月補貨。無調味可搭配咖啡、黑芝麻粉等調味。從 iHerb 改為 Costco 購買，省去國際運費。',
-  21
-);
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '肌酸 Creatine Monohydrate（CGN 454g）',
