@@ -290,18 +290,17 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 -- iHerb 專業補充品 (8 items)
 ------------------------------------------------------------
 
-INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
-  '乳清蛋白 Gold Standard Whey（ON 雙倍巧克力 2.29kg）',
-  '每份 31g 粉：24g 蛋白、120kcal、1.5g 脂肪、3g 碳水、130mg 鈣。WPI（分離乳清蛋白）為主要成分，5.5g BCAA',
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, origin, specs, nutrition, purchase_note, sort_order) VALUES (
+  'Tryall 無調味分離乳清蛋白 2kg',
+  '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每份 25g 含 ~24g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
   '訓練前 1 份（~30g 粉 ≈ 24g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 31g 蛋白）',
-  'NT$3,268 / 2.29kg',
-  'https://tw.iherb.com/pr/optimum-nutrition-gold-standard-100-whey-double-rich-chocolate-5-lbs-2-27-kg/27509',
-  'iHerb', 'iherb_supplement', 'Optimum Nutrition',
-  'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/opn/opn02866/g/100.jpg',
-  4.7, 32724, 'OPN-02866',
-  $${"ingredients":"蛋白質混合物（分離乳清蛋白、濃縮乳清蛋白、水解乳清蛋白）、鹼化可可粉、向日葵和/或大豆卵磷脂、天然和人工調味料、安賽蜜","form":"粉末","weight":"2.29kg"}$$::jsonb,
-  $${"serving_size":"31g（約1勺）","calories":"120","protein":"24g","fat":"1.5g","saturated_fat":"1g","carbs":"3g","calcium":"130mg","bcaa":"5.5g","eaa":"11g"}$$::jsonb,
-  'iHerb 直送台灣，滿 NT$1,245 免運。每日 ~70g，2.29kg 約 32 天，每月補貨。搭配其他品項湊免運，關注折扣碼。',
+  '約 NT$1,899~2,199 / 2kg',
+  'https://www.costco.com.tw/Health-Beauty/Supplements/Sports-Performance/Tryall-Whey-Protein-Isolate-Unflavored-2-kg/p/155648',
+  'Costco', 'costco_supplement', 'Tryall',
+  NULL, NULL, NULL, '155648', '台灣（品牌）/ 美國（乳源）',
+  '{"ingredients":"分離乳清蛋白（美國乳源）","form":"無調味粉末","weight":"2kg","features":"無添加糖、甜味劑、人工色素、香料"}'::jsonb,
+  '{"serving_size":"25g","calories":"~120kcal","protein":"~24g","fat":"~2g","carbs":"~4g","bcaa":"~4.7g","protein_pct":"約90%"}'::jsonb,
+  'Costco 線上可訂。每日 ~70g，2kg 約 28 天，每月補貨。無調味可搭配咖啡、黑芝麻粉等調味。從 iHerb 改為 Costco 購買，省去國際運費。',
   21
 );
 
@@ -316,7 +315,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 29306, 'CGN-01059',
   $${"ingredients":"一水肌酸","form":"無調味粉末","weight":"454g"}$$::jsonb,
   $${"serving_size":"5g","creatine_monohydrate":"5g"}$$::jsonb,
-  'iHerb 直送，建議與乳清同時下單。每日 5g，454g 可用 3 個月。CGN 自有品牌常有額外折扣。',
+  'iHerb 直送。每日 5g，454g 可用 3 個月。CGN 自有品牌常有額外折扣。搭配其他 iHerb 品項湊免運。',
   22
 );
 
