@@ -5,9 +5,9 @@
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count) VALUES
   ('07:00 起床 & 戶外光照', '戶外光照 10-20 分鐘（不戴太陽眼鏡），觸發皮質醇覺醒反應', 'daily', '睡眠', 1, 1),
   ('07:05 補水 & 電解質', '500ml 室溫水 + 少許碘鹽 + 檸檬汁', 'daily', '飲食', 2, 1),
-  ('07:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）', 'daily', '飲食', 3, 1),
+  ('07:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '飲食', 3, 1),
   ('08:30 咖啡 + L-Theanine', '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）', 'daily', '飲食', 4, 1),
-  ('09:00 訓練後早餐 + 補充品', '乳清蛋白 ~40g 粉（≈31g 蛋白）+ 肌酸 5g + 碳水 80-105g；魚油 3 顆、D3 5000IU、鈣+D3+K2 1 錠、維他命 C、葉黃素 20mg', 'daily', '飲食', 5, 1),
+  ('09:00 訓練後早餐 + 補充品', '乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g + 碳水 80-105g；魚油 3 顆、D3 5000IU、鈣+D3+K2 1 錠、維他命 C、葉黃素 20mg', 'daily', '飲食', 5, 1),
   ('13:00 午餐', '蛋白質 40-50g + 十字花科蔬菜', 'daily', '飲食', 7, 1),
   ('14:00 銅 2mg', '與鋅間隔 4hr+（鋅在 18:00 晚餐服用）', 'daily', '補充品', 8, 1),
   ('18:00 晚餐 + 鋅 25mg', '蛋白質 + 十字花科蔬菜 + 原型碳水。進食順序：纖維→蛋白→碳水。鋅 25mg 隨餐服用', 'daily', '飲食', 9, 1),
@@ -70,14 +70,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   'Tryall 無調味分離乳清蛋白 2kg',
-  '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每份 25g 含 ~24g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
-  '訓練前 1 份（~30g 粉 ≈ 24g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 31g 蛋白）',
+  '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每 30g 粉含 ~27g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
+  '訓練前 1 份（~30g 粉 ≈ 27g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 36g 蛋白）',
   '約 NT$1,899~2,199 / 2kg',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Sports-Performance/Tryall-Whey-Protein-Isolate-Unflavored-2-kg/p/155648',
   'Costco', 'costco_supplement', 'Tryall',
   NULL, NULL, NULL, '155648', '台灣（品牌）/ 美國（乳源）',
   '{"ingredients":"分離乳清蛋白（美國乳源）","form":"無調味粉末","weight":"2kg","features":"無添加糖、甜味劑、人工色素、香料"}'::jsonb,
-  '{"serving_size":"25g","calories":"~120kcal","protein":"~24g","fat":"~2g","carbs":"~4g","bcaa":"~4.7g","protein_pct":"約90%"}'::jsonb,
+  '{"serving_size":"30g","calories":"~120kcal","protein":"~27g","fat":"~2g","carbs":"~3g","bcaa":"~5.3g","protein_pct":"約90%"}'::jsonb,
   'Costco 線上可訂。每日 ~70g，2kg 約 28 天，每月補貨。無調味可搭配咖啡、黑芝麻粉等調味。',
   4
 );
@@ -113,13 +113,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  '冷凍青花菜（Nature''s Touch 454g×4）',
+  '冷凍綠花椰菜（Nature''s Touch 454g×4）',
   '十字花科蔬菜，富含蘿蔔硫素 Sulforaphane（Nrf2 激活劑）。切碎後靜置 40 分鐘可最大化黑芥子酶轉化。產地厄瓜多',
   '每日一份',
   'NT$329 / 454g×4',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Fruits-Vegetables/Natures-Touch-Frozen-Broccoli-454-g-X-4-Pack/p/122199',
   'Costco', 'costco_food', 'Nature''s Touch', '厄瓜多',
-  $${"ingredients":"青花菜","weight":"1816公克","count":"454公克 X 4包","storage":"請冷凍-18℃保存","cooking":"取出建議份量一小袋(454公克)放入微波爐加熱5-6分鐘，或連同250毫升水倒入鍋中加熱5-6分鐘，即可食用。"}$$::jsonb,
+  $${"ingredients":"綠花椰菜","weight":"1816公克","count":"454公克 X 4包","storage":"請冷凍-18℃保存","cooking":"取出建議份量一小袋(454公克)放入微波爐加熱5-6分鐘，或連同250毫升水倒入鍋中加熱5-6分鐘，即可食用。"}$$::jsonb,
   '{}'::jsonb,
   '線上可訂（冷凍配送）。每日一袋 454g，4 袋約 4 天用完。每週買 1 包即可（佔冷凍約 3L），不需囤貨。',
   6

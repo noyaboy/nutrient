@@ -358,7 +358,7 @@ function SupplementsTab() {
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">07:15 訓練前</p>
-            <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈24g 蛋白）</p>
+            <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
@@ -367,7 +367,7 @@ function SupplementsTab() {
           <div>
             <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
             <div className="space-y-0.5">
-              <p>乳清蛋白 ~40g 粉（≈31g 蛋白）+ 肌酸 5g</p>
+              <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
               <p>維他命 D3 5000 IU</p>
               <p>鈣 + D3 + K2（1 錠）</p>
