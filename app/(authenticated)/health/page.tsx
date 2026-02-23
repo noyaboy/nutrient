@@ -397,35 +397,19 @@ function SupplementsTab() {
         </div>
       </Section>
 
-      <Section title="吸收衝突與建議">
+      <Section title="搭配原理">
         <div className="text-xs text-gray-700 space-y-2">
-          <div className="bg-emerald-50 rounded-lg p-3">
-            <p className="font-semibold text-emerald-800 mb-1">維他命 D3 總量：~2,150 IU（安全範圍）</p>
-            <p className="text-emerald-700">鈣+D3+K2 每錠含 150 IU D3（每日 1 錠 = 150 IU）+ 額外 2000 IU = 每日約 2,150 IU。低於 IOM UL（4000 IU），屬保守安全劑量。建議每年驗血 25(OH)D，目標 40-60 ng/mL。</p>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="amber">鈣 vs 鋅</Tag>
-            <span className="flex-1">鈣和鋅競爭吸收 — 已分開（鈣訓練後/鋅晚餐）</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="amber">鈣 vs 鎂</Tag>
-            <span className="flex-1">高劑量鈣抑制鎂吸收 — 已分開（鈣訓練後/鎂睡前）</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="amber">鋅 vs 銅</Tag>
-            <span className="flex-1">鋅誘導金屬硫蛋白阻擋銅吸收 — 已分開 4+ 小時（銅午後/鋅晚餐）</span>
-          </div>
           <div className="flex items-start gap-2">
             <Tag color="green">D3 + K2</Tag>
-            <span className="flex-1">協同作用：D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈</span>
+            <span className="flex-1">D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="green">維他命 C + 魚油</Tag>
-            <span className="flex-1">維他命 C 的抗氧化保護 Omega-3 免受氧化降解</span>
+            <span className="flex-1">維他命 C 抗氧化保護 Omega-3 免受氧化降解</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="green">L-Theanine + 咖啡</Tag>
-            <span className="flex-1">L-Theanine 緩衝咖啡因焦慮副作用，搭配 200-300mg 咖啡因皆有效</span>
+            <span className="flex-1">L-Theanine 緩衝咖啡因焦慮，達到平靜專注</span>
           </div>
         </div>
       </Section>
