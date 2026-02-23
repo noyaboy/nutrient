@@ -369,7 +369,7 @@ function SupplementsTab() {
             <div className="space-y-0.5">
               <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
               <p>魚油 3 顆（2100mg EPA+DHA）</p>
-              <p>維他命 D3 5000 IU</p>
+              <p>維他命 D3 2000 IU</p>
               <p>鈣 + D3 + K2（1 錠）</p>
               <p>維他命 C 500-1000mg</p>
               <p>葉黃素 20mg</p>
@@ -399,9 +399,9 @@ function SupplementsTab() {
 
       <Section title="吸收衝突與建議">
         <div className="text-xs text-gray-700 space-y-2">
-          <div className="bg-red-50 rounded-lg p-3">
-            <p className="font-semibold text-red-800 mb-1">注意：維他命 D3 重複攝取</p>
-            <p className="text-red-700">鈣+D3+K2 每錠含 150 IU D3（每日 1 錠 = 150 IU）+ 額外 5000 IU = 每日約 5,150 IU。超過 IOM UL（4000 IU）但低於內分泌學會安全上限（10,000 IU）。建議驗血 25(OH)D，目標 40-60 ng/mL，如正常可減至 1000-2000 IU 維持劑量。</p>
+          <div className="bg-emerald-50 rounded-lg p-3">
+            <p className="font-semibold text-emerald-800 mb-1">維他命 D3 總量：~2,150 IU（安全範圍）</p>
+            <p className="text-emerald-700">鈣+D3+K2 每錠含 150 IU D3（每日 1 錠 = 150 IU）+ 額外 2000 IU = 每日約 2,150 IU。低於 IOM UL（4000 IU），屬保守安全劑量。建議每年驗血 25(OH)D，目標 40-60 ng/mL。</p>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="amber">鈣 vs 鋅</Tag>
