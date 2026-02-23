@@ -7,7 +7,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('07:05 補水 & 電解質', '500ml 室溫水 + 少許碘鹽 + 檸檬汁', 'daily', '飲食', 2, 1),
   ('07:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '飲食', 3, 1),
   ('08:30 咖啡 + L-Theanine', '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）', 'daily', '飲食', 4, 1),
-  ('09:00 訓練後早餐 + 補充品', '乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g + 碳水 80-105g；魚油 3 顆、D3 5000IU、鈣+D3+K2 1 錠、維他命 C、葉黃素 20mg', 'daily', '飲食', 5, 1),
+  ('09:00 訓練後早餐 + 補充品', '乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g + 碳水 80-105g；魚油 3 顆、D3 2000IU、鈣+D3+K2 1 錠、維他命 C、葉黃素 20mg', 'daily', '飲食', 5, 1),
   ('13:00 午餐', '蛋白質 40-50g + 十字花科蔬菜', 'daily', '飲食', 7, 1),
   ('14:00 銅 2mg', '與鋅間隔 4hr+（鋅在 18:00 晚餐服用）', 'daily', '補充品', 8, 1),
   ('18:00 晚餐 + 鋅 25mg', '蛋白質 + 十字花科蔬菜 + 原型碳水。進食順序：纖維→蛋白→碳水。鋅 25mg 隨餐服用', 'daily', '飲食', 9, 1),
@@ -95,7 +95,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '全佑牧場', '台灣',
   $${"count":"30入","storage":"冷藏 7°C 以下，離開冷藏時間請勿超過30分鐘，開封後請盡速使用","warehouse_only":true}$$::jsonb,
   '{}'::jsonb,
-  '賣場限定，無法線上訂。每日 3-4 顆，30 入約 7-10 天。選蛋殼完整、生產日期最近的。',
+  '賣場限定，無法線上訂。每日 3-4 顆，30 入約 7-10 天。絕對不要把 30 入紙托直接塞冰箱——買一個雙層抽屜式雞蛋盒（寬約 15cm），貼齊冷藏最底層側邊，上方平面還能繼續疊放保鮮盒。',
   4
 );
 
@@ -108,7 +108,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '挪威',
   $${"ingredients":"養殖鮭魚、水、食鹽","weight":"1.36公斤","storage":"請冷凍-18℃保存。","allergens":"本產品含有鮭魚，食物過敏者，請注意。","cooking":"烤：將烤箱預熱至200℃，將解凍後的鮭魚調味後放在烤盤上烤約10-12分，或直到中心溫度達63℃。"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（冷凍配送）。1.36kg 約 5-6 份，每 2 週買 1 包。買回立即分裝 5-6 份 zip bag（佔冷凍約 2.5L），每 2-3 天取 1 份冷藏解凍。避免與雞胸肉同週購買。',
+  '冷凍庫主力，每 2 週線上訂 1 包（冷凍配送）。買回立即分裝 5-6 份 zip bag（佔冷凍約 2.5L），每 2-3 天取 1 份移至冷藏解凍。冷凍庫僅 7L，鮭魚是唯一需要長期冷凍的高價值食材。',
   5
 );
 
@@ -121,7 +121,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', 'Nature''s Touch', '厄瓜多',
   $${"ingredients":"綠花椰菜","weight":"1816公克","count":"454公克 X 4包","storage":"請冷凍-18℃保存","cooking":"取出建議份量一小袋(454公克)放入微波爐加熱5-6分鐘，或連同250毫升水倒入鍋中加熱5-6分鐘，即可食用。"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（冷凍配送）。每日一袋 454g，4 袋約 4 天用完。每週買 1 包即可（佔冷凍約 3L），不需囤貨。',
+  '小冰箱請勿買冷凍版（佔冷凍 3L 直接爆倉）。改在傳統市場或超市買新鮮綠花椰菜，每次 2-3 顆，切成小朵後靜置 40 分鐘（最大化蘿蔔硫素），裝入有瀝水網底的長方形保鮮盒，冷藏可放 3-4 天。每週補貨 1-2 次。',
   6
 );
 
@@ -170,7 +170,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
   'Costco', 'costco_food', NULL, NULL,
   '{}'::jsonb, '{}'::jsonb,
-  '賣場蔬果區散裝。選外皮鮮黃有光澤。每日半顆約可用 3-4 週。冷藏保存較持久。',
+  '賣場蔬果區散裝。選外皮鮮黃有光澤。整顆放保鮮抽屜，切半後用矽膠套包住切面冷藏。每日半顆，約可用 3-4 週。',
   10
 );
 
@@ -183,7 +183,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '越南',
   $${"ingredients":"腰果,杏仁,開心果,夏威夷果仁,巴西堅果,花生油,海鹽","weight":"1.13公斤","storage":"未開封時請存放於陰涼乾燥處,開封後請冷藏並請儘速食用完畢","allergens":"本產品含有花生及堅果類製品，食物過敏者請留意","notes":"可能含有堅果碎殼，食用時請小心"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（常溫配送）。每日 30g，1.13kg 約 5-6 週。開封後冷藏防油耗味。含花生油，過敏者注意。',
+  '線上可訂（常溫配送）。每日 30g，1.13kg 約 5-6 週。原廠大圓罐浪費空間——開封後分裝 1-2 週份量到方形密封盒或夾鏈袋塞冷藏，剩餘留原罐常溫陰涼處。含花生油，過敏者注意。',
   11
 );
 
@@ -196,7 +196,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '美國',
   $${"ingredients":"巴氏殺菌發酵脫脂牛奶(巴氏殺菌脫脂牛奶,乳酸菌), 乳酸菌(Lactobacillus bulgaricus, Streptococcus thermophilus, Lactobacillus acidophilus, Bifidobacterium lactis, Lactobacillus casei)","weight":"907公克 X 2入","storage":"冷藏 4°C 以下，開封後請盡速食用完畢","allergens":"本產品含牛奶，食物過敏者請留意","warehouse_only":true,"notes":"無防腐劑、無色素、無麩質、無人工香料、無添加糖"}$$::jsonb,
   $${"protein_per_100g":"9.4g"}$$::jsonb,
-  '賣場限定，無法線上訂。每日 200-300g，907g×2 約 6-9 天，每週補貨。冷藏乳品區，留意效期。',
+  '賣場限定，無法線上訂。每日 200-300g，907g×2 約 6-9 天，每週補貨。兩罐圓筒無法改形狀，緊靠冷藏室最上層深處放置（最低溫區），前方空間留給泡菜疊放。',
   12
 );
 
@@ -209,7 +209,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '宗家府', '韓國',
   $${"ingredients":"白菜,蘿蔔,米澱粉,辣椒,大蒜,韭菜,果糖,昆布萃取物,鹽,大蔥,鰹魚萃取物,梨,鯷魚醬(鯷魚,鹽),蝦醬(蝦,鹽,鯷魚,玉米糖膠),甜味劑(D-山梨醇,麥芽糖醇),L-麩酸鈉","weight":"720公克","count":"120公克 X 6入","storage":"0°C-7°C","allergens":"本產品含有魚,蝦類及其製品,不適合其過敏體質者食用.","warehouse_only":true}$$::jsonb,
   '{}'::jsonb,
-  '賣場限定，無法線上訂。每日 50-100g，120g×6 約 7-14 天，每 1-2 週補貨。',
+  '賣場限定，無法線上訂。每日 50-100g，120g×6 約 7-14 天，每 1-2 週補貨。小圓罐適合見縫插針：兩兩疊放在優格罐前方，或利用層板間的零碎高度。',
   13
 );
 
@@ -233,7 +233,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
   'Costco', 'costco_food', NULL, NULL,
   '{}'::jsonb, '{}'::jsonb,
-  '建議買新鮮版：Costco 蔬果區或傳統市場，每次 300-400g 放冷藏，3-5 天內用完，每週補貨。冷凍版 500g×6 佔冷凍室 70%，小冰箱不適合。',
+  '絕對不買冷凍版（500g×6 佔冷凍室 70%）。每週在傳統市場或 Costco 蔬果區買 300-400g 新鮮菠菜，放入大保鮮袋、裡面墊一張廚房紙巾吸濕，平放於保鮮抽屜底部，3-5 天內用完。',
   15
 );
 
@@ -271,7 +271,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '大成', '台灣',
   $${"ingredients":"清雞胸肉","weight":"5公斤","count":"2.5公斤 X 2入","storage":"冷凍-18度保存","notes":"請保持冷凍直至食用前，解凍後請勿重覆冷凍，以免失去新鮮。"}$$::jsonb,
   $${"protein_per_100g":"約31g"}$$::jsonb,
-  '線上可訂（冷凍配送，廠商出貨）。2.5kg×2 可用 3-4 週，每月訂一箱。小冰箱無法整袋冷凍：買回當天全部煮熟，分裝 zip bag 壓扁，冷藏 3-4 天份 + 冷凍其餘（約佔 3L）。',
+  '線上可訂（冷凍配送）。買回當天全部煮熟，分裝長方形保鮮盒：冷藏 4-5 天份（放最上層靠冷凍處）+ 極少量壓扁冷凍（最多 1-1.5L）。或改每週 2 次在全聯/超市買冷藏鮮雞胸，隨買隨煮，完全不佔冷凍庫。',
   18
 );
 
@@ -380,8 +380,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
-  '維他命 D3 5000IU（Doctor''s Best 360 顆）',
-  '鈣+D3+K2 複合錠每錠含 150 IU D3（每日 1 錠 = 150 IU），額外補充 5000 IU，每日總計約 5,150 IU。超過 IOM UL（4000 IU）但低於內分泌學會安全上限（10,000 IU）。目標血清 40-60 ng/mL。360 顆大包裝更划算（-32%/顆）',
+  '維他命 D3 2000IU（Doctor''s Best 360 顆）',
+  '每日補充 2000 IU + 鈣+D3+K2 錠 150 IU = 總計約 2,150 IU/天，低於 IOM UL（4000 IU），屬保守安全劑量。目標血清 25(OH)D 40-60 ng/mL。360 顆大包裝更划算',
   '每日 1 顆隨訓練後餐（需搭配油脂吸收）',
   'NT$457 / 360 顆',
   'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
@@ -389,7 +389,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/drb/drb00250/g/114.jpg',
   4.9, 75650, 'DRB-00250',
   $${"form":"軟凝膠","count":"360顆"}$$::jsonb,
-  $${"serving_size":"1顆","vitamin_d3":"125微克（5000IU）"}$$::jsonb,
+  $${"serving_size":"1顆","vitamin_d3":"50微克（2000IU）"}$$::jsonb,
   'iHerb 直送。每日 1 顆，360 顆可用整年。大包裝每顆僅 ~$1.27。',
   27
 );
