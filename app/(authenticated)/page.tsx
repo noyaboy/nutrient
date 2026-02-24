@@ -147,7 +147,7 @@ function HealthNotes() {
         </div>
       </Section>
 
-      <Section title="血液檢查（每 6 個月）">
+      <Section title="血液檢查（每 6 個月）→ 補劑調整">
         <div className="text-xs text-gray-700 space-y-2">
           <div>
             <p className="font-semibold text-gray-900 mb-1">核心指標</p>
@@ -158,8 +158,16 @@ function HealthNotes() {
               <p>hs-CRP — 目標 &lt;1.0 mg/L</p>
               <p>Omega-3 指數 — 目標 &gt;8%</p>
               <p>維他命 D [25(OH)D] — 目標 40-60 ng/mL</p>
-              <p>BUN / Creatinine · ALT / AST — 基線追蹤</p>
             </div>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-3 space-y-1">
+            <p className="font-semibold text-blue-800">D3 動態調整</p>
+            <p className="text-blue-700">25(OH)D 達 40-60 ng/mL + 每日晨光曝曬 → D3 2000 IU 減半或改兩天一次</p>
+          </div>
+          <div className="bg-red-50 rounded-lg p-3 space-y-1">
+            <p className="font-semibold text-red-800">代謝壓力監控</p>
+            <p className="text-red-700">BUN / Creatinine（腎功能）· ALT / AST（肝功能）— 監控補充品與高蛋白飲食的代謝壓力</p>
+            <p className="text-red-700 font-medium">一旦數值出現爬升趨勢 → 立刻全面停用非必要合成補劑</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">荷爾蒙指標（每年）</p>

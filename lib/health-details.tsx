@@ -102,10 +102,22 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 2000 IU</p>
-          <p>鈣 + D3 + K2（1 錠）</p>
-          <p>維他命 C 500-1000mg</p>
+          <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
+          <p>鈣 + D3 + K2（1 錠）<span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
+          <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">補充品假期 5+2</p>
+          <p className="text-amber-700">脂溶性營養素（D3）與微量礦物質（鋅、銅）：每週吃 5 天、停 2 天（週末不吃）</p>
+          <p className="text-amber-700">讓身體排毒路徑與受體有喘息空間，防止脂肪組織或肝臟過度蓄積</p>
+          <p className="text-amber-700">水溶性維生素（Vit C）可每日服用，不需休息</p>
+        </div>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">D3 動態調整（依血檢）</p>
+          <p className="text-blue-700">目標：25(OH)D 40-60 ng/mL</p>
+          <p className="text-blue-700">若半年血檢已達標 + 每日確實晨光曝曬 → 可將 D3 2000 IU 減半或改兩天一次</p>
+          <p className="text-blue-700">BUN/Creatinine、ALT/AST 出現爬升趨勢 → 立刻全面停用非必要合成補劑</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-1 mt-1">
           <p className="font-medium text-emerald-800">搭配原理</p>
@@ -149,6 +161,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>銅 2mg</Label>
         <p>與鋅間隔 4 小時以上（銅和鋅在腸道吸收時互相競爭）</p>
         <p>14:00 服用銅 → 18:00 隨晚餐服用鋅 = 完美間隔</p>
+        <Tip>補充品假期 5+2：微量礦物質週一至五服用，週末休息，防止重金屬蓄積</Tip>
       </Detail>
     );
   }
@@ -157,7 +170,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐 + 鋅 25mg</Label>
-        <p>鋅隨餐服用避免噁心，與銅間隔 4hr+</p>
+        <p>鋅隨餐服用避免噁心，與銅間隔 4hr+（<span className="text-amber-600 font-medium">5+2：週一至五服用，週末休息</span>）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">進食順序建議</p>
           <p>蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
@@ -218,12 +231,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     const { zone2Low, zone2High } = getHeartRateZones();
     return (
       <Detail>
-        <Label>Zone 2 有氧（週二晚、週三、週五晚）</Label>
+        <Label>Zone 2 有氧（週三、週六、週日）</Label>
         <p>時間：45-60 分鐘持續運動</p>
         <p>心率：最大心率 60-70%（約 <strong>{zone2Low}-{zone2High} bpm</strong>）</p>
         <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
         <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
-        <Tip>肌力訓練日（週二、週五）的 Zone 2 安排在晚間，與重訓間隔 6hr+。若品質下降可移至週日</Tip>
+        <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週六 VO2 Max 日可將該次 Zone 2 作為暖身/收操的一部分</Tip>
       </Detail>
     );
   }
@@ -304,6 +317,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>第 1 週 RPE 7 → 第 2 週 7.5-8 → 第 3 週 8-8.5 → 第 4 週 8.5-9 → 第 5 週 9-9.5 → 第 6 週 Deload</p>
           <p>減量週：訓練量 50%、RPE 5-6、Zone 2 縮短至 30 分鐘、跳過 VO2 Max</p>
         </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-gray-800">週計劃總覽</p>
+          <p>週一 Upper A · 週二 Lower A · 週三 Zone 2 · 週四 Upper B · 週五 Lower B · 週六 VO2 Max · 週日 Zone 2</p>
+          <p className="text-gray-500">每週：肌力 4 次 · Zone 2 有氧 3 次 · VO2 Max 1 次</p>
+        </div>
       </Detail>
     );
   }
@@ -317,7 +335,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>心率：最大心率 90-95%（約 <strong>{vo2Low}-{vo2High} bpm</strong>）</p>
         <p>器材：衝刺飛輪、划船機或上坡跑</p>
         <p>總時間：含暖身和收操約 45 分鐘</p>
-        <Tip>若本週肌力訓練品質下降，可將週二或週五的 Zone 2 移至週日，確保恢復</Tip>
+        <Tip>週六 VO2 Max + Zone 2 可合併：Zone 2 作為暖身/收操。若體能不佳可將週六 Zone 2 移至週日</Tip>
       </Detail>
     );
   }
