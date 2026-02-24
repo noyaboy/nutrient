@@ -44,14 +44,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '鈣 + D3 + K2（Nature Made 250 錠）',
-  '碳酸鈣 + 檸檬酸鈣雙鈣源，K2 為 MK-7 型（納豆來源）。防骨鬆 + 防動脈鈣化。產地美國',
-  '每日 1 錠隨訓練後餐（09:00），D3+K2 協同作用',
+  '碳酸鈣 + 檸檬酸鈣雙鈣源，K2 為 MK-7 型（納豆來源）。防骨鬆 + 防動脈鈣化。產地美國。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
+  '備用品：僅在當日飲食鈣攝取確認嚴重不足時才服用 1 錠。日常以 D3+K2 為主，不額外補鈣片',
   'NT$759 / 250 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
   'Costco', 'costco_supplement', 'NATURE MADE 萊萃美', '美國',
   $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處，開封後請置於冰箱儲存。","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
   $${"calcium":"500mg/錠","vitamin_d3":"3.75mcg (150IU)/錠","vitamin_k2":"10mcg (MK-7型)/錠"}$$::jsonb,
-  '線上可訂（常溫配送）。每日 1 錠，250 錠可用 8 個月以上，補貨頻率極低。開封後建議冰箱保存。',
+  '線上可訂（常溫配送）。現為備用品（鈣從食物攝取為主），250 錠可用非常久。開封後建議冰箱保存。',
   2
 );
 
@@ -381,8 +381,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 D3 2000IU（Doctor''s Best 360 顆）',
-  '每日補充 2000 IU + 鈣+D3+K2 錠 150 IU = 總計約 2,150 IU/天，低於 IOM UL（4000 IU），屬保守安全劑量。目標血清 25(OH)D 40-60 ng/mL。360 顆大包裝更划算',
-  '每日 1 顆隨訓練後餐（需搭配油脂吸收）',
+  '每日 2000 IU（5+2：週一至五服用，週末休息）。目標血清 25(OH)D 40-60 ng/mL。血檢達標+每日晨光曝曬→可減半或改兩天一次。360 顆大包裝更划算',
+  '每日 1 顆隨訓練後餐（需搭配油脂吸收）。5+2 週末休息',
   'NT$457 / 360 顆',
   'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
   'iHerb', 'iherb_supplement', 'Doctor''s Best',
