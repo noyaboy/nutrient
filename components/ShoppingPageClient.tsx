@@ -72,7 +72,7 @@ function TimingTable() {
     { time: '13:00 午餐', items: '蛋白質 30-40g + 十字花科蔬菜' },
     { time: '14:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
     { time: '18:00 晚餐', items: '蛋白質 30-40g + 低 FODMAP 蔬菜 + 鋅 25mg' },
-    { time: '20:30 睡前', items: '酪蛋白 ~32g 粉（≈25g 蛋白）+甘胺酸鎂 200mg' },
+    { time: '20:30 睡前', items: '豌豆蛋白 ~32g 粉（≈25g 蛋白）+甘胺酸鎂 200mg' },
   ];
 
   return (

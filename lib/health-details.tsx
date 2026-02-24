@@ -191,7 +191,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
-          <p>酪蛋白 ~32g 粉（≈25g 蛋白）— 緩釋蛋白，整夜供應 MPS（減量以降低夜間消化負擔與夜尿風險）</p>
+          <p>豌豆蛋白 ~32g 粉（≈25g 蛋白）— 中速消化，無乳製品，對睡眠更友善</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 — 肌肉放鬆、GABA 受體調節</p>
@@ -200,7 +200,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">監測指標</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
-          <p className="text-red-700">若夜間腸胃蠕動過快 → 酪蛋白減半或改為較少量的希臘優格</p>
+          <p className="text-red-700">若夜間腸胃蠕動過快 → 豌豆蛋白減半或改為較少量的希臘優格</p>
           <p className="text-red-700">Ashwagandha 使用第 6-8 週留意情緒冷漠（Anhedonia）或早晨無力起床 → 出現則提前進入停用期</p>
         </div>
       </Detail>
