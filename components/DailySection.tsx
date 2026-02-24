@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react';
 import { toggleCompletion } from '@/app/actions/completions';
 import TaskItem from './TaskItem';
 import RecipeCard from './RecipeCard';
+import { getHealthDetails } from '@/lib/health-details';
 import type { PlanItemWithCompletion, DailyRecipes, Recipe } from '@/lib/types';
 
 interface DailySectionProps {
@@ -152,9 +153,10 @@ export default function DailySection({ items, targetDate, recipes }: DailySectio
                 <div className="space-y-2 mt-1">
                   {group.items.map(item => {
                     const recipe = getRecipeForItem(item, recipes);
+                    const details = getHealthDetails(item.title);
                     return (
                       <div key={item.id} className="space-y-2">
-                        <TaskItem item={item} targetDate={targetDate} />
+                        <TaskItem item={item} targetDate={targetDate} details={details} />
                         {recipe && <RecipeCard recipe={recipe} />}
                       </div>
                     );

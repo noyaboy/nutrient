@@ -1,0 +1,326 @@
+import React from 'react';
+
+function Detail({ children }: { children: React.ReactNode }) {
+  return <div className="text-xs text-gray-600 space-y-1.5">{children}</div>;
+}
+
+function Label({ children }: { children: React.ReactNode }) {
+  return <p className="text-xs font-semibold text-gray-800">{children}</p>;
+}
+
+function Tip({ children }: { children: React.ReactNode }) {
+  return <p className="text-xs text-amber-700 bg-amber-50 rounded-lg px-3 py-2">{children}</p>;
+}
+
+function Tag({ children, color = 'gray' }: { children: React.ReactNode; color?: string }) {
+  const colors: Record<string, string> = {
+    green: 'bg-emerald-100 text-emerald-700',
+    blue: 'bg-blue-100 text-blue-700',
+    amber: 'bg-amber-100 text-amber-700',
+    gray: 'bg-gray-100 text-gray-700',
+    red: 'bg-red-100 text-red-700',
+  };
+  return <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${colors[color]}`}>{children}</span>;
+}
+
+function ExerciseTable({ title, exercises }: { title: string; exercises: { name: string; sets: string; rest: string }[] }) {
+  return (
+    <div>
+      <p className="text-xs font-semibold text-emerald-700 mb-2">{title}</p>
+      <div className="space-y-1">
+        {exercises.map((ex, i) => (
+          <div key={i} className="flex items-center gap-2 text-xs">
+            <span className="text-gray-400 w-4 flex-shrink-0">{i + 1}.</span>
+            <span className="flex-1 text-gray-800 font-medium">{ex.name}</span>
+            <span className="text-gray-500 flex-shrink-0">{ex.sets}</span>
+            <span className="text-gray-400 flex-shrink-0 w-12 text-right">{ex.rest}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function getHeartRateZones() {
+  const age = new Date().getFullYear() - 2002;
+  const hrMax = 220 - age;
+  return {
+    zone2Low: Math.round(hrMax * 0.6),
+    zone2High: Math.round(hrMax * 0.7),
+    vo2Low: Math.round(hrMax * 0.9),
+    vo2High: Math.round(hrMax * 0.95),
+  };
+}
+
+export function getHealthDetails(title: string): React.ReactNode | null {
+  // Match by key phrase in title
+  if (title.includes('起床') && title.includes('光照')) {
+    return (
+      <Detail>
+        <Label>晨光曝曬指南</Label>
+        <p>起床後 30-60 分鐘內到戶外曝曬陽光（不要隔著玻璃、不戴太陽眼鏡）</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-blue-800">曝曬時長</p>
+          <p className="text-blue-700">晴天：5 分鐘 / 陰天：10 分鐘 / 多雲：20-30 分鐘</p>
+        </div>
+        <p>觸發皮質醇覺醒反應 → 設定生物鐘 → 改善夜間褪黑激素分泌</p>
+        <p>下午額外 20-30 分鐘日曬（皮膚暴露）可提升睪固酮</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('訓練前') && title.includes('營養')) {
+    return (
+      <Detail>
+        <Label>訓練前營養</Label>
+        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）</p>
+        <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
+        <Tip>下肢大重量日（深蹲/硬舉）若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
+      </Detail>
+    );
+  }
+
+  if (title.includes('咖啡') && title.includes('Theanine')) {
+    return (
+      <Detail>
+        <Label>咖啡因 + L-Theanine</Label>
+        <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
+        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2">
+          <p className="text-blue-700">偏好更平靜專注可調為 1:2 比例（如 100mg 咖啡因 + 200mg L-Theanine）</p>
+        </div>
+        <p>L-Theanine 緩衝咖啡因焦慮，達到平靜專注狀態</p>
+        <p className="text-red-600 font-medium">13:00 前為咖啡因截止時間（保護睡眠品質）</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('訓練後') && title.includes('補充品')) {
+    return (
+      <Detail>
+        <Label>訓練後補充品（隨含油脂餐點服用）</Label>
+        <div className="space-y-0.5">
+          <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
+          <p>魚油 3 顆（2100mg EPA+DHA）</p>
+          <p>維他命 D3 2000 IU</p>
+          <p>鈣 + D3 + K2（1 錠）</p>
+          <p>維他命 C 500-1000mg</p>
+          <p>葉黃素 20mg</p>
+        </div>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-1 mt-1">
+          <p className="font-medium text-emerald-800">搭配原理</p>
+          <div className="flex items-start gap-2">
+            <Tag color="green">D3 + K2</Tag>
+            <span className="flex-1 text-emerald-700">D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Tag color="green">Vit C + 魚油</Tag>
+            <span className="flex-1 text-emerald-700">維他命 C 抗氧化保護 Omega-3 免受氧化降解</span>
+          </div>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('午餐') && !title.includes('銅')) {
+    return (
+      <Detail>
+        <Label>午餐營養策略</Label>
+        <p>蛋白質 40-50g + 十字花科蔬菜</p>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.2g/kg（MPS 最大化區間）</p>
+          <p>增肌期上限 2.7g/kg（~200g/天）</p>
+          <p>每餐 30-50g、每日 3-4 餐均勻分配</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">抗發炎食物</p>
+          <p className="text-amber-700">十字花科蔬菜（花椰菜）— Nrf2 活化</p>
+          <p className="text-amber-700">鮭魚（EPA/DHA Omega-3）</p>
+          <p className="text-amber-700">發酵食物（希臘優格、泡菜）— 腸道多樣性</p>
+          <p className="text-amber-700">堅果 — 抗發炎脂肪和礦物質</p>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('銅') && title.includes('2mg')) {
+    return (
+      <Detail>
+        <Label>銅 2mg</Label>
+        <p>與鋅間隔 4 小時以上（銅和鋅在腸道吸收時互相競爭）</p>
+        <p>14:00 服用銅 → 18:00 隨晚餐服用鋅 = 完美間隔</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('晚餐') && title.includes('鋅')) {
+    return (
+      <Detail>
+        <Label>晚餐 + 鋅 25mg</Label>
+        <p>鋅隨餐服用避免噁心，與銅間隔 4hr+</p>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-gray-800">進食順序建議</p>
+          <p>蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">營養策略</p>
+          <p className="text-amber-700">溫和熱量盈餘（+200-300 kcal）避免極端增/減脂循環</p>
+          <p className="text-amber-700">體脂維持在 10-18% 以減少慢性發炎</p>
+          <p className="text-amber-700">抗發炎食物：十字花科蔬菜、鮭魚、發酵食物、堅果</p>
+        </div>
+        <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('藍光管理')) {
+    return (
+      <Detail>
+        <Label>藍光管理 & 睡眠衛生</Label>
+        <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-indigo-800">睡眠衛生清單</p>
+          <p className="text-indigo-700">睡前 60 分鐘關閉螢幕（或戴防藍光眼鏡）</p>
+          <p className="text-indigo-700">室溫 18-19°C（涼爽環境增加深層睡眠和生長激素分泌）</p>
+          <p className="text-indigo-700">完全遮光（全遮光窗簾 + 遮蓋 LED 指示燈）</p>
+          <p className="text-indigo-700">下午 13:00 後不攝取咖啡因</p>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('睡前') && title.includes('甘胺酸鎂')) {
+    return (
+      <Detail>
+        <Label>睡前營養 + 睡眠優化</Label>
+        <p>希臘優格 300g（~28g 蛋白）+ 甘胺酸鎂 200mg</p>
+        <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-indigo-800">睡眠優化</p>
+          <p className="text-indigo-700">目標 7.5-8.5 小時實際睡眠（不只是躺在床上的時間）</p>
+          <p className="text-indigo-700">固定起床時間比固定就寢時間更重要（每天同一時間起床）</p>
+          <p className="text-indigo-700">甘胺酸鎂有助肌肉放鬆和入睡品質</p>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('準時入睡')) {
+    return (
+      <Detail>
+        <Label>準時入睡</Label>
+        <p>理想就寢時間：22:00-23:00 入睡</p>
+        <p className="font-medium">固定起床時間 &gt; 固定就寢時間（最核心的晝夜節律原則）</p>
+        <p>慢性睡眠不足（&lt;6 小時）與胰島素阻抗、認知衰退、心血管疾病相關</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('Zone 2') && title.includes('有氧')) {
+    const { zone2Low, zone2High } = getHeartRateZones();
+    return (
+      <Detail>
+        <Label>Zone 2 有氧（週二晚、週三、週五晚）</Label>
+        <p>時間：45-60 分鐘持續運動</p>
+        <p>心率：最大心率 60-70%（約 <strong>{zone2Low}-{zone2High} bpm</strong>）</p>
+        <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
+        <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
+        <Tip>肌力訓練日（週二、週五）的 Zone 2 安排在晚間，與重訓間隔 6hr+。若品質下降可移至週日</Tip>
+      </Detail>
+    );
+  }
+
+  if (title.includes('肌力訓練')) {
+    return (
+      <Detail>
+        <Label>四天課表（Upper/Lower Split）</Label>
+        <div className="space-y-1 text-xs text-gray-700">
+          {[
+            { day: '週一', content: 'Upper A（力量）', tag: '力量', color: 'green' as const },
+            { day: '週二', content: 'Lower A（力量）', tag: '力量', color: 'green' as const },
+            { day: '週四', content: 'Upper B（肌肥大）', tag: '肌肥大', color: 'blue' as const },
+            { day: '週五', content: 'Lower B（肌肥大）', tag: '肌肥大', color: 'blue' as const },
+          ].map(({ day, content, tag, color }) => (
+            <div key={day} className="flex items-center gap-2 py-1 border-b border-gray-50 last:border-0">
+              <span className="font-semibold text-gray-900 w-10">{day}</span>
+              <span className="flex-1">{content}</span>
+              <Tag color={color}>{tag}</Tag>
+            </div>
+          ))}
+        </div>
+
+        <div className="space-y-3 mt-3">
+          <ExerciseTable
+            title="Upper A — 週一（力量）~65 分鐘"
+            exercises={[
+              { name: '槓鈴臥推 Bench Press', sets: '4×5-8', rest: '3-4 min' },
+              { name: '槓鈴划船 Bent-Over Row', sets: '4×6-8', rest: '3 min' },
+              { name: '肩推 Overhead Press', sets: '3×6-10', rest: '2-3 min' },
+              { name: '負重引體向上 Weighted Chin-Up', sets: '3×6-10', rest: '2-3 min' },
+              { name: '斜板彎舉 Incline DB Curl', sets: '3×8-12', rest: '90 sec' },
+              { name: '過頭三頭伸展 Overhead Tricep Extension', sets: '3×10-12', rest: '90 sec' },
+              { name: '面拉 Face Pull', sets: '3×15-20', rest: '60 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Lower A — 週二（力量）~60 分鐘"
+            exercises={[
+              { name: '槓鈴深蹲 Back Squat', sets: '4×5-8', rest: '3-4 min' },
+              { name: '羅馬尼亞硬舉 Romanian Deadlift', sets: '3×8-10', rest: '2-3 min' },
+              { name: '保加利亞分腿蹲 Bulgarian Split Squat', sets: '3×8-12', rest: '90 sec' },
+              { name: '坐姿腿彎舉 Seated Leg Curl', sets: '3×10-12', rest: '90 sec' },
+              { name: '站姿小腿推舉 Standing Calf Raise', sets: '4×10-15', rest: '60 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Upper B — 週四（肌肥大）~65 分鐘"
+            exercises={[
+              { name: '上斜啞鈴臥推 Incline DB Press', sets: '3×8-12', rest: '2-3 min' },
+              { name: '纜繩飛鳥 Cable Fly', sets: '3×12-15', rest: '90 sec' },
+              { name: '胸靠划船 Chest-Supported Row', sets: '4×8-12', rest: '2 min' },
+              { name: '滑輪下拉 Lat Pulldown', sets: '3×10-12', rest: '2 min' },
+              { name: '側平舉 Lateral Raise', sets: '4×12-15', rest: '60 sec' },
+              { name: '槓鈴彎舉 Barbell Curl', sets: '3×8-12', rest: '90 sec' },
+              { name: '纜繩下壓 Cable Pushdown', sets: '3×10-15', rest: '90 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Lower B — 週五（肌肥大）~60 分鐘"
+            exercises={[
+              { name: '腿推 Leg Press', sets: '4×8-12', rest: '2-3 min' },
+              { name: '槓鈴臀推 Barbell Hip Thrust', sets: '3×8-12', rest: '2 min' },
+              { name: '走路弓步 Walking Lunge', sets: '3×10-12', rest: '90 sec' },
+              { name: '俯臥腿彎舉 Lying Leg Curl', sets: '3×10-12', rest: '90 sec' },
+              { name: '坐姿小腿推舉 Seated Calf Raise', sets: '4×12-15', rest: '60 sec' },
+            ]}
+          />
+        </div>
+
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-1 mt-2">
+          <p className="font-medium text-gray-800">漸進式超負荷（雙重遞增法）</p>
+          <p>以處方次數下限開始 → 每次多做 1-2 次 → 所有組數完成上限次數時加重量</p>
+          <p>上肢 +2.5kg / 下肢 +5kg / 隔離動作 +1-2.5kg</p>
+        </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-gray-800">RPE 週期（每 6 週 Deload）</p>
+          <p>第 1 週 RPE 7 → 第 2 週 7.5-8 → 第 3 週 8-8.5 → 第 4 週 8.5-9 → 第 5 週 9-9.5 → 第 6 週 Deload</p>
+          <p>減量週：訓練量 50%、RPE 5-6、Zone 2 縮短至 30 分鐘、跳過 VO2 Max</p>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('VO2 Max')) {
+    const { vo2Low, vo2High } = getHeartRateZones();
+    return (
+      <Detail>
+        <Label>VO2 Max 訓練（週六）</Label>
+        <p>方式：Peter Attia 4×4 法 — 4 分鐘全力 + 4 分鐘恢復，重複 4 組</p>
+        <p>心率：最大心率 90-95%（約 <strong>{vo2Low}-{vo2High} bpm</strong>）</p>
+        <p>器材：衝刺飛輪、划船機或上坡跑</p>
+        <p>總時間：含暖身和收操約 45 分鐘</p>
+        <Tip>若本週肌力訓練品質下降，可將週二或週五的 Zone 2 移至週日，確保恢復</Tip>
+      </Detail>
+    );
+  }
+
+  return null;
+}

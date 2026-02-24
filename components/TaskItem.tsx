@@ -8,9 +8,10 @@ import type { PlanItemWithCompletion } from '@/lib/types';
 interface TaskItemProps {
   item: PlanItemWithCompletion;
   targetDate: string;
+  details?: React.ReactNode;
 }
 
-export default function TaskItem({ item, targetDate }: TaskItemProps) {
+export default function TaskItem({ item, targetDate, details }: TaskItemProps) {
   const [isPending, startTransition] = useTransition();
   const [expanded, setExpanded] = useState(false);
   const isCompleted = !!item.completion;
@@ -61,7 +62,7 @@ export default function TaskItem({ item, targetDate }: TaskItemProps) {
         <span className={`flex-shrink-0 text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
           {item.category}
         </span>
-        {item.description && (
+        {(item.description || details) && (
           <button
             type="button"
             onClick={() => setExpanded(!expanded)}
@@ -76,9 +77,10 @@ export default function TaskItem({ item, targetDate }: TaskItemProps) {
           </button>
         )}
       </div>
-      {expanded && item.description && (
-        <div className="px-4 pb-3 pl-[52px]">
-          <p className="text-sm text-gray-500">{item.description}</p>
+      {expanded && (item.description || details) && (
+        <div className="px-4 pb-3 pl-[52px] space-y-2">
+          {item.description && <p className="text-sm text-gray-500">{item.description}</p>}
+          {details}
         </div>
       )}
     </div>
