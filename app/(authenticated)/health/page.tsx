@@ -1,29 +1,16 @@
-'use client';
+import { Section, TabSwitcher } from '@/components/HealthTabs';
 
-import { useState } from 'react';
+export const dynamic = 'force-dynamic';
 
-type Tab = 'workout' | 'antiaging' | 'supplements';
-
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  const [open, setOpen] = useState(true);
-  return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-4"
-      >
-        <h3 className="text-sm font-bold text-gray-900">{title}</h3>
-        <svg
-          className={`w-4 h-4 text-gray-400 transition-transform ${open ? 'rotate-180' : ''}`}
-          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      {open && <div className="px-4 pb-4 space-y-3">{children}</div>}
-    </div>
-  );
+function Tag({ children, color = 'gray' }: { children: React.ReactNode; color?: string }) {
+  const colors: Record<string, string> = {
+    green: 'bg-emerald-100 text-emerald-700',
+    blue: 'bg-blue-100 text-blue-700',
+    amber: 'bg-amber-100 text-amber-700',
+    gray: 'bg-gray-100 text-gray-700',
+    red: 'bg-red-100 text-red-700',
+  };
+  return <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${colors[color]}`}>{children}</span>;
 }
 
 function ExerciseTable({ title, exercises }: { title: string; exercises: { name: string; sets: string; rest: string }[] }) {
@@ -42,17 +29,6 @@ function ExerciseTable({ title, exercises }: { title: string; exercises: { name:
       </div>
     </div>
   );
-}
-
-function Tag({ children, color = 'gray' }: { children: React.ReactNode; color?: string }) {
-  const colors: Record<string, string> = {
-    green: 'bg-emerald-100 text-emerald-700',
-    blue: 'bg-blue-100 text-blue-700',
-    amber: 'bg-amber-100 text-amber-700',
-    gray: 'bg-gray-100 text-gray-700',
-    red: 'bg-red-100 text-red-700',
-  };
-  return <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${colors[color]}`}>{children}</span>;
 }
 
 function WorkoutTab() {
@@ -419,7 +395,6 @@ function SupplementsTab() {
         </div>
       </Section>
 
-
       <Section title="建議新增補充品">
         <div className="text-xs text-gray-700 space-y-2">
           <div className="flex items-start gap-2">
@@ -450,9 +425,7 @@ function SupplementsTab() {
 }
 
 export default function HealthPage() {
-  const [tab, setTab] = useState<Tab>('workout');
-
-  const tabs: { key: Tab; label: string }[] = [
+  const tabs = [
     { key: 'workout', label: '訓練計劃' },
     { key: 'antiaging', label: '抗老化' },
     { key: 'supplements', label: '補充品' },
@@ -463,26 +436,13 @@ export default function HealthPage() {
       <h1 className="text-xl font-bold text-gray-900">健康優化計劃</h1>
       <p className="text-sm text-gray-500">{new Date().getFullYear() - 2002} 歲男性 · 182cm · 73kg · 重訓為主 · 兼顧長壽</p>
 
-      <div className="flex gap-2">
-        {tabs.map(({ key, label }) => (
-          <button
-            key={key}
-            type="button"
-            onClick={() => setTab(key)}
-            className={`flex-1 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-              tab === key
-                ? 'bg-emerald-600 text-white'
-                : 'bg-gray-100 text-gray-500'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
-      {tab === 'workout' && <WorkoutTab />}
-      {tab === 'antiaging' && <AntiAgingTab />}
-      {tab === 'supplements' && <SupplementsTab />}
+      <TabSwitcher tabs={tabs}>
+        {{
+          workout: <WorkoutTab />,
+          antiaging: <AntiAgingTab />,
+          supplements: <SupplementsTab />,
+        }}
+      </TabSwitcher>
     </div>
   );
 }
