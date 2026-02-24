@@ -30,6 +30,10 @@ export default async function SettingsPage() {
           {UI.nav.logout}
         </button>
       </form>
+
+      <p className="text-center text-[10px] text-gray-300 pt-2">
+        Build: {process.env.NEXT_PUBLIC_BUILD_TIME?.slice(0, 16).replace('T', ' ')}
+      </p>
     </div>
   );
 }
