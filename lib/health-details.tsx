@@ -131,7 +131,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐營養策略</Label>
-        <p>蛋白質 40-50g + 十字花科蔬菜</p>
+        <p>蛋白質 30-40g + 十字花科蔬菜</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
           <p>每餐 30-40g、每日 4-5 餐均勻分配</p>
@@ -159,7 +159,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>晚餐營養策略</Label>
         <p>鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
-        <p className="text-gray-500">腸胃不適時同午餐 FODMAP 策略</p>
+        <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-purple-800">社交豁免權 80/20</p>
@@ -191,7 +191,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
-          <p>酪蛋白 ~64g 粉（≈50g 蛋白）— 緩釋蛋白，整夜供應 MPS</p>
+          <p>酪蛋白 ~32g 粉（≈25g 蛋白）— 緩釋蛋白，整夜供應 MPS（減量以降低夜間消化負擔與夜尿風險）</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 — 肌肉放鬆、GABA 受體調節</p>
@@ -201,6 +201,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-red-800">監測指標</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
           <p className="text-red-700">若夜間腸胃蠕動過快 → 酪蛋白減半或改為較少量的希臘優格</p>
+          <p className="text-red-700">Ashwagandha 使用第 6-8 週留意情緒冷漠（Anhedonia）或早晨無力起床 → 出現則提前進入停用期</p>
         </div>
       </Detail>
     );
@@ -221,12 +222,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     const { zone2Low, zone2High } = getHeartRateZones();
     return (
       <Detail>
-        <Label>Zone 2 有氧（週三、週六、週日）</Label>
+        <Label>Zone 2 有氧（週六、週日）</Label>
         <p>時間：45-60 分鐘持續運動</p>
         <p>心率：最大心率 60-70%（約 <strong>{zone2Low}-{zone2High} bpm</strong>）</p>
         <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
         <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
-        <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週六 VO2 Max 日可將該次 Zone 2 作為暖身/收操的一部分</Tip>
+        <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週三改為 VO2 Max，避免高強度與長時間有氧疊加同一天</Tip>
       </Detail>
     );
   }
@@ -309,8 +310,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">週計劃總覽</p>
-          <p>週一 Upper A · 週二 Lower A · 週三 Zone 2 · 週四 Upper B · 週五 Lower B · 週六 VO2 Max · 週日 Zone 2</p>
-          <p className="text-gray-500">每週：肌力 4 次 · Zone 2 有氧 3 次 · VO2 Max 1 次</p>
+          <p>週一 Upper A · 週二 Lower A · 週三 VO2 Max · 週四 Upper B · 週五 Lower B · 週六 Zone 2 · 週日 Zone 2</p>
+          <p className="text-gray-500">每週：肌力 4 次 · Zone 2 有氧 2 次 · VO2 Max 1 次</p>
         </div>
       </Detail>
     );
@@ -320,12 +321,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     const { vo2Low, vo2High } = getHeartRateZones();
     return (
       <Detail>
-        <Label>VO2 Max 訓練（週六）</Label>
+        <Label>VO2 Max 訓練（週三）</Label>
         <p>方式：Peter Attia 4×4 法 — 4 分鐘全力 + 4 分鐘恢復，重複 4 組</p>
         <p>心率：最大心率 90-95%（約 <strong>{vo2Low}-{vo2High} bpm</strong>）</p>
         <p>器材：衝刺飛輪、划船機或上坡跑</p>
         <p>總時間：含暖身和收操約 45 分鐘</p>
-        <Tip>週六 VO2 Max + Zone 2 可合併：Zone 2 作為暖身/收操。若體能不佳可將週六 Zone 2 移至週日</Tip>
+        <Tip>安排在週三（非重訓日），與週六日 Zone 2 分開，避免中樞神經疲勞與恢復不良</Tip>
       </Detail>
     );
   }
