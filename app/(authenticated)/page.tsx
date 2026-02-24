@@ -8,7 +8,7 @@ import ProgressBar from '@/components/ProgressBar';
 import AllRecipesSection from '@/components/AllRecipesSection';
 import Link from 'next/link';
 import { getTodayRecipes, postWorkoutRecipes, lunchRecipes, dinnerRecipes } from '@/lib/recipes';
-import { Section, TabSwitcher } from '@/components/HealthTabs';
+import { Section } from '@/components/HealthTabs';
 
 export const dynamic = 'force-dynamic';
 
@@ -535,25 +535,15 @@ function SupplementsTab() {
 }
 
 function HealthSection() {
-  const tabs = [
-    { key: 'workout', label: '訓練計劃' },
-    { key: 'antiaging', label: '抗老化' },
-    { key: 'supplements', label: '補充品' },
-  ];
-
   return (
     <div className="space-y-4">
       <div>
         <h2 className="text-lg font-bold text-gray-900">健康優化計劃</h2>
         <p className="text-xs text-gray-500 mt-0.5">{new Date().getFullYear() - 2002} 歲男性 · 182cm · 73kg · 重訓為主 · 兼顧長壽</p>
       </div>
-      <TabSwitcher tabs={tabs}>
-        {{
-          workout: <WorkoutTab />,
-          antiaging: <AntiAgingTab />,
-          supplements: <SupplementsTab />,
-        }}
-      </TabSwitcher>
+      <WorkoutTab />
+      <AntiAgingTab />
+      <SupplementsTab />
     </div>
   );
 }

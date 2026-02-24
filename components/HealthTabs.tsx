@@ -23,32 +23,3 @@ export function Section({ title, children }: { title: string; children: React.Re
     </div>
   );
 }
-
-export function TabSwitcher({ tabs, children }: {
-  tabs: { key: string; label: string }[];
-  children: Record<string, React.ReactNode>;
-}) {
-  const [tab, setTab] = useState(tabs[0].key);
-
-  return (
-    <>
-      <div className="flex gap-2">
-        {tabs.map(({ key, label }) => (
-          <button
-            key={key}
-            type="button"
-            onClick={() => setTab(key)}
-            className={`flex-1 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-              tab === key
-                ? 'bg-emerald-600 text-white'
-                : 'bg-gray-100 text-gray-500'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      {children[tab]}
-    </>
-  );
-}
