@@ -174,7 +174,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('晚餐') && title.includes('鋅')) {
+  if (title.includes('晚餐') && !title.includes('銅')) {
     return (
       <Detail>
         <Label>晚餐 + 鋅 25mg</Label>
@@ -218,7 +218,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('睡前') && title.includes('甘胺酸鎂')) {
+  if (title.includes('睡前')) {
     return (
       <Detail>
         <Label>睡前營養 + 睡眠優化</Label>
