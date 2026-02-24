@@ -107,22 +107,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
         </div>
-        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-orange-800">鈣質策略：食物優先</p>
-          <p className="text-orange-700">優先從無糖希臘優格等原型食物攝取鈣。除非透過飲食計算確認當日鈣攝取嚴重不足，才啟用鈣片</p>
-          <p className="text-orange-700">避免單獨補充高劑量鈣質的潛在心血管風險</p>
-        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">補充品假期 5+2</p>
-          <p className="text-amber-700">脂溶性營養素（D3）與微量礦物質（鋅、銅）：每週吃 5 天、停 2 天（週末不吃）</p>
-          <p className="text-amber-700">讓身體排毒路徑與受體有喘息空間，防止脂肪組織或肝臟過度蓄積</p>
-          <p className="text-amber-700">水溶性維生素（Vit C）可每日服用，不需休息</p>
-        </div>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">D3 動態調整（依血檢）</p>
-          <p className="text-blue-700">目標：25(OH)D 40-60 ng/mL</p>
-          <p className="text-blue-700">若半年血檢已達標 + 每日確實晨光曝曬 → 可將 D3 2000 IU 減半或改兩天一次</p>
-          <p className="text-blue-700">BUN/Creatinine、ALT/AST 出現爬升趨勢 → 立刻全面停用非必要合成補劑</p>
+          <p className="text-amber-700">脂溶性（D3）與微量礦物質（鋅、銅）：週一至五服用，週末休息</p>
+          <p className="text-amber-700">防止脂肪組織或肝臟過度蓄積；水溶性（Vit C）可每日服用</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-1 mt-1">
           <p className="font-medium text-emerald-800">搭配原理</p>
@@ -152,13 +140,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
           <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
         </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">抗發炎食物</p>
-          <p className="text-amber-700">十字花科蔬菜（花椰菜）— Nrf2 活化</p>
-          <p className="text-amber-700">鮭魚（EPA/DHA Omega-3）</p>
-          <p className="text-amber-700">發酵食物（希臘優格、泡菜）— 腸道多樣性</p>
-          <p className="text-amber-700">堅果 — 抗發炎脂肪和礦物質</p>
-        </div>
       </Detail>
     );
   }
@@ -169,7 +150,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>銅 2mg</Label>
         <p>與鋅間隔 4 小時以上（銅和鋅在腸道吸收時互相競爭）</p>
         <p>14:00 服用銅 → 18:00 隨晚餐服用鋅 = 完美間隔</p>
-        <Tip>補充品假期 5+2：微量礦物質週一至五服用，週末休息，防止重金屬蓄積</Tip>
       </Detail>
     );
   }
@@ -178,21 +158,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>鋅隨餐服用避免噁心，與銅間隔 4hr+（<span className="text-amber-600 font-medium">5+2：週一至五服用，週末休息</span>）</p>
-        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-medium text-gray-800">進食順序建議</p>
-          <p>蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
-        </div>
-        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-orange-800">腸胃負荷管理</p>
-          <p className="text-orange-700">十字花科蔬菜若有脹氣或消化變慢 → 替換為菠菜、櫛瓜等低 FODMAP 蔬菜，當餐蛋白質微調降至 30g</p>
-        </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">營養策略</p>
-          <p className="text-amber-700">溫和熱量盈餘（+200-300 kcal）避免極端增/減脂循環</p>
-          <p className="text-amber-700">體脂維持在 10-18% 以減少慢性發炎</p>
-          <p className="text-amber-700">抗發炎食物：十字花科蔬菜、鮭魚、發酵食物、堅果</p>
-        </div>
+        <p>鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <p className="text-gray-500">腸胃不適時同午餐 FODMAP 策略</p>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-purple-800">社交豁免權 80/20</p>
@@ -212,7 +179,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-indigo-700">睡前 60 分鐘關閉螢幕（或戴防藍光眼鏡）</p>
           <p className="text-indigo-700">室溫 18-19°C（涼爽環境增加深層睡眠和生長激素分泌）</p>
           <p className="text-indigo-700">完全遮光（全遮光窗簾 + 遮蓋 LED 指示燈）</p>
-          <p className="text-indigo-700">下午 13:00 後不攝取咖啡因</p>
         </div>
       </Detail>
     );
@@ -221,7 +187,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('睡前')) {
     return (
       <Detail>
-        <Label>睡前營養 + 睡眠優化</Label>
+        <Label>睡前營養</Label>
         <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
@@ -235,12 +201,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-red-800">監測指標</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
           <p className="text-red-700">若夜間腸胃蠕動過快 → 酪蛋白減半或改為較少量的希臘優格</p>
-        </div>
-        <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-indigo-800">睡眠優化</p>
-          <p className="text-indigo-700">目標 8-8.5 小時實際睡眠（不只是躺在床上的時間）</p>
-          <p className="text-indigo-700">固定起床時間比固定就寢時間更重要（每天同一時間起床）</p>
-          <p className="text-indigo-700">全黑 + 低溫 18-19°C + 週末偏差 ≤30 分鐘</p>
         </div>
       </Detail>
     );
