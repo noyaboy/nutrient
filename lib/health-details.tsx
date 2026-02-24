@@ -103,9 +103,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
-          <p>鈣 + D3 + K2（1 錠）<span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
+          <p>D3 + K2（僅 D3 與 K2，不額外補鈣片）</p>
           <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-orange-800">鈣質策略：食物優先</p>
+          <p className="text-orange-700">優先從無糖希臘優格等原型食物攝取鈣。除非透過飲食計算確認當日鈣攝取嚴重不足，才啟用鈣片</p>
+          <p className="text-orange-700">避免單獨補充高劑量鈣質的潛在心血管風險</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">補充品假期 5+2</p>
@@ -141,8 +146,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 40-50g + 十字花科蔬菜</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.2g/kg（MPS 最大化區間）</p>
-          <p>增肌期上限 2.7g/kg（~200g/天）</p>
           <p>每餐 30-50g、每日 3-4 餐均勻分配</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-orange-800">腸胃負荷管理</p>
+          <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">抗發炎食物</p>
@@ -175,6 +183,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-gray-800">進食順序建議</p>
           <p>蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-orange-800">腸胃負荷管理</p>
+          <p className="text-orange-700">十字花科蔬菜若有脹氣或消化變慢 → 替換為菠菜、櫛瓜等低 FODMAP 蔬菜，當餐蛋白質微調降至 30g</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">營養策略</p>
           <p className="text-amber-700">溫和熱量盈餘（+200-300 kcal）避免極端增/減脂循環</p>
@@ -182,6 +194,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">抗發炎食物：十字花科蔬菜、鮭魚、發酵食物、堅果</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
+        <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-purple-800">社交豁免權 80/20</p>
+          <p className="text-purple-700">高質量社交聚餐時，允許打破 18:00 晚餐結束的限制。將社交帶來的多巴胺與催產素視為當日最佳的抗老補劑，零罪惡感享受當下</p>
+          <p className="text-purple-700">人際關係品質對壽命影響高於飲食與運動</p>
+        </div>
       </Detail>
     );
   }
@@ -206,6 +223,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>睡前營養 + 睡眠優化</Label>
         <p>希臘優格 300g（~28g 蛋白）+ 甘胺酸鎂 200mg</p>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-red-800">監測指標</p>
+          <p className="text-red-700">若隔日晨間感到異常昏沉或夜間腸胃蠕動過快 → 優先暫停甘胺酸鎂，或將優格減半至 150g</p>
+        </div>
         <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-indigo-800">睡眠優化</p>
           <p className="text-indigo-700">目標 7.5-8.5 小時實際睡眠（不只是躺在床上的時間）</p>
