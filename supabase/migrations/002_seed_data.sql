@@ -17,7 +17,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   -- === Midday (11:00-15:00) ===
   ('11:00 綠茶 EGCG 2-3 杯', '訓練後餐 2hr+ 再飲用（~11:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。13:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
-  ('13:00 午餐 + 蘿蔔硫素 BroccoMax', '蛋白質 30-40g + 十字花科蔬菜 + BroccoMax 1-2 顆（最強 Nrf2 激活劑）', 'daily', '飲食', 9, 1, true),
+  ('13:00 午餐 + 十字花科蔬菜', '蛋白質 30-40g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）', 'daily', '飲食', 9, 1, true),
   ('14:00 NSDR + 銅 2mg', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復。銅 2mg 搭配少量堅果或水果服用（與 EGCG 間隔 3hr+）', 'daily', '心理', 10, 1, true),
 
   -- === Afternoon (15:00-19:00) ===
