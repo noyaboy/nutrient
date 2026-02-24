@@ -133,8 +133,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>午餐營養策略</Label>
         <p>蛋白質 40-50g + 十字花科蔬菜</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.2g/kg（MPS 最大化區間）</p>
-          <p>每餐 30-50g、每日 3-4 餐均勻分配</p>
+          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
+          <p>每餐 30-40g、每日 4-5 餐均勻分配</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>

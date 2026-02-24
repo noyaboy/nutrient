@@ -166,7 +166,7 @@ function HealthNotes() {
           </div>
           <div className="bg-red-50 rounded-lg p-3 space-y-1">
             <p className="font-semibold text-red-800">代謝壓力監控</p>
-            <p className="text-red-700">BUN / Creatinine（腎功能）· ALT / AST（肝功能）— 監控補充品與高蛋白飲食的代謝壓力</p>
+            <p className="text-red-700">BUN / Creatinine / eGFR（腎功能）· ALT / AST（肝功能）— 監控高蛋白飲食與補充品的代謝壓力</p>
             <p className="text-red-700 font-medium">一旦數值出現爬升趨勢 → 立刻全面停用非必要合成補劑</p>
           </div>
           <div>
