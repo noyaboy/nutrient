@@ -54,7 +54,7 @@ function getHeartRateZones() {
 
 export function getHealthDetails(title: string): React.ReactNode | null {
   // Match by key phrase in title
-  if (title.includes('起床') && title.includes('光照')) {
+  if (title.includes('起床') && title.includes('曝曬')) {
     return (
       <Detail>
         <Label>晨光曝曬指南</Label>
@@ -177,7 +177,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('晚餐') && !title.includes('銅')) {
     return (
       <Detail>
-        <Label>晚餐 + 鋅 25mg</Label>
+        <Label>晚餐營養策略</Label>
         <p>鋅隨餐服用避免噁心，與銅間隔 4hr+（<span className="text-amber-600 font-medium">5+2：週一至五服用，週末休息</span>）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">進食順序建議</p>
@@ -222,16 +222,25 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>睡前營養 + 睡眠優化</Label>
-        <p>希臘優格 300g（~28g 蛋白）+ 甘胺酸鎂 200mg</p>
+        <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-gray-800">補充品堆疊</p>
+          <p>酪蛋白 ~64g 粉（≈50g 蛋白）— 緩釋蛋白，整夜供應 MPS</p>
+          <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
+          <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
+          <p>甘胺酸鎂 — 肌肉放鬆、GABA 受體調節</p>
+          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-amber-600 font-medium">8 週用 / 4 週停</span>，停用期改紅景天 500mg）</p>
+        </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">監測指標</p>
-          <p className="text-red-700">若隔日晨間感到異常昏沉或夜間腸胃蠕動過快 → 優先暫停甘胺酸鎂，或將優格減半至 150g</p>
+          <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
+          <p className="text-red-700">若夜間腸胃蠕動過快 → 酪蛋白減半或改為較少量的希臘優格</p>
         </div>
         <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-indigo-800">睡眠優化</p>
-          <p className="text-indigo-700">目標 7.5-8.5 小時實際睡眠（不只是躺在床上的時間）</p>
+          <p className="text-indigo-700">目標 8-8.5 小時實際睡眠（不只是躺在床上的時間）</p>
           <p className="text-indigo-700">固定起床時間比固定就寢時間更重要（每天同一時間起床）</p>
-          <p className="text-indigo-700">甘胺酸鎂有助肌肉放鬆和入睡品質</p>
+          <p className="text-indigo-700">全黑 + 低溫 18-19°C + 週末偏差 ≤30 分鐘</p>
         </div>
       </Detail>
     );
