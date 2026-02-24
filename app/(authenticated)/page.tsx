@@ -296,7 +296,7 @@ function AntiAgingTab() {
           <p>目標 <span className="font-semibold">7.5-8.5 小時</span>實際睡眠（不只是躺在床上的時間）</p>
           <p>固定起床時間比固定就寢時間更重要（每天同一時間起床）</p>
           <p>就寢時間：理想 22:00-23:00 入睡</p>
-          <p>最後一餐在睡前 2-3 小時完成</p>
+          <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
           <div className="bg-indigo-50 rounded-lg p-3 mt-2">
             <p className="font-semibold text-indigo-800 mb-1">睡眠衛生</p>
             <ul className="space-y-0.5 text-indigo-700">
@@ -453,7 +453,7 @@ function SupplementsTab() {
           <div>
             <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
             <p>咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）</p>
-            <p className="text-gray-400">偏好更平靜專注可調為 1:2 比例（如 100-150mg 咖啡因 + 200mg L-Theanine）</p>
+            <p className="text-gray-400">偏好更平靜專注可調為 1:2 比例（如 100mg 咖啡因 + 200mg L-Theanine）</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
