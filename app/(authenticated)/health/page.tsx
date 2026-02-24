@@ -84,6 +84,7 @@ function WorkoutTab() {
           ))}
         </div>
         <p className="text-xs text-gray-400 mt-2">每週：肌力 4 次 · Zone 2 有氧 3 次 · VO2 Max 1 次 · 總訓練 ~7.5 小時</p>
+        <p className="text-xs text-gray-400">若週三/週六訓練品質下降，可將週二或週五的 Zone 2 移至週日</p>
       </Section>
 
       <Section title="Upper A — 週一（力量重點）">
@@ -261,7 +262,7 @@ function AntiAgingTab() {
 
       <Section title="營養策略">
         <div className="text-xs text-gray-700 space-y-2">
-          <p><span className="font-semibold">蛋白質目標：~2.7g/kg = ~200g/天</span>（Peter Attia 長壽最低建議 1.6g/kg；增肌期以 2.5-2.7g/kg 為目標）</p>
+          <p><span className="font-semibold">蛋白質目標：1.6-2.2g/kg（MPS 最大化區間）</span>，增肌期上限 2.7g/kg（~200g/天）。過高蛋白的飽足感可能增加達成熱量盈餘的難度</p>
           <p>採用溫和熱量盈餘（+200-300 kcal），避免極端增/減脂循環</p>
           <p>體脂維持在 10-18% 以減少慢性發炎</p>
           <p>蛋白質分配：每餐 30-50g，每日 3-4 餐</p>
@@ -309,6 +310,8 @@ function AntiAgingTab() {
               <p>hs-CRP（全身發炎指標）— 目標 &lt;1.0 mg/L</p>
               <p>Omega-3 指數 — 目標 &gt;8%</p>
               <p>維他命 D [25(OH)D] — 目標 40-60 ng/mL</p>
+              <p>BUN / Creatinine — 腎功能基線（高蛋白 + 肌酸長期追蹤）</p>
+              <p>ALT / AST — 肝功能基線</p>
             </div>
           </div>
           <div>
@@ -359,10 +362,12 @@ function SupplementsTab() {
           <div>
             <p className="font-semibold text-amber-700 mb-1">07:15 訓練前</p>
             <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）</p>
+            <p className="text-gray-400">下肢大重量日（深蹲/硬舉）若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">08:30 咖啡</p>
             <p>咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）</p>
+            <p className="text-gray-400">偏好更平靜專注可調為 1:2 比例（如 100-150mg 咖啡因 + 200mg L-Theanine）</p>
           </div>
           <div>
             <p className="font-semibold text-amber-700 mb-1">09:00 訓練後（含油脂的餐點）</p>
