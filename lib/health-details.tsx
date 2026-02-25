@@ -106,6 +106,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>D3 + K2（僅 D3 與 K2，不額外補鈣片）</p>
           <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
+          <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
+          <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
+          <p>B群 1 顆（水溶性，白天能量代謝）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -125,6 +128,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <div className="flex items-start gap-2">
             <Tag color="green">Vit C + 魚油</Tag>
             <span className="flex-1 text-emerald-700">維他命 C 抗氧化保護 Omega-3 免受氧化降解</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Tag color="green">膠原蛋白 + Vit C</Tag>
+            <span className="flex-1 text-emerald-700">Vit C 是膠原蛋白合成的必要輔因子，同服最大化效果</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Tag color="green">CoQ10 + 魚油</Tag>
+            <span className="flex-1 text-emerald-700">CoQ10 為脂溶性，魚油中的脂肪大幅提升吸收率</span>
           </div>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -151,6 +162,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>晚餐營養策略</Label>
         <p>鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
+        <Tip>適量橄欖油入菜或涼拌，確保每日脂肪攝取達 20-30% 總熱量。脂溶性維他命（D3、K2、葉黃素）與 CoQ10 皆需油脂輔助吸收</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-purple-800">社交豁免權 80/20</p>

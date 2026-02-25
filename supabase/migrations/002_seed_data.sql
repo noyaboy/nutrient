@@ -14,14 +14,14 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。魚油 3 顆、D3 2000IU（5+2）、D3+K2（不額外補鈣片，鈣從食物攝取）、維他命 C、葉黃素 20mg。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。魚油 3 顆、D3 2000IU（5+2）、D3+K2（不額外補鈣片，鈣從食物攝取）、維他命 C、葉黃素 20mg、膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）、CoQ10 100-200mg（脂溶性，與魚油同服提升吸收）、B群 1 顆（水溶性，白天能量代謝）。適量橄欖油確保脂肪攝取（每日脂肪目標 20-30% 總熱量）。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
   ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
   ('15:00 NSDR + 銅 2mg', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復。銅 2mg 搭配少量堅果或水果服用（與 EGCG 間隔 2hr+）', 'daily', '心理', 10, 1, true),
 
   -- === Afternoon (17:00-20:00) ===
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 10, 1, true),
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 30-40g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。隨餐服用鋅 25mg（與銅間隔 4hr+）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 30-40g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。隨餐服用鋅 25mg（與銅間隔 4hr+）。適量橄欖油確保脂肪攝取（每日脂肪目標 20-30% 總熱量）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 12, 1, true),
 
   -- === Evening (22:00+) ===
@@ -331,7 +331,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 ------------------------------------------------------------
--- iHerb 專業補充品 (7 items)
+-- iHerb 專業補充品 (10 items)
 ------------------------------------------------------------
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -439,6 +439,48 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   28
 );
 
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
+  '膠原蛋白肽 CollagenUP（CGN 206g）',
+  '水解海洋膠原蛋白肽 + 玻尿酸 + 維他命 C。與 Vit C 協同促進膠原蛋白合成，支持皮膚、關節與結締組織健康',
+  '每日 10-15g 隨午餐（搭配維他命 C）',
+  'NT$489 / 206g',
+  'https://tw.iherb.com/pr/california-gold-nutrition-collagenup-marine-hydrolyzed-collagen-hyaluronic-acid-vitamin-c-unflavored-7-26-oz-206-g/64903',
+  'iHerb', 'iherb_supplement', 'California Gold Nutrition',
+  NULL, NULL, NULL, 'CGN-01033',
+  $${"ingredients":"水解海洋膠原蛋白肽、玻尿酸、維他命C","form":"無調味粉末","weight":"206g"}$$::jsonb,
+  $${"serving_size":"6.5g","collagen_peptides":"5.1g","hyaluronic_acid":"18mg","vitamin_c":"80mg"}$$::jsonb,
+  'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。與維他命 C 同服效果最佳。搭配其他 iHerb 品項湊免運。',
+  29
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
+  'CoQ10 Ubiquinol 200mg（NOW Foods 60 顆）',
+  '還原型輔酶 Q10（Ubiquinol），生物利用率高於 Ubiquinone。支持細胞能量產生與心血管健康。脂溶性，與魚油同服提升吸收',
+  '每日 1 顆隨午餐（搭配魚油）',
+  'NT$1,095 / 60 顆',
+  'https://tw.iherb.com/pr/now-foods-ubiquinol-200-mg-60-softgels/45079',
+  'iHerb', 'iherb_supplement', 'NOW Foods',
+  NULL, NULL, NULL, 'NOW-03153',
+  $${"form":"軟膠囊","count":"60顆"}$$::jsonb,
+  $${"serving_size":"1顆","ubiquinol":"200mg"}$$::jsonb,
+  'iHerb 直送。每日 1 顆，60 顆可用 2 個月。脂溶性，務必隨含油脂餐食服用。',
+  30
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
+  'B群 B-50（NOW Foods 100 顆）',
+  '完整 B 群複方（B1/B2/B3/B5/B6/B7/B9/B12）。水溶性，支持白天能量代謝、神經系統與紅血球生成',
+  '每日 1 顆隨午餐',
+  'NT$364 / 100 顆',
+  'https://tw.iherb.com/pr/now-foods-b-50-100-veg-capsules/604',
+  'iHerb', 'iherb_supplement', 'NOW Foods',
+  NULL, NULL, NULL, 'NOW-00426',
+  $${"form":"素食膠囊","count":"100顆"}$$::jsonb,
+  $${"serving_size":"1顆","b_complex":"B-50 完整複方"}$$::jsonb,
+  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月，每季補一次。尿液變黃為正常現象（B2 代謝）。',
+  31
+);
+
 ------------------------------------------------------------
 -- 設備 (3 items)
 ------------------------------------------------------------
@@ -451,7 +493,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
   'https://www.amazon.com/amber-blue-light-blocking-glasses/s?k=amber+blue+light+blocking+glasses',
   'Amazon', 'equipment',
   '一次性購買，Amazon 或蝦皮。選琥珀色鏡片才有效阻擋藍光。$500-1,500 即可。',
-  29
+  32
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
@@ -462,7 +504,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
   'https://www.amazon.com/digital-kitchen-food-scale/s?k=digital+kitchen+food+scale',
   'Amazon', 'equipment',
   '一次性購買，Amazon 或蝦皮。精度 0.1-1g，最大秤量至少 5kg。$300-800 即可。',
-  30
+  33
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
@@ -473,5 +515,5 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
   'https://www.amazon.com/100-percent-blackout-curtains/s?k=100+percent+blackout+curtains',
   'Amazon', 'equipment',
   '一次性購買。量好窗戶尺寸，選「100% blackout」標示。邊緣可用魔鬼氈輔助密封。',
-  31
+  34
 );
