@@ -64,15 +64,14 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
 
 function TimingTable() {
   const rows = [
-    { time: '07:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
-    { time: '07:05 補水', items: '500ml 室溫水 + 少許碘鹽 + 檸檬汁' },
-    { time: '07:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）' },
-    { time: '08:30 咖啡', items: '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，13:00 前）' },
-    { time: '09:00 訓練後', items: '乳清蛋白 ~40g 粉（≈36g 蛋白）+ 碳水 80-105g + 肌酸 5g、D3 ~2150IU+K2+魚油+葉黃素+維他命C' },
-    { time: '13:00 午餐', items: '蛋白質 30-40g + 十字花科蔬菜' },
-    { time: '14:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
-    { time: '18:00 晚餐', items: '蛋白質 30-40g + 低 FODMAP 蔬菜 + 鋅 25mg' },
-    { time: '20:30 睡前', items: '豌豆蛋白 ~32g 粉（≈25g 蛋白）+甘胺酸鎂 200mg' },
+    { time: '09:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
+    { time: '09:05 補水', items: '500ml 室溫水 + 少許碘鹽 + 檸檬汁' },
+    { time: '09:15 訓練前', items: '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）' },
+    { time: '10:30 咖啡', items: '咖啡因 200-300mg + L-Theanine 200mg（起床 60-90 分鐘後，15:00 前）' },
+    { time: '12:00 午餐', items: '蛋白質 30-40g + 十字花科蔬菜 + 肌酸 5g、D3 2000IU+K2+魚油+葉黃素+維他命C' },
+    { time: '15:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
+    { time: '19:00 晚餐', items: '蛋白質 30-40g + 低 FODMAP 蔬菜 + 鋅 25mg' },
+    { time: '22:30 睡前', items: '豌豆蛋白 ~32g 粉（≈25g 蛋白）+甘胺酸鎂 200mg' },
   ];
 
   return (

@@ -1,37 +1,36 @@
 ------------------------------------------------------------
 -- 每日計畫項目 (25 active + 6 inactive = 31 items)
--- Matches live DB state as of 2026-02-24
+-- Matches live DB state as of 2026-02-25
 ------------------------------------------------------------
 
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
-  -- === Morning (< 11:00) ===
-  ('07:00 起床 & 晨光曝曬', '起床後 30 分鐘內到戶外曬太陽 10-20 分鐘（陰天久一點）。不戴太陽眼鏡。校正晝夜節律、降低皮質醇、促進維他命D合成', 'daily', '睡眠', 1, 1, true),
-  ('07:05 補水 & 電解質', '起床後盡快補水。500ml 室溫水 + 少許碘鹽 + 檸檬汁。可搭配晨光曝曬同時進行。碘鹽取代海鹽以確保碘攝取', 'daily', '飲食', 2, 1, true),
-  ('07:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
-  ('07:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '飲食', 3, 1, true),
-  ('07:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
-  ('08:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘', 'daily', '運動', 5, 1, true),
-  ('08:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。13:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
-  ('09:00 訓練後營養 + 補充品', '乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g + 碳水 80-105g；魚油 3 顆、D3 2000IU（5+2）、D3+K2（不額外補鈣片，鈣從食物攝取）、維他命 C、葉黃素 20mg', 'daily', '飲食', 7, 1, true),
+  -- === Morning (< 12:00) ===
+  ('09:00 起床 & 晨光曝曬', '起床後 30 分鐘內到戶外曬太陽 10-20 分鐘（陰天久一點）。不戴太陽眼鏡。校正晝夜節律、降低皮質醇、促進維他命D合成', 'daily', '睡眠', 1, 1, true),
+  ('09:05 補水 & 電解質', '起床後盡快補水。500ml 室溫水 + 少許碘鹽 + 檸檬汁。可搭配晨光曝曬同時進行。碘鹽取代海鹽以確保碘攝取', 'daily', '飲食', 2, 1, true),
+  ('09:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
+  ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '飲食', 3, 1, true),
+  ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
+  ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘', 'daily', '運動', 5, 1, true),
+  ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
-  -- === Midday (11:00-15:00) ===
-  ('11:00 綠茶 EGCG 2-3 杯', '訓練後餐 2hr+ 再飲用（~11:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。13:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
+  -- === Midday (12:00-15:00) ===
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。魚油 3 顆、D3 2000IU（5+2）、D3+K2（不額外補鈣片，鈣從食物攝取）、維他命 C、葉黃素 20mg。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
-  ('13:00 午餐 + 十字花科蔬菜', '蛋白質 30-40g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）', 'daily', '飲食', 9, 1, true),
-  ('14:00 NSDR + 銅 2mg', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復。銅 2mg 搭配少量堅果或水果服用（與 EGCG 間隔 3hr+）', 'daily', '心理', 10, 1, true),
+  ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
+  ('15:00 NSDR + 銅 2mg', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復。銅 2mg 搭配少量堅果或水果服用（與 EGCG 間隔 2hr+）', 'daily', '心理', 10, 1, true),
 
-  -- === Afternoon (15:00-19:00) ===
+  -- === Afternoon (17:00-20:00) ===
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 10, 1, true),
-  ('18:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 30-40g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。隨餐服用鋅 25mg（與銅間隔 4hr+）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
-  ('18:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 12, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 30-40g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。隨餐服用鋅 25mg（與銅間隔 4hr+）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
+  ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 12, 1, true),
 
-  -- === Evening (19:00+) ===
-  ('20:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）', 'daily', '睡眠', 11, 1, true),
-  ('20:30 睡前：熱水澡 + 豌豆蛋白 + 補充品', '熱水澡 40-42°C 10-15 分鐘（睡前 60-90 分鐘）。豌豆蛋白 ~32g 粉（≈25g 蛋白）+ 甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 + Ashwagandha 600mg（8 週用 / 4 週停，停用期改服紅景天 500mg。第 6-8 週留意情緒冷漠或早晨無力）', 'daily', '補充品', 15, 1, true),
-  ('21:30 Cyclic Sighing + 專注冥想', 'Cyclic Sighing 5 分鐘（雙吸鼻、長呼口，Stanford RCT 證實最佳呼吸法）+ 專注冥想 10 分鐘（單點注意力：鼻尖呼吸）。寫下三件感恩的事', 'daily', '心理', 16, 1, true),
-  ('22:00 感恩練習', '睡前或早晨寫下三件感恩的事，調節自律神經系統', 'daily', '心理', 17, 1, false),
-  ('21:50 口腔衛生：刷牙 + 牙線', '早晚各一次。牙周病菌（P. gingivalis）與心血管疾病、阿茲海默症強相關。每日至少刷牙 2 次 + 牙線 1 次', 'daily', '一般', 17, 1, true),
-  ('22:00 準時入睡', '目標 8-8.5 小時睡眠。全黑、低溫 18-19°C。深層睡眠啟動腦部排毒系統。週末偏差不超過 30 分鐘。不使用褪黑激素（24歲不需要）', 'daily', '睡眠', 18, 1, true),
+  -- === Evening (22:00+) ===
+  ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）', 'daily', '睡眠', 11, 1, true),
+  ('22:30 睡前：熱水澡 + 豌豆蛋白 + 補充品', '熱水澡 40-42°C 10-15 分鐘（睡前 60-90 分鐘）。豌豆蛋白 ~32g 粉（≈25g 蛋白）+ 甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 + Ashwagandha 600mg（8 週用 / 4 週停，停用期改服紅景天 500mg。第 6-8 週留意情緒冷漠或早晨無力）', 'daily', '補充品', 15, 1, true),
+  ('23:30 Cyclic Sighing + 專注冥想', 'Cyclic Sighing 5 分鐘（雙吸鼻、長呼口，Stanford RCT 證實最佳呼吸法）+ 專注冥想 10 分鐘（單點注意力：鼻尖呼吸）。寫下三件感恩的事', 'daily', '心理', 16, 1, true),
+  ('00:00 感恩練習', '睡前或早晨寫下三件感恩的事，調節自律神經系統', 'daily', '心理', 17, 1, false),
+  ('23:50 口腔衛生：刷牙 + 牙線', '早晚各一次。牙周病菌（P. gingivalis）與心血管疾病、阿茲海默症強相關。每日至少刷牙 2 次 + 牙線 1 次', 'daily', '一般', 17, 1, true),
+  ('00:00 準時入睡', '目標 8-8.5 小時睡眠。全黑、低溫 18-19°C。深層睡眠啟動腦部排毒系統。週末偏差不超過 30 分鐘。不使用褪黑激素（24歲不需要）', 'daily', '睡眠', 18, 1, true),
 
   -- === All-day items ===
   ('全天 蛋白質 146g+ 目標', '每餐 30-40g 蛋白（蛋、魚、雞胸、乳清、豌豆蛋白）。每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）。每餐達到亮氨酸門檻 2.5-3g', 'daily', '飲食', 19, 1, true),
@@ -39,8 +38,8 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('全天 每 45 分鐘站立/坐姿切換', '維持脂蛋白脂肪酶 LPL 活性，避免久坐代謝下降', 'daily', '運動', 21, 1, true),
   ('全天 碳水循環：訓練日 vs 休息日', '重訓日 5-6g/kg (360-430g)、有氧日 3-4g/kg (215-290g)、休息日 2-3g/kg (145-215g，僅 Deload 週或臨時休息)。支持 mTOR 肌肉修復與合成。卡路里目標：重訓日 3,100-3,400 kcal', 'daily', '飲食', 22, 1, true),
   ('全天 週末睡眠一致性（±30 分鐘）', '週末起床/睡覺時間與平日偏差不超過 30 分鐘。社交時差（Social Jetlag）影響認知、情緒與代謝，A 級證據', 'daily', '睡眠', 23, 1, true),
-  ('全天 數位衛生', '娛樂螢幕 <2hr、社群媒體 <30min。21:00 後無螢幕、專注時段手機勿擾模式', 'daily', '心理', 24, 1, true),
-  ('全天 飲水 3-3.5L', '07:05 起床 500ml（碘鹽+檸檬）→ 08:00 訓練中 500ml → 10:00 訓練後補水 250ml → 11:00 綠茶 500ml → 13:00 隨餐 250ml → 15:00 下午補水 250ml → 18:00 隨餐 250ml → 20:30 豌豆蛋白沖泡 250ml。有氧日訓練中改用電解質粉。尿液淡黃色為適當水合指標', 'daily', '飲食', 25, 1, true);
+  ('全天 數位衛生', '娛樂螢幕 <2hr、社群媒體 <30min。23:00 後無螢幕、專注時段手機勿擾模式', 'daily', '心理', 24, 1, true),
+  ('全天 飲水 3-3.5L', '09:05 起床 500ml（碘鹽+檸檬）→ 10:00 訓練中 500ml → 12:00 隨餐 500ml → 13:00 綠茶 500ml → 15:00 下午補水 250ml → 19:00 隨餐 250ml → 22:30 豌豆蛋白沖泡 250ml。有氧日訓練中改用電解質粉。尿液淡黃色為適當水合指標', 'daily', '飲食', 25, 1, true);
 
 ------------------------------------------------------------
 -- 每週計畫項目 (3 active + 3 semi-active/inactive)
@@ -102,7 +101,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   'Tryall 無調味分離乳清蛋白 2kg',
   '台灣品牌，無調味無添加。分離乳清蛋白（WPI），約 90% 蛋白質含量，每 30g 粉含 ~27g 蛋白、~120kcal。美國乳源，過濾大部分乳糖與脂肪，乳糖不耐者也適合',
-  '訓練前 1 份（~30g 粉 ≈ 27g 蛋白），訓練後 ~1.3 份（~40g 粉 ≈ 36g 蛋白）',
+  '訓練前 1 份（~30g 粉 ≈ 27g 蛋白）。午餐改為正餐蛋白質，不再額外沖乳清',
   '約 NT$1,899~2,199 / 2kg',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Sports-Performance/Tryall-Whey-Protein-Isolate-Unflavored-2-kg/p/155648',
   'Costco', 'costco_supplement', 'Tryall',
@@ -322,7 +321,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '咖啡豆 / 研磨咖啡',
   '起床 60-90 分鐘後飲用，咖啡因 200-300mg。多酚抗氧化、增強專注力',
-  '每日 1-2 杯，08:30-13:00 之間',
+  '每日 1-2 杯，10:30-15:00 之間',
   '~NT$399 / 1.13kg',
   'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
   'Costco', 'costco_food', NULL, NULL,
@@ -447,7 +446,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
   '防藍光眼鏡（琥珀色鏡片）',
   '阻擋 400-550nm 藍光，保護褪黑激素分泌',
-  '20:00 後佩戴',
+  '22:00 後佩戴',
   'NT$500~1,500',
   'https://www.amazon.com/amber-blue-light-blocking-glasses/s?k=amber+blue+light+blocking+glasses',
   'Amazon', 'equipment',
@@ -468,7 +467,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
 
 INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
   '全遮光窗簾',
-  '確保臥室全黑環境，維持褪黑激素正常分泌。配合 22:00 入睡方案',
+  '確保臥室全黑環境，維持褪黑激素正常分泌。配合 00:00 入睡方案',
   '安裝於臥室窗戶',
   'NT$1,000~3,000',
   'https://www.amazon.com/100-percent-blackout-curtains/s?k=100+percent+blackout+curtains',

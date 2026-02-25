@@ -90,22 +90,26 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-blue-700">偏好更平靜專注可調為 1:2 比例（如 100mg 咖啡因 + 200mg L-Theanine）</p>
         </div>
         <p>L-Theanine 緩衝咖啡因焦慮，達到平靜專注狀態</p>
-        <p className="text-red-600 font-medium">13:00 前為咖啡因截止時間（保護睡眠品質）</p>
+        <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
   }
 
-  if (title.includes('訓練後') && title.includes('補充品')) {
+  if (title.includes('午餐') && !title.includes('銅')) {
     return (
       <Detail>
-        <Label>訓練後補充品（隨含油脂餐點服用）</Label>
+        <Label>午餐 + 訓練後補充品</Label>
+        <p>蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜</p>
         <div className="space-y-0.5">
-          <p>乳清蛋白 ~40g 粉（≈36g 蛋白）+ 肌酸 5g</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
           <p>D3 + K2（僅 D3 與 K2，不額外補鈣片）</p>
           <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
+        </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
+          <p>每餐 30-40g、每日 4-5 餐均勻分配。不再額外沖乳清蛋白（正餐蛋白質已足夠）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">補充品假期 5+2</p>
@@ -123,19 +127,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
             <span className="flex-1 text-emerald-700">維他命 C 抗氧化保護 Omega-3 免受氧化降解</span>
           </div>
         </div>
-      </Detail>
-    );
-  }
-
-  if (title.includes('午餐') && !title.includes('銅')) {
-    return (
-      <Detail>
-        <Label>午餐營養策略</Label>
-        <p>蛋白質 30-40g + 十字花科蔬菜</p>
-        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
-          <p>每餐 30-40g、每日 4-5 餐均勻分配</p>
-        </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
           <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
@@ -149,7 +140,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>銅 2mg</Label>
         <p>與鋅間隔 4 小時以上（銅和鋅在腸道吸收時互相競爭）</p>
-        <p>14:00 服用銅 → 18:00 隨晚餐服用鋅 = 完美間隔</p>
+        <p>15:00 服用銅 → 19:00 隨晚餐服用鋅 = 完美間隔</p>
       </Detail>
     );
   }
@@ -163,7 +154,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-purple-800">社交豁免權 80/20</p>
-          <p className="text-purple-700">高質量社交聚餐時，允許打破 18:00 晚餐結束的限制。將社交帶來的多巴胺與催產素視為當日最佳的抗老補劑，零罪惡感享受當下</p>
+          <p className="text-purple-700">高質量社交聚餐時，允許打破 19:00 晚餐結束的限制。將社交帶來的多巴胺與催產素視為當日最佳的抗老補劑，零罪惡感享受當下</p>
           <p className="text-purple-700">人際關係品質對壽命影響高於飲食與運動</p>
         </div>
       </Detail>
@@ -211,7 +202,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>準時入睡</Label>
-        <p>理想就寢時間：22:00-23:00 入睡</p>
+        <p>理想就寢時間：00:00 入睡</p>
         <p className="font-medium">固定起床時間 &gt; 固定就寢時間（最核心的晝夜節律原則）</p>
         <p>慢性睡眠不足（&lt;6 小時）與胰島素阻抗、認知衰退、心血管疾病相關</p>
       </Detail>
