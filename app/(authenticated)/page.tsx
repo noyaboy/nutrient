@@ -143,7 +143,6 @@ function HealthNotes() {
             <p className="font-semibold text-purple-800 mb-1">生理嘆息法 Physiological Sigh</p>
             <p className="text-purple-700">鼻子快速吸氣兩次 → 嘴巴長呼氣。Stanford 研究證實最有效的即時壓力緩解工具，只需 30 秒。</p>
           </div>
-          <p>每日 5 分鐘循環嘆息呼吸練習（exhale-focused breathing）</p>
         </div>
       </Section>
 
@@ -196,13 +195,6 @@ function HealthNotes() {
         </div>
       </Section>
 
-      <Section title="建議新增補充品">
-        <div className="text-xs text-gray-700 space-y-2">
-          <p><span className="font-semibold">膠原蛋白肽</span> 10-15g/天（搭配 Vit C，關節/肌腱保護）</p>
-          <p><span className="font-semibold">B 群</span>（能量代謝、甲基化）</p>
-          <p><span className="font-semibold">CoQ10 Ubiquinol</span> 100-200mg/天（粒線體能量、心臟保護）</p>
-        </div>
-      </Section>
     </div>
   );
 }

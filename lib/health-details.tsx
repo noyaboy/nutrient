@@ -85,11 +85,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>咖啡因 + L-Theanine</Label>
         <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg</p>
-        <div className="bg-blue-50 rounded-lg px-3 py-2">
-          <p className="text-blue-700">偏好更平靜專注可調為 1:2 比例（如 100mg 咖啡因 + 200mg L-Theanine）</p>
-        </div>
-        <p>L-Theanine 緩衝咖啡因焦慮，達到平靜專注狀態</p>
+        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg（偏好更平靜可調 1:2）</p>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -120,30 +116,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>晚餐：橄欖油 1 大匙（14g）+ 堅果 30g（~15g）≈ 25g</p>
           <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 50-70g</p>
         </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">補充品假期 5+2</p>
-          <p className="text-amber-700">脂溶性（D3）與微量礦物質（鋅、銅）：週一至五服用，週末休息</p>
-          <p className="text-amber-700">防止脂肪組織或肝臟過度蓄積；水溶性（Vit C）可每日服用</p>
-        </div>
-        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-1 mt-1">
-          <p className="font-medium text-emerald-800">搭配原理</p>
-          <div className="flex items-start gap-2">
-            <Tag color="green">D3 + K2</Tag>
-            <span className="flex-1 text-emerald-700">D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈（僅取 K2，不疊加 D3）</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="green">Vit C + 魚油</Tag>
-            <span className="flex-1 text-emerald-700">維他命 C 抗氧化保護 Omega-3 免受氧化降解</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="green">膠原蛋白 + Vit C</Tag>
-            <span className="flex-1 text-emerald-700">Vit C 是膠原蛋白合成的必要輔因子，同服最大化效果</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Tag color="green">CoQ10 + 魚油</Tag>
-            <span className="flex-1 text-emerald-700">CoQ10 為脂溶性，魚油中的脂肪大幅提升吸收率</span>
-          </div>
-        </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
           <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
@@ -170,11 +142,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 50-70g 目標</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
-        <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-purple-800">社交豁免權 80/20</p>
-          <p className="text-purple-700">高質量社交聚餐時，允許打破 19:00 晚餐結束的限制。將社交帶來的多巴胺與催產素視為當日最佳的抗老補劑，零罪惡感享受當下</p>
-          <p className="text-purple-700">人際關係品質對壽命影響高於飲食與運動</p>
-        </div>
+        <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
       </Detail>
     );
   }
