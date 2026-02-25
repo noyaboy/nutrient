@@ -60,8 +60,9 @@ function groupItems(items: PlanItemWithCompletion[]): TimeGroup[] {
   return groups.filter(g => g.items.length > 0);
 }
 
-function AllDayItem({ item, targetDate }: { item: PlanItemWithCompletion; targetDate: string }) {
+function AllDayItem({ item, targetDate, details }: { item: PlanItemWithCompletion; targetDate: string; details?: React.ReactNode | null }) {
   const [isPending, startTransition] = useTransition();
+  const [expanded, setExpanded] = useState(false);
   const isCompleted = !!item.completion;
   const shortTitle = item.title.replace(/^全天\s*/, '');
 
@@ -72,31 +73,55 @@ function AllDayItem({ item, targetDate }: { item: PlanItemWithCompletion; target
   }
 
   return (
-    <button
-      type="button"
-      onClick={handleToggle}
-      disabled={isPending}
-      className={`flex items-center gap-2.5 p-3 rounded-lg text-left transition-all active:scale-[0.97] ${
+    <div
+      className={`rounded-lg transition-all ${
         isCompleted
           ? 'bg-emerald-50 border border-emerald-200'
           : 'bg-white border border-gray-200'
       } ${isPending ? 'opacity-60' : ''}`}
     >
-      <div
-        className={`w-4 h-4 rounded flex-shrink-0 flex items-center justify-center transition-colors ${
-          isCompleted ? 'bg-emerald-500' : 'border-2 border-gray-300'
-        }`}
-      >
-        {isCompleted && (
-          <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
+      <div className="flex items-center gap-2.5 p-3">
+        <button
+          type="button"
+          onClick={handleToggle}
+          disabled={isPending}
+          className="flex-shrink-0 active:scale-90 transition-transform"
+        >
+          <div
+            className={`w-4 h-4 rounded flex items-center justify-center transition-colors ${
+              isCompleted ? 'bg-emerald-500' : 'border-2 border-gray-300'
+            }`}
+          >
+            {isCompleted && (
+              <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            )}
+          </div>
+        </button>
+        <button
+          type="button"
+          onClick={() => details && setExpanded(!expanded)}
+          className={`flex-1 text-left ${details ? 'cursor-pointer' : 'cursor-default'}`}
+        >
+          <span className={`text-sm font-medium leading-tight ${isCompleted ? 'line-through text-gray-400' : 'text-gray-700'}`}>
+            {shortTitle}
+          </span>
+        </button>
+        {details && (
+          <button type="button" onClick={() => setExpanded(!expanded)} className="flex-shrink-0 p-0.5">
+            <svg className={`w-3.5 h-3.5 text-gray-400 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         )}
       </div>
-      <span className={`text-sm font-medium leading-tight ${isCompleted ? 'line-through text-gray-400' : 'text-gray-700'}`}>
-        {shortTitle}
-      </span>
-    </button>
+      {expanded && details && (
+        <div className="px-3 pb-3 pt-0">
+          {details}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -146,7 +171,7 @@ export default function DailySection({ items, targetDate, recipes }: DailySectio
               group.key === 'allday' ? (
                 <div className="grid grid-cols-2 gap-2 mt-1">
                   {group.items.map(item => (
-                    <AllDayItem key={item.id} item={item} targetDate={targetDate} />
+                    <AllDayItem key={item.id} item={item} targetDate={targetDate} details={getHealthDetails(item.title)} />
                   ))}
                 </div>
               ) : (

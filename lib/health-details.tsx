@@ -150,12 +150,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('藍光管理')) {
     return (
       <Detail>
-        <Label>藍光管理 & 睡眠衛生</Label>
+        <Label>藍光管理 & 數位衛生</Label>
         <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-medium text-indigo-800">睡眠衛生清單</p>
-          <p className="text-indigo-700">睡前 60 分鐘關閉螢幕（或戴防藍光眼鏡）</p>
-          <p className="text-indigo-700">室溫 18-19°C（涼爽環境增加深層睡眠和生長激素分泌）</p>
-          <p className="text-indigo-700">完全遮光（全遮光窗簾 + 遮蓋 LED 指示燈）</p>
+          <p className="text-indigo-700">白天：娛樂螢幕 &lt;2hr、社群 &lt;30min、專注時段手機勿擾</p>
+          <p className="text-indigo-700">22:00 調暗燈光或戴防藍光眼鏡（琥珀色鏡片）</p>
+          <p className="text-indigo-700">室溫 18-19°C · 全遮光窗簾 · 遮蓋 LED 指示燈</p>
         </div>
       </Detail>
     );
@@ -290,6 +289,51 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>週一 Upper A · 週二 Lower A · 週三 VO2 Max · 週四 Upper B · 週五 Lower B · 週六 Zone 2 · 週日 Zone 2</p>
           <p className="text-gray-500">每週：肌力 4 次 · Zone 2 有氧 2 次 · VO2 Max 1 次</p>
         </div>
+      </Detail>
+    );
+  }
+
+  // === All-day items ===
+
+  if (title.includes('蛋白質') && title.includes('146')) {
+    return (
+      <Detail>
+        <p>訓練前乳清 27g + 午晚餐各 45-50g + 睡前豌豆 16g ≈ 143g</p>
+        <p>每餐達亮氨酸門檻 2.5-3g 才能啟動 MPS</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('膳食纖維')) {
+    return (
+      <Detail>
+        <p>洋蔥、大蒜、燕麥、酪梨、冷卻米飯/地瓜（抗性澱粉）</p>
+        <p>搭配發酵食物（優格、泡菜）增強腸道多樣性</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('站立') && title.includes('坐姿')) {
+    return (
+      <Detail>
+        <p>維持脂蛋白脂肪酶 LPL 活性，避免久坐代謝下降</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('碳水循環')) {
+    return (
+      <Detail>
+        <p>重訓日 5-6g/kg（360-430g）· 有氧日 3-4g/kg（215-290g）</p>
+        <p>重訓日熱量目標 3,100-3,400 kcal</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('飲水')) {
+    return (
+      <Detail>
+        <p>尿液淡黃色為適當水合指標。有氧日訓練中改用電解質粉</p>
       </Detail>
     );
   }
