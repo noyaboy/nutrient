@@ -71,7 +71,7 @@ function TimingTable() {
     { time: '12:00 午餐', items: '蛋白質 30-40g + 十字花科蔬菜 + 肌酸 5g、D3 2000IU+K2+魚油+葉黃素+維他命C+膠原蛋白肽+CoQ10+B群' },
     { time: '15:00 午後', items: '銅 2mg（與鋅間隔 4hr+）' },
     { time: '19:00 晚餐', items: '蛋白質 30-40g + 低 FODMAP 蔬菜 + 鋅 25mg' },
-    { time: '22:30 睡前', items: '豌豆蛋白 ~32g 粉（≈25g 蛋白）+甘胺酸鎂 200mg' },
+    { time: '22:30 睡前', items: '豌豆蛋白 ~20g 粉（≈16g 蛋白）+甘胺酸鎂 100mg' },
   ];
 
   return (

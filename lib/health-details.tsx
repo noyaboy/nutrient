@@ -102,8 +102,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜</p>
         <div className="space-y-0.5">
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息</span></p>
-          <p>D3 + K2（僅 D3 與 K2，不額外補鈣片）</p>
+          <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
+          <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
@@ -123,7 +123,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-emerald-800">搭配原理</p>
           <div className="flex items-start gap-2">
             <Tag color="green">D3 + K2</Tag>
-            <span className="flex-1 text-emerald-700">D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈</span>
+            <span className="flex-1 text-emerald-700">D3 增加鈣吸收，K2 引導鈣至骨骼而非動脈（僅取 K2，不疊加 D3）</span>
           </div>
           <div className="flex items-start gap-2">
             <Tag color="green">Vit C + 魚油</Tag>
@@ -194,10 +194,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
-          <p>豌豆蛋白 ~32g 粉（≈25g 蛋白）— 中速消化，無乳製品，對睡眠更友善</p>
+          <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 降低粉末蛋白佔比，減輕腎過濾負荷</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
-          <p>甘胺酸鎂 — 肌肉放鬆、GABA 受體調節</p>
+          <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
           <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-amber-600 font-medium">8 週用 / 4 週停</span>，停用期改紅景天 500mg）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
