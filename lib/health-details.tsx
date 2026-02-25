@@ -99,7 +99,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 30-40g（正餐食物）+ 肌酸 5g + 十字花科蔬菜</p>
+        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜</p>
         <div className="space-y-0.5">
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
@@ -112,7 +112,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
-          <p>每餐 30-40g、每日 4-5 餐均勻分配。不再額外沖乳清蛋白（正餐蛋白質已足夠）</p>
+          <p>午晚餐各 45-50g、每日 4-5 餐均勻分配。不再額外沖乳清蛋白（正餐蛋白質已足夠）</p>
+        </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-gray-800">每日脂肪目標：50-70g（20-30% 總熱量）</p>
+          <p>午餐：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g</p>
+          <p>晚餐：橄欖油 1 大匙（14g）+ 堅果 30g（~15g）≈ 25g</p>
+          <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 50-70g</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">補充品假期 5+2</p>
@@ -160,9 +166,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <p>蛋白質 45-50g + 鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
-        <Tip>適量橄欖油入菜或涼拌，確保每日脂肪攝取達 20-30% 總熱量。脂溶性維他命（D3、K2、葉黃素）與 CoQ10 皆需油脂輔助吸收</Tip>
+        <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 50-70g 目標</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-purple-800">社交豁免權 80/20</p>
@@ -198,7 +204,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
-          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-amber-600 font-medium">8 週用 / 4 週停</span>，停用期改紅景天 500mg）</p>
+          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-amber-600 font-medium">8 週用 / 4 週停</span>，停用期留白讓受體完全重置）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">監測指標</p>
