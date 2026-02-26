@@ -111,10 +111,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>午晚餐各 45-50g、每日 4-5 餐均勻分配。不再額外沖乳清蛋白（正餐蛋白質已足夠）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-gray-800">每日脂肪目標：50-70g（20-30% 總熱量）</p>
+          <p className="font-medium text-gray-800">每日脂肪目標：80-90g（22-25% 總熱量）</p>
           <p>午餐：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g</p>
           <p>晚餐：橄欖油 1 大匙（14g）+ 堅果 30g（~15g）≈ 25g</p>
-          <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 50-70g</p>
+          <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 80-90g</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
@@ -144,7 +144,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 C 500-1000mg（改至晚餐服用，遠離早晨訓練視窗，減少腸胃刺激）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
-        <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 50-70g 目標</Tip>
+        <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
       </Detail>
