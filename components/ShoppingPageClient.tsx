@@ -7,6 +7,7 @@ interface ShoppingPageClientProps {
   costcoSupplements: Product[];
   costcoFoods: Product[];
   iherbSupplements: Product[];
+  personalCare: Product[];
   equipment: Product[];
 }
 
@@ -94,6 +95,7 @@ export default function ShoppingPageClient({
   costcoSupplements,
   costcoFoods,
   iherbSupplements,
+  personalCare,
   equipment,
 }: ShoppingPageClientProps) {
   const [search, setSearch] = useState('');
@@ -112,8 +114,9 @@ export default function ShoppingPageClient({
   const filteredCostco = filterItems(costcoSupplements);
   const filteredCostcoFood = filterItems(costcoFoods);
   const filteredIherb = filterItems(iherbSupplements);
+  const filteredPersonalCare = filterItems(personalCare);
   const filteredEquipment = filterItems(equipment);
-  const hasResults = filteredCostco.length + filteredCostcoFood.length + filteredIherb.length + filteredEquipment.length > 0;
+  const hasResults = filteredCostco.length + filteredCostcoFood.length + filteredIherb.length + filteredPersonalCare.length + filteredEquipment.length > 0;
 
   return (
     <div className="space-y-8">
@@ -138,6 +141,7 @@ export default function ShoppingPageClient({
           {filteredCostco.length > 0 && <ShoppingSection title="Costco 好市多 — 保健品" items={filteredCostco} />}
           {filteredCostcoFood.length > 0 && <ShoppingSection title="Costco 好市多 — 食材" items={filteredCostcoFood} />}
           {filteredIherb.length > 0 && <ShoppingSection title="iHerb — 專業補充品" items={filteredIherb} />}
+          {filteredPersonalCare.length > 0 && <ShoppingSection title="個人保養" items={filteredPersonalCare} />}
           {filteredEquipment.length > 0 && <ShoppingSection title="其他 — 設備" items={filteredEquipment} />}
         </>
       ) : (

@@ -16,6 +16,7 @@ export default async function ShoppingPage() {
   const costcoSupplements = items.filter(p => p.category === 'costco_supplement');
   const costcoFoods = items.filter(p => p.category === 'costco_food');
   const iherbSupplements = items.filter(p => p.category === 'iherb_supplement');
+  const personalCare = items.filter(p => p.category === 'personal_care');
   const equipment = items.filter(p => p.category === 'equipment');
 
   return (
@@ -23,6 +24,7 @@ export default async function ShoppingPage() {
       costcoSupplements={costcoSupplements}
       costcoFoods={costcoFoods}
       iherbSupplements={iherbSupplements}
+      personalCare={personalCare}
       equipment={equipment}
     />
   );
