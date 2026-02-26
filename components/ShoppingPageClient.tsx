@@ -9,6 +9,7 @@ interface ShoppingPageClientProps {
   iherbSupplements: Product[];
   personalCare: Product[];
   equipment: Product[];
+  convenienceDaily: Product[];
 }
 
 function StoreTag({ store }: { store: string }) {
@@ -16,6 +17,9 @@ function StoreTag({ store }: { store: string }) {
     Costco: 'bg-red-100 text-red-700',
     iHerb: 'bg-green-100 text-green-700',
     Amazon: 'bg-yellow-100 text-yellow-700',
+    '7-Eleven': 'bg-blue-100 text-blue-700',
+    '全家便利店': 'bg-purple-100 text-purple-700',
+    '全聯': 'bg-indigo-100 text-indigo-700',
   };
   return (
     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${colors[store] || 'bg-gray-100 text-gray-700'}`}>
@@ -97,6 +101,7 @@ export default function ShoppingPageClient({
   iherbSupplements,
   personalCare,
   equipment,
+  convenienceDaily,
 }: ShoppingPageClientProps) {
   const [search, setSearch] = useState('');
 
@@ -116,7 +121,8 @@ export default function ShoppingPageClient({
   const filteredIherb = filterItems(iherbSupplements);
   const filteredPersonalCare = filterItems(personalCare);
   const filteredEquipment = filterItems(equipment);
-  const hasResults = filteredCostco.length + filteredCostcoFood.length + filteredIherb.length + filteredPersonalCare.length + filteredEquipment.length > 0;
+  const filteredConvenience = filterItems(convenienceDaily);
+  const hasResults = filteredCostco.length + filteredCostcoFood.length + filteredIherb.length + filteredPersonalCare.length + filteredEquipment.length + filteredConvenience.length > 0;
 
   return (
     <div className="space-y-8">
@@ -140,6 +146,7 @@ export default function ShoppingPageClient({
         <>
           {filteredCostco.length > 0 && <ShoppingSection title="Costco 好市多 — 保健品" items={filteredCostco} />}
           {filteredCostcoFood.length > 0 && <ShoppingSection title="Costco 好市多 — 食材" items={filteredCostcoFood} />}
+          {filteredConvenience.length > 0 && <ShoppingSection title="便利超商 — 日常必需" items={filteredConvenience} />}
           {filteredIherb.length > 0 && <ShoppingSection title="iHerb — 專業補充品" items={filteredIherb} />}
           {filteredPersonalCare.length > 0 && <ShoppingSection title="個人保養" items={filteredPersonalCare} />}
           {filteredEquipment.length > 0 && <ShoppingSection title="其他 — 設備" items={filteredEquipment} />}

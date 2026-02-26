@@ -18,6 +18,7 @@ export default async function ShoppingPage() {
   const iherbSupplements = items.filter(p => p.category === 'iherb_supplement');
   const personalCare = items.filter(p => p.category === 'personal_care');
   const equipment = items.filter(p => p.category === 'equipment');
+  const convenienceDaily = items.filter(p => p.category === 'convenience_daily');
 
   return (
     <ShoppingPageClient
@@ -26,6 +27,7 @@ export default async function ShoppingPage() {
       iherbSupplements={iherbSupplements}
       personalCare={personalCare}
       equipment={equipment}
+      convenienceDaily={convenienceDaily}
     />
   );
 }
