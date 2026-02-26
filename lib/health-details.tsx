@@ -100,11 +100,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
-          <p>維他命 C 500-1000mg（水溶性，每日服用）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
           <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
           <p>B群 1 顆（水溶性，白天能量代謝）</p>
+          <p>銅 2mg（隨午餐正餐服用，利用食物體積緩衝腸胃刺激。與晚餐鋅間隔 4hr+ 避免競爭吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -128,8 +128,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>銅 2mg</Label>
-        <p>與鋅間隔 4 小時以上（銅和鋅在腸道吸收時互相競爭）</p>
-        <p>15:00 服用銅 → 19:00 隨晚餐服用鋅 = 完美間隔</p>
+        <p>隨午餐正餐服用，利用食物體積緩衝腸胃刺激</p>
+        <p>12:00 午餐服用銅 → 19:00 隨晚餐服用鋅 = 間隔 7hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -139,6 +139,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>晚餐營養策略</Label>
         <p>蛋白質 45-50g + 鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <div className="space-y-0.5">
+          <p>鋅 25mg（半顆 50mg 膠囊）隨晚餐（與午餐銅間隔 4hr+）</p>
+          <p>維他命 C 500-1000mg（改至晚餐服用，遠離早晨訓練視窗，減少腸胃刺激）</p>
+        </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 50-70g 目標</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
@@ -160,11 +164,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('睡前')) {
+  if (title.includes('21:30') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <Label>睡前營養</Label>
-        <p>熱水澡 40-42°C，10-15 分鐘（睡前 60-90 分鐘）</p>
+        <Label>21:30-22:00 睡前補充品</Label>
+        <p>提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 降低粉末蛋白佔比，減輕腎過濾負荷</p>
@@ -326,6 +330,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>重訓日 5-6g/kg（360-430g）· 有氧日 3-4g/kg（215-290g）</p>
         <p>重訓日熱量目標 3,100-3,400 kcal</p>
+        <p className="mt-1 text-amber-700 bg-amber-50 rounded-lg px-3 py-2">高碳水日建議將 30-40% 替換為低纖維來源（白米飯、義大利麵、去皮馬鈴薯）以控制總纖維量並減輕腸胃負擔</p>
       </Detail>
     );
   }
