@@ -38,7 +38,7 @@ export interface Recipe {
   id: string;
   name: string;
   mealSlot: 'post-workout' | 'lunch' | 'dinner';
-  cookingMethod: '電鍋' | '電子鍋' | '免煮';
+  cookingMethod: '電子鍋' | '免煮';
   prepTime: number;
   macros: {
     protein: number;

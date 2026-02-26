@@ -702,13 +702,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
-  '電子鍋 / 多功能電鍋',
+  '電子鍋（多功能）',
   '煮飯、蒸地瓜/馬鈴薯、燉雞胸肉、煮燕麥粥。一鍋多用是小廚房核心設備。選 3-6 人份（1.0-1.8L 內鍋）適合一人備餐',
   '每日使用（煮飯、蒸菜、燉肉）',
   'NT$1,500-4,000',
   'https://www.costco.com.tw/TVs-Electronics/Home-Appliances/Rice-Cookers/c/90118',
   'Costco/momo/蝦皮', 'equipment',
-  '一次性購買。推薦：大同電鍋 6 人份（~$1,800，經典耐用）或象印微電腦電子鍋 3 人份（~$2,500-4,000，煮飯品質佳）。選有預約定時功能可前晚設定早上煮好。Costco 線上有多款可比較。',
+  '一次性購買。推薦：象印微電腦電子鍋 3 人份（~$2,500-4,000，煮飯品質佳，有預約定時功能可前晚設定早上煮好）或大同電子鍋 6 人份（~$1,800，經典耐用）。Costco 線上有多款可比較。',
   40
 );
 

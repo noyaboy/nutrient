@@ -8,7 +8,7 @@ export const postWorkoutRecipes: Recipe[] = [
     id: 'pw-sweet-potato-oats',
     name: '地瓜燕麥能量碗',
     mealSlot: 'post-workout',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 30,
     macros: { protein: 12, carbs: 104, fat: 4, calories: 476 },
     ingredients: [
@@ -18,7 +18,7 @@ export const postWorkoutRecipes: Recipe[] = [
       { name: '肌酸', amount: '5g' },
     ],
     steps: [
-      '地瓜洗淨切塊，放入電鍋內鍋，外鍋1杯水蒸熟',
+      '地瓜洗淨切塊，放入電子鍋內鍋，外鍋1杯水蒸熟',
       '燕麥加熱水泡軟（或微波2分鐘）',
       '香蕉切片',
       '碗中依序放入地瓜、燕麥、香蕉片',
@@ -52,7 +52,7 @@ export const postWorkoutRecipes: Recipe[] = [
     id: 'pw-sweet-potato-banana-mash',
     name: '地瓜香蕉泥',
     mealSlot: 'post-workout',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 35,
     macros: { protein: 6, carbs: 87, fat: 1, calories: 363 },
     ingredients: [
@@ -62,7 +62,7 @@ export const postWorkoutRecipes: Recipe[] = [
       { name: '肌酸', amount: '5g' },
     ],
     steps: [
-      '地瓜去皮切小塊，電鍋外鍋1杯水蒸至軟爛',
+      '地瓜去皮切小塊，電子鍋外鍋1杯水蒸至軟爛',
       '趁熱壓成泥',
       '香蕉壓碎拌入地瓜泥，加少許碘鹽提味',
       '肌酸加入乳清蛋白搖搖杯',
@@ -116,7 +116,7 @@ export const postWorkoutRecipes: Recipe[] = [
     id: 'pw-sweet-potato-oat-cake',
     name: '地瓜蛋燕麥糕',
     mealSlot: 'post-workout',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 45,
     macros: { protein: 20, carbs: 94, fat: 9, calories: 530 },
     ingredients: [
@@ -130,7 +130,7 @@ export const postWorkoutRecipes: Recipe[] = [
       '地瓜蒸熟壓泥',
       '拌入燕麥、打入雞蛋攪勻',
       '倒入內鍋，表面鋪香蕉片',
-      '電鍋外鍋1.5杯水蒸熟',
+      '電子鍋外鍋1.5杯水蒸熟',
       '放涼切塊食用，肌酸配乳清',
     ],
     tips: '可一次做多份冷藏，隔天微波加熱',
@@ -191,7 +191,7 @@ export const lunchRecipes: Recipe[] = [
     id: 'lunch-salmon-spinach-rice',
     name: '鮭魚花椰菠菜糙米',
     mealSlot: 'lunch',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 44, carbs: 84, fat: 24, calories: 741 },
     ingredients: [
@@ -205,7 +205,7 @@ export const lunchRecipes: Recipe[] = [
     steps: [
       '糙米洗淨放內鍋加水',
       '鮭魚退冰後抹鹽，放在糙米上方的蒸盤',
-      '電鍋外鍋2杯水',
+      '電子鍋外鍋2杯水',
       '跳起前5分鐘放入花椰菜和菠菜一起蒸',
       '擠檸檬汁在鮭魚上',
     ],
@@ -215,7 +215,7 @@ export const lunchRecipes: Recipe[] = [
     id: 'lunch-egg-broccoli-rice',
     name: '四蛋花椰菜蓋飯',
     mealSlot: 'lunch',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 35,
     macros: { protein: 41, carbs: 96, fat: 23, calories: 755 },
     ingredients: [
@@ -226,8 +226,8 @@ export const lunchRecipes: Recipe[] = [
       { name: '碘鹽', amount: '適量' },
     ],
     steps: [
-      '糙米放電鍋煮飯',
-      '雞蛋放電鍋上層蒸架一起蒸（水煮蛋）',
+      '糙米放電子鍋煮飯',
+      '雞蛋放電子鍋上層蒸架一起蒸（水煮蛋）',
       '花椰菜、洋蔥切好，飯快好時放蒸架蒸5分鐘',
       '水煮蛋剝殼切半，鋪在糙米飯上',
       '花椰菜、洋蔥鋪旁邊',
@@ -238,7 +238,7 @@ export const lunchRecipes: Recipe[] = [
     id: 'lunch-chicken-cauliflower-bowl',
     name: '雞胸花椰菜低碳碗',
     mealSlot: 'lunch',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 61, carbs: 63, fat: 9, calories: 587 },
     ingredients: [
@@ -252,7 +252,7 @@ export const lunchRecipes: Recipe[] = [
       '糙米加水放內鍋',
       '雞胸肉切厚片抹鹽蒜末，放蒸盤',
       '花椰菜放蒸盤旁',
-      '電鍋外鍋2杯水一次蒸好',
+      '電子鍋外鍋2杯水一次蒸好',
       '擺盤調味即可',
     ],
   },
@@ -260,7 +260,7 @@ export const lunchRecipes: Recipe[] = [
     id: 'lunch-salmon-broccoli-sweet-potato',
     name: '鮭魚花椰菜地瓜餐',
     mealSlot: 'lunch',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 41, carbs: 47, fat: 22, calories: 550 },
     ingredients: [
@@ -273,7 +273,7 @@ export const lunchRecipes: Recipe[] = [
     steps: [
       '地瓜切塊放內鍋',
       '鮭魚抹鹽放蒸盤',
-      '電鍋外鍋1.5杯水',
+      '電子鍋外鍋1.5杯水',
       '跳起前5分鐘加入花椰菜',
       '擠檸檬汁提味',
     ],
@@ -306,7 +306,7 @@ export const lunchRecipes: Recipe[] = [
     id: 'lunch-avocado-salmon-bowl',
     name: '酪梨鮭魚蛋花椰碗',
     mealSlot: 'lunch',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 43, carbs: 76, fat: 38, calories: 825 },
     ingredients: [
@@ -322,7 +322,7 @@ export const lunchRecipes: Recipe[] = [
     steps: [
       '糙米放內鍋煮飯',
       '鮭魚、蛋放蒸盤一起蒸',
-      '電鍋外鍋1.5杯水，跳起前5分鐘加花椰菜',
+      '電子鍋外鍋1.5杯水，跳起前5分鐘加花椰菜',
       '酪梨切片，菠菜洗淨',
       '組碗：飯底→花椰菜+菠菜→鮭魚→蛋→酪梨，擠檸檬',
     ],
@@ -337,7 +337,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-chicken-broccoli-rice',
     name: '蒜香雞胸花椰菜飯',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 45,
     macros: { protein: 60, carbs: 86, fat: 9, calories: 686 },
     ingredients: [
@@ -349,7 +349,7 @@ export const dinnerRecipes: Recipe[] = [
     ],
     steps: [
       '糙米放內鍋，雞胸抹蒜鹽放蒸盤',
-      '電鍋外鍋2杯水',
+      '電子鍋外鍋2杯水',
       '跳起前5分鐘加花椰菜',
       '進食順序：先吃花椰菜（纖維）→ 雞胸（蛋白）→ 飯（碳水）',
     ],
@@ -359,7 +359,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-salmon-cauliflower-rice',
     name: '檸檬鮭魚花椰菜飯',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 44, carbs: 86, fat: 24, calories: 742 },
     ingredients: [
@@ -372,7 +372,7 @@ export const dinnerRecipes: Recipe[] = [
     steps: [
       '糙米放內鍋加水',
       '鮭魚抹鹽放蒸盤，花椰菜鋪旁邊',
-      '電鍋外鍋2杯水',
+      '電子鍋外鍋2杯水',
       '進食順序：先吃花椰菜 → 鮭魚（擠檸檬）→ 飯',
     ],
   },
@@ -380,7 +380,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-egg-spinach-sweet-potato',
     name: '多蛋花椰菠菜地瓜餐',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 35,
     macros: { protein: 44, carbs: 69, fat: 25, calories: 668 },
     ingredients: [
@@ -393,7 +393,7 @@ export const dinnerRecipes: Recipe[] = [
     ],
     steps: [
       '地瓜切塊放內鍋，蛋放蒸架',
-      '電鍋外鍋1.5杯水',
+      '電子鍋外鍋1.5杯水',
       '跳起前5分鐘加花椰菜，3分鐘加菠菜和洋蔥絲',
       '進食順序：先吃花椰菜菠菜洋蔥 → 水煮蛋 → 地瓜',
     ],
@@ -403,7 +403,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-chicken-dual-cruciferous',
     name: '雞胸花椰菠菜盤',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 62, carbs: 77, fat: 9, calories: 658 },
     ingredients: [
@@ -417,7 +417,7 @@ export const dinnerRecipes: Recipe[] = [
     steps: [
       '糙米放內鍋',
       '雞胸切厚片抹蒜鹽，放蒸盤',
-      '電鍋外鍋2杯水，跳起前5分鐘加花椰菜和菠菜',
+      '電子鍋外鍋2杯水，跳起前5分鐘加花椰菜和菠菜',
       '進食順序：先吃蔬菜 → 雞胸 → 糙米飯',
     ],
   },
@@ -425,7 +425,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-salmon-broccoli-avocado',
     name: '鮭魚酪梨花椰菜餐',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 40,
     macros: { protein: 42, carbs: 79, fat: 37, calories: 807 },
     ingredients: [
@@ -438,7 +438,7 @@ export const dinnerRecipes: Recipe[] = [
     ],
     steps: [
       '糙米放內鍋，鮭魚放蒸盤',
-      '電鍋外鍋2杯水，跳起前5分鐘加花椰菜',
+      '電子鍋外鍋2杯水，跳起前5分鐘加花椰菜',
       '酪梨切片（不加熱）',
       '進食順序：先吃花椰菜 → 鮭魚+酪梨（擠檸檬）→ 飯',
     ],
@@ -469,7 +469,7 @@ export const dinnerRecipes: Recipe[] = [
     id: 'dinner-chicken-kimchi-spinach',
     name: '雞胸泡菜花椰糙米',
     mealSlot: 'dinner',
-    cookingMethod: '電鍋',
+    cookingMethod: '電子鍋',
     prepTime: 45,
     macros: { protein: 61, carbs: 86, fat: 10, calories: 693 },
     ingredients: [
@@ -483,7 +483,7 @@ export const dinnerRecipes: Recipe[] = [
     ],
     steps: [
       '糙米放內鍋，雞胸抹蒜鹽放蒸盤',
-      '電鍋外鍋2杯水',
+      '電子鍋外鍋2杯水',
       '跳起前5分鐘加花椰菜，3分鐘加菠菜',
       '雞胸切片，搭配泡菜食用',
       '進食順序：先吃花椰菜+菠菜+泡菜 → 雞胸 → 飯',
