@@ -8,13 +8,13 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:00 起床 & 晨光曝曬', '起床後 30 分鐘內到戶外曬太陽 10-20 分鐘（陰天久一點）。不戴太陽眼鏡。校正晝夜節律、降低皮質醇、促進維他命D合成', 'daily', '睡眠', 1, 1, true),
   ('09:05 補水 & 電解質', '起床後盡快補水。500ml 室溫水 + 少許碘鹽 + 檸檬汁。可搭配晨光曝曬同時進行。碘鹽取代海鹽以確保碘攝取', 'daily', '飲食', 2, 1, true),
   ('09:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
-  ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '飲食', 3, 1, true),
+  ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（水溶性，早晨隨餐提供全天能量代謝）', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
   ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘', 'daily', '運動', 5, 1, true),
   ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2（僅取 K2 引導鈣至骨骼）、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg（脂溶性，與魚油同服提升吸收）、B群 1 顆（水溶性，白天能量代謝）、銅 2mg（隨午餐正餐服用，利用食物體積緩衝腸胃刺激）。每日脂肪目標 80-90g（22-25% 總熱量）。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2 MK-7 100mcg（引導鈣至骨骼，使用獨立K2而非鈣片複方）、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg（脂溶性，與魚油同服提升吸收）、銅 2mg（隨午餐正餐服用，利用食物體積緩衝腸胃刺激）。每日脂肪目標 80-90g（22-25% 總熱量）。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
   ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 10, 1, true),
@@ -35,7 +35,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 
   -- === All-day items ===
   ('全天 蛋白質 146g+ 目標', '訓練前乳清 27g + 午晚餐各 45-50g + 睡前豌豆 16g ≈ 143g。每餐達亮氨酸門檻 2.5-3g。每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）', 'daily', '飲食', 19, 1, true),
-  ('全天 膳食纖維 35-45g', '洋蔥、大蒜、蘆筍、燕麥、扁豆、酪梨、冷卻米飯/地瓜。供腸道菌產生丁酸，維護腸腦軸。搭配發酵食物（優格、泡菜）增強腸道多樣性', 'daily', '飲食', 20, 1, true),
+  ('全天 膳食纖維 35-45g', '洋蔥、大蒜、蘆筍、燕麥、扁豆、酪梨、冷卻米飯/地瓜。供腸道菌產生丁酸，維護腸腦軸。每日至少 1 份發酵食物：希臘優格 200-300g（午餐/點心）+ 泡菜 50-100g（晚餐隨餐）。雙菌源增強腸道多樣性', 'daily', '飲食', 20, 1, true),
   ('全天 每 45 分鐘站立/坐姿切換', '維持脂蛋白脂肪酶 LPL 活性，避免久坐代謝下降', 'daily', '運動', 21, 1, true),
   ('全天 碳水循環：訓練日 vs 休息日', '重訓日 5-6g/kg (360-430g)、有氧日 3-4g/kg (215-290g)、休息日 2-3g/kg (145-215g，僅 Deload 週或臨時休息)。支持 mTOR 肌肉修復與合成。高碳水日建議將 30-40% 替換為低纖維來源（白米飯、義大利麵、去皮馬鈴薯）以控制總纖維量並減輕腸胃負擔。卡路里目標：重訓日 3,100-3,400 kcal', 'daily', '飲食', 22, 1, true),
   ('全天 週末睡眠一致性（±30 分鐘）', '週末起床/睡覺時間與平日偏差不超過 30 分鐘。社交時差（Social Jetlag）影響認知、情緒與代謝，A 級證據', 'daily', '睡眠', 23, 1, false),
@@ -74,15 +74,15 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  '鈣 + D3 + K2（Nature Made 250 錠）',
-  '碳酸鈣 + 檸檬酸鈣雙鈣源，K2 為 MK-7 型（納豆來源）。防骨鬆 + 防動脈鈣化。產地美國。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
-  '備用品：僅在當日飲食鈣攝取確認嚴重不足時才服用 1 錠。日常以 D3+K2 為主，不額外補鈣片',
+  '鈣片備用（Nature Made Ca+D3+K2 250 錠）',
+  '碳酸鈣 + 檸檬酸鈣雙鈣源。純粹作為鈣質備用品。注意：本品含 D3 150IU/錠，與獨立 D3 2000IU 疊加風險低但需留意。K2 僅 10mcg/錠（不足日需量，已改用獨立 K2 MK-7 100mcg）。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
+  '備用品：僅在當日飲食鈣攝取確認嚴重不足時才服用 1 錠。日常 K2 已改用獨立 K2 MK-7 產品',
   'NT$759 / 250 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
   'Costco', 'costco_supplement', 'NATURE MADE 萊萃美', '美國',
   $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處，開封後請置於冰箱儲存。","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
   $${"calcium":"500mg/錠","vitamin_d3":"3.75mcg (150IU)/錠","vitamin_k2":"10mcg (MK-7型)/錠"}$$::jsonb,
-  '線上可訂（常溫配送）。現為備用品（鈣從食物攝取為主），250 錠可用非常久。開封後建議冰箱保存。',
+  '線上可訂（常溫配送）。純鈣備用品（鈣從食物攝取為主），250 錠可用非常久。K2 已獨立購買（NOW Foods MK-7），本品 K2 含量不足日常需求。開封後建議冰箱保存。',
   2
 );
 
@@ -382,6 +382,19 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   23
 );
 
+INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
+  '藍莓 / 冷凍莓果',
+  '抗氧化花青素含量最高的水果之一。搭配燕麥碗、希臘優格食用。改善認知功能與心血管健康',
+  '每日 50-100g（燕麥碗或優格搭配）',
+  '新鮮 ~NT$399/510g 或 冷凍 ~NT$329/600g',
+  'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
+  'Costco', 'costco_food', NULL, '美國/加拿大/智利',
+  '{"storage":"新鮮冷藏3-5天，冷凍版-18°C長期保存"}'::jsonb,
+  '{"anthocyanins":"花青素豐富","fiber":"約2.4g/100g","vitamin_c":"約10mg/100g"}'::jsonb,
+  '新鮮藍莓在 Costco 蔬果區（季節性）。小冰箱建議買新鮮版每週 1 盒（510g），放保鮮抽屜 3-5 天用完。若買冷凍版（Nature''s Touch 600g），僅佔冷凍約 0.5L 可接受。每日取 50-100g 加入燕麥碗或優格。',
+  24
+);
+
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES
   ('有機白米（銀川一等白米 3kg）',
    '花蓮產有機白米。低纖維碳水，訓練日30-40%替代糙米以減輕腸胃負擔。易消化，GI較高適合訓練後補充',
@@ -511,6 +524,20 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
+  '維他命 K2 MK-7（NOW Foods 100mcg × 120 顆）',
+  '獨立 K2 MK-7（納豆來源），引導鈣質沉積至骨骼而非血管壁。與 D3 協同作用，防止動脈鈣化。取代鈣片複方中不足量的 K2',
+  '每日 1 顆隨午餐（與 D3、魚油同服，脂溶性需油脂）',
+  'NT$450 / 120 顆',
+  'https://tw.iherb.com/pr/now-foods-mk-7-vitamin-k-2-100-mcg-120-veg-capsules/40283',
+  'iHerb', 'iherb_supplement', 'NOW Foods',
+  NULL, NULL, NULL, 'NOW-00993',
+  $${"form":"素食膠囊","count":"120顆","source":"MK-7（納豆來源）"}$$::jsonb,
+  $${"serving_size":"1顆","vitamin_k2":"100mcg（MK-7型）"}$$::jsonb,
+  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。MK-7 型半衰期長（~72hr），每日 1 顆即可維持穩定血中濃度。取代 Nature Made 鈣片複方中僅 10mcg 的不足 K2。',
+  28
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'L-Theanine（NOW Foods Double Strength 200mg × 120 顆）',
   '搭配咖啡的最強 nootropic 組合（A 級證據）。促進專注 + 放鬆，消除咖啡因焦慮感。120 顆大包裝更划算',
   '每日 1 顆（200mg）搭配早晨咖啡',
@@ -522,7 +549,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"素食膠囊","count":"120顆"}$$::jsonb,
   $${"serving_size":"1顆","l_theanine":"200mg"}$$::jsonb,
   'iHerb 直送。每日 1 顆，120 顆可用 4 個月。Double Strength 200mg，每季訂一次。',
-  28
+  29
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -536,7 +563,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"ingredients":"水解海洋膠原蛋白肽、玻尿酸、維他命C","form":"無調味粉末","weight":"206g"}$$::jsonb,
   $${"serving_size":"6.5g","collagen_peptides":"5.1g","hyaluronic_acid":"18mg","vitamin_c":"80mg"}$$::jsonb,
   'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。與維他命 C 同服效果最佳。搭配其他 iHerb 品項湊免運。',
-  29
+  30
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -550,13 +577,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"軟膠囊","count":"60顆"}$$::jsonb,
   $${"serving_size":"1顆","ubiquinol":"200mg"}$$::jsonb,
   'iHerb 直送。每日 1 顆，60 顆可用 2 個月。脂溶性，務必隨含油脂餐食服用。',
-  30
+  31
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'B群 B-50（NOW Foods 100 顆）',
   '完整 B 群複方（B1/B2/B3/B5/B6/B7/B9/B12）。水溶性，支持白天能量代謝、神經系統與紅血球生成',
-  '每日 1 顆隨午餐',
+  '每日 1 顆隨早餐（訓練前營養餐）',
   'NT$332 / 100 顆',
   'https://tw.iherb.com/pr/now-foods-b-50-100-veg-capsules/39670',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -564,7 +591,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"素食膠囊","count":"100顆"}$$::jsonb,
   $${"serving_size":"1顆","b_complex":"B-50 完整複方"}$$::jsonb,
   'iHerb 直送。每日 1 顆，100 顆可用 3 個多月，每季補一次。尿液變黃為正常現象（B2 代謝）。',
-  31
+  32
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -578,7 +605,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"ingredients":"豌豆蛋白分離物（黃豌豆）","form":"無調味粉末","weight":"907g"}$$::jsonb,
   $${"serving_size":"33g","protein":"24g","fat":"2g","carbs":"1g"}$$::jsonb,
   'iHerb 直送。每日 ~20g，907g 可用 45 天。無調味可搭配少量蜂蜜或可可粉。',
-  32
+  33
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -592,7 +619,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"ingredients":"甘胺酸","form":"純粉末","weight":"454g"}$$::jsonb,
   $${"serving_size":"3g","glycine":"3g"}$$::jsonb,
   'iHerb 直送。每日 3g，454g 可用 5 個月。微甜味，可直接加入豌豆蛋白一起沖泡。',
-  33
+  34
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -606,7 +633,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"素食膠囊","count":"90顆"}$$::jsonb,
   $${"serving_size":"3顆","magnesium_l_threonate":"2000mg","elemental_magnesium":"144mg"}$$::jsonb,
   'iHerb 直送。每日 3 顆，90 顆可用 1 個月。與甘胺酸鎂搭配使用，注意總鎂量。',
-  34
+  35
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -620,7 +647,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"素食膠囊","count":"90顆","extract":"KSM-66 全譜根部萃取"}$$::jsonb,
   $${"serving_size":"1顆","ashwagandha_extract":"450mg"}$$::jsonb,
   'iHerb 直送。8 週用期每日 1 顆（2 顆達 ~600mg 視劑量調整），90 顆約 1.5-3 個月。停用期留白讓受體重置。第 6-8 週留意情緒變化。',
-  35
+  36
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
@@ -634,7 +661,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"form":"沖泡粉末","count":"20包"}$$::jsonb,
   $${"serving_size":"1包","sodium":"250mg","potassium":"150mg"}$$::jsonb,
   'iHerb 直送。有氧日每次 1 包，每週 2-3 次，20 包約 7-10 週。CGN 自有品牌有折扣。',
-  36
+  37
 );
 
 ------------------------------------------------------------
@@ -672,6 +699,17 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
   'Amazon', 'equipment',
   '一次性購買。量好窗戶尺寸，選「100% blackout」標示。邊緣可用魔鬼氈輔助密封。',
   39
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, purchase_note, sort_order) VALUES (
+  '電子鍋 / 多功能電鍋',
+  '煮飯、蒸地瓜/馬鈴薯、燉雞胸肉、煮燕麥粥。一鍋多用是小廚房核心設備。選 3-6 人份（1.0-1.8L 內鍋）適合一人備餐',
+  '每日使用（煮飯、蒸菜、燉肉）',
+  'NT$1,500-4,000',
+  'https://www.costco.com.tw/TVs-Electronics/Home-Appliances/Rice-Cookers/c/90118',
+  'Costco/momo/蝦皮', 'equipment',
+  '一次性購買。推薦：大同電鍋 6 人份（~$1,800，經典耐用）或象印微電腦電子鍋 3 人份（~$2,500-4,000，煮飯品質佳）。選有預約定時功能可前晚設定早上煮好。Costco 線上有多款可比較。',
+  40
 );
 
 ------------------------------------------------------------
