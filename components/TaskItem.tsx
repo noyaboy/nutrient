@@ -13,7 +13,7 @@ interface TaskItemProps {
 
 export default function TaskItem({ item, targetDate, details }: TaskItemProps) {
   const [isPending, startTransition] = useTransition();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const isCompleted = !!item.completion;
 
   function handleToggle() {

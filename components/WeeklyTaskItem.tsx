@@ -14,7 +14,7 @@ interface WeeklyTaskItemProps {
 
 export default function WeeklyTaskItem({ item, weekDates, today, details }: WeeklyTaskItemProps) {
   const [isPending, startTransition] = useTransition();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const completedDates = new Set(item.completions.map(c => c.target_date));
   const completedCount = completedDates.size;
   const isGoalMet = completedCount >= item.targetCount;

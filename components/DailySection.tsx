@@ -62,7 +62,7 @@ function groupItems(items: PlanItemWithCompletion[]): TimeGroup[] {
 
 function AllDayItem({ item, targetDate, details }: { item: PlanItemWithCompletion; targetDate: string; details?: React.ReactNode | null }) {
   const [isPending, startTransition] = useTransition();
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const isCompleted = !!item.completion;
   const shortTitle = item.title.replace(/^全天\s*/, '');
 
