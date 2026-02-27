@@ -195,7 +195,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">補鈣日暫停</span>）— 午餐膠原蛋白已含 ~160mg，補鈣日當日 ~160mg 已足夠</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留午餐膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
           <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
@@ -206,10 +206,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 補鈣日晚餐：暫停 VitC + 避免菠菜/甜菜</p>
-          <p className="text-red-700 font-bold">補鈣日晚餐暫停 VitC 500mg 補劑（午餐膠原蛋白 ~160mg 已足夠當日需求）</p>
-          <p className="text-red-700">維他命 C 增強草酸吸收 → 與鈣片併用 → 草酸鈣結石風險</p>
-          <p className="text-red-700">補鈣日菠菜、甜菜等高草酸蔬菜移至非補鈣日，或選擇低草酸蔬菜（櫛瓜、小白菜）</p>
+          <p className="font-semibold text-red-800">🔴 補鈣日 VitC 統一策略</p>
+          <p className="text-red-700 font-bold">補鈣日全天停用合成 VitC 補劑（晚餐 500mg 停服）</p>
+          <p className="text-red-700">僅保留午餐膠原蛋白食物來源 160mg（非額外合成補劑）</p>
+          <p className="text-red-700">高劑量 VitC + 鈣 + 草酸 = 結石黃金三角，三者不可同餐</p>
+          <p className="text-red-700">補鈣日菠菜、甜菜等高草酸蔬菜移至非補鈣日</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐避免優格</p>
@@ -482,10 +483,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>每餐達亮氨酸門檻 2.5-3g，單餐 ≤40g 避免 BUN 飆升與腸道產氣</p>
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 eGFR &lt;90 警示（排除肌酸偽陽性後）</p>
-          <p className="text-red-700">若腎絲球過濾率低於 90 → 立即下修總蛋白至 1.6g/kg（≈ 117g/day）</p>
-          <p className="text-red-700">每餐 ≤35g，停止肌酸補充，密切監測 BUN/Creatinine 變化</p>
-          <p className="text-red-700 font-semibold">⚠️ 抽血前 3-5 天停用肌酸，避免 Creatinine 偽高導致 eGFR 低估</p>
+          <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
+          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 3-5 天（Creatinine 偽高 → eGFR 被低估）</p>
+          <p className="text-red-700 font-bold">2. 取得真實 eGFR → 若仍 &lt;90 才啟動下修蛋白質</p>
+          <p className="text-red-700">→ 下修至 1.6g/kg（≈ 117g/day），每餐 ≤35g，永久停止肌酸</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
@@ -601,10 +602,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>每半年健康檢測 — 必檢指標</Label>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-semibold text-red-800">腎功能（高蛋白飲食 + 肌酸監測）</p>
+          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 3-5 天必須停用肌酸</p>
+          <p className="text-red-700">肌酸補充使 Creatinine 偽陽性升高 → eGFR 被低估 → 可能誤判腎功能異常</p>
+          <p className="text-red-700">只有停用後的數據才能反映真實腎功能</p>
           <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
           <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
           <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
-          <p className="text-red-700 font-bold">⚠️ 抽血前 3-5 天停用肌酸：肌酸補充使 Creatinine 偽陽性升高 → eGFR 被低估</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
@@ -637,11 +640,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">⚠️ 腎功能異常（eGFR &lt;90，已排除肌酸偽陽性）</p>
+          <p className="font-bold text-red-800">⚠️ 若停用肌酸後 eGFR 仍 &lt;90（確認為真實腎功能下降）</p>
           <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
-          <p className="text-red-700">停止肌酸補充（減少腎臟代謝負擔）</p>
+          <p className="text-red-700">永久停止肌酸補充（減少腎臟代謝負擔）</p>
           <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
-          <p className="text-red-700 font-semibold">⚠️ 確認已停用肌酸 3-5 天後再抽血，排除偽陽性後方可診斷</p>
+          <p className="text-red-700 font-semibold">必須先停用肌酸 3-5 天 → 取得真實 eGFR → 才啟動下修蛋白質</p>
         </div>
       </Detail>
     );
