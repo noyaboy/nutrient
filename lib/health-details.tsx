@@ -108,10 +108,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週五：下半身 B（硬舉 + 腿前側）</p>
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 冷水浴嚴格限制</p>
-          <p className="text-red-700 font-bold">重訓日（一二四五）及 VO2 Max 日（三）絕對禁止冷水浴</p>
-          <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1）+ 線粒體適應信號，顯著減少肌肉蛋白質合成</p>
-          <p className="text-emerald-600 font-semibold">僅週六/日（Zone 2 日）可在早晨執行冷水浴</p>
+          <p className="font-bold text-red-800">🚫 冷水浴統一規定</p>
+          <p className="text-red-700 font-bold">重訓日（一二四五）及 VO2 Max 日（三）嚴格禁止</p>
+          <p className="text-red-700">冷水浴會抑制肌肥大信號（mTOR、IGF-1）+ 線粒體適應</p>
+          <p className="text-emerald-600 font-semibold">✓ 僅週六/日（Zone 2 日）早晨 07:00-08:00 可執行</p>
           <p className="text-emerald-600">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
         </div>
       </Detail>
@@ -139,7 +139,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">每日脂肪目標：80-90g（22-25% 總熱量）</p>
           <p>午餐：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g</p>
-          <p>晚餐：橄欖油 1 大匙（14g）+ 堅果 30g（~15g）≈ 25g</p>
+          <p>晚餐：橄欖油 2 大匙（28g）</p>
           <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 80-90g</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -157,7 +157,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 15:00-16:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
         <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
-        <p>15:00 銅 → 19:00 鋅（僅週二、六）= 間隔 4hr+（避免競爭吸收）</p>
+        <p>15:00 銅 → 19:00 鋅（每日）= 間隔 4hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -169,10 +169,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 40-45g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（1 錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
-          <p className="text-amber-600">鋅 25mg 僅週二、六隨晚餐服用（每週 1-2 次，降低長期風險）</p>
+          <p className="text-amber-600">鋅 25mg 每日隨晚餐服用（半顆，與 15:00 銅間隔 4hr+，鋅銅比 12.5:1）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
-        <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
+        <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
       </Detail>
@@ -252,8 +252,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
         <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週三改為 VO2 Max，避免高強度與長時間有氧疊加同一天</Tip>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">冷水浴可在週六/日早晨執行</p>
-          <p className="text-blue-700">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
+          <p className="font-medium text-blue-800">冷水浴僅限週六/日早晨</p>
+          <p className="text-blue-700">07:00-08:00 執行冷水浴，與 Zone 2 運動間隔 4hr+</p>
+          <p className="text-blue-700">例：07:00 冷水浴（10 分鐘）→ 11:00 Zone 2 有氧（45-60 分鐘）</p>
           <p className="text-blue-700">Zone 2 為低強度有氧，冷水浴對其影響較小（非肌肥大目標）</p>
         </div>
       </Detail>
@@ -402,10 +403,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">主要鈣來源（食物優先）</p>
           <p>希臘優格 200-300g — ~200-300mg</p>
-          <p>牛奶 250ml — ~300mg</p>
           <p>深綠蔬菜（菠菜、花椰菜）— ~100-150mg</p>
           <p>豆腐（板豆腐）100g — ~150mg</p>
-          <p>起司 30g — ~200mg</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 不足時下午補鈣（14:00-15:00）</p>
