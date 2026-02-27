@@ -154,10 +154,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>銅 2mg — 嚴格空腹單獨服用</Label>
-        <p className="font-semibold">下午 15:00-16:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
+        <p className="font-semibold">下午 16:00-17:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
         <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
-        <p>15:00 銅 → 19:00 鋅（每兩天）= 間隔 4hr+（避免競爭吸收）</p>
+        <p>12:00 鈣（午餐）→ 16:00 銅（間隔 4hr）→ 19:00 鋅（間隔 3hr），三者充分拉開</p>
       </Detail>
     );
   }
@@ -166,11 +166,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 40-45g（⚠️ 牛肉日：200g 牛肉 ≈ 40-50g 蛋白，減少其他蛋白來源，單餐 ≤50g）</p>
+        <p>蛋白質 40-45g（⚠️ 牛肉日務必減蛋：200g 牛肉 ≈ 40-50g 蛋白，不加蛋，單餐 ≤50g）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
-          <p className="text-amber-600">鋅 25mg 每兩天隨晚餐服用（半顆，與 15:00 銅間隔 4hr+）</p>
+          <p className="text-amber-600">鋅 25mg 每兩天隨晚餐服用（半顆，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -368,7 +368,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）</p>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
-          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，應減少其他蛋白來源（少加蛋）</p>
+          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋）</p>
           <p className="text-amber-700">確保單餐 ≤50g，避免腎臟短時間代謝壓力</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
@@ -424,8 +424,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>豆腐（板豆腐）100g — ~150mg</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 不足時午餐後補鈣（13:00）</p>
-          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐後 13:00 隨輕食補 1 錠鈣片 500mg</p>
+          <p className="font-semibold text-amber-800">⚠️ 不足時午餐隨餐補鈣（12:00）</p>
+          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐（12:00）隨餐補 1 錠鈣片 500mg</p>
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
           <p className="text-amber-700">鈣片僅為安全網，不應取代食物來源</p>
         </div>
@@ -438,7 +438,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">13:00 補鈣與 15:00 銅間隔 2hr+（二價金屬競爭吸收通道）</p>
+          <p className="text-red-700">12:00 午餐鈣 → 16:00 銅 → 19:00 鋅，各間隔 3-4hr+（二價金屬競爭吸收通道）</p>
         </div>
       </Detail>
     );
