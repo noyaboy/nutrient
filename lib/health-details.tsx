@@ -73,9 +73,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>訓練前營養</Label>
-        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性隨餐）</p>
+        <p>地瓜（推薦）或香蕉+堅果醬 1 茶匙 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
         <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
         <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
+          <p className="text-amber-700">水溶性維生素需食物基質減緩胃排空以提升吸收</p>
+          <p className="text-amber-700">推薦：地瓜（前晚蒸好冷藏產生抗性澱粉 RS3）</p>
+          <p className="text-amber-700">替代：香蕉 + 堅果醬 1 茶匙（~5g脂肪）</p>
+        </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">抗性澱粉 RS3 落實</p>
           <p className="text-blue-700">地瓜建議前晚用電子鍋蒸好冷藏（產生抗性澱粉 RS3）</p>
@@ -126,7 +132,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 1000 IU（半顆）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
+          <p>維他命 D3 1000 IU（半顆，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
@@ -136,7 +142,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
           <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
-          <p className="text-amber-700">補鈣當日停用午餐獨立 D3（鈣片已含 150IU，25(OH)D 為長期蓄積指標不受單日影響）</p>
+          <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
           <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -184,8 +190,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
-          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋），確保單餐 ≤40g</p>
-          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免超過 UL 40mg/日</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，務必減蛋（不加蛋或僅加 1 顆），確保單餐 ≤40g</p>
+          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">🚫 補鈣日晚餐避免菠菜</p>
+          <p className="text-red-700">晚餐維他命 C 500mg 增強草酸吸收，與鈣片併用 → 草酸鈣結石風險</p>
+          <p className="text-red-700">補鈣日菠菜移至非補鈣日，或選擇其他低草酸蔬菜（櫛瓜、小白菜）</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -416,7 +427,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
-          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋）</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，務必減蛋（不加蛋或僅加 1 顆）</p>
           <p className="text-amber-700">確保單餐 ≤40g，避免腎臟短時間代謝壓力</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
@@ -486,16 +497,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">與午餐脂溶性維生素（魚油/D3/K2/葉黃素）間隔 1hr+，避免競爭吸收</p>
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
         </div>
-        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：停用午餐獨立 D3</p>
-          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 1000IU 當日停用</p>
-          <p className="text-orange-700">25(OH)D 為長期蓄積指標，單日少攝取不影響血清濃度（錠劑也無法精確切分）</p>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
+          <p className="text-emerald-700">總攝取 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
+          <p className="text-emerald-700">25(OH)D 為長期蓄積指標，單日波動不影響血清濃度</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
-          <p className="text-red-700">補鈣日午餐避免大量菠菜等高草酸食物</p>
+          <p className="text-red-700 font-bold">補鈣日午餐+晚餐都避免大量菠菜</p>
+          <p className="text-red-700">午餐膠原蛋白 ~160mg Vit C + 晚餐 500mg Vit C → 維他命 C 增強草酸吸收</p>
           <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
-          <p className="text-red-700">菠菜移至晚餐或非補鈣日食用</p>
+          <p className="text-red-700">菠菜移至非補鈣日食用，或選擇低草酸蔬菜（櫛瓜、小白菜、大白菜）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
