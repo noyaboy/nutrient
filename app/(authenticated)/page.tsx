@@ -161,7 +161,7 @@ function HealthNotes() {
           </div>
           <div className="bg-blue-50 rounded-lg p-3 space-y-1">
             <p className="font-semibold text-blue-800">D3 動態調整</p>
-            <p className="text-blue-700">25(OH)D 達 40-60 ng/mL + 每日晨光曝曬 → D3 2000 IU 減半或改兩天一次</p>
+            <p className="text-blue-700">25(OH)D 達 40-60 ng/mL + 每日晨光曝曬 → D3 1000 IU 可進一步減量或改兩天一次</p>
           </div>
           <div className="bg-red-50 rounded-lg p-3 space-y-1">
             <p className="font-semibold text-red-800">代謝壓力監控</p>

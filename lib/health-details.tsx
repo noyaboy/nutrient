@@ -159,7 +159,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：14:00 服用（午餐後 2hr）</p>
           <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 18:00+：與 14:00 鈣片間隔 4hr+（VitC + 鈣 + 草酸 = 結石黃金三角）</p>
           <p className="text-amber-700">時間軸：14:00 鈣片 → 16:00 銅 → 18:00 膠原蛋白 → 19:00 晚餐最後一口鋅</p>
-          <p className="text-red-700">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜），改用青花菜、高麗菜、小白菜</p>
+          <p className="text-red-700">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜、青花菜），改用櫛瓜、大白菜、高麗菜、小白菜</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
@@ -219,20 +219,22 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-bold">補鈣日全天停用合成 VitC 補劑（晚餐 500mg 停服）</p>
           <p className="text-red-700">僅保留 18:00 膠原蛋白食物來源 160mg（與 14:00 鈣片間隔 4hr+）</p>
           <p className="text-red-700">高劑量 VitC + 鈣 + 草酸 = 結石黃金三角，三者不可同餐</p>
-          <p className="text-red-700 font-bold">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜），改用青花菜、高麗菜、小白菜、櫛瓜</p>
+          <p className="text-red-700 font-bold">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜、青花菜），改用櫛瓜、大白菜、高麗菜、小白菜</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐避免優格</p>
-          <p className="text-amber-700">希臘優格鈣 200-300mg 會抑制鋅 15mg 吸收，優格移至午餐或 15:30 點心</p>
+          <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐嚴禁優格</p>
+          <p className="text-amber-700">希臘優格鈣 200-300mg 會抑制鋅 15mg 吸收，必須間隔 2hr+</p>
+          <p className="text-amber-700">優格安排在午餐或 15:30 點心（15:30 → 19:00 鋅 = 3.5hr 間隔 ✓）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 重訓日（一二四五）晚餐零葉菜 + 零抗性澱粉</p>
           <p className="text-red-700">高碳水日嚴格執行：僅保留新鮮熱白米飯/去皮馬鈴薯/義大利麵</p>
+          <p className="text-emerald-700 font-medium">✅ 保留少量煮熟去皮櫛瓜 50-100g（微量纖維緩衝血糖波動，不產氣）</p>
           <p className="text-red-700 font-bold">禁止冷卻米飯/地瓜：抗性澱粉在腸道後段發酵產氣比葉菜纖維更強</p>
           <p className="text-red-700">纖維 + 抗性澱粉 + 睡前甘胺酸鎂（高滲透壓）三重疊加 → 夜間滲透性腹脹干擾睡眠</p>
           <p className="text-emerald-700">抗性澱粉保留在午餐（冷卻再加熱米飯），晚餐以新鮮熱食為主</p>
         </div>
-        <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
+        <p>最後正餐在睡前 2-3 小時完成（⚠️ 優格須在 17:00 前食用，與 19:00 鋅間隔 2hr+）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
       </Detail>
     );
@@ -294,8 +296,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">□ 今天是否對平常喜歡的事物失去興趣？</p>
           <p className="text-orange-700">□ 是否感到情緒平淡/麻木？</p>
           <p className="text-orange-700">□ 早晨是否異常無力起床？</p>
-          <p className="text-orange-700 font-bold">→ 任一「是」連續 2 天 → 立即停用 Ashwagandha</p>
-          <p className="text-orange-600 text-[10px]">藥源性情緒阻斷具隱蔽性，僅靠第 4/12 週抽血不足以應對突發情緒副作用</p>
+          <p className="text-orange-700 font-bold">→ 任一「是」連續 2 天 → 立即停用 Ashwagandha（不可因 8 週未滿而繼續服用）</p>
+          <p className="text-orange-600 text-[10px]">情緒冷漠為「強制停用」信號，藥源性情緒阻斷具隱蔽性，僅靠第 4/12 週抽血不足以應對</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
@@ -318,7 +320,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>Ashwagandha 週期管理</Label>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">📋 8 週用 / 4 週停 週期</p>
-          <p>第 1-5 週：正常服用 600mg/日（睡前）</p>
+          <p>第 1-5 週：正常服用 450mg/日（睡前）</p>
           <p>第 6 週起：每日自評情緒冷漠、早晨無力起床</p>
           <p>第 8 週（第 56 天）：準時進入停用期</p>
           <p>停用 4 週（28 天）：甘胺酸鎂 + Cyclic Sighing 替代</p>
@@ -326,8 +328,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 禁忌與停用觸發</p>
           <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
-          <p className="text-red-700 font-semibold">甲亢或正服用甲狀腺藥物 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
-          <p className="text-red-700">情緒冷漠（Anhedonia）→ 立即停用</p>
+          <p className="text-red-700 font-semibold">🚫 甲狀腺即時停用：若 TSH/Free T4 異常 → 立即停用並就醫（可能提升 T4，甲狀腺風暴風險）</p>
+          <p className="text-red-700 font-bold">⚠️ 情緒冷漠為「強制停用」信號：即使未滿 8 週也必須立即停用，不可因週期未滿而繼續服用</p>
           <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
           <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停，康復後再恢復</p>
         </div>
@@ -500,7 +502,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
-          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 7 天（24 歲高強度重訓 + 高蛋白，3-5 天可能不足）</p>
+          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 7 天 + 暫停高強度重訓 48-72hr（肌肉修復也會升高 Creatinine）</p>
           <p className="text-red-700 font-bold">2. 取得真實 eGFR → 若仍 &lt;90 才啟動下修蛋白質</p>
           <p className="text-red-700">→ 下修至 1.6g/kg（≈ 117g/day），每餐 ≤35g，永久停止肌酸</p>
         </div>
@@ -541,7 +543,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-blue-700">訓練前：地瓜 200g ≈ 50g 碳水</p>
           <p className="text-blue-700">午餐：白米飯 300g（乾重 120g）≈ 90g + 冷卻米飯 150g ≈ 45g = 135g</p>
           <p className="text-blue-700">下午點心：香蕉 1 根 ≈ 27g</p>
-          <p className="text-blue-700">晚餐：義大利麵 120g（乾重）≈ 90g + 白米飯 200g ≈ 60g = 150g</p>
+          <p className="text-blue-700">晚餐：義大利麵 120g（乾重）≈ 90g + 白米飯 200g ≈ 60g = 150g + 去皮櫛瓜 50-100g</p>
           <p className="text-blue-700">零食加餐：燕麥 40g ≈ 28g</p>
           <p className="text-blue-800 font-medium">合計 ≈ 390g ✓</p>
         </div>
@@ -590,10 +592,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
-          <p className="text-red-700 font-bold">補鈣日全天禁止中高草酸蔬菜</p>
-          <p className="text-red-700">菠菜、甜菜、羽衣甘藍、芥菜均禁（部分十字花科也含中等草酸）</p>
+          <p className="text-red-700 font-bold">補鈣日全天禁止中高草酸蔬菜（含青花菜）</p>
+          <p className="text-red-700">菠菜、甜菜、羽衣甘藍、芥菜、青花菜均禁（青花菜仍含中等草酸）</p>
           <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
-          <p className="text-red-700">菠菜移至非補鈣日食用，或選擇低草酸蔬菜（櫛瓜、小白菜、大白菜）</p>
+          <p className="text-red-700">改用極低草酸蔬菜：櫛瓜、大白菜、高麗菜、小白菜</p>
+          <p className="text-blue-700 font-medium">💧 補鈣日飲水目標 3.5L+（稀釋尿鈣，降低結石風險）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
@@ -610,6 +613,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>尿液淡黃色為適當水合指標</p>
         <p className="text-amber-600">⚠️ 週六/日 Zone 2 有氧日：09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration），訓練中持續補充電解質水</p>
+        <p className="text-blue-600 font-medium">💧 補鈣日飲水目標 3.5L+（稀釋尿鈣，降低結石風險）</p>
       </Detail>
     );
   }
@@ -620,9 +624,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>每半年健康檢測 — 必檢指標</Label>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-semibold text-red-800">腎功能（高蛋白飲食 + 肌酸監測）</p>
-          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 7 天停用肌酸</p>
-          <p className="text-red-700">24 歲高強度重訓 + 高蛋白 113-123g/day，Creatinine 代謝需更長時間（3-5 天可能不足）</p>
-          <p className="text-red-700">只有停用後的數據才能反映真實腎功能</p>
+          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72hr 暫停高強度重訓</p>
+          <p className="text-red-700">肌肉修復本身也會顯著升高 Creatinine，與肌酸偽陽性疊加 → eGFR 被嚴重低估</p>
+          <p className="text-red-700">只有停用+休息後的數據才能反映真實腎功能</p>
           <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
           <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
           <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
@@ -662,7 +666,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
           <p className="text-red-700">永久停止肌酸補充（減少腎臟代謝負擔）</p>
           <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
-          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 → 取得真實 eGFR → 才啟動下修蛋白質</p>
+          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 + 暫停重訓 48-72hr → 取得真實 eGFR → 才啟動下修蛋白質</p>
         </div>
       </Detail>
     );
