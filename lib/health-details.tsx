@@ -145,17 +145,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。⚠️ 補鈣日：此 160mg Vit C 需與鈣片拉開 2hr+）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
-          <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
+          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：14:00 服用（午餐後 2hr）</p>
+          <p className="text-amber-700">鈣片改於 14:00 服用，與 12:00 膠原蛋白 Vit C 160mg 拉開 2hr+，降低 Vit C + 鈣 + 草酸「結石黃金三角」風險</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
-          <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
+          <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜、甜菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -482,14 +482,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>每餐達亮氨酸門檻 2.5-3g，單餐 ≤40g 避免 BUN 飆升與腸道產氣</p>
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 eGFR &lt;90 警示</p>
+          <p className="font-bold text-red-800">🚫 eGFR &lt;90 警示（排除肌酸偽陽性後）</p>
           <p className="text-red-700">若腎絲球過濾率低於 90 → 立即下修總蛋白至 1.6g/kg（≈ 117g/day）</p>
-          <p className="text-red-700">每餐 ≤35g，密切監測 BUN/Creatinine 變化</p>
-          <p className="text-red-700">健康檢查結果若 eGFR &lt;90 → 優先調整蛋白質攝取，保護腎功能</p>
+          <p className="text-red-700">每餐 ≤35g，停止肌酸補充，密切監測 BUN/Creatinine 變化</p>
+          <p className="text-red-700 font-semibold">⚠️ 抽血前 3-5 天停用肌酸，避免 Creatinine 偽高導致 eGFR 低估</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，務必減蛋（不加蛋或僅加 1 顆）</p>
+          <p className="text-amber-700 font-bold">草飼牛肉 150-180g ≈ 30-36g 蛋白，嚴格零蛋（36g + 1蛋 6.3g = 42.3g 超標）</p>
           <p className="text-amber-700">確保單餐 ≤40g，避免腎臟短時間代謝壓力</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
@@ -604,6 +604,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
           <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
           <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
+          <p className="text-red-700 font-bold">⚠️ 抽血前 3-5 天停用肌酸：肌酸補充使 Creatinine 偽陽性升高 → eGFR 被低估</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
@@ -636,10 +637,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">⚠️ 腎功能異常（eGFR &lt;90）</p>
+          <p className="font-bold text-red-800">⚠️ 腎功能異常（eGFR &lt;90，已排除肌酸偽陽性）</p>
           <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
           <p className="text-red-700">停止肌酸補充（減少腎臟代謝負擔）</p>
           <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
+          <p className="text-red-700 font-semibold">⚠️ 確認已停用肌酸 3-5 天後再抽血，排除偽陽性後方可診斷</p>
         </div>
       </Detail>
     );
