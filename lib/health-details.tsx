@@ -102,10 +102,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週五：下半身 B（硬舉 + 腿前側）</p>
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">⚠️ 冷水浴警示</p>
-          <p className="text-red-700 font-semibold">重訓後 4-6 小時內禁止冷水浴</p>
+          <p className="font-bold text-red-800">🚫 冷水浴嚴格限制</p>
+          <p className="text-red-700 font-bold">重訓後 4-6 小時內絕對禁止冷水浴</p>
           <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1），顯著減少肌肉蛋白質合成</p>
-          <p className="text-emerald-600">安全時機：休息日早晨 or 訓練前 30 分鐘</p>
+          <p className="text-emerald-600 font-semibold">僅允許時機：休息日早晨 or 訓練前 30 分鐘</p>
+          <p className="text-gray-500">週三（VO2 Max 日）/ 週六日（Zone 2 日）也需間隔 4hr+</p>
         </div>
       </Detail>
     );
@@ -115,7 +116,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜</p>
+        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜</p>
         <div className="space-y-0.5">
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
@@ -123,7 +124,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
           <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
-          <p>B群 1 顆（水溶性，白天能量代謝）</p>
+          <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -146,10 +147,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('銅') && title.includes('2mg')) {
     return (
       <Detail>
-        <Label>銅 2mg</Label>
-        <p>下午 15:00-16:00 單獨服用，空腹或僅搭配少量食物（如水果、堅果）</p>
+        <Label>銅 2mg — 嚴格空腹單獨服用</Label>
+        <p className="font-semibold">下午 15:00-16:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
-        <p>15:00 銅 → 19:00 鋅（每週 2-3 次）= 間隔 4hr+（避免競爭吸收）</p>
+        <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
+        <p>15:00 銅 → 19:00 鋅（僅週二、四、六）= 間隔 4hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -161,7 +163,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 45-50g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500-1000mg（遠離早晨訓練視窗，減少腸胃刺激）</p>
-          <p className="text-amber-600">鋅 25mg 改為每週 2-3 次隨晚餐服用（降低長期風險）</p>
+          <p className="text-amber-600">鋅 25mg 僅週二、四、六隨晚餐服用（降低每日高劑量長期風險）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -206,12 +208,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
-          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-amber-600 font-medium">8 週用 / 4 週停</span>，停用期留白讓受體完全重置）</p>
+          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停</span>，停用期留白讓受體完全重置）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-red-800">監測指標</p>
+          <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
+          <p className="text-red-700 font-semibold">第 6 週開始每日自評：是否出現情緒冷漠（Anhedonia）、對平常喜歡的事物失去興趣、早晨無力起床</p>
+          <p className="text-red-700">任一症狀出現 → 立即停用，進入 4 週停用期</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
-          <p className="text-red-700">Ashwagandha 使用第 6-8 週留意情緒冷漠（Anhedonia）或早晨無力起床 → 出現則提前進入停用期</p>
         </div>
       </Detail>
     );
@@ -360,7 +363,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>重訓日 5-6g/kg（360-430g）· 有氧日 3-4g/kg（215-290g）</p>
         <p>重訓日熱量目標 3,100-3,400 kcal</p>
-        <p className="mt-1 text-amber-700 bg-amber-50 rounded-lg px-3 py-2">高碳水日建議將 30-40% 替換為低纖維來源（白米飯、義大利麵、去皮馬鈴薯）以控制總纖維量並減輕腸胃負擔</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 高碳水日嚴格執行低纖維替換</p>
+          <p className="text-amber-700">30-40% 碳水必須替換為低纖維來源：白米飯、義大利麵、去皮馬鈴薯</p>
+          <p className="text-amber-700">目的：控制總纖維量（&lt;45g），減輕腸胃負擔</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-orange-800">脹氣優先監控</p>
+          <p className="text-orange-700">若出現腹脹 → 當餐立即減少十字花科蔬菜份量</p>
+          <p className="text-orange-700">增加低纖維碳水佔比（白米 &gt; 地瓜，義大利麵 &gt; 燕麥）</p>
+          <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，改全低 FODMAP 蔬菜</p>
+        </div>
       </Detail>
     );
   }
@@ -369,6 +382,33 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <p>尿液淡黃色為適當水合指標。有氧日訓練中改用電解質粉</p>
+      </Detail>
+    );
+  }
+
+  if (title.includes('健康檢測') || title.includes('每半年')) {
+    return (
+      <Detail>
+        <Label>每半年健康檢測 — 必檢指標</Label>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-semibold text-red-800">腎功能（高蛋白飲食 + 肌酸監測）</p>
+          <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
+          <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
+          <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
+          <p className="text-orange-700">ALT — 正常 7-56 U/L</p>
+          <p className="text-orange-700">AST — 正常 10-40 U/L</p>
+        </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-gray-800">其他指標</p>
+          <p>維他命 D — 目標 40-60 ng/mL</p>
+          <p>鋅銅比 — 目標 10-15:1</p>
+          <p>荷爾蒙：睪固酮、SHBG、皮質醇</p>
+          <p>代謝：空腹血糖、HbA1c、胰島素</p>
+        </div>
+        <Tip>⚠️ 任一腎肝指標超出參考範圍 → 立即停用非必要合成補劑（優先停：Ashwagandha、CoQ10、葉黃素），2 週後複檢</Tip>
       </Detail>
     );
   }
