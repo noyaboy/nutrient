@@ -77,11 +77,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">⏰ 正確順序</p>
-          <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（標準 1/4 茶匙量勺）+ 檸檬汁</p>
+          <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 3-5g（食品電子秤測量，提供碘 ~60-165mcg）+ 檸檬汁</p>
           <p className="text-blue-700">09:15 進食：地瓜/香蕉 + 乳清蛋白 + B群</p>
           <p className="text-blue-700">先喝水再吃固體食物+B群，確保胃中有食物基質時 B群才進入</p>
         </div>
-        <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）。使用量勺精確測量，避免估量</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
+          <p className="text-amber-700">台灣碘鹽含碘 ~20-33mcg/g，09:05 碘鹽 3-5g 僅提供 ~60-165mcg</p>
+          <p className="text-amber-700">其餘碘來源：烹調用碘鹽 + 每週 2-3 次海帶/紫菜（富含碘）</p>
+          <p className="text-amber-700">⚠️ 十字花科蔬菜含硫代葡萄糖苷（Goitrogens），競爭甲狀腺碘吸收 → 碘需求更高</p>
+          <p className="text-amber-700">使用食品電子秤（精度 0.1g）精確測量，1/4 茶匙≈1.4g 誤差達 40%</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
           <p className="text-amber-700">水溶性維生素需食物基質減緩胃排空以提升吸收</p>
@@ -144,26 +150,30 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 35-40g（正餐食物，單餐 ≤40g 避免 BUN 飆升與腸道產氣）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
+        <p>蛋白質 35-40g（正餐食物，單餐 ≤40g 避免 BUN 飆升與腸道產氣）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
         <div className="space-y-0.5">
           <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
+          <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。<span className="text-red-600 font-bold">🔴 補鈣日移至 18:00 服用</span>，與 14:00 鈣片間隔 4hr+）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg，每日隨午餐服用）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-emerald-800">✅ 草酸鈣正確觀念</p>
+          <p className="text-emerald-700">鈣與草酸在「腸道」同餐攝取 → 結合為不溶性草酸鈣隨糞便排出（保護機制）</p>
+          <p className="text-emerald-700">若刻意分開，游離草酸被吸收入血 → 在「腎臟」與尿鈣結合形成結石</p>
+          <p className="text-emerald-700 font-medium">因此：高草酸蔬菜（菠菜）搭配含鈣食物同餐食用才是正確防結石策略</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：14:00 服用（午餐後 2hr）</p>
-          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 18:00+：與 14:00 鈣片間隔 4hr+（VitC + 鈣 + 草酸 = 結石黃金三角）</p>
-          <p className="text-amber-700">時間軸：14:00 鈣片 → 16:00 銅 → 18:00 膠原蛋白 → 19:00 晚餐最後一口鋅</p>
-          <p className="text-red-700">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜、青花菜），改用櫛瓜、大白菜、高麗菜、小白菜</p>
+          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：鈣片隨午餐服用</p>
+          <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅 → 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
-          <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜、甜菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -190,7 +200,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 16:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
         <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
         <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
-        <p>14:00 鈣 → 16:00 銅（間隔 2hr）→ 18:00 膠原蛋白（補鈣日，與鈣間隔 4hr+）→ 19:00 晚餐最後一口鋅</p>
+        <p>12:00 午餐（鈣隨餐）→ 16:00 銅（間隔 4hr）→ 19:00 晚餐最後一口鋅</p>
         <p className="text-amber-600 font-medium">⚠️ 牛肉日免補銅：牛肉 + 堅果已提供足夠銅，當日取消銅補劑避免逼近 UL 10mg/日</p>
         <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
@@ -204,22 +214,21 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留 18:00 膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
           <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 16:00 銅的時間距離）</p>
         </div>
-        <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
+        <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
           <p className="text-amber-700 font-bold">草飼牛肉 150-180g ≈ 30-36g 蛋白，嚴格零蛋（36g + 1蛋 6.3g = 42.3g 超過 40g 上限）</p>
           <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
         </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🔴 補鈣日 VitC 統一策略</p>
-          <p className="text-red-700 font-bold">補鈣日全天停用合成 VitC 補劑（晚餐 500mg 停服）</p>
-          <p className="text-red-700">僅保留 18:00 膠原蛋白食物來源 160mg（與 14:00 鈣片間隔 4hr+）</p>
-          <p className="text-red-700">高劑量 VitC + 鈣 + 草酸 = 結石黃金三角，三者不可同餐</p>
-          <p className="text-red-700 font-bold">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜、青花菜），改用櫛瓜、大白菜、高麗菜、小白菜</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 鋅吸收注意：晚餐避免高植酸食物</p>
+          <p className="text-amber-700">菠菜、豆類等高植酸食物的植酸+草酸強力螯合游離鋅離子，大幅削弱 15mg 鋅吸收率</p>
+          <p className="text-amber-700">晚餐蔬菜優先：櫛瓜、大白菜、高麗菜、小白菜（低植酸）</p>
+          <p className="text-amber-700">菠菜安排在午餐（有鈣質保護 + 不影響鋅吸收）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐嚴禁優格</p>
@@ -521,6 +530,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>洋蔥、大蒜、燕麥、酪梨、冷卻米飯/地瓜（抗性澱粉）</p>
         <p>搭配發酵食物（優格、泡菜）增強腸道多樣性</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">菠菜安排策略</p>
+          <p className="text-blue-700">菠菜在午餐食用（有鈣質食物保護：鈣+草酸在腸道結合排出）</p>
+          <p className="text-blue-700">晚餐避免菠菜（植酸螯合鋅離子，削弱 19:00 鋅吸收）</p>
+          <p className="text-blue-700">晚餐選低植酸蔬菜：櫛瓜、大白菜、高麗菜、小白菜</p>
+        </div>
       </Detail>
     );
   }
@@ -543,7 +558,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-blue-700">訓練前：地瓜 200g ≈ 50g 碳水</p>
           <p className="text-blue-700">午餐：白米飯 300g（乾重 120g）≈ 90g + 冷卻米飯 150g ≈ 45g = 135g</p>
           <p className="text-blue-700">下午點心：香蕉 1 根 ≈ 27g</p>
-          <p className="text-blue-700">晚餐：義大利麵 120g（乾重）≈ 90g + 白米飯 200g ≈ 60g = 150g + 去皮櫛瓜 50-100g</p>
+          <p className="text-blue-700">晚餐：義大利麵 120g（乾重）≈ 90g + 白米飯 200g ≈ 60g = 150g + 去皮櫛瓜/大白菜/高麗菜 50-100g</p>
           <p className="text-blue-700">零食加餐：燕麥 40g ≈ 28g</p>
           <p className="text-blue-800 font-medium">合計 ≈ 390g ✓</p>
         </div>
@@ -577,11 +592,16 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-700">若已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜（~200mg）≥ 500mg → 可不補鈣片</p>
           <p className="text-emerald-700">避免不必要的高劑量鈣抑制午餐鐵鋅吸收</p>
         </div>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-emerald-800">✅ 草酸鈣正確觀念</p>
+          <p className="text-emerald-700">鈣與草酸在「腸道」同餐攝取 → 結合為不溶性草酸鈣隨糞便排出（保護機制）</p>
+          <p className="text-emerald-700">若刻意分開，游離草酸被吸收入血 → 在「腎臟」與尿鈣結合形成結石</p>
+          <p className="text-emerald-700 font-medium">因此：高草酸蔬菜（菠菜）搭配含鈣食物同餐食用才是正確防結石策略</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：14:00 服用（午餐後 2hr）</p>
-          <p className="text-amber-700">鈣片 500mg 於 14:00 服用，與午餐脂溶性維生素間隔 2hr</p>
-          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 18:00+：與鈣片間隔 4hr+</p>
-          <p className="text-amber-700">時間軸：14:00 鈣 → 16:00 銅 → 18:00 膠原蛋白 → 19:00 鋅（最後一口）</p>
+          <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：隨午餐服用</p>
+          <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅 → 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
         </div>
@@ -591,18 +611,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-700">25(OH)D 為長期蓄積指標，單日波動不影響血清濃度</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
-          <p className="text-red-700 font-bold">補鈣日全天禁止中高草酸蔬菜（含青花菜）</p>
-          <p className="text-red-700">菠菜、甜菜、羽衣甘藍、芥菜、青花菜均禁（青花菜仍含中等草酸）</p>
-          <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
-          <p className="text-red-700">改用極低草酸蔬菜：櫛瓜、大白菜、高麗菜、小白菜</p>
-          <p className="text-blue-700 font-medium">💧 補鈣日飲水目標 3.5L+（稀釋尿鈣，降低結石風險）</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">09:05 碘鹽 → 14:00 鈣（間隔 5hr）→ 16:00 銅（牛肉日免補）→ 18:00 膠原蛋白（補鈣日，與鈣間隔 4hr+）→ 19:00 鋅（最後一口）</p>
+          <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 16:00 銅（牛肉日免補）→ 19:00 鋅（最後一口）</p>
         </div>
       </Detail>
     );
@@ -613,7 +625,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>尿液淡黃色為適當水合指標</p>
         <p className="text-amber-600">⚠️ 週六/日 Zone 2 有氧日：09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration），訓練中持續補充電解質水</p>
-        <p className="text-blue-600 font-medium">💧 補鈣日飲水目標 3.5L+（稀釋尿鈣，降低結石風險）</p>
+        <p className="text-blue-600 font-medium">💧 補鈣日飲水建議 3L+（維持良好水合，支持腎臟代謝）</p>
       </Detail>
     );
   }
