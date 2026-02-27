@@ -73,8 +73,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>訓練前營養</Label>
-        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）</p>
+        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（iHerb NOW Foods B-50，水溶性隨餐）</p>
         <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
+        <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）</p>
         <Tip>下肢大重量日（深蹲/硬舉）若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
       </Detail>
     );
@@ -85,7 +86,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>咖啡因 + L-Theanine</Label>
         <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg（偏好更平靜可調 1:2）</p>
+        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods，偏好更平靜可調 1:2）</p>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -103,10 +104,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 冷水浴嚴格限制</p>
-          <p className="text-red-700 font-bold">重訓後 4-6 小時內絕對禁止冷水浴</p>
+          <p className="text-red-700 font-bold">重訓日（一二四五）絕對禁止冷水浴</p>
           <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1），顯著減少肌肉蛋白質合成</p>
-          <p className="text-emerald-600 font-semibold">僅允許時機：休息日早晨 or 訓練前 30 分鐘</p>
-          <p className="text-gray-500">週三（VO2 Max 日）/ 週六日（Zone 2 日）也需間隔 4hr+</p>
+          <p className="text-emerald-600 font-semibold">週六/日（Zone 2 日）：可在早晨執行冷水浴</p>
+          <p className="text-emerald-600">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
+          <p className="text-gray-500">週三（VO2 Max 日）：建議避免，若執行需間隔 4hr+</p>
         </div>
       </Detail>
     );
@@ -122,7 +124,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
           <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
@@ -151,7 +153,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 15:00-16:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
         <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
-        <p>15:00 銅 → 19:00 鋅（僅週二、四、六）= 間隔 4hr+（避免競爭吸收）</p>
+        <p>15:00 銅 → 19:00 鋅（僅週二、六）= 間隔 4hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -162,8 +164,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>晚餐營養策略</Label>
         <p>蛋白質 45-50g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500-1000mg（遠離早晨訓練視窗，減少腸胃刺激）</p>
-          <p className="text-amber-600">鋅 25mg 僅週二、四、六隨晚餐服用（降低每日高劑量長期風險）</p>
+          <p>維他命 C 500mg（1 錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
+          <p className="text-amber-600">鋅 25mg 僅週二、六隨晚餐服用（每週 1-2 次，降低長期風險）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -241,6 +243,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
         <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
         <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週三改為 VO2 Max，避免高強度與長時間有氧疊加同一天</Tip>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">冷水浴可在週六/日早晨執行</p>
+          <p className="text-blue-700">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
+          <p className="text-blue-700">Zone 2 為低強度有氧，冷水浴對其影響較小（非肌肥大目標）</p>
+        </div>
       </Detail>
     );
   }
@@ -373,6 +380,28 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">若出現腹脹 → 當餐立即減少十字花科蔬菜份量</p>
           <p className="text-orange-700">增加低纖維碳水佔比（白米 &gt; 地瓜，義大利麵 &gt; 燕麥）</p>
           <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，改全低 FODMAP 蔬菜</p>
+        </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('鈣攝取') || title.includes('鈣') && title.includes('1000')) {
+    return (
+      <Detail>
+        <Label>每日鈣攝取確認（目標 1000mg）</Label>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-gray-800">主要鈣來源（食物優先）</p>
+          <p>希臘優格 200-300g — ~200-300mg</p>
+          <p>牛奶 250ml — ~300mg</p>
+          <p>深綠蔬菜（菠菜、花椰菜）— ~100-150mg</p>
+          <p>豆腐（板豆腐）100g — ~150mg</p>
+          <p>起司 30g — ~200mg</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 不足時睡前補鈣</p>
+          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 睡前補 1 錠鈣片 500mg</p>
+          <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
+          <p className="text-amber-700">鈣片僅為安全網，不應取代食物來源</p>
         </div>
       </Detail>
     );

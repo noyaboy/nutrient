@@ -10,19 +10,19 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
   ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（水溶性，早晨隨餐提供全天能量代謝）', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
-  ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘。🚫 冷水浴嚴格限制：僅限「休息日早晨」或「訓練前 30 分鐘」。重訓後 4-6 小時內絕對禁止冷水浴（會抑制肌肥大信號 mTOR/IGF-1，顯著減少肌肉蛋白質合成）', 'daily', '運動', 5, 1, true),
+  ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘。🚫 冷水浴嚴格限制：週六/日 Zone 2 日可在早晨執行冷水浴（運動前 4hr+ 或運動後 4hr+）。重訓日（一二四五）絕對禁止冷水浴（抑制 mTOR/IGF-1 肌肥大信號）', 'daily', '運動', 5, 1, true),
   ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
   ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate）+ 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2 MK-7 100mcg、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg。每日脂肪目標 80-90g（22-25% 總熱量）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
-  ('15:00-16:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）嚴格單獨空腹服用，不與任何礦物質補劑同服。空腹可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。與晚餐鋅間隔 4hr+。若空腹不適可搭配少量水果（非含鈣/鐵食物）', 'daily', '補充品', 9, 1, true),
+  ('15:00-16:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）嚴格單獨空腹服用，不與任何礦物質補劑同服。空腹可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。與晚餐鋅間隔 4hr+（鋅僅週二、六服用）。若空腹不適可搭配少量水果（非含鈣/鐵食物）', 'daily', '補充品', 9, 1, true),
   ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 10, 1, true),
 
   -- === Afternoon (17:00-20:00) ===
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 10, 1, true),
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 45-50g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 1 大匙（14g）入菜或涼拌 + 堅果一把 30g（~15g 脂肪）≈ 20-25g。隨餐服用維他命 C 500-1000mg。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 45-50g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 1 大匙（14g）入菜或涼拌 + 堅果一把 30g（~15g 脂肪）≈ 20-25g。隨餐服用維他命 C 500mg（1 錠，午餐膠原蛋白已含 ~160mg Vit C，每日總計 ~660mg 已達 RDA，無需 1000mg 避免過量）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 12, 1, true),
 
   -- === Evening (22:00+) ===
@@ -42,6 +42,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('全天 碳水循環：訓練日 vs 休息日', '重訓日 5-6g/kg (360-430g)、有氧日 3-4g/kg (215-290g)、休息日 2-3g/kg (145-215g，僅 Deload 週或臨時休息)。支持 mTOR 肌肉修復與合成。⚠️ 高碳水日嚴格執行 30-40% 替換為低纖維來源（白米飯、義大利麵、去皮馬鈴薯）以控制總纖維量。優先監控脹氣反應：若出現腹脹→當餐立即減少十字花科蔬菜、增加低纖維碳水佔比。卡路里目標：重訓日 3,100-3,400 kcal', 'daily', '飲食', 22, 1, true),
   ('全天 週末睡眠一致性（±30 分鐘）', '週末起床/睡覺時間與平日偏差不超過 30 分鐘。社交時差（Social Jetlag）影響認知、情緒與代謝，A 級證據', 'daily', '睡眠', 23, 1, false),
   ('全天 數位衛生', '娛樂螢幕 <2hr、社群媒體 <30min。23:00 後無螢幕、專注時段手機勿擾模式', 'daily', '心理', 24, 1, false),
+  ('全天 鈣攝取確認（目標 1000mg）', '每日確認鈣攝取是否達標 1000mg。主要來源：希臘優格 200-300g（~200-300mg）+ 牛奶/起司 + 深綠蔬菜 + 豆腐。⚠️ 若當日飲食鈣攝取確認不足 → 睡前補 1 錠鈣片 500mg（Nature Made Ca+D3+K2）。食物優先，鈣片僅為安全網', 'daily', '飲食', 23, 1, true),
   ('全天 飲水 3-3.5L', '尿液淡黃色為適當水合指標。有氧日訓練中改用電解質粉', 'daily', '飲食', 25, 1, true);
 
 ------------------------------------------------------------
@@ -53,7 +54,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('肌力訓練 4 次（Upper/Lower）', '一上半身A/二下半身A/四上半身B/五下半身B。每肌群每週 12-20 組，分 2 次訓練。3 週漸進超負荷 + 第 4 週 Deload（量減 40-50%，強度維持 85%）。記錄每組重量/次數', 'weekly', '運動', 2, 4, true),
   ('VO2 Max 訓練 1 次', 'Peter Attia 4×4 法 — 4 分鐘全力（90-95% HRmax）+ 4 分鐘恢復 × 4 組。週三進行', 'weekly', '運動', 3, 1, true),
   ('學習新技能', '樂器或語言學習最佳（結構性神經可塑性證據最強）。20-30 分鐘練習後安排運動，有助記憶鞏固。NSDR 也可在學習後使用', 'weekly', '心理', 4, 3, true),
-  ('鋅 25mg 補充', '每週二、四、六服用鋅 25mg（Zinc Picolinate 半顆），隨晚餐服用。與銅間隔 4hr+。降低每日高劑量補充的長期風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 3, true),
+  ('鋅 25mg 補充', '每週 1-2 次服用鋅 25mg（Zinc Picolinate 半顆），建議週二、週六隨晚餐服用。與銅間隔 4hr+。降低長期高劑量風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 2, true),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
   ('【每半年】健康檢測', '每半年一次全面健康檢查。必檢指標：BUN（尿素氮）、Creatinine（肌酐）、eGFR（腎絲球過濾率）監測腎功能；ALT/AST 監測肝功能。⚠️ 任一數值上升超出參考範圍 → 立即停用非必要合成補劑（優先停：Ashwagandha、CoQ10、葉黃素）。其他：血液、荷爾蒙、代謝指標、維他命D、鋅銅比', 'weekly', '一般', 6, 0, true),
@@ -92,13 +93,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 C（Kirkland 500mg × 500 錠）',
   '抗氧化、膠原蛋白合成、增強鐵吸收。產地加拿大',
-  '每日 1-2 錠（500-1000mg）',
+  '每日 1 錠（500mg）隨晚餐服用。午餐膠原蛋白已含 ~160mg，每日總計 ~660mg',
   'NT$399 / 500 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Multi-Letter-Vitamins/Kirkland-Signature-Vitamin-C-500-mg-500-Tablet/p/684654',
   'Costco', 'costco_supplement', 'Kirkland Signature 科克蘭', '加拿大',
   $${"ingredients":"抗壞血酸(維生素C),微結晶狀a-纖維素,羥丙基甲基纖維素(膜衣成分),交聯羧甲基纖維素鈉,硬脂酸,羥丙基纖維素(膜衣成分),硬脂酸鎂,羥丙基甲基纖維素(膜衣成分),二氧化矽,棕櫚蠟(膜衣成分)","form":"錠劑","count":"500錠","storage":"請存放於乾燥陰涼處，開封後請旋緊瓶蓋，並避免陽光直射。"}$$::jsonb,
   $${"vitamin_c":"500mg/錠"}$$::jsonb,
-  '線上可訂（常溫配送）。每日 1-2 錠，500 錠可用 8-16 個月，每錠不到 $1。',
+  '線上可訂（常溫配送）。每日 1 錠（500mg），500 錠可用 16 個月。午餐膠原蛋白已提供 ~160mg Vit C，晚餐 1 錠 500mg 即可，無需 2 錠避免過量。',
   3
 );
 
@@ -192,7 +193,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '統一生機', '西班牙',
   $${"ingredients":"日曬海鹽、碘化鉀","weight":"2公斤","storage":"常溫","allergens":"本產品與其它含有芒果、大豆、奶類、含麩質之穀物、魚、堅果、芝麻、蕎麥及甲殼類的產品於同一工廠生產，食物過敏者請留意。","notes":"不添加抗結塊劑，若有輕微結塊，品質無虞請安心食用。"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（常溫配送）。2kg 約可用 6 個月以上。確認選「加碘」版本。',
+  '線上可訂（常溫配送）。2kg 約可用 6 個月以上。⚠️ 務必確認現有庫存為「加碘」版本（包裝標示「碘化鉀」成分）。海鹽/玫瑰鹽碘含量極低，十字花科攝取量高時碘不足風險大增。',
   9
 );
 
@@ -344,7 +345,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
   'Costco', 'costco_food', NULL, NULL,
   '{}'::jsonb, '{}'::jsonb,
-  '賣場咖啡專區。Kirkland 深焙豆 1.13kg 約 $399 最經濟，可用 1-2 個月。開封後密封或冷凍保存。',
+  '賣場咖啡專區。Kirkland 深焙豆 1.13kg 約 $399 最經濟，可用 1-2 個月。開封後密封或冷凍保存。⚠️ 搭配 L-Theanine 200mg（iHerb NOW Foods）一起服用，構成 A 級 nootropic 組合。',
   21
 );
 
@@ -484,8 +485,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-  '免疫與睪固酮合成必需。每週 2-3 次 25mg（半顆），搭配銅 2mg 維持平衡',
-  '每週 2-3 次，每次半顆（25mg）隨晚餐（避開鈣，與銅間隔 4hr+）',
+  '免疫與睪固酮合成必需。每週 1-2 次 25mg（半顆），搭配銅 2mg 維持平衡。降低每日高劑量長期風險',
+  '每週 1-2 次，每次半顆（25mg）隨晚餐（避開鈣，與銅間隔 4hr+）',
   'NT$710 / 120 顆',
   'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -493,7 +494,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 46833, 'NOW-01552',
   $${"form":"素食膠囊","count":"120顆","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
   $${"serving_size":"1顆","zinc":"50mg（270mg吡啶甲酸鋅）"}$$::jsonb,
-  'iHerb 直送。每週 2-3 次（週二、四、六），每次半顆 25mg，120 顆可用 8-10 個月。降低每日補充的長期風險。與銅保持 10-15:1 比例。',
+  'iHerb 直送。每週 1-2 次（週二、六），每次半顆 25mg，120 顆可用 1 年以上。降低每日補充的長期風險。與銅保持 10-15:1 比例。',
   25
 );
 
@@ -558,15 +559,15 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '膠原蛋白肽 CollagenUP（CGN 206g）',
-  '水解海洋膠原蛋白肽 + 玻尿酸 + 維他命 C。與 Vit C 協同促進膠原蛋白合成，支持皮膚、關節與結締組織健康',
-  '每日 10-15g 隨午餐（搭配維他命 C）',
+  '水解海洋膠原蛋白肽 + 玻尿酸 + 維他命 C（每 6.5g 含 80mg Vit C）。午餐服用 10-15g 已提供 ~120-160mg Vit C，與晚餐 500mg 合計每日 ~660mg，無需額外疊加',
+  '每日 10-15g 隨午餐（已含 Vit C ~160mg，晚餐再補 500mg 即可）',
   'NT$1,279 / 206g',
   'https://tw.iherb.com/pr/california-gold-nutrition-collagenup-marine-hydrolyzed-collagen-hyaluronic-acid-vitamin-c-unflavored-7-26-oz-206-g/64903',
   'iHerb', 'iherb_supplement', 'California Gold Nutrition',
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01033/g/255.jpg', 4.7, NULL, 'CGN-01033',
   $${"ingredients":"水解海洋膠原蛋白肽、玻尿酸、維他命C","form":"無調味粉末","weight":"206g"}$$::jsonb,
   $${"serving_size":"6.5g","collagen_peptides":"5.1g","hyaluronic_acid":"18mg","vitamin_c":"80mg"}$$::jsonb,
-  'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。與維他命 C 同服效果最佳。搭配其他 iHerb 品項湊免運。',
+  'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。已內含維他命 C（~160mg/份），與晚餐 500mg Vit C 合計每日 ~660mg（充足且不過量）。搭配其他 iHerb 品項湊免運。',
   30
 );
 
