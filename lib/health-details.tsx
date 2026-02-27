@@ -95,9 +95,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('咖啡') && title.includes('Theanine')) {
     return (
       <Detail>
-        <Label>咖啡因 + L-Theanine</Label>
-        <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>1:1 比例：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods），A 級 nootropic 組合，消除焦慮、增強專注</p>
+        <Label>咖啡因 + L-Theanine（11:15+）</Label>
+        <p>起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
+        <p>1:1 比例：咖啡因 200-300mg + L-Theanine 200mg（NOW Foods Double Strength 200mg，iHerb），A 級 nootropic 組合</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">⚠️ B群吸收保護：與 09:15 B群間隔 2hr+</p>
+          <p className="text-amber-700">咖啡因利尿作用加速水溶性 B 群（尤其 B1）排出</p>
+          <p className="text-amber-700">最早 11:15 飲用（09:15 + 2hr = 11:15）</p>
+        </div>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -132,7 +137,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 1000 IU（<span className="text-red-600 font-bold">2000IU 錠劑需掰半</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
+          <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
@@ -185,7 +190,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-red-600 font-bold">1000mg 錠劑需掰半</span>）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
           <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
@@ -201,9 +206,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">補鈣日菠菜移至非補鈣日，或選擇其他低草酸蔬菜（櫛瓜、小白菜）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 晚餐纖維管理（避免夜間脹氣）</p>
-          <p className="text-amber-700">休息日或腸胃敏感時，碳水優先選擇低纖維來源（白米飯、去皮馬鈴薯）</p>
-          <p className="text-amber-700">避免高纖維（地瓜、燕麥、洋蔥）+ 睡前甘胺酸鎂（高滲透壓）疊加 → 夜間脹氣干擾睡眠</p>
+          <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐避免優格</p>
+          <p className="text-amber-700">希臘優格鈣 200-300mg 會抑制鋅 15mg 吸收，優格移至午餐或 15:30 點心</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">🚫 重訓日（一二四五）晚餐零葉菜</p>
+          <p className="text-red-700">高碳水日嚴格執行：僅保留白米飯/去皮馬鈴薯/義大利麵</p>
+          <p className="text-red-700">菠菜等葉菜纖維 + 睡前甘胺酸鎂（高滲透壓）疊加 → 夜間滲透性腹脹干擾睡眠</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -299,6 +308,34 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">藥源性肝損傷多發於服用後數週內，早期發現可避免惡化</p>
         </div>
         <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
+      </Detail>
+    );
+  }
+
+  if (title.includes('肝功能追蹤') && title.includes('第4/12週')) {
+    return (
+      <Detail>
+        <Label>Ashwagandha 肝功能追蹤（第4/12週）</Label>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-semibold text-red-800">⚠️ 開始服用新品牌 Ashwagandha 後，務必追蹤肝功能</p>
+          <p className="text-red-700 font-bold">第 4 週 + 第 12 週各安排一次 ALT/AST 抽血</p>
+          <p className="text-red-700">藥源性肝損傷（DILI）多發於服用後數週內，早期發現可避免惡化</p>
+        </div>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-blue-800">📋 追蹤方式</p>
+          <p className="text-blue-700">自費抽血（家醫科/健檢中心，約 NT$200-400）</p>
+          <p className="text-blue-700">僅需檢測 ALT + AST 兩項</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 異常處理</p>
+          <p className="text-amber-700">若 ALT &gt;56 U/L 或 AST &gt;40 U/L → 立即停用 Ashwagandha</p>
+          <p className="text-amber-700">停用 2 週後複檢確認回落</p>
+        </div>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-emerald-800">✅ 兩次追蹤均正常</p>
+          <p className="text-emerald-700">後續回歸每半年健檢即可</p>
+        </div>
+        <Tip>在瓶身標記「第 4 週抽血日」與「第 12 週抽血日」</Tip>
       </Detail>
     );
   }
