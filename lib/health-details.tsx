@@ -91,7 +91,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>咖啡因 + L-Theanine</Label>
         <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>標準比例：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods，偏好更平靜可調 1:2）</p>
+        <p>標準比例 1:1：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods）</p>
+        <p className="text-amber-600">⚠️ 若偏好更平靜可調 1:2（咖啡因 200mg + L-Theanine 400mg = 每日 2 顆），120 顆僅可用 2 個月需提前補貨</p>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -136,7 +137,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
           <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
-          <p className="text-amber-700">補鈣當日停用午餐獨立 D3（鈣片已含 D3 150IU）</p>
+          <p className="text-amber-700">補鈣當日午餐 D3 改為 500IU（1/4 錠），鈣片已含 150IU → 當日合計 650IU</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -249,6 +250,28 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-blue-700">甘胺酸鎂 + Cyclic Sighing 呼吸法維持睡眠品質</p>
           <p className="text-blue-700">其餘睡前補充品（甘胺酸 3g、蘇糖酸鎂）照常服用</p>
         </div>
+      </Detail>
+    );
+  }
+
+  if (title.includes('Ashwagandha') && title.includes('週期')) {
+    return (
+      <Detail>
+        <Label>Ashwagandha 週期管理</Label>
+        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
+          <p className="font-medium text-gray-800">📋 8 週用 / 4 週停 週期</p>
+          <p>第 1-5 週：正常服用 600mg/日（睡前）</p>
+          <p>第 6 週起：每日自評情緒冷漠、早晨無力起床</p>
+          <p>第 8 週（第 56 天）：準時進入停用期</p>
+          <p>停用 4 週（28 天）：甘胺酸鎂 + Cyclic Sighing 替代</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">🚫 禁忌與停用觸發</p>
+          <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
+          <p className="text-red-700">情緒冷漠（Anhedonia）→ 立即停用</p>
+          <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
+        </div>
+        <Tip>在瓶身標記「開始日」與「第 56 天停用日」。每半年健檢確認肝功能指標</Tip>
       </Detail>
     );
   }
@@ -420,6 +443,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <p>重訓日 5-6g/kg（360-430g）· 有氧日 3-4g/kg（215-290g）</p>
         <p>重訓日熱量目標 3,100-3,400 kcal</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-blue-800">📋 重訓日碳水分配範例（目標 ~400g）</p>
+          <p className="text-blue-700">訓練前：地瓜 200g ≈ 50g 碳水</p>
+          <p className="text-blue-700">午餐：白米飯 300g（乾重 120g）≈ 90g + 冷卻米飯 150g ≈ 45g = 135g</p>
+          <p className="text-blue-700">下午點心：香蕉 1 根 ≈ 27g</p>
+          <p className="text-blue-700">晚餐：義大利麵 120g（乾重）≈ 90g + 白米飯 200g ≈ 60g = 150g</p>
+          <p className="text-blue-700">零食加餐：燕麥 40g ≈ 28g</p>
+          <p className="text-blue-800 font-medium">合計 ≈ 390g ✓</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 高碳水日嚴格執行低纖維替換</p>
           <p className="text-amber-700">30-40% 碳水必須替換為低纖維來源：白米飯、義大利麵、去皮馬鈴薯</p>
@@ -452,9 +484,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：停用午餐獨立 D3</p>
-          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 1000IU 應停用</p>
-          <p className="text-orange-700">避免長期疊加超量，嚴格遵守血檢達標後減量原則</p>
+          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：午餐 D3 減半</p>
+          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 改為 500IU（1/4 錠，非完全停用）</p>
+          <p className="text-orange-700">當日合計 650IU，維持穩定血清 25(OH)D 濃度</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
