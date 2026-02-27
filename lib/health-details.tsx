@@ -73,8 +73,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>訓練前營養</Label>
+        <p>⏰ 09:05 先補水 → 09:15 訓練前營養</p>
         <p>地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
-        <p>500ml 室溫水 + 碘鹽 1g（標準 1/4 茶匙量勺）+ 檸檬汁（補水）</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">⏰ 正確順序</p>
+          <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（標準 1/4 茶匙量勺）+ 檸檬汁</p>
+          <p className="text-blue-700">09:15 進食：地瓜/香蕉 + 乳清蛋白 + B群</p>
+          <p className="text-blue-700">先喝水再吃固體食物+B群，確保胃中有食物基質時 B群才進入</p>
+        </div>
         <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）。使用量勺精確測量，避免估量</p>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
@@ -145,13 +151,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。⚠️ 補鈣日：此 160mg Vit C 需與鈣片拉開 2hr+）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。<span className="text-red-600 font-bold">🔴 補鈣日移至 17:00 服用</span>，與 14:00 鈣片在腸道完全錯開）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：14:00 服用（午餐後 2hr）</p>
-          <p className="text-amber-700">鈣片改於 14:00 服用，與 12:00 膠原蛋白 Vit C 160mg 拉開 2hr+，降低 Vit C + 鈣 + 草酸「結石黃金三角」風險</p>
+          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 17:00+：與 14:00 鈣片在腸道完全錯開（VitC + 鈣 + 草酸 = 結石黃金三角）</p>
+          <p className="text-amber-700">時間軸：14:00 鈣片 → 16:00 銅 → 17:00 膠原蛋白 → 19:00 晚餐</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
@@ -182,7 +189,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 16:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
         <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
         <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
-        <p>13:00 鈣（午餐後 1hr）→ 16:00 銅（間隔 3hr）→ 19:00 鋅（間隔 3hr），三者充分拉開</p>
+        <p>14:00 鈣 → 16:00 銅（間隔 2hr）→ 17:00 膠原蛋白（補鈣日）→ 19:00 晚餐最後一口鋅（間隔 3hr+）</p>
         <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
     );
@@ -195,8 +202,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留午餐膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
-          <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留 17:00 膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
+          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 16:00 銅的時間距離）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -259,8 +266,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('22:00') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <Label>22:30 睡前補充品</Label>
-        <p>⏰ 嚴格 22:30 後服用，確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
+        <Label>22:30 睡前補充品（洗完熱水澡後）</Label>
+        <p>⏰ 嚴格 22:30 後服用（洗完熱水澡後），確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">⚠️ 甘胺酸 vs 熱水澡：必須先洗澡再服用</p>
+          <p className="text-red-700">熱水澡短暫升高核心體溫，甘胺酸降低核心體溫 → 兩者同時進行會互相抵消</p>
+          <p className="text-red-700">正確流程：21:30-22:15 洗澡 → 22:30 服用甘胺酸 → 散熱 60-90min → 00:00 入睡</p>
+        </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
@@ -560,8 +572,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-700">避免不必要的高劑量鈣抑制午餐鐵鋅吸收</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：午餐後 1hr（13:00）</p>
-          <p className="text-amber-700">鈣片 500mg 午餐後 1hr（13:00）服用，與脂溶性維生素間隔 1hr+</p>
+          <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：14:00 服用（午餐後 2hr）</p>
+          <p className="text-amber-700">鈣片 500mg 於 14:00 服用，與午餐脂溶性維生素間隔 2hr</p>
+          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 17:00+：與鈣片在腸道完全錯開</p>
+          <p className="text-amber-700">時間軸：14:00 鈣 → 16:00 銅 → 17:00 膠原蛋白 → 19:00 鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
         </div>
@@ -573,7 +587,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
           <p className="text-red-700 font-bold">補鈣日午餐+晚餐都避免大量菠菜</p>
-          <p className="text-red-700">午餐膠原蛋白 ~160mg Vit C + 晚餐 500mg Vit C → 維他命 C 增強草酸吸收</p>
+          <p className="text-red-700">17:00 膠原蛋白 ~160mg Vit C（補鈣日已移離午餐）→ 仍需避免高草酸蔬菜</p>
           <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
           <p className="text-red-700">菠菜移至非補鈣日食用，或選擇低草酸蔬菜（櫛瓜、小白菜、大白菜）</p>
         </div>
@@ -581,7 +595,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">09:05 碘鹽 → 13:00 鈣（間隔 4hr）→ 16:00 銅 → 19:00 鋅，各間隔 3hr+</p>
+          <p className="text-red-700">09:05 碘鹽 → 14:00 鈣（間隔 5hr）→ 16:00 銅 → 17:00 膠原蛋白（補鈣日）→ 19:00 鋅（最後一口）</p>
         </div>
       </Detail>
     );
