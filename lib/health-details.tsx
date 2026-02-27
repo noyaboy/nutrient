@@ -151,14 +151,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。<span className="text-red-600 font-bold">🔴 補鈣日移至 17:00 服用</span>，與 14:00 鈣片在腸道完全錯開）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg。<span className="text-red-600 font-bold">🔴 補鈣日移至 18:00 服用</span>，與 14:00 鈣片間隔 4hr+）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：14:00 服用（午餐後 2hr）</p>
-          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 17:00+：與 14:00 鈣片在腸道完全錯開（VitC + 鈣 + 草酸 = 結石黃金三角）</p>
-          <p className="text-amber-700">時間軸：14:00 鈣片 → 16:00 銅 → 17:00 膠原蛋白 → 19:00 晚餐</p>
+          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 18:00+：與 14:00 鈣片間隔 4hr+（VitC + 鈣 + 草酸 = 結石黃金三角）</p>
+          <p className="text-amber-700">時間軸：14:00 鈣片 → 16:00 銅 → 18:00 膠原蛋白 → 19:00 晚餐最後一口鋅</p>
+          <p className="text-red-700">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜），改用青花菜、高麗菜、小白菜</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
@@ -189,7 +190,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 16:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
         <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
         <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
-        <p>14:00 鈣 → 16:00 銅（間隔 2hr）→ 17:00 膠原蛋白（補鈣日）→ 19:00 晚餐最後一口鋅（間隔 3hr+）</p>
+        <p>14:00 鈣 → 16:00 銅（間隔 2hr）→ 18:00 膠原蛋白（補鈣日，與鈣間隔 4hr+）→ 19:00 晚餐最後一口鋅</p>
+        <p className="text-amber-600 font-medium">⚠️ 牛肉日免補銅：牛肉 + 堅果已提供足夠銅，當日取消銅補劑避免逼近 UL 10mg/日</p>
         <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
     );
@@ -202,7 +204,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留 17:00 膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">🔴 補鈣日全天停用</span>）— 補鈣日僅保留 18:00 膠原蛋白食物來源 160mg，不額外補充合成 VitC</p>
           <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 16:00 銅的時間距離）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
@@ -215,18 +217,20 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🔴 補鈣日 VitC 統一策略</p>
           <p className="text-red-700 font-bold">補鈣日全天停用合成 VitC 補劑（晚餐 500mg 停服）</p>
-          <p className="text-red-700">僅保留午餐膠原蛋白食物來源 160mg（非額外合成補劑）</p>
+          <p className="text-red-700">僅保留 18:00 膠原蛋白食物來源 160mg（與 14:00 鈣片間隔 4hr+）</p>
           <p className="text-red-700">高劑量 VitC + 鈣 + 草酸 = 結石黃金三角，三者不可同餐</p>
-          <p className="text-red-700">補鈣日菠菜、甜菜等高草酸蔬菜移至非補鈣日</p>
+          <p className="text-red-700 font-bold">🚫 補鈣日全天禁中高草酸蔬菜（菠菜、甜菜、羽衣甘藍、芥菜），改用青花菜、高麗菜、小白菜、櫛瓜</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐避免優格</p>
           <p className="text-amber-700">希臘優格鈣 200-300mg 會抑制鋅 15mg 吸收，優格移至午餐或 15:30 點心</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 重訓日（一二四五）晚餐零葉菜</p>
-          <p className="text-red-700">高碳水日嚴格執行：僅保留白米飯/去皮馬鈴薯/義大利麵</p>
-          <p className="text-red-700">菠菜等葉菜纖維 + 睡前甘胺酸鎂（高滲透壓）疊加 → 夜間滲透性腹脹干擾睡眠</p>
+          <p className="font-semibold text-red-800">🚫 重訓日（一二四五）晚餐零葉菜 + 零抗性澱粉</p>
+          <p className="text-red-700">高碳水日嚴格執行：僅保留新鮮熱白米飯/去皮馬鈴薯/義大利麵</p>
+          <p className="text-red-700 font-bold">禁止冷卻米飯/地瓜：抗性澱粉在腸道後段發酵產氣比葉菜纖維更強</p>
+          <p className="text-red-700">纖維 + 抗性澱粉 + 睡前甘胺酸鎂（高滲透壓）三重疊加 → 夜間滲透性腹脹干擾睡眠</p>
+          <p className="text-emerald-700">抗性澱粉保留在午餐（冷卻再加熱米飯），晚餐以新鮮熱食為主</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -278,7 +282,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
-          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日</span>）</p>
+          <p>Ashwagandha 450mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日</span>）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 血清素藥物禁忌</p>
@@ -496,7 +500,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
-          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 3-5 天（Creatinine 偽高 → eGFR 被低估）</p>
+          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 7 天（24 歲高強度重訓 + 高蛋白，3-5 天可能不足）</p>
           <p className="text-red-700 font-bold">2. 取得真實 eGFR → 若仍 &lt;90 才啟動下修蛋白質</p>
           <p className="text-red-700">→ 下修至 1.6g/kg（≈ 117g/day），每餐 ≤35g，永久停止肌酸</p>
         </div>
@@ -574,8 +578,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：14:00 服用（午餐後 2hr）</p>
           <p className="text-amber-700">鈣片 500mg 於 14:00 服用，與午餐脂溶性維生素間隔 2hr</p>
-          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 17:00+：與鈣片在腸道完全錯開</p>
-          <p className="text-amber-700">時間軸：14:00 鈣 → 16:00 銅 → 17:00 膠原蛋白 → 19:00 鋅</p>
+          <p className="text-red-700 font-bold">🔴 補鈣日膠原蛋白移至 18:00+：與鈣片間隔 4hr+</p>
+          <p className="text-amber-700">時間軸：14:00 鈣 → 16:00 銅 → 18:00 膠原蛋白 → 19:00 鋅（最後一口）</p>
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
         </div>
@@ -586,8 +590,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
-          <p className="text-red-700 font-bold">補鈣日午餐+晚餐都避免大量菠菜</p>
-          <p className="text-red-700">17:00 膠原蛋白 ~160mg Vit C（補鈣日已移離午餐）→ 仍需避免高草酸蔬菜</p>
+          <p className="text-red-700 font-bold">補鈣日全天禁止中高草酸蔬菜</p>
+          <p className="text-red-700">菠菜、甜菜、羽衣甘藍、芥菜均禁（部分十字花科也含中等草酸）</p>
           <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
           <p className="text-red-700">菠菜移至非補鈣日食用，或選擇低草酸蔬菜（櫛瓜、小白菜、大白菜）</p>
         </div>
@@ -595,7 +599,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">09:05 碘鹽 → 14:00 鈣（間隔 5hr）→ 16:00 銅 → 17:00 膠原蛋白（補鈣日）→ 19:00 鋅（最後一口）</p>
+          <p className="text-red-700">09:05 碘鹽 → 14:00 鈣（間隔 5hr）→ 16:00 銅（牛肉日免補）→ 18:00 膠原蛋白（補鈣日，與鈣間隔 4hr+）→ 19:00 鋅（最後一口）</p>
         </div>
       </Detail>
     );
@@ -616,8 +620,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>每半年健康檢測 — 必檢指標</Label>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-semibold text-red-800">腎功能（高蛋白飲食 + 肌酸監測）</p>
-          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 3-5 天必須停用肌酸</p>
-          <p className="text-red-700">肌酸補充使 Creatinine 偽陽性升高 → eGFR 被低估 → 可能誤判腎功能異常</p>
+          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 7 天停用肌酸</p>
+          <p className="text-red-700">24 歲高強度重訓 + 高蛋白 113-123g/day，Creatinine 代謝需更長時間（3-5 天可能不足）</p>
           <p className="text-red-700">只有停用後的數據才能反映真實腎功能</p>
           <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
           <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
@@ -658,7 +662,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
           <p className="text-red-700">永久停止肌酸補充（減少腎臟代謝負擔）</p>
           <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
-          <p className="text-red-700 font-semibold">必須先停用肌酸 3-5 天 → 取得真實 eGFR → 才啟動下修蛋白質</p>
+          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 → 取得真實 eGFR → 才啟動下修蛋白質</p>
         </div>
       </Detail>
     );
