@@ -73,7 +73,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>訓練前營養</Label>
-        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（iHerb NOW Foods B-50，水溶性隨餐）</p>
+        <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性隨餐）</p>
         <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
         <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）</p>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -137,7 +137,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
           <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
-          <p className="text-amber-700">補鈣當日午餐 D3 改為 500IU（1/4 錠），鈣片已含 150IU → 當日合計 650IU</p>
+          <p className="text-amber-700">補鈣當日停用午餐獨立 D3（鈣片已含 150IU，25(OH)D 為長期蓄積指標不受單日影響）</p>
+          <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -224,8 +225,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('22:00') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <Label>22:00 睡前補充品</Label>
-        <p>22:00 服用（睡前 2hr），確保與 19:00 晚餐蛋白質間隔 3hr+（甘胺酸與蛋白質競爭吸收），同時為腎臟保留排尿緩衝時間</p>
+        <Label>22:30 睡前補充品</Label>
+        <p>⏰ 嚴格 22:30 後服用，確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
@@ -270,8 +271,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
           <p className="text-red-700">情緒冷漠（Anhedonia）→ 立即停用</p>
           <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
+          <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停（免疫調節作用可能干擾自然免疫反應），康復後再恢復</p>
         </div>
-        <Tip>在瓶身標記「開始日」與「第 56 天停用日」。每半年健檢確認肝功能指標</Tip>
+        <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能指標</Tip>
       </Detail>
     );
   }
@@ -484,15 +486,21 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：午餐 D3 減半</p>
-          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 改為 500IU（1/4 錠，非完全停用）</p>
-          <p className="text-orange-700">當日合計 650IU，維持穩定血清 25(OH)D 濃度</p>
+          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：停用午餐獨立 D3</p>
+          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 1000IU 當日停用</p>
+          <p className="text-orange-700">25(OH)D 為長期蓄積指標，單日少攝取不影響血清濃度（錠劑也無法精確切分）</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">🚫 草酸警示（補鈣日特別注意）</p>
+          <p className="text-red-700">補鈣日午餐避免大量菠菜等高草酸食物</p>
+          <p className="text-red-700">草酸與鈣結合 → 草酸鈣結石風險 + 降低鈣吸收率</p>
+          <p className="text-red-700">菠菜移至晚餐或非補鈣日食用</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">13:00 鈣 → 16:00 銅 → 19:00 鋅，各間隔 3hr+（二價金屬競爭吸收通道）</p>
+          <p className="text-red-700">09:05 碘鹽 → 13:00 鈣（間隔 4hr）→ 16:00 銅 → 19:00 鋅，各間隔 3hr+</p>
         </div>
       </Detail>
     );
