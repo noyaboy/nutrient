@@ -91,6 +91,26 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
+  if (title.includes('10:00') && title.includes('運動')) {
+    return (
+      <Detail>
+        <Label>訓練計畫</Label>
+        <p>週一：上半身 A（推 + 垂直拉）</p>
+        <p>週二：下半身 A（深蹲 + 腿後側）</p>
+        <p>週三：VO2 Max 間歇（4 分鐘 × 4-6 組）</p>
+        <p>週四：上半身 B（推 + 水平拉）</p>
+        <p>週五：下半身 B（硬舉 + 腿前側）</p>
+        <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">⚠️ 冷水浴警示</p>
+          <p className="text-red-700 font-semibold">重訓後 4-6 小時內禁止冷水浴</p>
+          <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1），顯著減少肌肉蛋白質合成</p>
+          <p className="text-emerald-600">安全時機：休息日早晨 or 訓練前 30 分鐘</p>
+        </div>
+      </Detail>
+    );
+  }
+
   if (title.includes('午餐') && !title.includes('銅')) {
     return (
       <Detail>
@@ -104,7 +124,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>膠原蛋白肽 10-15g（與 Vit C 協同促進膠原蛋白合成）</p>
           <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
           <p>B群 1 顆（水溶性，白天能量代謝）</p>
-          <p>銅 2mg（隨午餐正餐服用，利用食物體積緩衝腸胃刺激。與晚餐鋅間隔 4hr+ 避免競爭吸收）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
@@ -128,8 +147,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>銅 2mg</Label>
-        <p>隨午餐正餐服用，利用食物體積緩衝腸胃刺激</p>
-        <p>12:00 午餐服用銅 → 19:00 隨晚餐服用鋅 = 間隔 7hr+（避免競爭吸收）</p>
+        <p>下午 15:00-16:00 單獨服用，空腹或僅搭配少量食物（如水果、堅果）</p>
+        <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
+        <p>15:00 銅 → 19:00 鋅（每週 2-3 次）= 間隔 4hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -138,10 +158,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 45-50g + 鋅隨餐服用避免噁心，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <p>蛋白質 45-50g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>鋅 25mg（半顆 50mg 膠囊）隨晚餐（與午餐銅間隔 4hr+）</p>
-          <p>維他命 C 500-1000mg（改至晚餐服用，遠離早晨訓練視窗，減少腸胃刺激）</p>
+          <p>維他命 C 500-1000mg（遠離早晨訓練視窗，減少腸胃刺激）</p>
+          <p className="text-amber-600">鋅 25mg 改為每週 2-3 次隨晚餐服用（降低長期風險）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 1 大匙（14g）入菜或涼拌 + 堅果 30g（~15g 脂肪）≈ 25g。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -164,6 +184,18 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
+  if (title.includes('晚餐後點心') || title.includes('20:00')) {
+    return (
+      <Detail>
+        <Label>20:00-20:30 晚餐後點心</Label>
+        <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 非乳製植物蛋白，中速消化</p>
+        <p>晚餐後 1-1.5 小時服用，補充當日蛋白質目標</p>
+        <p>避免睡前過飽影響睡眠品質</p>
+        <Tip>無調味可搭配少量蜂蜜或可可粉調味</Tip>
+      </Detail>
+    );
+  }
+
   if (title.includes('21:30') || title.includes('睡前補充品')) {
     return (
       <Detail>
@@ -171,7 +203,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
-          <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 降低粉末蛋白佔比，減輕腎過濾負荷</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
@@ -180,7 +211,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">監測指標</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
-          <p className="text-red-700">若夜間腸胃蠕動過快 → 豌豆蛋白減半或改為較少量的希臘優格</p>
           <p className="text-red-700">Ashwagandha 使用第 6-8 週留意情緒冷漠（Anhedonia）或早晨無力起床 → 出現則提前進入停用期</p>
         </div>
       </Detail>

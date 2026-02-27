@@ -10,23 +10,25 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
   ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（水溶性，早晨隨餐提供全天能量代謝）', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
-  ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘', 'daily', '運動', 5, 1, true),
+  ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘。⚠️ 重訓後 4-6 小時內禁止冷水浴（會抑制肌肥大信號 mTOR/IGF-1）— 冷水浴僅限休息日或訓練前', 'daily', '運動', 5, 1, true),
   ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2 MK-7 100mcg（引導鈣至骨骼，使用獨立K2而非鈣片複方）、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg（脂溶性，與魚油同服提升吸收）、銅 2mg（隨午餐正餐服用，利用食物體積緩衝腸胃刺激）。每日脂肪目標 80-90g（22-25% 總熱量）。不再額外沖乳清蛋白（正餐蛋白質已足夠）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g + 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2 MK-7 100mcg、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg。每日脂肪目標 80-90g（22-25% 總熱量）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
+  ('15:00-16:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）單獨服用或與無礦物質補劑的輕食搭配。空腹或僅少量食物可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。與晚餐鋅間隔 4hr+', 'daily', '補充品', 9, 1, true),
   ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 10, 1, true),
 
   -- === Afternoon (17:00-20:00) ===
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 10, 1, true),
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 45-50g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 1 大匙（14g）入菜或涼拌 + 堅果一把 30g（~15g 脂肪）≈ 20-25g。隨餐服用鋅 25mg（與午餐銅間隔 4hr+ 避免競爭吸收）+ 維他命 C 500-1000mg（改至晚餐服用，遠離早晨訓練視窗，減少腸胃刺激）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 45-50g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 1 大匙（14g）入菜或涼拌 + 堅果一把 30g（~15g 脂肪）≈ 20-25g。隨餐服用維他命 C 500-1000mg。固體食物睡前 3-4hr 結束', 'daily', '飲食', 11, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 12, 1, true),
 
   -- === Evening (22:00+) ===
   ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）。白天：娛樂螢幕 <2hr、社群媒體 <30min、專注時段手機勿擾模式', 'daily', '睡眠', 11, 1, true),
-  ('21:30-22:00 睡前補充品', '豌豆蛋白 ~20g 粉（≈16g 蛋白）+ 甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 600mg（8 週用 / 4 週停）。提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床中斷睡眠', 'daily', '補充品', 14, 1, true),
+  ('20:00-20:30 晚餐後點心', '豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，中速消化。晚餐後 1-1.5 小時服用，補充當日蛋白質目標，避免睡前過飽影響睡眠', 'daily', '飲食', 13, 1, true),
+  ('21:30-22:00 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 600mg（8 週用 / 4 週停）。提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床中斷睡眠', 'daily', '補充品', 14, 1, true),
   ('22:00-23:00 熱水澡', '40-42°C 10-15 分鐘（睡前 60-90 分鐘）。提高核心體溫後快速降溫觸發睡眠驅動', 'daily', '睡眠', 15, 1, true),
   ('23:30 Cyclic Sighing + 專注冥想', 'Cyclic Sighing 5 分鐘（雙吸鼻、長呼口，Stanford RCT 證實最佳呼吸法）+ 專注冥想 10 分鐘（單點注意力：鼻尖呼吸）。寫下三件感恩的事', 'daily', '心理', 16, 1, true),
   ('00:00 感恩練習', '睡前或早晨寫下三件感恩的事，調節自律神經系統', 'daily', '心理', 17, 1, false),
@@ -51,6 +53,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('肌力訓練 4 次（Upper/Lower）', '一上半身A/二下半身A/四上半身B/五下半身B。每肌群每週 12-20 組，分 2 次訓練。3 週漸進超負荷 + 第 4 週 Deload（量減 40-50%，強度維持 85%）。記錄每組重量/次數', 'weekly', '運動', 2, 4, true),
   ('VO2 Max 訓練 1 次', 'Peter Attia 4×4 法 — 4 分鐘全力（90-95% HRmax）+ 4 分鐘恢復 × 4 組。週三進行', 'weekly', '運動', 3, 1, true),
   ('學習新技能', '樂器或語言學習最佳（結構性神經可塑性證據最強）。20-30 分鐘練習後安排運動，有助記憶鞏固。NSDR 也可在學習後使用', 'weekly', '心理', 4, 3, true),
+  ('鋅 25mg 補充', '每週 2-3 次服用鋅 25mg（Zinc Picolinate 半顆），隨晚餐服用。與銅間隔 4hr+。降低每日高劑量補充的長期風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 3, true),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
   ('【每半年】健康檢測', '每半年一次全面健康檢查（血液、荷爾蒙、代謝指標）。此為半年提醒，非每週目標', 'weekly', '一般', 6, 0, true),
@@ -144,15 +147,15 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  '冷凍綠花椰菜（Nature''s Touch 454g×4）',
-  '十字花科蔬菜，富含蘿蔔硫素 Sulforaphane（Nrf2 激活劑）。切碎後靜置 40 分鐘可最大化黑芥子酶轉化。產地厄瓜多',
+  '新鮮綠花椰菜（傳統市場/超市）',
+  '十字花科蔬菜，富含蘿蔔硫素 Sulforaphane（Nrf2 激活劑）。切碎後靜置 40 分鐘可最大化黑芥子酶轉化',
   '每日一份',
-  'NT$339 / 454g×4',
-  'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Fruits-Vegetables/Natures-Touch-Frozen-Broccoli-454-g-X-4-Pack/p/122199',
-  'Costco', 'costco_food', 'Nature''s Touch', '厄瓜多',
-  $${"ingredients":"青花菜。","weight":"1816公克","count":"454公克 X 4包","storage":"請冷凍-18℃保存","cooking":"取出建議份量一小袋(454公克)放入微波爐加熱5-6分鐘，或連同250毫升水倒入鍋中加熱5-6分鐘，即可食用。"}$$::jsonb,
+  'NT$20-30 / 顆',
+  'https://www.pxmart.com.tw',
+  '傳統市場 / 全聯 / 頂好', 'costco_food', NULL, '台灣',
+  '{"storage":"冷藏3-4天","preparation":"切碎靜置40分鐘最大化蘿蔔硫素","portion":"每次2-3顆"}'::jsonb,
   '{}'::jsonb,
-  '小冰箱請勿買冷凍版（佔冷凍 3L 直接爆倉）。改在傳統市場或超市買新鮮綠花椰菜，每次 2-3 顆，切成小朵後靜置 40 分鐘（最大化蘿蔔硫素），裝入有瀝水網底的長方形保鮮盒，冷藏可放 3-4 天。每週補貨 1-2 次。',
+  '每週補貨 1-2 次，每次買 2-3 顆。切成小朵後靜置 40 分鐘（最大化蘿蔔硫素），裝入有瀝水網底的長方形保鮮盒，冷藏可放 3-4 天。小冰箱用戶不建議買 Costco 冷凍版（454g×4 佔冷凍 3L 直接爆倉）',
   6
 );
 
@@ -257,14 +260,15 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  '菠菜（冷凍或新鮮）',
-  '鉀、鎂、鐵、葉酸來源。搭配維他命C增強鐵吸收',
+  '新鮮菠菜（傳統市場/超市）',
+  '低 FODMAP 蔬菜，鉀、鎂、鐵、葉酸來源。搭配維他命C增強鐵吸收',
   '每日 100-150g 入菜',
-  'NT$379 / 500g×6',
-  'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
-  'Costco', 'costco_food', NULL, NULL,
-  '{}'::jsonb, '{}'::jsonb,
-  '絕對不買冷凍版（500g×6 佔冷凍室 70%）。每週在傳統市場或 Costco 蔬果區買 300-400g 新鮮菠菜，放入大保鮮袋、裡面墊一張廚房紙巾吸濕，平放於保鮮抽屜底部，3-5 天內用完。',
+  'NT$30-50 / 300-400g',
+  'https://www.pxmart.com.tw',
+  '傳統市場 / 全聯 / 頂好', 'costco_food', NULL, '台灣',
+  '{"storage":"冷藏3-5天","preparation":"墊廚房紙巾吸濕","portion":"每週300-400g"}'::jsonb,
+  '{}'::jsonb,
+  '每週補貨 1-2 次，每次買 300-400g。放入大保鮮袋、裡面墊一張廚房紙巾吸濕，平放於保鮮抽屜底部，3-5 天內用完。小冰箱用戶不建議買 Costco 冷凍版（500g×6 佔冷凍室 70%）',
   15
 );
 
@@ -480,8 +484,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-  '免疫與睪固酮合成必需。每日 25mg（半顆），搭配銅 2mg 維持平衡',
-  '每日半顆（25mg）隨晚餐（避開鈣，與銅間隔 4hr+）',
+  '免疫與睪固酮合成必需。每週 2-3 次 25mg（半顆），搭配銅 2mg 維持平衡',
+  '每週 2-3 次，每次半顆（25mg）隨晚餐（避開鈣，與銅間隔 4hr+）',
   'NT$710 / 120 顆',
   'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -489,14 +493,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 46833, 'NOW-01552',
   $${"form":"素食膠囊","count":"120顆","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
   $${"serving_size":"1顆","zinc":"50mg（270mg吡啶甲酸鋅）"}$$::jsonb,
-  'iHerb 直送。每日半顆，120 顆可用 8 個月。建議隔日 1 顆替代切半。務必搭配銅。',
+  'iHerb 直送。每週 2-3 次（週二、四、六），每次半顆 25mg，120 顆可用 8-10 個月。降低每日補充的長期風險。與銅保持 10-15:1 比例。',
   25
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '銅 Copper Bisglycinate（Solaray 2mg × 100 顆）',
-  '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅，鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷。100 顆裝省 13%/顆',
-  '每日 1 顆隨午餐或午後（與鋅間隔 4hr+）',
+  '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅。下午單獨服用可最大化吸收率，避免與鋅、鈣、鐵競爭。鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷',
+  '每日 1 顆，下午 15:00-16:00 單獨服用（空腹或僅搭配輕食，與礦物質補劑間隔）',
   'NT$217 / 100 顆',
   'https://tw.iherb.com/pr/solaray-copper-2-mg-100-vegcaps/70102',
   'iHerb', 'iherb_supplement', 'Solaray',
@@ -504,7 +508,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 17219, 'SOR-45931',
   $${"form":"素食膠囊","count":"100顆","chelate_type":"銅氨基酸螯合物"}$$::jsonb,
   $${"serving_size":"1顆","copper":"2mg"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月，每季補一次。與鋅間隔至少 4 小時。',
+  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月。下午 15:00-16:00 空腹或搭配少量食物服用，避開午餐的魚油/D3/鈣鎂等礦物質競爭，最大化吸收率。與晚餐鋅間隔 4hr+',
   26
 );
 
@@ -582,7 +586,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'B群 B-50（NOW Foods 100 顆）',
-  '完整 B 群複方（B1/B2/B3/B5/B6/B7/B9/B12）。水溶性，支持白天能量代謝、神經系統與紅血球生成',
+  '✓ iHerb 必買。完整 B 群複方（B1/B2/B3/B5/B6/B7/B9/B12）。水溶性，需隨餐服用以利能量代謝、神經系統與紅血球生成',
   '每日 1 顆隨早餐（訓練前營養餐）',
   'NT$332 / 100 顆',
   'https://tw.iherb.com/pr/now-foods-b-50-100-veg-capsules/39670',
@@ -590,21 +594,21 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now00420/g/74.jpg', 4.7, NULL, 'NOW-00420',
   $${"form":"素食膠囊","count":"100顆"}$$::jsonb,
   $${"serving_size":"1顆","b_complex":"B-50 完整複方"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月，每季補一次。尿液變黃為正常現象（B2 代謝）。',
+  'iHerb 必買品項。每日 1 顆隨早餐（訓練前營養餐）服用，100 顆可用 3 個多月。水溶性維生素，隨餐服用提升吸收率。尿液變黃為正常現象（B2 代謝）',
   32
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '豌豆蛋白 Pea Protein（NOW Foods 907g）',
-  '非乳製植物蛋白，中速消化適合睡前。無大豆、無乳製品、無麩質。每份 ~24g 蛋白',
-  '睡前 ~20g 粉（≈16g 蛋白）',
+  '非乳製植物蛋白，中速消化。晚餐後 1-1.5 小時服用補充當日蛋白質，避免睡前過飽。無大豆、無乳製品、無麩質。每份 ~24g 蛋白',
+  '晚餐後點心 ~20g 粉（≈16g 蛋白），約 20:00-20:30',
   'NT$600 / 907g',
   'https://tw.iherb.com/pr/now-foods-sports-pea-protein-pure-unflavored-2-lbs-907-g/9858',
   'iHerb', 'iherb_supplement', 'NOW Foods',
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now02135/g/41.jpg', 4.4, NULL, 'NOW-02135',
   $${"ingredients":"豌豆蛋白分離物（黃豌豆）","form":"無調味粉末","weight":"907g"}$$::jsonb,
   $${"serving_size":"33g","protein":"24g","fat":"2g","carbs":"1g"}$$::jsonb,
-  'iHerb 直送。每日 ~20g，907g 可用 45 天。無調味可搭配少量蜂蜜或可可粉。',
+  'iHerb 直送。每日 ~20g，907g 可用 45 天。無調味可搭配少量蜂蜜或可可粉。晚餐後 1-1.5 小時服用，避免睡前影響睡眠品質',
   33
 );
 
