@@ -76,6 +76,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（iHerb NOW Foods B-50，水溶性隨餐）</p>
         <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
         <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）</p>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">抗性澱粉 RS3 落實</p>
+          <p className="text-blue-700">地瓜建議前晚用電子鍋蒸好冷藏（產生抗性澱粉 RS3）</p>
+          <p className="text-blue-700">隔日微波 30 秒加溫即可食用，抗性澱粉仍保留大部分</p>
+        </div>
         <Tip>下肢大重量日（深蹲/硬舉）若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
       </Detail>
     );
@@ -104,11 +109,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 冷水浴嚴格限制</p>
-          <p className="text-red-700 font-bold">重訓日（一二四五）絕對禁止冷水浴</p>
-          <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1），顯著減少肌肉蛋白質合成</p>
-          <p className="text-emerald-600 font-semibold">週六/日（Zone 2 日）：可在早晨執行冷水浴</p>
+          <p className="text-red-700 font-bold">重訓日（一二四五）及 VO2 Max 日（三）絕對禁止冷水浴</p>
+          <p className="text-red-700">冷水浴會降低核心體溫，抑制肌肥大關鍵信號（mTOR、IGF-1）+ 線粒體適應信號，顯著減少肌肉蛋白質合成</p>
+          <p className="text-emerald-600 font-semibold">僅週六/日（Zone 2 日）可在早晨執行冷水浴</p>
           <p className="text-emerald-600">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
-          <p className="text-gray-500">週三（VO2 Max 日）：建議避免，若執行需間隔 4hr+</p>
         </div>
       </Detail>
     );
@@ -118,7 +122,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜</p>
+        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
         <div className="space-y-0.5">
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
@@ -162,7 +166,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 45-50g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <p>蛋白質 40-45g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（1 錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
           <p className="text-amber-600">鋅 25mg 僅週二、六隨晚餐服用（每週 1-2 次，降低長期風險）</p>
@@ -188,13 +192,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('晚餐後點心') || title.includes('20:00')) {
+  if (title.includes('下午點心') || title.includes('15:30')) {
     return (
       <Detail>
-        <Label>20:00-20:30 晚餐後點心</Label>
+        <Label>15:30 下午點心</Label>
         <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 非乳製植物蛋白，中速消化</p>
-        <p>晚餐後 1-1.5 小時服用，補充當日蛋白質目標</p>
-        <p>避免睡前過飽影響睡眠品質</p>
+        <p>下午點心時段服用，分散蛋白質攝取壓力</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-amber-800">為何從 20:00 移至 15:30？</p>
+          <p className="text-amber-700">避免 19:00 晚餐 45-50g + 20:00 再補 16g = 1.5hr 內超過 60g 蛋白質</p>
+          <p className="text-amber-700">單次消化壓力過大，可能造成腹脹、消化不良</p>
+        </div>
         <Tip>無調味可搭配少量蜂蜜或可可粉調味</Tip>
       </Detail>
     );
@@ -342,8 +350,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('蛋白質') && title.includes('146')) {
     return (
       <Detail>
-        <p>訓練前乳清 27g + 午晚餐各 45-50g + 睡前豌豆 16g ≈ 143g</p>
+        <p>訓練前乳清 27g + 午餐 40-45g（含每週 1-2 次草飼牛肉 200-300g 替代雞胸）+ 下午豌豆 16g + 晚餐 40-45g ≈ 130-140g</p>
         <p>每餐達亮氨酸門檻 2.5-3g 才能啟動 MPS</p>
+        <p>每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）</p>
+        <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
     );
   }
@@ -398,10 +408,16 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>起司 30g — ~200mg</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 不足時睡前補鈣</p>
-          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 睡前補 1 錠鈣片 500mg</p>
+          <p className="font-semibold text-amber-800">⚠️ 不足時下午補鈣（14:00-15:00）</p>
+          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 下午 14:00-15:00 隨輕食補 1 錠鈣片 500mg</p>
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
           <p className="text-amber-700">鈣片僅為安全網，不應取代食物來源</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
+          <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
+          <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
+          <p className="text-red-700">與 15:00 銅間隔 1hr+</p>
         </div>
       </Detail>
     );
@@ -452,6 +468,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>器材：衝刺飛輪、划船機或上坡跑</p>
         <p>總時間：含暖身和收操約 45 分鐘</p>
         <Tip>安排在週三（非重訓日），與週六日 Zone 2 分開，避免中樞神經疲勞與恢復不良</Tip>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">🚫 VO2 Max 日禁止冷水浴</p>
+          <p className="text-red-700">高強度間歇訓練後冷水浴會抑制線粒體適應信號，降低 VO2 Max 訓練效果</p>
+          <p className="text-red-700">比照重訓日嚴格禁止</p>
+        </div>
       </Detail>
     );
   }
