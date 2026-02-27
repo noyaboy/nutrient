@@ -122,8 +122,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
+        <p>蛋白質 35-40g（正餐食物，單餐 ≤40g 避免 BUN 飆升與腸道產氣）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
         <div className="space-y-0.5">
+          <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
           <p>維他命 D3 1000 IU（半顆）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
@@ -132,9 +133,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
+          <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
+          <p className="text-amber-700">補鈣當日停用午餐獨立 D3（鈣片已含 D3 150IU）</p>
+        </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-gray-800">蛋白質目標：1.6-2.0g/kg（MPS 最大化 + 腎負荷平衡）</p>
-          <p>午晚餐各 45-50g、每日 4-5 餐均勻分配。不再額外沖乳清蛋白（正餐蛋白質已足夠）</p>
+          <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
+          <p>午晚餐各 35-40g（單餐 ≤40g）、每日 4-5 餐均勻分配</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">每日脂肪目標：80-90g（22-25% 總熱量）</p>
@@ -157,7 +163,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 16:00-17:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
         <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
-        <p>12:00 鈣（午餐）→ 16:00 銅（間隔 4hr）→ 19:00 鋅（間隔 3hr），三者充分拉開</p>
+        <p>13:00 鈣（午餐後 1hr）→ 16:00 銅（間隔 3hr）→ 19:00 鋅（間隔 3hr），三者充分拉開</p>
       </Detail>
     );
   }
@@ -166,7 +172,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 40-45g（⚠️ 牛肉日務必減蛋：200g 牛肉 ≈ 40-50g 蛋白，不加蛋，單餐 ≤50g）</p>
+        <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
@@ -174,6 +180,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
+          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋），確保單餐 ≤40g</p>
+          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免礦物質競爭與鋅銅比例失衡</p>
+        </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
       </Detail>
@@ -220,6 +231,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
           <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日</span>）</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">🚫 血清素藥物禁忌</p>
+          <p className="text-red-700 font-semibold">若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 必須立即停用 Ashwagandha</p>
+          <p className="text-red-700">可能誘發血清素綜合徵（Serotonin Syndrome），症狀包括高熱、肌肉僵硬、意識混亂</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
@@ -360,16 +376,22 @@ export function getHealthDetails(title: string): React.ReactNode | null {
 
   // === All-day items ===
 
-  if (title.includes('蛋白質') && title.includes('146')) {
+  if (title.includes('蛋白質') && (title.includes('113') || title.includes('146'))) {
     return (
       <Detail>
-        <p>訓練前乳清 27g + 午餐 40-45g（含每週 1-2 次草飼牛肉 200-300g 替代雞胸）+ 下午豌豆 16g + 晚餐 40-45g ≈ 130-140g</p>
-        <p>每餐達亮氨酸門檻 2.5-3g 才能啟動 MPS</p>
-        <p>每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）</p>
+        <p>訓練前乳清 27g + 午餐 35-40g + 下午豌豆 16g + 晚餐 35-40g ≈ 113-123g</p>
+        <p>每餐達亮氨酸門檻 2.5-3g，單餐 ≤40g 避免 BUN 飆升與腸道產氣</p>
+        <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">🚫 eGFR &lt;90 警示</p>
+          <p className="text-red-700">若腎絲球過濾率低於 90 → 立即下修總蛋白至 1.6g/kg（≈ 117g/day）</p>
+          <p className="text-red-700">每餐 ≤35g，密切監測 BUN/Creatinine 變化</p>
+          <p className="text-red-700">健康檢查結果若 eGFR &lt;90 → 優先調整蛋白質攝取，保護腎功能</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
           <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋）</p>
-          <p className="text-amber-700">確保單餐 ≤50g，避免腎臟短時間代謝壓力</p>
+          <p className="text-amber-700">確保單餐 ≤40g，避免腎臟短時間代謝壓力</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
@@ -424,10 +446,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>豆腐（板豆腐）100g — ~150mg</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 不足時午餐隨餐補鈣（12:00）</p>
-          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐（12:00）隨餐補 1 錠鈣片 500mg</p>
+          <p className="font-semibold text-amber-800">⚠️ 不足時午餐後 1hr 補鈣（13:00）</p>
+          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐後 1hr（13:00）補 1 錠鈣片 500mg</p>
+          <p className="text-amber-700">與午餐脂溶性維生素（魚油/D3/K2/葉黃素）間隔 1hr+，避免競爭吸收</p>
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
-          <p className="text-amber-700">鈣片僅為安全網，不應取代食物來源</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">⚠️ 補鈣當日：停用午餐獨立 D3</p>
@@ -438,7 +460,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">12:00 午餐鈣 → 16:00 銅 → 19:00 鋅，各間隔 3-4hr+（二價金屬競爭吸收通道）</p>
+          <p className="text-red-700">13:00 鈣 → 16:00 銅 → 19:00 鋅，各間隔 3hr+（二價金屬競爭吸收通道）</p>
         </div>
       </Detail>
     );
@@ -480,6 +502,16 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700 font-bold">1. 首位停用：Ashwagandha（偶有肝損傷案例報告）</p>
           <p className="text-amber-700">2. 其次停用：CoQ10、葉黃素</p>
           <p className="text-amber-700">停用後 2 週複檢，確認指標回落</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">🚫 Ashwagandha 血清素禁忌</p>
+          <p className="text-red-700">若正在服用抗憂鬱劑（SSRIs/SNRIs）或血清素藥物 → 禁用 Ashwagandha（血清素綜合徵風險）</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-red-800">⚠️ 腎功能異常（eGFR &lt;90）</p>
+          <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
+          <p className="text-red-700">停止肌酸補充（減少腎臟代謝負擔）</p>
+          <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
         </div>
       </Detail>
     );
