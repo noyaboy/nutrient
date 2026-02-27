@@ -129,7 +129,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
-          <p>CoQ10 Ubiquinol 100-200mg（脂溶性，與魚油同服）</p>
+          <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -166,7 +166,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 40-45g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
+        <p>蛋白質 40-45g（⚠️ 牛肉日：200g 牛肉 ≈ 40-50g 蛋白，減少其他蛋白來源，單餐 ≤50g）</p>
+        <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
           <p className="text-amber-600">鋅 25mg 每兩天隨晚餐服用（半顆，與 15:00 銅間隔 4hr+）</p>
@@ -218,13 +219,19 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
           <p>蘇糖酸鎂 — 唯一可穿越血腦屏障的鎂型態，改善認知與睡眠</p>
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
-          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停</span>，停用期留白讓受體完全重置）</p>
+          <p>Ashwagandha 600mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日</span>）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
           <p className="text-red-700 font-semibold">第 6 週開始每日自評：是否出現情緒冷漠（Anhedonia）、對平常喜歡的事物失去興趣、早晨無力起床</p>
           <p className="text-red-700">任一症狀出現 → 立即停用，進入 4 週停用期</p>
+          <p className="text-red-700">若 ALT/AST 異常 → 首位停用 Ashwagandha（偶有肝損傷案例）</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
+        </div>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">停用期 4 週替代方案</p>
+          <p className="text-blue-700">甘胺酸鎂 + Cyclic Sighing 呼吸法維持睡眠品質</p>
+          <p className="text-blue-700">其餘睡前補充品（甘胺酸 3g、蘇糖酸鎂）照常服用</p>
         </div>
       </Detail>
     );
@@ -250,6 +257,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>心率：最大心率 60-70%（約 <strong>{zone2Low}-{zone2High} bpm</strong>）</p>
         <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
         <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-emerald-800">Zone 2 日補水策略</p>
+          <p className="text-emerald-700">09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration）</p>
+          <p className="text-emerald-700">訓練中持續飲用電解質水維持水合與電解質平衡</p>
+        </div>
         <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週三改為 VO2 Max，避免高強度與長時間有氧疊加同一天</Tip>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">冷水浴僅限週六/日早晨</p>
@@ -354,6 +366,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>訓練前乳清 27g + 午餐 40-45g（含每週 1-2 次草飼牛肉 200-300g 替代雞胸）+ 下午豌豆 16g + 晚餐 40-45g ≈ 130-140g</p>
         <p>每餐達亮氨酸門檻 2.5-3g 才能啟動 MPS</p>
         <p>每日 4-5 餐均勻分配，總計 146g+（2.0g/kg）</p>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
+          <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，應減少其他蛋白來源（少加蛋）</p>
+          <p className="text-amber-700">確保單餐 ≤50g，避免腎臟短時間代謝壓力</p>
+        </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
     );
@@ -407,16 +424,21 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>豆腐（板豆腐）100g — ~150mg</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 不足時下午補鈣（14:00-15:00）</p>
-          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 下午 14:00-15:00 隨輕食補 1 錠鈣片 500mg</p>
+          <p className="font-semibold text-amber-800">⚠️ 不足時午餐後補鈣（13:00）</p>
+          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐後 13:00 隨輕食補 1 錠鈣片 500mg</p>
           <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
           <p className="text-amber-700">鈣片僅為安全網，不應取代食物來源</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-orange-800">⚠️ 補鈣當日：停用午餐獨立 D3</p>
+          <p className="text-orange-700">鈣片每錠含 D3 150IU，午餐獨立 D3 1000IU 應停用</p>
+          <p className="text-orange-700">避免長期疊加超量，嚴格遵守血檢達標後減量原則</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">與 15:00 銅間隔 1hr+</p>
+          <p className="text-red-700">13:00 補鈣與 15:00 銅間隔 2hr+（二價金屬競爭吸收通道）</p>
         </div>
       </Detail>
     );
@@ -425,7 +447,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('飲水')) {
     return (
       <Detail>
-        <p>尿液淡黃色為適當水合指標。有氧日訓練中改用電解質粉</p>
+        <p>尿液淡黃色為適當水合指標</p>
+        <p className="text-amber-600">⚠️ 週六/日 Zone 2 有氧日：09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration），訓練中持續補充電解質水</p>
       </Detail>
     );
   }
