@@ -73,14 +73,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>訓練前營養</Label>
-        <p>地瓜（推薦）或香蕉+堅果醬 1 茶匙 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
+        <p>地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
         <p>500ml 室溫水 + 碘鹽 1g（標準 1/4 茶匙量勺）+ 檸檬汁（補水）</p>
         <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）。使用量勺精確測量，避免估量</p>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
           <p className="text-amber-700">水溶性維生素需食物基質減緩胃排空以提升吸收</p>
           <p className="text-amber-700">推薦：地瓜（前晚蒸好冷藏產生抗性澱粉 RS3）</p>
-          <p className="text-amber-700">替代：香蕉 + 堅果醬 1 茶匙（~5g脂肪）</p>
+          <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">抗性澱粉 RS3 落實</p>
@@ -102,6 +102,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-medium text-amber-800">⚠️ B群吸收保護：與 09:15 B群間隔 2hr+</p>
           <p className="text-amber-700">咖啡因利尿作用加速水溶性 B 群（尤其 B1）排出</p>
           <p className="text-amber-700">最早 11:15 飲用（09:15 + 2hr = 11:15）</p>
+        </div>
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-medium text-blue-800">⚠️ 綠茶日 L-Theanine 微調</p>
+          <p className="text-blue-700">若 13:00 飲用綠茶 2-3 杯（天然 L-Theanine ~20-30mg/杯，合計 40-90mg）</p>
+          <p className="text-blue-700">當日 L-Theanine 補劑可減半（100mg）或跳過，避免總量過高導致過度放鬆</p>
         </div>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
@@ -190,20 +195,21 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
+          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切</span>，<span className="text-red-600 font-bold">補鈣日暫停</span>）— 午餐膠原蛋白已含 ~160mg，補鈣日當日 ~160mg 已足夠</p>
           <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，務必減蛋（不加蛋或僅加 1 顆），確保單餐 ≤40g</p>
+          <p className="text-amber-700 font-bold">草飼牛肉 150-180g ≈ 30-36g 蛋白，嚴格零蛋（36g + 1蛋 6.3g = 42.3g 超過 40g 上限）</p>
           <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 補鈣日晚餐避免菠菜</p>
-          <p className="text-red-700">晚餐維他命 C 500mg 增強草酸吸收，與鈣片併用 → 草酸鈣結石風險</p>
-          <p className="text-red-700">補鈣日菠菜移至非補鈣日，或選擇其他低草酸蔬菜（櫛瓜、小白菜）</p>
+          <p className="font-semibold text-red-800">🚫 補鈣日晚餐：暫停 VitC + 避免菠菜/甜菜</p>
+          <p className="text-red-700 font-bold">補鈣日晚餐暫停 VitC 500mg 補劑（午餐膠原蛋白 ~160mg 已足夠當日需求）</p>
+          <p className="text-red-700">維他命 C 增強草酸吸收 → 與鈣片併用 → 草酸鈣結石風險</p>
+          <p className="text-red-700">補鈣日菠菜、甜菜等高草酸蔬菜移至非補鈣日，或選擇低草酸蔬菜（櫛瓜、小白菜）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐避免優格</p>
@@ -266,10 +272,16 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-semibold">若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 必須立即停用 Ashwagandha</p>
           <p className="text-red-700">可能誘發血清素綜合徵（Serotonin Syndrome），症狀包括高熱、肌肉僵硬、意識混亂</p>
         </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-orange-800">📋 每日情緒自評（Ashwagandha 服用期間）</p>
+          <p className="text-orange-700">□ 今天是否對平常喜歡的事物失去興趣？</p>
+          <p className="text-orange-700">□ 是否感到情緒平淡/麻木？</p>
+          <p className="text-orange-700">□ 早晨是否異常無力起床？</p>
+          <p className="text-orange-700 font-bold">→ 任一「是」連續 2 天 → 立即停用 Ashwagandha</p>
+          <p className="text-orange-600 text-[10px]">藥源性情緒阻斷具隱蔽性，僅靠第 4/12 週抽血不足以應對突發情緒副作用</p>
+        </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
-          <p className="text-red-700 font-semibold">第 6 週開始每日自評：是否出現情緒冷漠（Anhedonia）、對平常喜歡的事物失去興趣、早晨無力起床</p>
-          <p className="text-red-700">任一症狀出現 → 立即停用，進入 4 週停用期</p>
           <p className="text-red-700">若 ALT/AST 異常 → 首位停用 Ashwagandha（偶有肝損傷案例）</p>
           <p className="text-red-700 font-semibold">肝功能追蹤：新品牌開始後第 4 週、第 12 週各追蹤 ALT/AST（藥源性肝損傷多發於數週內）</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
