@@ -11,7 +11,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:15 訓練前營養', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，應對 MTHFR 基因變異，水溶性隨餐）。⚠️ 地瓜建議前晚用電子鍋蒸好冷藏（產生抗性澱粉 RS3），隔日微波 30 秒加溫即可食用，抗性澱粉仍保留大部分', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
   ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘。每次 60-90 分鐘。🚫 冷水浴統一規定：僅限週六、日 Zone 2 日執行（早晨 07:00-08:00），與運動間隔 4hr 以上。重訓日（一二四五）及 VO2 Max 日（三）嚴格禁止冷水浴（抑制 mTOR/IGF-1 肌肥大 + 線粒體適應）', 'daily', '運動', 5, 1, true),
-  ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（1:1 標準比例，A 級 nootropic 組合，消除焦慮、增強專注）。⚠️ 若偏好更平靜可調 1:2（咖啡因 200mg + L-Theanine 400mg = 每日 2 顆），120 顆僅可用 2 個月需提前補貨。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
+  ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（1:1 比例，A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
   ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐 ≤40g 避免 BUN 飆升與腸道產氣）+ 肌酸 5g（CGN Creatine Monohydrate）+ 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日，建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）。隨餐服用：魚油 3 顆、D3 1000IU（每日半顆）、K2 MK-7 100mcg、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg。⚠️ 若當日需補鈣：鈣片午餐後 1hr（13:00）服用，當日停用午餐獨立 D3（鈣片已含 150IU，25(OH)D 為長期蓄積指標不受單日影響）。🚫 補鈣日午餐避免大量菠菜（草酸結合鈣降低吸收）', 'daily', '飲食', 7, 1, true),
@@ -20,15 +20,15 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
-  ('16:00-17:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）嚴格單獨空腹服用，不與任何礦物質補劑同服。空腹可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。⚠️ 時間安排：12:00 午餐（含鈣片）→ 16:00 銅（間隔 4hr）→ 19:00 鋅（間隔 3hr）。若空腹不適可搭配少量水果（非含鈣/鐵食物）', 'daily', '補充品', 10, 1, true),
-  ('15:30 下午點心', '豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，中速消化。下午點心時段服用，分散蛋白質攝取壓力。避免 19:00 晚餐 45-50g + 20:00 再補 16g = 1.5hr 內超過 60g 造成消化不良', 'daily', '飲食', 11, 1, true),
+  ('16:00-17:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（如少量水果、幾片餅乾），避免空腹服用引發噁心嘔吐。不與鋅、鈣、鐵等礦物質補劑同服。⚠️ 時間安排：13:00 鈣 → 16:00 銅（間隔 3hr）→ 19:00 鋅（間隔 3hr）。遵從性優先：不再堅持「嚴格空腹」，以不引起嘔吐感為最高原則', 'daily', '補充品', 10, 1, true),
+  ('15:30 下午點心', 'Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，中速消化。下午點心時段服用，分散蛋白質攝取壓力。與 Tryall 乳清同品牌，品質一致', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐 ≤40g）+ 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 2 大匙（28g）入菜或涼拌。隨餐服用：維他命 C 500mg（半錠）+ 鋅 25mg（半顆，每兩天一次，與 16:00 銅間隔 3hr+）。⚠️ 牛肉日務必減蛋：草飼牛肉 200g ≈ 40-50g 蛋白，不加蛋，確保單餐 ≤40g 避免腎臟短時間代謝壓力。⚠️ 牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免礦物質競爭與鋅銅比例失衡。固體食物睡前 3-4hr 結束', 'daily', '飲食', 13, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐 ≤40g）+ 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 2 大匙（28g）入菜或涼拌。隨餐服用：維他命 C 500mg（半錠）+ 鋅 15mg（每日 1 錠，與 16:00 銅間隔 3hr+）。⚠️ 牛肉日務必減蛋：草飼牛肉 200g ≈ 40-50g 蛋白，不加蛋，確保單餐 ≤40g 避免腎臟短時間代謝壓力。⚠️ 牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免超過 UL 40mg/日。固體食物睡前 3-4hr 結束', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
   ('22:00 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 600mg（嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。🚫 血清素藥物禁忌：若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 必須立即停用 Ashwagandha，可能誘發血清素綜合徵（Serotonin Syndrome）。⚠️ 第 6 週起密切觀察情緒變化：若出現情緒冷漠（Anhedonia）或早晨無力起床 → 立即進入停用期。停用期替代：甘胺酸鎂 + Cyclic Sighing 維持睡眠品質。⏰ 嚴格 22:30 後服用（非 22:00），確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間', 'daily', '補充品', 15, 1, true),
-  ('Ashwagandha 週期管理（8 週用 / 4 週停）', '在瓶身標記「開始日」與「第 56 天停用日」，建議設定手機鬧鐘提醒停用日期。📋 週期檢查：第 1-5 週正常服用 / 第 6 週起每日自評情緒冷漠（Anhedonia）、早晨無力起床 → 任一症狀立即停用 / 第 8 週（56 天）準時進入停用期 / 停用 4 週（28 天）替代方案：甘胺酸鎂 + Cyclic Sighing。🚫 禁忌：服用 SSRIs/SNRIs 或血清素藥物者禁用。⚠️ ALT/AST 異常 → 首位停用本品。🚫 感冒/免疫啟動時立即停用：Ashwagandha 具有免疫調節作用（上調 Th1/Th2 平衡），感冒、發燒或任何急性感染徵兆出現時 → 立即暫停服用，待完全康復後再恢復，避免干擾身體對急性感染的自然免疫反應。每半年健檢時確認肝功能指標', 'daily', '補充品', 16, 1, true),
+  ('Ashwagandha 週期管理（8 週用 / 4 週停）', '在瓶身標記「開始日」與「第 56 天停用日」，建議設定手機鬧鐘提醒停用日期。📋 週期檢查：第 1-5 週正常服用 / 第 6 週起每日自評情緒冷漠（Anhedonia）、早晨無力起床 → 任一症狀立即停用 / 第 8 週（56 天）準時進入停用期 / 停用 4 週（28 天）替代方案：甘胺酸鎂 + Cyclic Sighing。🚫 禁忌：服用 SSRIs/SNRIs 或血清素藥物者禁用。🚫 甲狀腺警示：Ashwagandha 可能提升 T4 水平，甲亢或正服用甲狀腺藥物者禁用（甲狀腺風暴風險）。⚠️ ALT/AST 異常 → 首位停用本品。🚫 感冒/免疫啟動時立即停用：Ashwagandha 具有免疫調節作用，急性感染徵兆出現時 → 立即暫停，待完全康復後再恢復。每半年健檢時確認肝功能 + 甲狀腺指標（TSH、Free T4）', 'daily', '補充品', 16, 1, true),
   ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）。白天：娛樂螢幕 <2hr、社群媒體 <30min、專注時段手機勿擾模式', 'daily', '睡眠', 17, 1, true),
   ('22:00-23:00 熱水澡', '40-42°C 10-15 分鐘（睡前 60-90 分鐘）。提高核心體溫後快速降溫觸發睡眠驅動。建議 22:30-23:00 洗澡 → 00:00 入睡', 'daily', '睡眠', 17, 1, true),
   ('23:30 Cyclic Sighing + 專注冥想', 'Cyclic Sighing 5 分鐘（雙吸鼻、長呼口，Stanford RCT 證實最佳呼吸法）+ 專注冥想 10 分鐘（單點注意力：鼻尖呼吸）。寫下三件感恩的事', 'daily', '心理', 18, 1, true),
@@ -58,7 +58,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('鋅 25mg 補充', '每週 1-2 次服用鋅 25mg（Zinc Picolinate 半顆），建議週二、週六隨晚餐服用。與銅間隔 4hr+。降低長期高劑量風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 2, false),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
-  ('【每半年】健康檢測', '每半年一次全面健康檢查。必檢指標：BUN（尿素氮）、Creatinine（肌酐）、eGFR（腎絲球過濾率）監測腎功能；ALT/AST 監測肝功能。⚠️ 若 ALT/AST 異常：首位停用 Ashwagandha（偶有肝損傷案例報告），其次停用 CoQ10、葉黃素。🚫 Ashwagandha 禁忌：若正在服用抗憂鬱劑或血清素藥物 → 禁用 Ashwagandha（血清素綜合徵風險）。⚠️ 若 eGFR <90：立即將蛋白質攝取下修至 1.6g/kg/day（≈ 117g/day），每餐 ≤35g，密切監測 BUN/Creatinine 變化。其他：血液、荷爾蒙、代謝指標、維他命D、鋅銅比', 'weekly', '一般', 6, 0, true),
+  ('【每半年】健康檢測', '每半年一次全面健康檢查。必檢指標：BUN（尿素氮）、Creatinine（肌酐）、eGFR（腎絲球過濾率）監測腎功能；ALT/AST 監測肝功能；TSH + Free T4 監測甲狀腺功能（Ashwagandha 可能提升 T4）。⚠️ 若 ALT/AST 異常：首位停用 Ashwagandha（偶有肝損傷案例報告），其次停用 CoQ10、葉黃素。🚫 Ashwagandha 禁忌：若正在服用抗憂鬱劑或血清素藥物 → 禁用（血清素綜合徵風險）；甲亢或服用甲狀腺藥物者 → 禁用（甲狀腺風暴風險）。⚠️ 若 eGFR <90：立即將蛋白質攝取下修至 1.6g/kg/day（≈ 117g/day），每餐 ≤35g，密切監測 BUN/Creatinine 變化。其他：血液、荷爾蒙、代謝指標、維他命D、鋅銅比', 'weekly', '一般', 6, 0, true),
   ('【每季】FMD 斷食模擬飲食（5 天）', '每 3-4 月執行 5 天低蛋白/低糖/高脂飲食。清除衰老細胞、重啟免疫系統。FMD 期間停用：肌酸、魚油、NMN、白藜蘆醇', 'weekly', '飲食', 9, 1, false);
 
 ------------------------------------------------------------
@@ -67,7 +67,8 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
   ('鋅 25mg 每日補充', '每日隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。與每日銅 2mg 維持 12.5:1 鋅銅比例，防止長期銅缺乏導致貧血與神經損傷。與 16:00 銅間隔 3hr+', 'daily', '補充品', 27, 1, false),
-  ('鋅 25mg 每兩天補充', '每兩天隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。平均每日鋅攝入 12.5mg + 銅 2mg/日 = 鋅銅比約 6.25:1（加上飲食鋅可達 10:1 以上）。與 16:00 銅間隔 3hr+。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 200g 已含鋅 8-12mg，無需額外補充', 'daily', '補充品', 27, 1, true);
+  ('鋅 25mg 每兩天補充', '每兩天隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。平均每日鋅攝入 12.5mg + 銅 2mg/日 = 鋅銅比約 6.25:1（加上飲食鋅可達 10:1 以上）。與 16:00 銅間隔 3hr+。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 200g 已含鋅 8-12mg，無需額外補充', 'daily', '補充品', 27, 1, false),
+  ('鋅 15mg 每日補充', '每日隨晚餐服用鋅 15mg（Picolinate 錠劑 1 錠）。補充品 15mg + 飲食鋅 ~10-15mg = 每日總計 25-30mg（安全低於 UL 40mg/日）。與 16:00 銅間隔 3hr+。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 200g 已含鋅 8-12mg，無需額外補充', 'daily', '補充品', 27, 1, true);
 
 ------------------------------------------------------------
 -- 追蹤項目：油、鹽、藍莓 (4 items)
@@ -500,24 +501,24 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
-  '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-  '免疫與睪固酮合成必需。每兩天 25mg（半顆），搭配每日銅 2mg。飲食鋅 + 補充品平均可維持鋅銅比 10:1 以上。Picolinate 形式吸收率優於其他形式',
-  '每兩天隨晚餐服用半顆（25mg），與銅 2mg 維持平衡',
-  'NT$710 / 120 顆',
-  'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
+  '鋅 Zinc Picolinate（NOW Foods 15mg × 120 錠）',
+  '免疫與睪固酮合成必需。每日 15mg 錠劑，含飲食鋅（雞蛋 ~5mg + 肉類 ~5-12mg + 堅果 ~2-3mg）總計不超過 UL 40mg/日。Picolinate 形式吸收率優於其他形式。錠劑可精確控量（膠囊粉末無法掰半）',
+  '每日隨晚餐服用 1 錠（15mg），與銅 2mg 維持平衡',
+  'NT$250-350 / 120 錠',
+  'https://tw.iherb.com/pr/now-foods-zinc-picolinate-30-mg-100-veg-capsules/733',
   'iHerb', 'iherb_supplement', 'NOW Foods',
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now01552/g/57.jpg',
   4.8, 46833, 'NOW-01552',
-  $${"form":"素食膠囊","count":"120顆","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
-  $${"serving_size":"1顆","zinc":"50mg（270mg吡啶甲酸鋅）"}$$::jsonb,
-  'iHerb 直送。每兩天半顆 25mg，120 顆可用約 16 個月。與 16:00 銅間隔 3hr+（晚餐 19:00 服用）。與銅保持 10-15:1 比例（含飲食鋅）。',
+  $${"form":"錠劑","count":"120錠","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
+  $${"serving_size":"1錠","zinc":"15mg"}$$::jsonb,
+  'iHerb 直送。✅ 15mg 錠劑（非 50mg 膠囊），可精確控量。每日 1 錠，120 錠可用 4 個月。含飲食鋅（蛋 ~5mg + 肉 ~5-12mg）每日總鋅攝取 25-32mg，安全低於 UL 40mg。⚠️ 牛肉日豁免：牛肉 200g 已含鋅 8-12mg，當晚不服鋅補劑。與 16:00 銅間隔 3hr+（晚餐 19:00 服用）',
   25
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '銅 Copper Bisglycinate（Solaray 2mg × 100 顆）',
-  '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅。下午單獨服用可最大化吸收率，避免與鋅、鈣、鐵競爭。鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷',
-  '每日 1 顆，下午 15:00-16:00 單獨服用（空腹或僅搭配輕食，與礦物質補劑間隔）',
+  '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅。隨低鈣/低鐵小點心服用，避免空腹噁心。不與鋅、鈣、鐵等礦物質競爭。鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷',
+  '每日 1 顆，下午 16:00 隨低鈣/低鐵小點心服用（少量水果或餅乾，避免空腹噁心）',
   'NT$217 / 100 顆',
   'https://tw.iherb.com/pr/solaray-copper-2-mg-100-vegcaps/70102',
   'iHerb', 'iherb_supplement', 'Solaray',
@@ -525,7 +526,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 17219, 'SOR-45931',
   $${"form":"素食膠囊","count":"100顆","chelate_type":"銅氨基酸螯合物"}$$::jsonb,
   $${"serving_size":"1顆","copper":"2mg"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月。下午 15:00-16:00 空腹或搭配少量食物服用，避開午餐的魚油/D3/鈣鎂等礦物質競爭，最大化吸收率。與晚餐鋅間隔 4hr+',
+  'iHerb 直送。每日 1 顆，100 顆可用 3 個多月。⚠️ 16:00 隨小點心服用（非嚴格空腹）：銅離子空腹刺激性高，易引發噁心嘔吐，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率。避開午餐的魚油/D3/鈣鎂等礦物質競爭，與晚餐鋅間隔 3hr+',
   26
 );
 
@@ -569,7 +570,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 16952, 'NOW-00148',
   $${"form":"素食膠囊","count":"120顆"}$$::jsonb,
   $${"serving_size":"1顆","l_theanine":"200mg"}$$::jsonb,
-  'iHerb 直送。✅ 標準 1:1 比例：每日 1 顆（200mg），120 顆可用 4 個月，與其他 iHerb 品項同步補貨。⚠️ 若採用 1:2 比例：每日 2 顆（400mg），120 顆僅可用 2 個月，需每 2 個月單獨補貨（與其他 4 個月週期品項錯開）。建議：先以 1:1 開始，若仍感焦慮再升級 1:2',
+  'iHerb 直送。每日 1 顆（200mg），120 顆可用 4 個月，與其他 iHerb 品項同步補貨。1:1 比例（咖啡因 200mg + L-Theanine 200mg）為標準用量',
   29
 );
 
@@ -616,16 +617,16 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
-  '豌豆蛋白 Pea Protein（NOW Foods 907g）',
-  '非乳製植物蛋白，中速消化。下午點心時段服用，分散每日蛋白質攝取至 4-5 餐。避免晚間 1.5hr 內蛋白質超過 60g 造成消化壓力。無大豆、無乳製品、無麩質。每份 ~24g 蛋白',
+  '豌豆蛋白 Pea Protein（Tryall 1kg）',
+  '台灣品牌 Tryall，非乳製植物蛋白，中速消化。下午點心時段服用，分散每日蛋白質攝取至 4-5 餐。無大豆、無乳製品、無麩質。與 Tryall 乳清同品牌，品質一致',
   '下午點心 ~20g 粉（≈16g 蛋白），約 15:30',
-  'NT$600 / 907g',
-  'https://tw.iherb.com/pr/now-foods-sports-pea-protein-pure-unflavored-2-lbs-907-g/9858',
-  'iHerb', 'iherb_supplement', 'NOW Foods',
-  'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now02135/g/41.jpg', 4.4, NULL, 'NOW-02135',
-  $${"ingredients":"豌豆蛋白分離物（黃豌豆）","form":"無調味粉末","weight":"907g"}$$::jsonb,
-  $${"serving_size":"33g","protein":"24g","fat":"2g","carbs":"1g"}$$::jsonb,
-  'iHerb 直送。每日 ~20g，907g 可用 45 天（每月補貨 1 次）。無調味可搭配少量蜂蜜或可可粉。下午 15:30 服用，分散蛋白質攝取',
+  '約 NT$800-1,000 / 1kg',
+  'https://www.tryall.com.tw',
+  'Costco', 'iherb_supplement', 'TRYALL',
+  NULL, NULL, NULL, NULL,
+  $${"ingredients":"豌豆蛋白分離物","form":"無調味粉末","weight":"1kg","brand":"Tryall"}$$::jsonb,
+  $${"serving_size":"33g","protein":"~24g","fat":"~2g","carbs":"~1g"}$$::jsonb,
+  'Tryall 官網或 Costco 線上可訂。每日 ~20g，1kg 可用約 50 天。無調味可搭配少量蜂蜜或可可粉。下午 15:30 服用，分散蛋白質攝取。與 Tryall 乳清同品牌，統一採購更方便',
   33
 );
 
@@ -667,7 +668,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now04603/g/83.jpg', 4.7, NULL, 'NOW-04603',
   $${"form":"素食膠囊","count":"90顆","extract":"KSM-66 全譜根部萃取"}$$::jsonb,
   $${"serving_size":"1顆","ashwagandha_extract":"450mg"}$$::jsonb,
-  'iHerb 直送。⚠️ 8 週用期（56 天）每日 1 顆，每瓶 90 顆可完成 1 個完整週期（56 顆用 + 剩 34 顆留下一輪）。建議在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。停用期 4 週（28 天）替代方案：甘胺酸鎂 + Cyclic Sighing 呼吸法維持睡眠品質。⚠️ 第 6 週起留意情緒冷漠 → 立即停用。若 ALT/AST 異常 → 首位停用本品。🚫 血清素藥物禁忌：若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 禁用本品（血清素綜合徵風險）。🚫 感冒/免疫啟動時立即暫停：Ashwagandha 具免疫調節作用，急性感染期間服用可能干擾自然免疫反應，待完全康復後再恢復',
+  'iHerb 直送。⚠️ 8 週用期（56 天）每日 1 顆，每瓶 90 顆可完成 1 個完整週期（56 顆用 + 剩 34 顆留下一輪）。建議在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。停用期 4 週替代：甘胺酸鎂 + Cyclic Sighing。⚠️ 第 6 週起留意情緒冷漠 → 立即停用。若 ALT/AST 異常 → 首位停用本品。🚫 血清素藥物禁忌（SSRIs/SNRIs）→ 禁用。🚫 甲狀腺警示：甲亢或正服用甲狀腺藥物者禁用（可能提升 T4，甲狀腺風暴風險）。🚫 感冒/免疫啟動時立即暫停，待康復後再恢復',
   36
 );
 

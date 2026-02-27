@@ -91,8 +91,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>咖啡因 + L-Theanine</Label>
         <p>起床後 60-90 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>標準比例 1:1：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods）</p>
-        <p className="text-amber-600">⚠️ 若偏好更平靜可調 1:2（咖啡因 200mg + L-Theanine 400mg = 每日 2 顆），120 顆僅可用 2 個月需提前補貨</p>
+        <p>1:1 比例：咖啡因 200-300mg + L-Theanine 200mg（iHerb NOW Foods），A 級 nootropic 組合，消除焦慮、增強專注</p>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -161,11 +160,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('銅') && title.includes('2mg')) {
     return (
       <Detail>
-        <Label>銅 2mg — 嚴格空腹單獨服用</Label>
-        <p className="font-semibold">下午 16:00-17:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
-        <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
-        <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
+        <Label>銅 2mg — 隨小點心服用（非嚴格空腹）</Label>
+        <p className="font-semibold">下午 16:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
+        <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
+        <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
         <p>13:00 鈣（午餐後 1hr）→ 16:00 銅（間隔 3hr）→ 19:00 鋅（間隔 3hr），三者充分拉開</p>
+        <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
     );
   }
@@ -178,14 +178,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
-          <p className="text-amber-600">鋅 25mg 每兩天隨晚餐服用（半顆，與 16:00 銅間隔 3hr+）</p>
+          <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
           <p className="text-amber-700">草飼牛肉 200g ≈ 40-50g 蛋白，務必減蛋（不加蛋），確保單餐 ≤40g</p>
-          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免礦物質競爭與鋅銅比例失衡</p>
+          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 8-12mg/200g，當晚無需額外補鋅，避免超過 UL 40mg/日</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -210,14 +210,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>15:30 下午點心</Label>
-        <p>豌豆蛋白 ~20g 粉（≈16g 蛋白）— 非乳製植物蛋白，中速消化</p>
-        <p>下午點心時段服用，分散蛋白質攝取壓力</p>
+        <p>Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）— 台灣品牌，非乳製植物蛋白，中速消化</p>
+        <p>下午點心時段服用，分散蛋白質攝取壓力。與 Tryall 乳清同品牌，品質一致</p>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">為何從 20:00 移至 15:30？</p>
           <p className="text-amber-700">避免 19:00 晚餐 45-50g + 20:00 再補 16g = 1.5hr 內超過 60g 蛋白質</p>
           <p className="text-amber-700">單次消化壓力過大，可能造成腹脹、消化不良</p>
         </div>
-        <Tip>無調味可搭配少量蜂蜜或可可粉調味</Tip>
+        <Tip>無調味可搭配少量蜂蜜或可可粉調味。Tryall 官網或 Costco 線上可訂</Tip>
       </Detail>
     );
   }
@@ -269,11 +269,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 禁忌與停用觸發</p>
           <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
+          <p className="text-red-700 font-semibold">甲亢或正服用甲狀腺藥物 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
           <p className="text-red-700">情緒冷漠（Anhedonia）→ 立即停用</p>
           <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
-          <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停（免疫調節作用可能干擾自然免疫反應），康復後再恢復</p>
+          <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停，康復後再恢復</p>
         </div>
-        <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能指標</Tip>
+        <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
       </Detail>
     );
   }
@@ -530,6 +531,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">ALT — 正常 7-56 U/L</p>
           <p className="text-orange-700">AST — 正常 10-40 U/L</p>
         </div>
+        <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-purple-800">甲狀腺功能（Ashwagandha 可能提升 T4）</p>
+          <p className="text-purple-700">TSH — 正常 0.4-4.0 mIU/L</p>
+          <p className="text-purple-700">Free T4 — 正常 0.8-1.8 ng/dL</p>
+        </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">其他指標</p>
           <p>維他命 D — 目標 40-60 ng/mL</p>
@@ -544,8 +550,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">停用後 2 週複檢，確認指標回落</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 Ashwagandha 血清素禁忌</p>
-          <p className="text-red-700">若正在服用抗憂鬱劑（SSRIs/SNRIs）或血清素藥物 → 禁用 Ashwagandha（血清素綜合徵風險）</p>
+          <p className="font-bold text-red-800">🚫 Ashwagandha 禁忌</p>
+          <p className="text-red-700">若正在服用抗憂鬱劑（SSRIs/SNRIs）或血清素藥物 → 禁用（血清素綜合徵風險）</p>
+          <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">⚠️ 腎功能異常（eGFR &lt;90）</p>
