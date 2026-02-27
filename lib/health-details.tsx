@@ -77,16 +77,17 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">⏰ 正確順序</p>
-          <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 3-5g（食品電子秤測量，提供碘 ~60-165mcg）+ 檸檬汁</p>
+          <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（食品電子秤測量，~400mg 鈉）+ 檸檬汁</p>
           <p className="text-blue-700">09:15 進食：地瓜/香蕉 + 乳清蛋白 + B群</p>
           <p className="text-blue-700">先喝水再吃固體食物+B群，確保胃中有食物基質時 B群才進入</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">台灣碘鹽含碘 ~20-33mcg/g，09:05 碘鹽 3-5g 僅提供 ~60-165mcg</p>
-          <p className="text-amber-700">其餘碘來源：烹調用碘鹽 + 每週 2-3 次海帶/紫菜（富含碘）</p>
-          <p className="text-amber-700">⚠️ 十字花科蔬菜含硫代葡萄糖苷（Goitrogens），競爭甲狀腺碘吸收 → 碘需求更高</p>
-          <p className="text-amber-700">使用食品電子秤（精度 0.1g）精確測量，1/4 茶匙≈1.4g 誤差達 40%</p>
+          <p className="text-amber-700">晨間碘鹽僅 1g（~20-33mcg 碘），碘攝取主力仰賴食物：</p>
+          <p className="text-amber-700">• 午晚餐烹調碘鹽（每餐 1-2g）</p>
+          <p className="text-amber-700">• 每週 2-3 次海帶味噌湯 / 涼拌紫菜（3-5g 乾海帶即超過 RDA）</p>
+          <p className="text-amber-700">⚠️ 為何不用 3-5g？5g 鹽 / 500ml = 1%（高於生理食鹽水 0.9%），空腹易噁心/腹瀉；且 5g = 2000mg 鈉，加烹調鹽必超 WHO 上限</p>
+          <p className="text-amber-700">使用食品電子秤（精度 0.1g）精確測量</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
@@ -116,9 +117,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">最早 11:15 飲用（09:15 + 2hr = 11:15）</p>
         </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">⚠️ 綠茶日 L-Theanine 微調</p>
-          <p className="text-blue-700">若 13:00 飲用綠茶 2-3 杯（天然 L-Theanine ~20-30mg/杯，合計 40-90mg）</p>
-          <p className="text-blue-700">當日 L-Theanine 補劑可減半（100mg）或跳過，避免總量過高導致過度放鬆</p>
+          <p className="font-medium text-blue-800">⚠️ 綠茶日 L-Theanine 處理</p>
+          <p className="text-blue-700">若當日飲用綠茶 2-3 杯（天然 L-Theanine ~20-30mg/杯，合計 40-90mg）</p>
+          <p className="text-blue-700">直接跳過 L-Theanine 補劑（200mg 素食膠囊無法精準減半，拆開估量誤差大且易受潮）</p>
         </div>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
@@ -211,7 +212,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>晚餐營養策略</Label>
-        <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
+        <p>蛋白質 35-40g（單餐建議 ≤45g，生理上非絕對門檻）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
@@ -220,8 +221,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 牛肉日特別注意</p>
-          <p className="text-amber-700 font-bold">草飼牛肉 150-180g ≈ 30-36g 蛋白，嚴格零蛋（36g + 1蛋 6.3g = 42.3g 超過 40g 上限）</p>
+          <p className="font-semibold text-amber-800">⚠️ 牛肉日注意</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，可加 1 顆蛋（~42g 仍在安全範圍內）</p>
+          <p className="text-amber-700">整日總量維持 1.5-1.7g/kg 即可，不必為 2.3g 差異造成備餐壓力</p>
           <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -507,7 +509,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <p>訓練前乳清 27g + 午餐 35-40g + 下午豌豆 16g + 晚餐 35-40g ≈ 113-123g</p>
-        <p>每餐達亮氨酸門檻 2.5-3g，單餐 ≤40g 避免 BUN 飆升與腸道產氣</p>
+        <p>每餐達亮氨酸門檻 2.5-3g，單餐建議 ≤45g（生理上非絕對門檻）</p>
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
@@ -516,9 +518,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">→ 下修至 1.6g/kg（≈ 117g/day），每餐 ≤35g，永久停止肌酸</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 牛肉日單餐蛋白質控制</p>
-          <p className="text-amber-700 font-bold">草飼牛肉 150-180g ≈ 30-36g 蛋白，嚴格零蛋（36g + 1蛋 6.3g = 42.3g 超標）</p>
-          <p className="text-amber-700">確保單餐 ≤40g，避免腎臟短時間代謝壓力</p>
+          <p className="font-semibold text-amber-800">⚠️ 牛肉日蛋白質彈性</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，可加 1 顆蛋（~42g 仍安全）</p>
+          <p className="text-amber-700">不必為 2.3g 差異造成備餐壓力，整日總量維持 1.5-1.7g/kg 即可</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
