@@ -74,8 +74,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>訓練前營養</Label>
         <p>地瓜（推薦）或香蕉+堅果醬 1 茶匙 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
-        <p>500ml 室溫水 + 少許碘鹽 + 檸檬汁（補水）</p>
-        <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）</p>
+        <p>500ml 室溫水 + 碘鹽 1g（標準 1/4 茶匙量勺）+ 檸檬汁（補水）</p>
+        <p className="text-amber-600">⚠️ 確認碘鹽為「加碘」版本（統一生機日曬海鹽加碘，包裝標示「碘化鉀」）。使用量勺精確測量，避免估量</p>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
           <p className="text-amber-700">水溶性維生素需食物基質減緩胃排空以提升吸收</p>
@@ -132,7 +132,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 1000 IU（半顆，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
+          <p>維他命 D3 1000 IU（<span className="text-red-600 font-bold">2000IU 錠劑需掰半</span>，補鈣日維持攝取）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
@@ -142,6 +142,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：午餐後 1hr（13:00）服用</p>
           <p className="text-amber-700">鈣片應於午餐後 1hr（13:00）服用，與脂溶性維生素（魚油/D3/K2/葉黃素）間隔，避免競爭吸收</p>
+          <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
+          <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
           <p className="text-amber-700">🚫 補鈣日午餐避免大量菠菜（草酸與鈣結合 → 結石 + 降低吸收）</p>
         </div>
@@ -183,7 +185,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 35-40g（單餐 ≤40g 避免 BUN 飆升與腸道產氣）</p>
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
+          <p>維他命 C 500mg（<span className="text-red-600 font-bold">1000mg 錠劑需掰半</span>）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
           <p className="text-amber-600">鋅 15mg 每日隨晚餐服用（1 錠，與 16:00 銅間隔 3hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
@@ -197,6 +199,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 補鈣日晚餐避免菠菜</p>
           <p className="text-red-700">晚餐維他命 C 500mg 增強草酸吸收，與鈣片併用 → 草酸鈣結石風險</p>
           <p className="text-red-700">補鈣日菠菜移至非補鈣日，或選擇其他低草酸蔬菜（櫛瓜、小白菜）</p>
+        </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ 晚餐纖維管理（避免夜間脹氣）</p>
+          <p className="text-amber-700">休息日或腸胃敏感時，碳水優先選擇低纖維來源（白米飯、去皮馬鈴薯）</p>
+          <p className="text-amber-700">避免高纖維（地瓜、燕麥、洋蔥）+ 睡前甘胺酸鎂（高滲透壓）疊加 → 夜間脹氣干擾睡眠</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（睡前小份優格不影響）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -255,6 +262,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-semibold">第 6 週開始每日自評：是否出現情緒冷漠（Anhedonia）、對平常喜歡的事物失去興趣、早晨無力起床</p>
           <p className="text-red-700">任一症狀出現 → 立即停用，進入 4 週停用期</p>
           <p className="text-red-700">若 ALT/AST 異常 → 首位停用 Ashwagandha（偶有肝損傷案例）</p>
+          <p className="text-red-700 font-semibold">肝功能追蹤：新品牌開始後第 4 週、第 12 週各追蹤 ALT/AST（藥源性肝損傷多發於數週內）</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
         </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -284,6 +292,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">情緒冷漠（Anhedonia）→ 立即停用</p>
           <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
           <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停，康復後再恢復</p>
+        </div>
+        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-orange-800">⚠️ 肝功能追蹤（勿枯等半年健檢）</p>
+          <p className="text-orange-700">開始服用新品牌 Ashwagandha 後第 4 週及第 12 週各追蹤 ALT/AST</p>
+          <p className="text-orange-700">藥源性肝損傷多發於服用後數週內，早期發現可避免惡化</p>
         </div>
         <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
       </Detail>
@@ -491,11 +504,16 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>深綠蔬菜（菠菜、花椰菜）— ~100-150mg</p>
           <p>豆腐（板豆腐）100g — ~150mg</p>
         </div>
+        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-emerald-800">✅ 飲食鈣優先原則</p>
+          <p className="text-emerald-700">若已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜（~200mg）≥ 500mg → 可不補鈣片</p>
+          <p className="text-emerald-700">避免不必要的高劑量鈣抑制午餐鐵鋅吸收</p>
+        </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 不足時午餐後 1hr 補鈣（13:00）</p>
-          <p className="text-amber-700">若當日飲食鈣攝取明顯不足（&lt;600mg）→ 午餐後 1hr（13:00）補 1 錠鈣片 500mg</p>
-          <p className="text-amber-700">與午餐脂溶性維生素（魚油/D3/K2/葉黃素）間隔 1hr+，避免競爭吸收</p>
-          <p className="text-amber-700">使用 Nature Made Ca+D3+K2（Costco 備用品）</p>
+          <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：午餐後 1hr（13:00）</p>
+          <p className="text-amber-700">鈣片 500mg 午餐後 1hr（13:00）服用，與脂溶性維生素間隔 1hr+</p>
+          <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
+          <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
@@ -542,6 +560,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
           <p className="text-orange-700">ALT — 正常 7-56 U/L</p>
           <p className="text-orange-700">AST — 正常 10-40 U/L</p>
+          <p className="text-orange-700 font-semibold">⚠️ Ashwagandha 肝功能追蹤：新品牌開始後第 4 週、第 12 週各加測 ALT/AST</p>
+          <p className="text-orange-700">藥源性肝損傷多發於數週內，勿枯等半年健檢</p>
         </div>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-purple-800">甲狀腺功能（Ashwagandha 可能提升 T4）</p>
