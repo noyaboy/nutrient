@@ -28,40 +28,112 @@ function StoreTag({ store }: { store: string }) {
   );
 }
 
+function InfoRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex gap-2 text-xs">
+      <span className="text-gray-400 flex-shrink-0">{label}</span>
+      <span className="text-gray-600">{value}</span>
+    </div>
+  );
+}
+
+function JsonEntries({ data }: { data: Record<string, unknown> }) {
+  const entries = Object.entries(data).filter(([, v]) => v !== null && v !== '' && v !== undefined);
+  if (entries.length === 0) return null;
+  return (
+    <div className="flex flex-wrap gap-x-3 gap-y-0.5">
+      {entries.map(([k, v]) => (
+        <span key={k} className="text-xs text-gray-500">
+          <span className="text-gray-400">{k}:</span> {String(v)}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function RatingStars({ rating, reviewCount }: { rating: number; reviewCount?: number | null }) {
+  return (
+    <span className="text-xs text-yellow-600">
+      {'★'.repeat(Math.round(rating))}{'☆'.repeat(5 - Math.round(rating))}
+      {' '}{rating}
+      {reviewCount != null && <span className="text-gray-400"> ({reviewCount.toLocaleString()})</span>}
+    </span>
+  );
+}
+
 function ShoppingSection({ title, items }: { title: string; items: Product[] }) {
   return (
     <section className="space-y-3">
       <h2 className="text-base font-bold text-gray-900">{title}</h2>
       <div className="space-y-2">
-        {items.map((item) => (
-          <a
-            key={item.id}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-sm transition-all active:scale-[0.98]"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  <p className="text-base font-medium text-gray-900">{item.name}</p>
+        {items.map((item) => {
+          const hasSpecs = item.specs && Object.keys(item.specs).length > 0;
+          const hasNutrition = item.nutrition && Object.keys(item.nutrition).length > 0;
+          return (
+            <a
+              key={item.id}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-4 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-sm transition-all active:scale-[0.98]"
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    {item.image_url && (
+                      <img src={item.image_url} alt="" className="w-10 h-10 rounded object-contain flex-shrink-0" />
+                    )}
+                    <div>
+                      <p className="text-base font-medium text-gray-900">{item.name}</p>
+                      {(item.brand || item.origin) && (
+                        <p className="text-xs text-gray-400">
+                          {item.brand}{item.brand && item.origin && ' · '}{item.origin}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500">{item.description}</p>
+                  <p className="text-sm text-emerald-700 mt-1">{item.usage}</p>
+
+                  {item.rating != null && (
+                    <div className="mt-1">
+                      <RatingStars rating={item.rating} reviewCount={item.review_count} />
+                    </div>
+                  )}
+
+                  {hasSpecs && (
+                    <div className="mt-1.5 bg-gray-50 rounded px-2 py-1">
+                      <p className="text-[10px] font-medium text-gray-400 mb-0.5">規格</p>
+                      <JsonEntries data={item.specs} />
+                    </div>
+                  )}
+
+                  {hasNutrition && (
+                    <div className="mt-1 bg-emerald-50 rounded px-2 py-1">
+                      <p className="text-[10px] font-medium text-emerald-400 mb-0.5">營養</p>
+                      <JsonEntries data={item.nutrition} />
+                    </div>
+                  )}
+
+                  {item.purchase_note && (
+                    <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{item.purchase_note}</p>
+                  )}
+
+                  {item.sku && (
+                    <InfoRow label="SKU" value={item.sku} />
+                  )}
                 </div>
-                <p className="text-sm text-gray-500">{item.description}</p>
-                <p className="text-sm text-emerald-700 mt-1">{item.usage}</p>
-                {item.purchase_note && (
-                  <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{item.purchase_note}</p>
-                )}
+                <div className="flex flex-col items-end gap-1.5 flex-shrink-0">
+                  <StoreTag store={item.store} />
+                  <span className="text-xs font-semibold text-amber-700">{item.price}</span>
+                  <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
               </div>
-              <div className="flex flex-col items-end gap-1.5 flex-shrink-0">
-                <StoreTag store={item.store} />
-                <span className="text-xs font-semibold text-amber-700">{item.price}</span>
-                <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          );
+        })}
       </div>
     </section>
   );
