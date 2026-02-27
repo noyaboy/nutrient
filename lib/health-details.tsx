@@ -125,7 +125,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 十字花科蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
         <div className="space-y-0.5">
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
-          <p>維他命 D3 2000 IU <span className="text-amber-600 font-medium">⟵ 週一至五，週末休息；血檢達標+晨光曝曬→減半或改兩天一次</span></p>
+          <p>維他命 D3 1000 IU（半顆）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg）</p>
@@ -157,7 +157,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="font-semibold">下午 15:00-16:00 嚴格單獨空腹服用，不與任何礦物質補劑同服</p>
         <p>最大化吸收率：避開午餐的魚油、D3、鈣鎂等礦物質競爭</p>
         <p>若空腹不適 → 搭配少量水果（非含鈣/鐵食物）</p>
-        <p>15:00 銅 → 19:00 鋅（每日）= 間隔 4hr+（避免競爭吸收）</p>
+        <p>15:00 銅 → 19:00 鋅（每兩天）= 間隔 4hr+（避免競爭吸收）</p>
       </Detail>
     );
   }
@@ -168,8 +168,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>晚餐營養策略</Label>
         <p>蛋白質 40-45g，進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（1 錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
-          <p className="text-amber-600">鋅 25mg 每日隨晚餐服用（半顆，與 15:00 銅間隔 4hr+，鋅銅比 12.5:1）</p>
+          <p>維他命 C 500mg（半錠）— 午餐膠原蛋白已含 ~160mg，每日合計 ~660mg 已足夠</p>
+          <p className="text-amber-600">鋅 25mg 每兩天隨晚餐服用（半顆，與 15:00 銅間隔 4hr+）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜預設菠菜、櫛瓜等低 FODMAP（十字花科留給午餐，減少每日兩餐脹氣風險）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -208,11 +208,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('21:30') || title.includes('睡前補充品')) {
+  if (title.includes('22:00') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <Label>21:30-22:00 睡前補充品</Label>
-        <p>提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床</p>
+        <Label>22:00 睡前補充品</Label>
+        <p>22:00 服用（睡前 2hr），確保與 19:00 晚餐蛋白質間隔 3hr+（甘胺酸與蛋白質競爭吸收），同時為腎臟保留排尿緩衝時間</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
@@ -452,7 +452,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>荷爾蒙：睪固酮、SHBG、皮質醇</p>
           <p>代謝：空腹血糖、HbA1c、胰島素</p>
         </div>
-        <Tip>⚠️ 任一腎肝指標超出參考範圍 → 立即停用非必要合成補劑（優先停：Ashwagandha、CoQ10、葉黃素），2 週後複檢</Tip>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-amber-800">⚠️ ALT/AST 異常時停用順序</p>
+          <p className="text-amber-700 font-bold">1. 首位停用：Ashwagandha（偶有肝損傷案例報告）</p>
+          <p className="text-amber-700">2. 其次停用：CoQ10、葉黃素</p>
+          <p className="text-amber-700">停用後 2 週複檢，確認指標回落</p>
+        </div>
       </Detail>
     );
   }

@@ -14,22 +14,22 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('10:30 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 200-300mg（約 1-2 杯黑咖啡）+ L-Theanine 200mg（A 級 nootropic 組合，消除焦慮、增強專注）。15:00 後禁止咖啡因（半衰期 5-6 小時影響睡眠）', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate）+ 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日，建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 2000IU（5+2）、K2 MK-7 100mcg、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg。每日脂肪目標 80-90g（午餐 ~30g + 晚餐橄欖油 2 大匙 28g + 魚油/蛋/肉脂肪）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 45-50g（正餐食物）+ 肌酸 5g（CGN Creatine Monohydrate）+ 十字花科蔬菜（切碎靜置 40 分鐘最大化蘿蔔硫素）+ 碳水 80-105g（訓練日，建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g。魚油 3 顆、D3 1000IU（每日半顆）、K2 MK-7 100mcg、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 100-200mg。每日脂肪目標 80-90g（午餐 ~30g + 晚餐橄欖油 2 大匙 28g + 魚油/蛋/肉脂肪）', 'daily', '飲食', 7, 1, true),
   ('12:00-13:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午餐服用。與鋅間隔 4+ 小時（鋅在晚餐）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏', 'daily', '補充品', 8, 1, false),
   ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）', 'daily', '飲食', 8, 1, true),
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
-  ('15:00-16:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）嚴格單獨空腹服用，不與任何礦物質補劑同服。空腹可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。與晚餐鋅間隔 4hr+（鋅每日服用）。若空腹不適可搭配少量水果（非含鈣/鐵食物）', 'daily', '補充品', 10, 1, true),
+  ('15:00-16:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）嚴格單獨空腹服用，不與任何礦物質補劑同服。空腹可最大化吸收率，避免與鋅、鈣、鐵等礦物質競爭。與晚餐鋅間隔 4hr+（鋅每兩天服用）。若空腹不適可搭配少量水果（非含鈣/鐵食物）', 'daily', '補充品', 10, 1, true),
   ('15:30 下午點心', '豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，中速消化。下午點心時段服用，分散蛋白質攝取壓力。避免 19:00 晚餐 45-50g + 20:00 再補 16g = 1.5hr 內超過 60g 造成消化不良', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 40-45g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 2 大匙（28g）入菜或涼拌。隨餐服用：維他命 C 500mg（1 錠）+ 鋅 25mg（半顆，與 15:00 銅間隔 4hr+）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 13, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 40-45g + 菠菜、櫛瓜等低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。脂肪：橄欖油 2 大匙（28g）入菜或涼拌。隨餐服用：維他命 C 500mg（半錠）+ 鋅 25mg（半顆，每兩天一次，與 15:00 銅間隔 4hr+）。固體食物睡前 3-4hr 結束', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
-  ('21:30-22:00 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 600mg（嚴格 8 週用 / 4 週停）。⚠️ 第 6 週起密切觀察情緒變化：若出現情緒冷漠（Anhedonia）或早晨無力起床 → 立即進入停用期。提前至 21:30-22:00 服用，為腎臟保留排尿緩衝時間，避免半夜起床中斷睡眠', 'daily', '補充品', 15, 1, true),
+  ('22:00 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 600mg（嚴格 8 週用 / 4 週停）。⚠️ 第 6 週起密切觀察情緒變化：若出現情緒冷漠（Anhedonia）或早晨無力起床 → 立即進入停用期。22:00 服用確保與 19:00 晚餐蛋白質間隔 3hr+（甘胺酸與蛋白質競爭吸收），同時為腎臟保留排尿緩衝時間', 'daily', '補充品', 15, 1, true),
   ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）。白天：娛樂螢幕 <2hr、社群媒體 <30min、專注時段手機勿擾模式', 'daily', '睡眠', 16, 1, true),
-  ('22:00-23:00 熱水澡', '40-42°C 10-15 分鐘（睡前 60-90 分鐘）。提高核心體溫後快速降溫觸發睡眠驅動', 'daily', '睡眠', 17, 1, true),
+  ('22:00-23:00 熱水澡', '40-42°C 10-15 分鐘（睡前 60-90 分鐘）。提高核心體溫後快速降溫觸發睡眠驅動。建議 22:30-23:00 洗澡 → 00:00 入睡', 'daily', '睡眠', 17, 1, true),
   ('23:30 Cyclic Sighing + 專注冥想', 'Cyclic Sighing 5 分鐘（雙吸鼻、長呼口，Stanford RCT 證實最佳呼吸法）+ 專注冥想 10 分鐘（單點注意力：鼻尖呼吸）。寫下三件感恩的事', 'daily', '心理', 18, 1, true),
   ('00:00 感恩練習', '睡前或早晨寫下三件感恩的事，調節自律神經系統', 'daily', '心理', 19, 1, false),
   ('23:50 口腔衛生：刷牙 + 牙線', '早晚各一次。牙周病菌（P. gingivalis）與心血管疾病、阿茲海默症強相關。每日至少刷牙 2 次 + 牙線 1 次', 'daily', '一般', 19, 1, true),
@@ -57,7 +57,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('鋅 25mg 補充', '每週 1-2 次服用鋅 25mg（Zinc Picolinate 半顆），建議週二、週六隨晚餐服用。與銅間隔 4hr+。降低長期高劑量風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 2, false),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
-  ('【每半年】健康檢測', '每半年一次全面健康檢查。必檢指標：BUN（尿素氮）、Creatinine（肌酐）、eGFR（腎絲球過濾率）監測腎功能；ALT/AST 監測肝功能。⚠️ 任一數值上升超出參考範圍 → 立即停用非必要合成補劑（優先停：Ashwagandha、CoQ10、葉黃素）。其他：血液、荷爾蒙、代謝指標、維他命D、鋅銅比', 'weekly', '一般', 6, 0, true),
+  ('【每半年】健康檢測', '每半年一次全面健康檢查。必檢指標：BUN（尿素氮）、Creatinine（肌酐）、eGFR（腎絲球過濾率）監測腎功能；ALT/AST 監測肝功能。⚠️ 若 ALT/AST 異常：首位停用 Ashwagandha（偶有肝損傷案例報告），其次停用 CoQ10、葉黃素。其他：血液、荷爾蒙、代謝指標、維他命D、鋅銅比', 'weekly', '一般', 6, 0, true),
   ('【每季】FMD 斷食模擬飲食（5 天）', '每 3-4 月執行 5 天低蛋白/低糖/高脂飲食。清除衰老細胞、重啟免疫系統。FMD 期間停用：肌酸、魚油、NMN、白藜蘆醇', 'weekly', '飲食', 9, 1, false);
 
 ------------------------------------------------------------
@@ -65,7 +65,8 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 ------------------------------------------------------------
 
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
-  ('鋅 25mg 每日補充', '每日隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。與每日銅 2mg 維持 12.5:1 鋅銅比例，防止長期銅缺乏導致貧血與神經損傷。與 15:00 銅間隔 4hr+', 'daily', '補充品', 27, 1, true);
+  ('鋅 25mg 每日補充', '每日隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。與每日銅 2mg 維持 12.5:1 鋅銅比例，防止長期銅缺乏導致貧血與神經損傷。與 15:00 銅間隔 4hr+', 'daily', '補充品', 27, 1, false),
+  ('鋅 25mg 每兩天補充', '每兩天隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。平均每日鋅攝入 12.5mg + 銅 2mg/日 = 鋅銅比約 6.25:1（加上飲食鋅可達 10:1 以上）。與 15:00 銅間隔 4hr+', 'daily', '補充品', 27, 1, true);
 
 ------------------------------------------------------------
 -- Costco 保健品 (4 items)
@@ -86,14 +87,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '鈣片備用（Nature Made Ca+D3+K2 250 錠）',
-  '碳酸鈣 + 檸檬酸鈣雙鈣源。純粹作為鈣質備用品。注意：本品含 D3 150IU/錠，與獨立 D3 2000IU 疊加風險低但需留意。K2 僅 10mcg/錠（不足日需量，已改用獨立 K2 MK-7 100mcg）。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
+  '碳酸鈣 + 檸檬酸鈣雙鈣源。純粹作為鈣質備用品。注意：本品含 D3 150IU/錠，與獨立 D3 1000IU 疊加風險低但需留意。K2 僅 10mcg/錠（不足日需量，已改用獨立 K2 MK-7 100mcg）。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
   '備用品：僅在當日飲食鈣攝取確認嚴重不足時才服用 1 錠。日常 K2 已改用獨立 K2 MK-7 產品',
   'NT$759 / 250 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
   'Costco', 'costco_supplement', 'NATURE MADE 萊萃美', '美國',
-  $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處，開封後請置於冰箱儲存。","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
+  $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處（錠劑常溫即可穩定保存）","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
   $${"calcium":"500mg/錠","vitamin_d3":"3.75mcg (150IU)/錠","vitamin_k2":"10mcg (MK-7型)/錠"}$$::jsonb,
-  '線上可訂（常溫配送）。純鈣備用品（鈣從食物攝取為主），250 錠可用非常久。K2 已獨立購買（NOW Foods MK-7），本品 K2 含量不足日常需求。開封後建議冰箱保存。',
+  '線上可訂（常溫配送）。純鈣備用品（鈣從食物攝取為主），250 錠可用非常久。K2 已獨立購買（NOW Foods MK-7），本品 K2 含量不足日常需求。⚠️ 碳酸鈣+檸檬酸鈣錠劑常溫陰涼處即可穩定保存，無需冰箱（原包裝建議冰箱保存為保守建議）。適合放辦公桌或隨身攜帶，確保 14:00-15:00 補鈣時段可取用。',
   2
 );
 
@@ -104,8 +105,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'NT$300-400 / 100 錠',
   'https://tw.iherb.com/pr/now-foods-c-1000-100-tablets/446',
   'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
-  $${"ingredients":"抗壞血酸(維生素C),微結晶狀a-纖維素,羥丙基甲基纖維素(膜衣成分),交聯羧甲基纖維素鈉,硬脂酸,羥丙基纖維素(膜衣成分),硬脂酸鎂,羥丙基甲基纖維素(膜衣成分),二氧化矽,棕櫚蠟(膜衣成分)","form":"錠劑","count":"500錠","storage":"請存放於乾燥陰涼處，開封後請旋緊瓶蓋，並避免陽光直射。"}$$::jsonb,
-  $${"vitamin_c":"500mg/錠"}$$::jsonb,
+  $${"ingredients":"抗壞血酸(維生素C),微結晶狀a-纖維素,羥丙基甲基纖維素(膜衣成分),交聯羧甲基纖維素鈉,硬脂酸,羥丙基纖維素(膜衣成分),硬脂酸鎂,羥丙基甲基纖維素(膜衣成分),二氧化矽,棕櫚蠟(膜衣成分)","form":"錠劑","count":"100錠","storage":"請存放於乾燥陰涼處，開封後請旋緊瓶蓋，並避免陽光直射。"}$$::jsonb,
+  $${"vitamin_c":"1000mg/錠（掰半服用 500mg）"}$$::jsonb,
   'iHerb 直送。每日半錠（500mg），100 錠可用 6 個月（每半年補貨）。⚠️ 小包裝策略：避免 500 錠大包裝開瓶 16 個月導致嚴重氧化。午餐膠原蛋白已含 ~160mg Vit C，晚餐半錠 500mg 即可。開瓶後標記日期，6 個月內用完。',
   3
 );
@@ -218,14 +219,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '綜合堅果（Kirkland 1.13kg）',
-  '（可選品項）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅來源。⚠️ 堅果含鎂，若有腹瀉傾向可省略，改用橄欖油補足脂肪',
+  '（可選品項）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅來源',
   '每日一把',
   'NT$599 / 1.13kg',
   'https://www.costco.com.tw/Food-Dining/Snacks/Nuts-Jerky/Kirkland-Signature-Mixed-Nuts-113-kg/p/1669722',
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '越南',
   $${"ingredients":"腰果,杏仁,開心果,夏威夷果仁,巴西堅果,花生油,海鹽","weight":"1.13公斤","storage":"未開封時請存放於陰涼乾燥處,開封後請冷藏並請儘速食用完畢","allergens":"本產品含有花生及堅果類製品，食物過敏者請留意","notes":"可能含有堅果碎殼，食用時請小心"}$$::jsonb,
   '{}'::jsonb,
-  '（可選）線上可訂（常溫配送）。每日 30g，1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意。若睡前鎂補充已導致腹瀉，建議省略堅果改用橄欖油',
+  '（可選）線上可訂（常溫配送）。每日 30g，1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意',
   11
 );
 
@@ -471,7 +472,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 30061, 'NOW-01289',
   $${"form":"錠劑","count":"180錠","chelate_type":"TRAACS™ 甘氨酸鎂"}$$::jsonb,
   $${"serving_size":"2錠","magnesium":"200mg（提取自2000mg甘氨酸鎂）"}$$::jsonb,
-  'iHerb 直送。每日 2 錠，180 錠可用 3 個月，每季補一次。',
+  'iHerb 直送。每日睡前 1 錠（100mg），180 錠可用 6 個月。⚠️ 產品標示 serving size 為 2 錠 200mg，但本計畫僅用 1 錠（減半策略，避免總鎂過高致腹瀉）。',
   23
 );
 
@@ -492,8 +493,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '鋅 Zinc Picolinate（NOW Foods 50mg × 120 顆）',
-  '免疫與睪固酮合成必需。每日 25mg（半顆）搭配每日銅 2mg，維持鋅銅平衡比例 12.5:1。Picolinate 形式吸收率優於其他形式',
-  '每日隨晚餐服用半顆（25mg），與銅 2mg 維持 12.5:1 比例',
+  '免疫與睪固酮合成必需。每兩天 25mg（半顆），搭配每日銅 2mg。飲食鋅 + 補充品平均可維持鋅銅比 10:1 以上。Picolinate 形式吸收率優於其他形式',
+  '每兩天隨晚餐服用半顆（25mg），與銅 2mg 維持平衡',
   'NT$710 / 120 顆',
   'https://tw.iherb.com/pr/now-foods-zinc-picolinate-50-mg-120-veg-capsules/878',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -501,7 +502,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 46833, 'NOW-01552',
   $${"form":"素食膠囊","count":"120顆","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
   $${"serving_size":"1顆","zinc":"50mg（270mg吡啶甲酸鋅）"}$$::jsonb,
-  'iHerb 直送。每日半顆 25mg，120 顆可用 8 個月。與 15:00 銅間隔 4hr+（晚餐 19:00 服用）。與銅保持 10-15:1 比例。',
+  'iHerb 直送。每兩天半顆 25mg，120 顆可用約 16 個月。與 15:00 銅間隔 4hr+（晚餐 19:00 服用）。與銅保持 10-15:1 比例（含飲食鋅）。',
   25
 );
 
@@ -522,8 +523,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 D3 2000IU（Doctor''s Best 360 顆）',
-  '每日 2000 IU（5+2：週一至五服用，週末休息）。目標血清 25(OH)D 40-60 ng/mL。血檢達標+每日晨光曝曬→可減半或改兩天一次。360 顆大包裝更划算',
-  '每日 1 顆隨訓練後餐（需搭配油脂吸收）。5+2 週末休息',
+  '每日服用半顆（1000 IU）。目標血清 25(OH)D 40-60 ng/mL。血檢達標+每日晨光曝曬→可進一步減量。原產品為 2000IU/顆，半顆即 1000IU',
+  '每日半顆（1000 IU）隨訓練後餐（需搭配油脂吸收）',
   'NT$457 / 360 顆',
   'https://tw.iherb.com/pr/doctor-s-best-vitamin-d3-125-mcg-5-000-iu-360-softgels/36580',
   'iHerb', 'iherb_supplement', 'Doctor''s Best',
@@ -531,7 +532,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.9, 75650, 'DRB-00250',
   $${"form":"軟凝膠","count":"360顆"}$$::jsonb,
   $${"serving_size":"1顆","vitamin_d3":"50微克（2000IU）"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，360 顆可用整年。大包裝每顆僅 ~$1.27。',
+  'iHerb 直送。每日半顆（1000IU），360 顆可用約 2 年。大包裝每顆僅 ~$1.27。',
   27
 );
 
@@ -560,7 +561,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 16952, 'NOW-00148',
   $${"form":"素食膠囊","count":"120顆"}$$::jsonb,
   $${"serving_size":"1顆","l_theanine":"200mg"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。Double Strength 200mg，每季訂一次。',
+  'iHerb 直送。標準用量每日 1 顆（200mg），120 顆可用 4 個月。⚠️ 若偏好 1:2 比例（每日 2 顆 400mg 搭配咖啡因 200mg），120 顆僅可用 2 個月，需提前補貨。',
   29
 );
 
