@@ -63,7 +63,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('起床') && title.includes('曝曬')) {
     return (
       <Detail>
-        <Label>晨光曝曬指南</Label>
         <p>起床後 30-60 分鐘內到戶外曝曬陽光（不要隔著玻璃、不戴太陽眼鏡）</p>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-blue-800">曝曬時長</p>
@@ -78,10 +77,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('訓練前') && title.includes('營養')) {
     return (
       <Detail>
-        <Label>訓練前營養</Label>
-        <p>⏰ 09:05 先補水 → 09:15 訓練前營養</p>
-        <p>地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex：甲鈷胺 B12 + 5-MTHF 葉酸 + P5P B6，水溶性需隨餐）</p>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-blue-800">⏰ 正確順序</p>
           <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（食品電子秤測量，~400mg 鈉）+ 檸檬汁</p>
           <p className="text-blue-700">09:15 進食：地瓜/香蕉 + 乳清蛋白 + B群</p>
@@ -105,12 +101,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('咖啡') && title.includes('Theanine')) {
     return (
       <Detail>
-        <Label>咖啡因 + L-Theanine（11:15+）</Label>
-        <p>起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
-        <p>1:1 比例：咖啡因 200-300mg + L-Theanine 200mg（NOW Foods Double Strength 200mg，iHerb），A 級 nootropic 組合</p>
-        <p className="text-amber-600 mt-1">⚠️ 最早 11:15 飲用（與 09:15 B群間隔 2hr+，咖啡因利尿加速水溶性 B 群排出）</p>
+        <p className="text-amber-600">⚠️ 最早 11:15 飲用（與 09:15 B群間隔 2hr+，咖啡因利尿加速水溶性 B 群排出）</p>
         <p className="text-blue-600">⚠️ 綠茶日停用 L-Theanine 補劑（綠茶 2-3 杯已含天然 L-Theanine 40-90mg）</p>
-        <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
   }
@@ -118,13 +110,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('10:00') && title.includes('運動')) {
     return (
       <Detail>
-        <Label>訓練計畫</Label>
-        <p>週一：上半身 A（推 + 垂直拉）</p>
-        <p>週二：下半身 A（深蹲 + 腿後側）</p>
-        <p>週三：VO2 Max 間歇（4 分鐘 × 4-6 組）</p>
-        <p>週四：上半身 B（推 + 水平拉）</p>
-        <p>週五：下半身 B（硬舉 + 腿前側）</p>
-        <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <ColdBathRules context="exercise" />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 三溫暖排程</p>
@@ -137,8 +122,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('午餐') && !title.includes('銅')) {
     return (
       <Detail>
-        <Label>午餐 + 訓練後補充品</Label>
-        <p>蛋白質 35-40g（正餐食物，單餐 ≤40g 避免 BUN 飆升與腸道產氣）+ 肌酸 5g（CGN Creatine Monohydrate，iHerb）+ 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）</p>
         <div className="space-y-0.5">
           <p>脂肪：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g（確保脂溶性維生素充分吸收）</p>
           <p>魚油 3 顆（2100mg EPA+DHA）</p>
@@ -163,10 +146,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('銅') && title.includes('2mg')) {
     return (
       <Detail>
-        <Label>銅 2mg — 隨小點心服用（非嚴格空腹）</Label>
-        <p className="font-semibold">下午 14:00-15:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
-        <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
-        <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
         <p>12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（間隔 2-3hr）→ 19:00 晚餐最後一口鋅（間隔 4-5hr）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 14:00-15:00 小點心嚴格避開含鈣食物</p>
@@ -182,9 +161,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('晚餐') && !title.includes('銅')) {
     return (
       <Detail>
-        <Label>晚餐營養策略</Label>
-        <p>蛋白質 35-40g（單餐建議 ≤45g，生理上非絕對門檻）</p>
-        <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
           <p className="text-gray-400 text-[10px]">⚠️ 補劑 ~660mg + 蔬菜/檸檬汁天然 Vit C 合計每日可達 800-900mg（仍安全，UL 2000mg）。若當日蔬菜攝取量極大，500mg 錠可改兩天一次以減少代謝負擔</p>
@@ -207,11 +183,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('藍光管理')) {
     return (
       <Detail>
-        <Label>藍光管理 & 數位衛生</Label>
         <div className="bg-indigo-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="text-indigo-700">白天：娛樂螢幕 &lt;2hr、社群 &lt;30min、專注時段手機勿擾</p>
-          <p className="text-indigo-700">22:00 調暗燈光或戴防藍光眼鏡（琥珀色鏡片）</p>
-          <p className="text-indigo-700">室溫 18-19°C · 全遮光窗簾 · 遮蓋 LED 指示燈</p>
+          <p className="text-indigo-700">睡眠環境：室溫 18-19°C · 全遮光窗簾 · 遮蓋 LED 指示燈</p>
         </div>
       </Detail>
     );
@@ -220,8 +193,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('下午點心') || title.includes('15:30')) {
     return (
       <Detail>
-        <Label>15:30 下午點心</Label>
-        <p>Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）— 非乳製植物蛋白，分散蛋白質攝取壓力</p>
         <p className="text-amber-600">安排在 15:30 而非 20:00：避免晚餐 45g + 再補 16g = 1.5hr 內超 60g 蛋白致消化壓力</p>
         <Tip>無調味可搭配蜂蜜或可可粉。Tryall 官網或 Costco 線上可訂</Tip>
       </Detail>
@@ -231,9 +202,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('22:00') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <Label>22:30 睡前補充品（洗完熱水澡後）</Label>
-        <p>⏰ 嚴格 22:30 後服用（洗完熱水澡後），確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
-        <p className="text-red-600 font-medium mt-1">⚠️ 先洗澡再服用（熱水澡升溫 vs 甘胺酸降溫互相抵消）。流程：21:30 洗澡 → 22:30 服用 → 00:00 入睡</p>
+        <p>與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
@@ -249,7 +218,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('Ashwagandha') && title.includes('週期')) {
     return (
       <Detail>
-        <Label>Ashwagandha 週期管理</Label>
         <AshwagandhaWarnings variant="cycle" />
         <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
       </Detail>
@@ -259,7 +227,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('肝功能追蹤') && title.includes('第4/12週')) {
     return (
       <Detail>
-        <Label>Ashwagandha 肝功能追蹤（第4/12週）</Label>
         <AshwagandhaWarnings variant="liver-tracking" />
         <Tip>在瓶身標記「第 4 週抽血日」與「第 12 週抽血日」</Tip>
       </Detail>
@@ -269,8 +236,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('準時入睡')) {
     return (
       <Detail>
-        <Label>準時入睡</Label>
-        <p>理想就寢時間：00:00 入睡</p>
         <p className="font-medium">固定起床時間 &gt; 固定就寢時間（最核心的晝夜節律原則）</p>
         <p>慢性睡眠不足（&lt;6 小時）與胰島素阻抗、認知衰退、心血管疾病相關</p>
       </Detail>
@@ -281,11 +246,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     const { zone2Low, zone2High } = getHeartRateZones();
     return (
       <Detail>
-        <Label>Zone 2 有氧（週六、週日）</Label>
-        <p>時間：45-60 分鐘持續運動</p>
-        <p>心率：最大心率 60-70%（約 <strong>{zone2Low}-{zone2High} bpm</strong>）</p>
-        <p>方式：固定式腳踏車、飛輪或划船機（避免跑步以減少對肌肥大的干擾）</p>
-        <p>強度：可以說話但無法唱歌，鼻呼吸為佳</p>
+        <p>心率目標：約 <strong>{zone2Low}-{zone2High} bpm</strong>（可以說話但無法唱歌，鼻呼吸為佳）</p>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-emerald-800">Zone 2 日補水策略</p>
           <p className="text-emerald-700">09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration）</p>
@@ -300,7 +261,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('肌力訓練')) {
     return (
       <Detail>
-        <Label>四天課表（Upper/Lower Split）</Label>
         <div className="space-y-1 text-xs text-gray-700">
           {[
             { day: '週一', content: 'Upper A（力量）', tag: '力量', color: 'green' as const },
@@ -387,9 +347,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('蛋白質') && (title.includes('113') || title.includes('146'))) {
     return (
       <Detail>
-        <p>訓練前乳清 27g + 午餐 35-40g + 下午豌豆 16g + 晚餐 35-40g ≈ 113-123g</p>
-        <p>每餐達亮氨酸門檻 2.5-3g，單餐建議 ≤45g（生理上非絕對門檻）</p>
-        <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
+        <p>每餐達亮氨酸門檻 2.5-3g（健康腎功能範圍）</p>
         <EgfrProtocol context="protein-section" />
         <BeefDayAdjustments context="protein" />
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
@@ -400,8 +358,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('膳食纖維')) {
     return (
       <Detail>
-        <p>洋蔥、大蒜、燕麥、酪梨、冷卻米飯/地瓜（抗性澱粉）</p>
-        <p>搭配發酵食物（優格、泡菜）增強腸道多樣性</p>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">菠菜安排策略</p>
           <p className="text-blue-700">菠菜在午餐食用（有鈣質食物保護：鈣+草酸在腸道結合排出）</p>
@@ -423,9 +379,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('碳水循環')) {
     return (
       <Detail>
-        <p>重訓日 5-6g/kg（360-430g）· 有氧日 3-4g/kg（215-290g）</p>
-        <p>重訓日熱量目標 3,100-3,400 kcal</p>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-semibold text-blue-800">📋 重訓日碳水分配範例（目標 ~400g）</p>
           <p className="text-blue-700">訓練前：地瓜 200g ≈ 50g 碳水</p>
           <p className="text-blue-700">午餐：白米飯 300g（乾重 120g）≈ 90g + 冷卻米飯 150g ≈ 45g = 135g</p>
@@ -452,7 +406,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('鈣攝取') || title.includes('鈣') && title.includes('1000')) {
     return (
       <Detail>
-        <Label>每日鈣攝取確認（目標 1000mg）</Label>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">主要鈣來源（食物優先）</p>
           <p>希臘優格 200-300g — ~200-300mg</p>
@@ -491,9 +444,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('飲水')) {
     return (
       <Detail>
-        <p>尿液淡黃色為適當水合指標</p>
         <p className="text-amber-600">⚠️ 週六/日 Zone 2 有氧日：09:05 補水改用電解質粉沖泡 500ml（CGN Sport Hydration），訓練中持續補充電解質水</p>
-        <p className="text-blue-600 font-medium">💧 補鈣日飲水建議 3L+（維持良好水合，支持腎臟代謝）</p>
       </Detail>
     );
   }
@@ -501,7 +452,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('健康檢測') || title.includes('每半年')) {
     return (
       <Detail>
-        <Label>每半年健康檢測 — 必檢指標</Label>
         <EgfrProtocol context="health-check" />
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
@@ -538,8 +488,6 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     const { vo2Low, vo2High } = getHeartRateZones();
     return (
       <Detail>
-        <Label>VO2 Max 訓練（週三）</Label>
-        <p>方式：Peter Attia 4×4 法 — 4 分鐘全力 + 4 分鐘恢復，重複 4 組</p>
         <p>心率：最大心率 90-95%（約 <strong>{vo2Low}-{vo2High} bpm</strong>）</p>
         <p>器材：衝刺飛輪、划船機或上坡跑</p>
         <p>總時間：含暖身和收操約 45 分鐘</p>
