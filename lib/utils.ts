@@ -57,6 +57,21 @@ export function getWeeklyTargetCount(title: string): number {
   return 1;
 }
 
+export function extractTime(title: string): string {
+  const match = title.match(/^\d{2}:\d{2}[^&]*/);
+  return match ? match[0].trim() : title;
+}
+
+export function condenseDescription(description: string): string {
+  const sentences = description.split('。');
+  let result = sentences[0];
+
+  const warnings = description.match(/[⚠️🚫✅⛔][^。]*/g);
+  if (warnings) result += ' ' + warnings.join(' ');
+
+  return result.length > 150 ? result.slice(0, 147) + '...' : result;
+}
+
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
     '運動': 'bg-green-100 text-green-800',

@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { getTodayRecipes, postWorkoutRecipes, lunchRecipes, dinnerRecipes } from '@/lib/recipes';
 import { getHealthDetails } from '@/lib/health-details';
 import { Section } from '@/components/HealthTabs';
+import { ColdBathRules } from '@/lib/health-warnings/ColdBathRules';
 
 export const dynamic = 'force-dynamic';
 
@@ -123,12 +124,7 @@ function HealthNotes() {
 
       <Section title="冷熱暴露">
         <div className="text-xs text-gray-700 space-y-3">
-          <div>
-            <p className="font-semibold text-blue-700 mb-1">冷水浴（2-4 次/週，休息日）</p>
-            <p>10-15°C，1-5 分鐘</p>
-            <p className="text-red-600 font-medium">重訓後 4-6 小時內禁止冷水浴（會抑制肌肥大信號）</p>
-            <p>最佳時機：休息日早晨或訓練前</p>
-          </div>
+          <ColdBathRules context="general" />
           <div>
             <p className="font-semibold text-red-700 mb-1">三溫暖（3-7 次/週）</p>
             <p>80-100°C，15-20 分鐘/次</p>

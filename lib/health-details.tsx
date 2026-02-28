@@ -1,4 +1,10 @@
 import React from 'react';
+import { AshwagandhaWarnings } from '@/lib/health-warnings/AshwagandhaWarnings';
+import { EgfrProtocol } from '@/lib/health-warnings/EgfrProtocol';
+import { ColdBathRules } from '@/lib/health-warnings/ColdBathRules';
+import { CalciumOxalateEducation } from '@/lib/health-warnings/CalciumOxalateEducation';
+import { MineralTimingGuidance } from '@/lib/health-warnings/MineralTimingGuidance';
+import { BeefDayAdjustments } from '@/lib/health-warnings/BeefDayAdjustments';
 
 function Detail({ children }: { children: React.ReactNode }) {
   return <div className="text-xs text-gray-600 space-y-1.5">{children}</div>;
@@ -136,13 +142,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週四：上半身 B（推 + 水平拉）</p>
         <p>週五：下半身 B（硬舉 + 腿前側）</p>
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 冷水浴統一規定</p>
-          <p className="text-red-700 font-bold">重訓日（一二四五）及 VO2 Max 日（三）嚴格禁止</p>
-          <p className="text-red-700">冷水浴會抑制肌肥大信號（mTOR、IGF-1）+ 線粒體適應</p>
-          <p className="text-emerald-600 font-semibold">✓ 僅週六/日（Zone 2 日）早晨 07:00-08:00 可執行</p>
-          <p className="text-emerald-600">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
-        </div>
+        <ColdBathRules context="exercise" />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-amber-800">⚠️ 三溫暖/熱暴露排程</p>
           <p className="text-amber-700 font-semibold">三溫暖必須在重訓「之後」執行，或與重訓間隔 2 小時以上</p>
@@ -169,16 +169,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
-        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-emerald-800">✅ 草酸鈣正確觀念</p>
-          <p className="text-emerald-700">鈣與草酸在「腸道」同餐攝取 → 結合為不溶性草酸鈣隨糞便排出（保護機制）</p>
-          <p className="text-emerald-700">若刻意分開，游離草酸被吸收入血 → 在「腎臟」與尿鈣結合形成結石</p>
-          <p className="text-emerald-700 font-medium">因此：高草酸蔬菜（菠菜）搭配含鈣食物同餐食用才是正確防結石策略</p>
-        </div>
+        <CalciumOxalateEducation />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：鈣片隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
+          <MineralTimingGuidance minerals={['calcium', 'copper', 'zinc']} />
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
           <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭同一二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
@@ -215,7 +210,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">優格、牛奶、起司等含鈣食物會顯著抑制銅吸收（鈣銅共用 DMT1 轉運蛋白）</p>
           <p className="text-red-700">正確選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾</p>
         </div>
-        <p className="text-amber-600 font-medium">⚠️ 牛肉日免補銅：牛肉 + 堅果已提供足夠銅，當日取消銅補劑避免逼近 UL 10mg/日</p>
+        <BeefDayAdjustments context="copper" />
         <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
     );
@@ -234,12 +229,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 牛肉日注意</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，取消雞蛋（牛肉已接近單餐上限 ≤45g）</p>
-          <p className="text-amber-700">雞蛋移至 15:30 下午點心與豌豆蛋白同食（蛋 6.3g + 豌豆 16g = 22.3g）</p>
-          <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
-        </div>
+        <BeefDayAdjustments context="egg" />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 鋅吸收注意：晚餐避免高植酸食物</p>
           <p className="text-amber-700">菠菜、豆類等高植酸食物的植酸+草酸強力螯合游離鋅離子，大幅削弱 15mg 鋅吸收率</p>
@@ -311,44 +301,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>甘胺酸鎂 100mg — 肌肉放鬆、GABA 受體調節（減半避免總鎂過高致腹瀉）</p>
           <p>Ashwagandha 450mg — 降低皮質醇（<span className="text-red-600 font-bold">嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日</span>）</p>
         </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 血清素藥物禁忌</p>
-          <p className="text-red-700 font-semibold">若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 必須立即停用 Ashwagandha</p>
-          <p className="text-red-700">可能誘發血清素綜合徵（Serotonin Syndrome），症狀包括高熱、肌肉僵硬、意識混亂</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-300">
-          <p className="font-bold text-red-800">🚫 自體免疫疾病完全禁用</p>
-          <p className="text-red-700 font-semibold">橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等自體免疫疾病患者 → 完全禁用 Ashwagandha</p>
-          <p className="text-red-700">免疫調節作用可能加劇自體免疫反應，甲狀腺風暴風險</p>
-        </div>
-        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-orange-800">📋 每日情緒自評（Ashwagandha 服用期間）</p>
-          <p className="text-orange-700">□ 今天是否對平常喜歡的事物失去興趣？</p>
-          <p className="text-orange-700">□ 是否感到情緒平淡/麻木？</p>
-          <p className="text-orange-700">□ 早晨是否異常無力起床？</p>
-          <p className="text-orange-700 font-bold">→ 任一「是」連續 2 天 → 立即停用 Ashwagandha（不可因 8 週未滿而繼續服用）</p>
-          <p className="text-orange-600 text-[10px]">情緒冷漠為「強制停用」信號，藥源性情緒阻斷具隱蔽性，僅靠第 4/12 週抽血不足以應對</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-red-800">⚠️ Ashwagandha 監測 — 第 6 週起密切觀察</p>
-          <p className="text-red-700">若 ALT/AST 異常 → 首位停用 Ashwagandha（偶有肝損傷案例）</p>
-          <p className="text-red-700 font-semibold">肝功能追蹤：新品牌開始後第 4 週、第 12 週各追蹤 ALT/AST（藥源性肝損傷多發於數週內）</p>
-          <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
-          <p className="font-bold text-red-800">🚨 肝毒性實體症狀監測（DILI）— 不限品牌/批次</p>
-          <p className="text-red-700">服用期間出現以下任一症狀 → 立即停用並安排 ALT/AST 抽血：</p>
-          <p className="text-red-700 font-semibold">1. 異常疲累加重（排除訓練/睡眠因素）</p>
-          <p className="text-red-700 font-semibold">2. 食慾不振持續 2 天以上</p>
-          <p className="text-red-700 font-semibold">3. 皮膚或眼白微黃（黃疸前兆）</p>
-          <p className="text-red-700 font-semibold">4. 右上腹不適/隱痛</p>
-          <p className="text-red-700">⚠️ DILI 可發生在任何品牌、任何批次，不應僅依賴定期抽血排程</p>
-        </div>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">停用期 4 週替代方案</p>
-          <p className="text-blue-700">甘胺酸鎂 + Cyclic Sighing 呼吸法維持睡眠品質</p>
-          <p className="text-blue-700">其餘睡前補充品（甘胺酸 3g、蘇糖酸鎂）照常服用</p>
-        </div>
+        <AshwagandhaWarnings variant="sleep" />
       </Detail>
     );
   }
@@ -357,32 +310,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>Ashwagandha 週期管理</Label>
-        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-medium text-gray-800">📋 8 週用 / 4 週停 週期</p>
-          <p>第 1-5 週：正常服用 450mg/日（睡前）</p>
-          <p>第 6 週起：每日自評情緒冷漠、早晨無力起床</p>
-          <p>第 8 週（第 56 天）：準時進入停用期</p>
-          <p>停用 4 週（28 天）：甘胺酸鎂 + Cyclic Sighing 替代</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 禁忌與停用觸發</p>
-          <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
-          <p className="text-red-700 font-semibold">🚫 自體免疫疾病完全禁用：橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等（加劇自體免疫反應）</p>
-          <p className="text-red-700 font-semibold">🚫 甲狀腺即時停用：若 TSH/Free T4 異常 → 立即停用並就醫（可能提升 T4，甲狀腺風暴風險）</p>
-          <p className="text-red-700 font-bold">⚠️ 情緒冷漠為「強制停用」信號：即使未滿 8 週也必須立即停用，不可因週期未滿而繼續服用</p>
-          <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
-          <p className="text-red-700 font-semibold">感冒/發燒/任何急性感染 → 立即暫停，康復後再恢復</p>
-        </div>
-        <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-orange-800">⚠️ 肝功能追蹤（勿枯等半年健檢）</p>
-          <p className="text-orange-700">開始服用新品牌 Ashwagandha 後第 4 週及第 12 週各追蹤 ALT/AST</p>
-          <p className="text-orange-700">藥源性肝損傷多發於服用後數週內，早期發現可避免惡化</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
-          <p className="font-bold text-red-800">🚨 肝毒性實體症狀（DILI）— 不限品牌/批次</p>
-          <p className="text-red-700 font-semibold">異常疲累、食慾不振 ≥2天、皮膚/眼白微黃、右上腹不適</p>
-          <p className="text-red-700 font-bold">→ 任一出現即刻停用並抽血 ALT/AST（不必等排程）</p>
-        </div>
+        <AshwagandhaWarnings variant="cycle" />
         <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
       </Detail>
     );
@@ -392,30 +320,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>Ashwagandha 肝功能追蹤（第4/12週）</Label>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-semibold text-red-800">⚠️ 開始服用新品牌 Ashwagandha 後，務必追蹤肝功能</p>
-          <p className="text-red-700 font-bold">第 4 週 + 第 12 週各安排一次 ALT/AST 抽血</p>
-          <p className="text-red-700">藥源性肝損傷（DILI）多發於服用後數週內，早期發現可避免惡化</p>
-        </div>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-blue-800">📋 追蹤方式</p>
-          <p className="text-blue-700">自費抽血（家醫科/健檢中心，約 NT$200-400）</p>
-          <p className="text-blue-700">僅需檢測 ALT + AST 兩項</p>
-        </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 異常處理</p>
-          <p className="text-amber-700">若 ALT &gt;56 U/L 或 AST &gt;40 U/L → 立即停用 Ashwagandha</p>
-          <p className="text-amber-700">停用 2 週後複檢確認回落</p>
-        </div>
-        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-emerald-800">✅ 兩次追蹤均正常</p>
-          <p className="text-emerald-700">後續回歸每半年健檢即可</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
-          <p className="font-bold text-red-800">🚨 重要：DILI 不限品牌/批次</p>
-          <p className="text-red-700">定期排程僅是基準線。服用期間出現疲累加重、食慾不振、皮膚/眼白微黃、右上腹不適</p>
-          <p className="text-red-700 font-bold">→ 不必等排程，立即安排抽血</p>
-        </div>
+        <AshwagandhaWarnings variant="liver-tracking" />
         <Tip>在瓶身標記「第 4 週抽血日」與「第 12 週抽血日」</Tip>
       </Detail>
     );
@@ -447,12 +352,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-700">訓練中持續飲用電解質水維持水合與電解質平衡</p>
         </div>
         <Tip>Zone 2 安排在非重訓日，避免與肌力訓練競爭恢復資源。週三改為 VO2 Max，避免高強度與長時間有氧疊加同一天</Tip>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">冷水浴僅限週六/日早晨</p>
-          <p className="text-blue-700">07:00-08:00 執行冷水浴，與 Zone 2 運動間隔 4hr+</p>
-          <p className="text-blue-700">例：07:00 冷水浴（10 分鐘）→ 11:00 Zone 2 有氧（45-60 分鐘）</p>
-          <p className="text-blue-700">Zone 2 為低強度有氧，冷水浴對其影響較小（非肌肥大目標）</p>
-        </div>
+        <ColdBathRules context="zone2" />
       </Detail>
     );
   }
@@ -550,19 +450,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>訓練前乳清 27g + 午餐 35-40g + 下午豌豆 16g + 晚餐 35-40g ≈ 113-123g</p>
         <p>每餐達亮氨酸門檻 2.5-3g，單餐建議 ≤45g（生理上非絕對門檻）</p>
         <p>每日 4-5 餐均勻分配，總計約 1.5-1.7g/kg（健康腎功能範圍）</p>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
-          <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 7 天 + 暫停高強度重訓 48-72hr（肌肉修復也會升高 Creatinine）</p>
-          <p className="text-red-700 font-bold">2. 建議加測 Cystatin C（不受肌肉量/肌酸影響，交叉驗證真實腎功能）</p>
-          <p className="text-red-700 font-bold">3. eGFR &lt;90 分級處置：</p>
-          <p className="text-red-700">首次 &lt;90 → 下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
-          <p className="text-red-700 font-semibold">連續兩次 &lt;90（間隔 3 個月）→ 強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科</p>
-        </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 牛肉日蛋白質分配</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白（晚餐），取消雞蛋（牛肉已接近單餐上限 ≤45g）</p>
-          <p className="text-amber-700">雞蛋移至 15:30 下午點心與豌豆蛋白同食（蛋 6.3g + 豌豆 16g = 22.3g）</p>
-        </div>
+        <EgfrProtocol context="protein-section" />
+        <BeefDayAdjustments context="protein" />
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
     );
@@ -635,16 +524,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-700">若已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜（~200mg）≥ 500mg → 可不補鈣片</p>
           <p className="text-emerald-700">避免不必要的高劑量鈣抑制午餐鐵鋅吸收</p>
         </div>
-        <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-emerald-800">✅ 草酸鈣正確觀念</p>
-          <p className="text-emerald-700">鈣與草酸在「腸道」同餐攝取 → 結合為不溶性草酸鈣隨糞便排出（保護機制）</p>
-          <p className="text-emerald-700">若刻意分開，游離草酸被吸收入血 → 在「腎臟」與尿鈣結合形成結石</p>
-          <p className="text-emerald-700 font-medium">因此：高草酸蔬菜（菠菜）搭配含鈣食物同餐食用才是正確防結石策略</p>
-        </div>
+        <CalciumOxalateEducation />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
+          <MineralTimingGuidance minerals={['calcium', 'copper', 'zinc']} />
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
           <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與甘胺酸鎂競爭二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
@@ -678,16 +562,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>每半年健康檢測 — 必檢指標</Label>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">
-          <p className="font-semibold text-red-800">腎功能（高蛋白飲食 + 肌酸監測）</p>
-          <p className="text-red-700 font-bold">🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72hr 暫停高強度重訓</p>
-          <p className="text-red-700">肌肉修復本身也會顯著升高 Creatinine，與肌酸偽陽性疊加 → eGFR 被嚴重低估</p>
-          <p className="text-red-700">只有停用+休息後的數據才能反映真實腎功能</p>
-          <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
-          <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
-          <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
-          <p className="text-red-700 font-semibold">建議加測 Cystatin C：不受肌肉量/肌酸影響，交叉驗證真實 eGFR</p>
-        </div>
+        <EgfrProtocol context="health-check" />
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
           <p className="text-orange-700">ALT — 正常 7-56 U/L</p>
@@ -714,20 +589,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">2. 其次停用：CoQ10、葉黃素</p>
           <p className="text-amber-700">停用後 2 週複檢，確認指標回落</p>
         </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 Ashwagandha 禁忌</p>
-          <p className="text-red-700">若正在服用抗憂鬱劑（SSRIs/SNRIs）或血清素藥物 → 禁用（血清素綜合徵風險）</p>
-          <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
-          <p className="text-red-700 font-semibold">自體免疫疾病（橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等）→ 完全禁用</p>
-        </div>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">⚠️ eGFR &lt;90 分級處置（確認為真實腎功能下降後）</p>
-          <p className="text-red-700 font-bold">首次 &lt;90：下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
-          <p className="text-red-700 font-bold">連續兩次 &lt;90（間隔 3 個月）：強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科追蹤</p>
-          <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
-          <p className="text-red-700">建議搭配 Cystatin C 檢測（不受肌肉量/肌酸影響），交叉驗證 eGFR</p>
-          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 + 暫停重訓 48-72hr → 取得真實 eGFR → 才啟動處置</p>
-        </div>
+        <AshwagandhaWarnings variant="health-check" />
       </Detail>
     );
   }
@@ -742,11 +604,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>器材：衝刺飛輪、划船機或上坡跑</p>
         <p>總時間：含暖身和收操約 45 分鐘</p>
         <Tip>安排在週三（非重訓日），與週六日 Zone 2 分開，避免中樞神經疲勞與恢復不良</Tip>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">🚫 VO2 Max 日禁止冷水浴</p>
-          <p className="text-red-700">高強度間歇訓練後冷水浴會抑制線粒體適應信號，降低 VO2 Max 訓練效果</p>
-          <p className="text-red-700">比照重訓日嚴格禁止</p>
-        </div>
+        <ColdBathRules context="vo2max" />
       </Detail>
     );
   }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Product } from '@/lib/types';
+import TimingTable, { TimingRow } from '@/components/TimingTable';
 
 interface ShoppingPageClientProps {
   costcoSupplements: Product[];
@@ -10,6 +11,7 @@ interface ShoppingPageClientProps {
   personalCare: Product[];
   equipment: Product[];
   convenienceDaily: Product[];
+  timingRows: TimingRow[];
 }
 
 function StoreTag({ store }: { store: string }) {
@@ -139,36 +141,6 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
   );
 }
 
-function TimingTable() {
-  const rows = [
-    { time: '09:00 起床', items: '晨光曝曬 10-20 分鐘（不戴太陽眼鏡）' },
-    { time: '09:05 補水', items: '500ml 室溫水 + 碘鹽 1g（電子秤測量，~400mg 鈉）+ 檸檬汁。碘由午晚餐海帶/紫菜補足' },
-    { time: '09:15 訓練前', items: '先 09:05 補水 → 再進食。地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme，隨餐）' },
-    { time: '10:30-11:15 咖啡', items: '咖啡因 200-300mg + L-Theanine 200mg（⚠️ 綠茶日一律停用）。與 09:15 B群間隔 2hr+' },
-    { time: '12:00 午餐', items: '蛋白質 35-40g + 橄欖油 1 大匙+酪梨半顆 + 肌酸 5g（CGN）、D3 1000IU+K2 MK-7+魚油+葉黃素+膠原蛋白肽+CoQ10 200mg。若需補鈣：鈣片 500mg 隨餐服用（碳酸鈣需胃酸）' },
-    { time: '15:00 午後', items: 'NSDR (Yoga Nidra)' },
-    { time: '14:00-15:00 銅', items: '銅 2mg 隨低鈣小點心（🚫 嚴格避開優格/牛奶/起司，鈣銅共用 DMT1 競爭。⚠️ 牛肉日免補）。12:00 鈣→14:00-15:00 銅→19:00 鋅（間隔 4-5hr）' },
-    { time: '15:30 點心', items: 'Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白），分散蛋白質攝取' },
-    { time: '19:00 晚餐', items: '蛋白質 35-40g（≤45g）+ 橄欖油 2 大匙（28g）+ VitC 500mg。鋅 15mg「最後一口」（⚠️ 牛肉日取消鋅+取消蛋。🚫 補鈣日當晚放棄補鋅）' },
-    { time: '21:30-22:15', items: '熱水澡 40-42°C 10-15 分鐘（⚠️ 必須 22:15 前結束，為甘胺酸降溫留空間）' },
-    { time: '22:30 睡前', items: '洗澡後服用：甘胺酸 3g+蘇糖酸鎂+甘胺酸鎂 100mg+Ashwagandha 450mg（距晚餐 3.5hr+）。📋 每日情緒自評（⛔ 冷漠=強制停用。🚫 自體免疫疾病完全禁用）' },
-  ];
-
-  return (
-    <section className="space-y-3">
-      <h2 className="text-base font-bold text-gray-900">服用時間對照</h2>
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        {rows.map((row, i) => (
-          <div key={i} className={`flex px-4 py-3 ${i !== rows.length - 1 ? 'border-b border-gray-100' : ''}`}>
-            <span className="text-sm font-medium text-emerald-700 w-28 flex-shrink-0">{row.time}</span>
-            <span className="text-sm text-gray-700">{row.items}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export default function ShoppingPageClient({
   costcoSupplements,
   costcoFoods,
@@ -176,6 +148,7 @@ export default function ShoppingPageClient({
   personalCare,
   equipment,
   convenienceDaily,
+  timingRows,
 }: ShoppingPageClientProps) {
   const [search, setSearch] = useState('');
 
@@ -202,7 +175,7 @@ export default function ShoppingPageClient({
     <div className="space-y-8">
       <h1 className="text-xl font-bold text-gray-900">採購清單</h1>
 
-      <TimingTable />
+      <TimingTable rows={timingRows} />
 
       <div className="sticky top-12 z-[5] -mx-4 px-4 bg-gray-50 pb-3 pt-1">
         <input
