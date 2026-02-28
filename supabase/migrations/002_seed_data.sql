@@ -11,21 +11,21 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:15 訓練前營養', '地瓜（推薦）或香蕉 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ B群 1 顆（活化型態 Coenzyme B-Complex）。09:05 先補水 → 09:15 進食', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
   ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘', 'daily', '運動', 5, 1, true),
-  ('11:15 咖啡 + L-Theanine', '起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應，且與 09:15 B群間隔 2hr+）。咖啡因 200-300mg + L-Theanine 200mg（1:1 A 級 nootropic 組合）。15:00 後禁止咖啡因', 'daily', '飲食', 6, 1, true),
+  ('11:15 咖啡 + L-Theanine', '起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應，且與 09:15 B群間隔 2hr+）。咖啡因 200-300mg + L-Theanine 200mg（1:1 A 級 nootropic 組合）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
   ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆、D3 1000IU、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
-  ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）。⚠️ 綠茶日規定：凡飲用綠茶之日，一律停用 L-Theanine 200mg 補劑。綠茶天然 L-Theanine（~20-30mg/杯 × 2-3 杯 = 40-90mg）已足夠，額外 200mg 膠囊可能過度放鬆且膠囊無法精準減半', 'daily', '飲食', 8, 1, true),
+  ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
-  ('14:00-15:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）。避免空腹引發噁心嘔吐，不與鋅、鈣、鐵同服', 'daily', '補充品', 10, 1, true),
+  ('14:00-15:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）。避免空腹引發噁心嘔吐，不與鋅、鈣、鐵同服', 'daily', '補充品', 10, 1, false),
   ('15:30 下午點心', 'Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。維他命 C 500mg（1 錠，每日服用）+ 鋅 15mg 在晚餐「最後一口」吞服', 'daily', '飲食', 13, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服。⚠️ 牛肉日：牛肉上限 150g，雞蛋強制移至 15:30 下午點心', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
   ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完澡後核心體溫開始回落時服用', 'daily', '補充品', 15, 1, true),
   ('Ashwagandha 週期管理（8 週用 / 4 週停）', '📋 8 週用 / 4 週停 週期。第 1-5 週正常服用 450mg/日（睡前）。第 6 週起每日自評情緒冷漠。第 8 週（第 56 天）準時進入停用期。停用 4 週：甘胺酸鎂 + Cyclic Sighing 替代', 'daily', '補充品', 16, 1, true),
@@ -69,7 +69,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
   ('鋅 25mg 每日補充', '每日隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。與每日銅 2mg 維持 12.5:1 鋅銅比例，防止長期銅缺乏導致貧血與神經損傷。與 14:00-15:00 銅間隔 4-5hr', 'daily', '補充品', 27, 1, false),
   ('鋅 25mg 每兩天補充', '每兩天隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。平均每日鋅攝入 12.5mg + 銅 2mg/日 = 鋅銅比約 6.25:1（加上飲食鋅可達 10:1 以上）。與 14:00-15:00 銅間隔 4-5hr。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150-180g 已含鋅 6-9mg，無需額外補充', 'daily', '補充品', 27, 1, false),
-  ('鋅 15mg 每日補充', '每日隨晚餐服用鋅 15mg（Picolinate 錠劑 1 錠）。補充品 15mg + 飲食鋅 ~10-15mg = 每日總計 25-30mg（安全低於 UL 40mg/日）。與 14:00-15:00 銅間隔 4-5hr。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150-180g 已含鋅 6-9mg，無需額外補充。🚫 補鈣日豁免：當日服用鈣片 500mg 者，晚餐不補鋅（鈣殘餘競爭 DMT1 + 睡前鋅與鎂競爭二價陽離子載體），單日不補鋅不影響整體鋅營養狀態', 'daily', '補充品', 27, 1, true);
+  ('鋅 15mg 每日補充', '每日隨晚餐服用鋅 15mg（Picolinate 錠劑 1 錠）。補充品 15mg + 飲食鋅 ~10-15mg = 每日總計 25-30mg（安全低於 UL 40mg/日）。15mg 屬安全生理劑量，不會觸發金屬硫蛋白阻斷銅吸收，銅由堅果/可可粉/全穀類天然提供。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150g 已含鋅 6-9mg。🚫 補鈣日豁免：當日服用鈣片 500mg 者，晚餐不補鋅（鈣殘餘競爭 DMT1），單日不補鋅不影響整體鋅營養狀態', 'daily', '補充品', 27, 1, true);
 
 ------------------------------------------------------------
 -- 追蹤項目：油、鹽、藍莓 (4 items)
@@ -121,8 +121,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 C（NOW Foods 500mg × 100 錠）',
-  '抗氧化、膠原蛋白合成、增強鐵吸收。✅ 500mg 規格每日 1 錠免切，避免 1000mg 切半導致的氧化與劑量不準風險',
-  '每日 1 錠（500mg）隨晚餐。午餐膠原蛋白已含 ~160mg，每日總計 ~660mg',
+  '⛔ 已停用 — 夜間高劑量 Vit C 代謝為草酸有腎結石風險。每日 Vit C 改由膠原蛋白肽（~160mg）+ 檸檬汁 + 蔬菜天然攝取，遠超 RDA 100mg',
+  '已停用。若未來需要恢復，可每日 1 錠隨午餐（非晚餐）',
   'NT$250-350 / 100 錠',
   'https://tw.iherb.com/pr/now-foods-c-500-100-tablets/690',
   'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
@@ -446,13 +446,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '冷凍草飼牛肉片（澳洲）',
   '紅肉提供血基質鐵（吸收率 15-35%）、維他命 B12、天然肌酸。草飼牛肉 Omega-3 較高',
-  '每週 1-2 次晚餐（150-180g/次），替代雞胸肉',
+  '每週 1-2 次晚餐（嚴格上限 150g/次），牛肉日雞蛋強制移至 15:30 下午點心',
   'NT$600-800 / 1kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/c/90701',
   'Costco', 'costco_food', NULL, '澳洲',
   '{"cut":"薄片火鍋肉片或牛排","fat":"選擇瘦部位（如菲力、後腿）","storage":"冷凍 -18°C"}'::jsonb,
   '{"protein_per_100g":"20-25g","iron":"2-3mg（血基質鐵）","b12":"豐富","creatine":"天然含有"}'::jsonb,
-  '每週 1-2 次作為紅肉來源，替代 1-2 餐雞胸肉（150-180g/次）。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
+  '每週 1-2 次作為紅肉來源（嚴格上限 150g/次）。牛肉日雞蛋移至下午點心。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
   23
 );
 
@@ -567,7 +567,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '鋅 Zinc Picolinate（NOW Foods 15mg × 120 錠）',
   '免疫與睪固酮合成必需。每日 15mg 錠劑，含飲食鋅（雞蛋 ~5mg + 肉類 ~5-12mg + 堅果 ~2-3mg）總計不超過 UL 40mg/日。Picolinate 形式吸收率優於其他形式。錠劑可精確控量（膠囊粉末無法掰半）',
-  '每日隨晚餐服用 1 錠（15mg），與銅 2mg 維持平衡',
+  '每日隨晚餐服用 1 錠（15mg）。15mg 為安全生理劑量，銅由天然食物提供',
   'NT$250-350 / 120 錠',
   'https://tw.iherb.com/pr/now-foods-zinc-picolinate-30-mg-100-veg-capsules/733',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -581,8 +581,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '銅 Copper Bisglycinate（Solaray 2mg × 100 顆）',
-  '長期補鋅必須搭配銅。甘胺酸銅吸收率優於檸檬酸銅。隨低鈣/低鐵小點心服用，避免空腹噁心。不與鋅、鈣、鐵等礦物質競爭。鋅銅比維持 10-15:1，防止銅缺乏導致貧血與神經損傷',
-  '非紅肉日每日 1 顆，下午 14:00-15:00 隨低鈣/低鐵小點心服用（少量水果或餅乾，避免空腹噁心）。⚠️ 牛肉日免補銅。⚠️ 嚴格避開優格/牛奶等含鈣食物，鈣與銅共用 DMT1 競爭吸收',
+  '⛔ 已停用 — 15mg 鋅屬安全生理劑量，不會觸發金屬硫蛋白阻斷銅吸收。銅由堅果、可可粉、全穀類天然提供，免除游離銅蓄積導致的神經與肝臟毒性風險',
+  '已停用。不再需要額外補充銅',
   'NT$217 / 100 顆',
   'https://tw.iherb.com/pr/solaray-copper-2-mg-100-vegcaps/70102',
   'iHerb', 'iherb_supplement', 'Solaray',
@@ -590,7 +590,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 17219, 'SOR-45931',
   $${"form":"素食膠囊","count":"100顆","chelate_type":"銅氨基酸螯合物"}$$::jsonb,
   $${"serving_size":"1顆","copper":"2mg"}$$::jsonb,
-  'iHerb 直送。非紅肉日每日 1 顆，100 顆可用 4 個月+（因牛肉日免補）。',
+  '⛔ 已停用。15mg 鋅不需要搭配銅補劑，銅由天然食物提供。',
   26
 );
 
@@ -626,7 +626,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'L-Theanine（NOW Foods Double Strength 200mg × 120 顆）',
   '搭配咖啡的最強 nootropic 組合（A 級證據）。促進專注 + 放鬆，消除咖啡因焦慮感。120 顆大包裝更划算',
-  '每日 1 顆（200mg）隨咖啡。綠茶日一律停用（膠囊無法減半）',
+  '每日 1 顆（200mg）隨咖啡服用，無論當天是否飲用綠茶。下午綠茶另含天然 L-Theanine 40-90mg 為額外紅利',
   'NT$399 / 120 顆',
   'https://tw.iherb.com/pr/now-foods-double-strength-l-theanine-200-mg-120-veg-capsules/54096',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -640,7 +640,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '膠原蛋白肽 CollagenUP（CGN 206g）',
-  '水解海洋膠原蛋白肽 + 玻尿酸 + 維他命 C（每 6.5g 含 80mg Vit C）。午餐服用 10-15g 已提供 ~120-160mg Vit C，與晚餐 500mg 合計每日 ~660mg，無需額外疊加。每日隨午餐服用（含鈣食物同餐攝取可在腸道結合草酸，無需錯開）',
+  '水解海洋膠原蛋白肽 + 玻尿酸 + 維他命 C（每 6.5g 含 80mg Vit C）。午餐服用 10-15g 已提供 ~120-160mg Vit C，為每日主要 Vit C 來源（搭配檸檬汁與蔬菜已遠超 RDA 100mg）。每日隨午餐服用',
   '每日 10-15g 隨午餐（已含 Vit C ~160mg）',
   'NT$1,279 / 206g',
   'https://tw.iherb.com/pr/california-gold-nutrition-collagenup-marine-hydrolyzed-collagen-hyaluronic-acid-vitamin-c-unflavored-7-26-oz-206-g/64903',

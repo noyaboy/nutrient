@@ -102,7 +102,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <p className="text-amber-600">⚠️ 最早 11:15 飲用（與 09:15 B群間隔 2hr+，咖啡因利尿加速水溶性 B 群排出）</p>
-        <p className="text-blue-600">⚠️ 綠茶日停用 L-Theanine 補劑（綠茶 2-3 杯已含天然 L-Theanine 40-90mg）</p>
+        <p className="text-emerald-600">✅ 無論當天是否飲用綠茶，只要喝咖啡就必須同步服用 L-Theanine 200mg（確保咖啡因即時得到緩衝）</p>
+        <p className="text-gray-500">下午綠茶另含天然 L-Theanine 40-90mg，總計 ~300mg 仍安全無虞</p>
       </Detail>
     );
   }
@@ -128,7 +129,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 補劑 ~660mg，每日隨午餐服用）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，為每日主要 Vit C 來源，搭配檸檬汁與蔬菜已遠超 RDA 100mg）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
@@ -143,28 +144,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('銅') && title.includes('2mg')) {
-    return (
-      <Detail>
-        <p>12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（間隔 2-3hr）→ 19:00 晚餐最後一口鋅（間隔 4-5hr）</p>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 14:00-15:00 小點心嚴格避開含鈣食物</p>
-          <p className="text-red-700">優格、牛奶、起司等含鈣食物會顯著抑制銅吸收（鈣銅共用 DMT1 轉運蛋白）</p>
-          <p className="text-red-700">正確選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾</p>
-        </div>
-        <BeefDayAdjustments context="copper" />
-        <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
-      </Detail>
-    );
-  }
+  // 銅 2mg 已停用 — 15mg 鋅不會觸發金屬硫蛋白阻斷銅吸收，銅由堅果/可可粉/全穀類天然提供
 
   if (title.includes('晚餐') && !title.includes('銅')) {
     return (
       <Detail>
         <div className="space-y-0.5">
-          <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
-          <p className="text-gray-400 text-[10px]">⚠️ 補劑 ~660mg + 蔬菜/檸檬汁天然 Vit C 合計每日可達 800-900mg（仍安全，UL 2000mg）。若當日蔬菜攝取量極大，500mg 錠可改兩天一次以減少代謝負擔</p>
-          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（與銅間隔 4-5hr）。補鈣日放棄補鋅（詳見「鈣攝取」）</p>
+          <p className="text-emerald-600 font-medium">✅ 維他命 C 已停用補劑 — 每日由午餐膠原蛋白肽（~160mg）+ 晨間檸檬汁 + 蔬菜天然攝取，遠超 RDA 100mg</p>
+          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服。補鈣日放棄補鋅（詳見「鈣攝取」）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜。菠菜/優格安排在午餐或點心（植酸螯合鋅 + 鈣抑制鋅吸收，詳見「膳食纖維」）</p>
         <Tip>橄欖油 2 大匙入菜。脂溶性維他命皆在午餐服用</Tip>
@@ -421,7 +408,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <MineralTimingGuidance minerals={['calcium', 'copper', 'zinc']} />
+          <MineralTimingGuidance minerals={['calcium', 'zinc']} />
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
           <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與甘胺酸鎂競爭二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
@@ -435,7 +422,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（牛肉日免補）→ 19:00 鋅（最後一口）</p>
+          <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 19:00 鋅（最後一口）</p>
         </div>
       </Detail>
     );
@@ -469,7 +456,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-gray-800">其他指標</p>
           <p>維他命 D — 目標 40-60 ng/mL</p>
-          <p>鋅銅比 — 目標 10-15:1</p>
+          <p>鋅銅比 — 目標 10-15:1（銅由天然食物提供，不額外補劑）</p>
           <p>荷爾蒙：睪固酮、SHBG、皮質醇</p>
           <p>代謝：空腹血糖、HbA1c、胰島素</p>
         </div>
