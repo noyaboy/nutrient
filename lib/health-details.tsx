@@ -87,7 +87,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">全日碘鹽（~2.5g）僅提供 ~50-82mcg 碘，不足 RDA 150mcg。主力碘來源：每週 2-3 次紫菜/海苔（每次 1-2g 乾重，每片 ~12-43mcg 碘）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入（昆布碘含量極高且變異大，不建議作為常規選項）</p>
+          <p className="text-amber-700">全日碘鹽（~2.5g）提供 ~50-82mcg 碘，輔助補足：每週 2-3 次紫菜/海苔（每次 1-2g 乾重，每片 ~12-43mcg 碘），穩定縮小與 RDA 150mcg 的缺口。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入。🚫 不以海帶/昆布作為補碘來源：碘含量極高且變異大（1-2g 乾重 = 300-6000mcg，輕易超過 UL 1100mcg），有甲狀腺毒性風險</p>
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -424,7 +424,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
-          <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
+          <p className="text-red-700">高劑量鈣鎂同服時經細胞旁路徑（paracellular pathway）產生吸收干擾（鎂走 TRPM6/7、鈣走 TRPV5/6，非 DMT1 競爭）</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
           <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 19:00 鋅（最後一口）</p>
         </div>
