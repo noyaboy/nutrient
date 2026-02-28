@@ -117,9 +117,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">最早 11:15 飲用（09:15 + 2hr = 11:15）</p>
         </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">⚠️ 綠茶日 L-Theanine 處理</p>
-          <p className="text-blue-700">若當日飲用綠茶 2-3 杯（天然 L-Theanine ~20-30mg/杯，合計 40-90mg）</p>
-          <p className="text-blue-700">直接跳過 L-Theanine 補劑（200mg 素食膠囊無法精準減半，拆開估量誤差大且易受潮）</p>
+          <p className="font-medium text-blue-800">⚠️ 綠茶日規定</p>
+          <p className="text-blue-700">凡飲用綠茶之日，一律停用 L-Theanine 補劑</p>
+          <p className="text-blue-700">綠茶 2-3 杯已提供天然 L-Theanine 40-90mg，200mg 膠囊無法精準減半</p>
         </div>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
@@ -178,10 +178,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：鈣片隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
-          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：午餐鈣 500mg 殘餘鈣競爭 DMT1，睡前與午餐鈣間隔 10hr 避免鈣鋅競爭</p>
+          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭同一二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -206,12 +206,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>銅 2mg — 隨小點心服用（非嚴格空腹）</Label>
-        <p className="font-semibold">下午 16:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
+        <p className="font-semibold">下午 14:00-15:00 隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）</p>
         <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
         <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
-        <p>12:00 午餐（鈣隨餐）→ 16:00 銅（間隔 4hr）→ 19:00 晚餐最後一口鋅</p>
+        <p>12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（間隔 2-3hr）→ 19:00 晚餐最後一口鋅（間隔 4-5hr）</p>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 16:00 小點心嚴格避開含鈣食物</p>
+          <p className="font-semibold text-red-800">🚫 14:00-15:00 小點心嚴格避開含鈣食物</p>
           <p className="text-red-700">優格、牛奶、起司等含鈣食物會顯著抑制銅吸收（鈣銅共用 DMT1 轉運蛋白）</p>
           <p className="text-red-700">正確選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾</p>
         </div>
@@ -229,15 +229,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
-          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 16:00 銅的時間距離）</p>
-          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：午餐鈣 500mg 殘餘鈣在腸道停留數小時競爭 DMT1，睡前與午餐鈣間隔 10hr 避免鈣鋅競爭</p>
+          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 14:00-15:00 銅的時間距離 4-5hr）</p>
+          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 若改睡前 22:00 與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭二價陽離子載體 → 兩者皆降。單日不補鋅不影響整體鋅營養狀態</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日注意</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，可加 1 顆蛋（~42g 仍在安全範圍內）</p>
-          <p className="text-amber-700">整日總量維持 1.5-1.7g/kg 即可，不必為 2.3g 差異造成備餐壓力</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，取消雞蛋（牛肉已接近單餐上限 ≤45g）</p>
+          <p className="text-amber-700">雞蛋移至 15:30 下午點心與豌豆蛋白同食（蛋 6.3g + 豌豆 16g = 22.3g）</p>
           <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150-180g，當晚無需額外補鋅</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -316,6 +316,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-semibold">若正在服用抗憂鬱劑（SSRIs/SNRIs）或任何影響血清素的藥物 → 必須立即停用 Ashwagandha</p>
           <p className="text-red-700">可能誘發血清素綜合徵（Serotonin Syndrome），症狀包括高熱、肌肉僵硬、意識混亂</p>
         </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-300">
+          <p className="font-bold text-red-800">🚫 自體免疫疾病完全禁用</p>
+          <p className="text-red-700 font-semibold">橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等自體免疫疾病患者 → 完全禁用 Ashwagandha</p>
+          <p className="text-red-700">免疫調節作用可能加劇自體免疫反應，甲狀腺風暴風險</p>
+        </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-orange-800">📋 每日情緒自評（Ashwagandha 服用期間）</p>
           <p className="text-orange-700">□ 今天是否對平常喜歡的事物失去興趣？</p>
@@ -362,6 +367,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🚫 禁忌與停用觸發</p>
           <p className="text-red-700">服用 SSRIs/SNRIs 或血清素藥物 → 禁用（血清素綜合徵風險）</p>
+          <p className="text-red-700 font-semibold">🚫 自體免疫疾病完全禁用：橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等（加劇自體免疫反應）</p>
           <p className="text-red-700 font-semibold">🚫 甲狀腺即時停用：若 TSH/Free T4 異常 → 立即停用並就醫（可能提升 T4，甲狀腺風暴風險）</p>
           <p className="text-red-700 font-bold">⚠️ 情緒冷漠為「強制停用」信號：即使未滿 8 週也必須立即停用，不可因週期未滿而繼續服用</p>
           <p className="text-red-700">ALT/AST 異常 → 首位停用本品（肝損傷風險）</p>
@@ -553,9 +559,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-semibold">連續兩次 &lt;90（間隔 3 個月）→ 強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 牛肉日蛋白質彈性</p>
-          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白，可加 1 顆蛋（~42g 仍安全）</p>
-          <p className="text-amber-700">不必為 2.3g 差異造成備餐壓力，整日總量維持 1.5-1.7g/kg 即可</p>
+          <p className="font-semibold text-amber-800">⚠️ 牛肉日蛋白質分配</p>
+          <p className="text-amber-700">草飼牛肉 150-180g ≈ 30-36g 蛋白（晚餐），取消雞蛋（牛肉已接近單餐上限 ≤45g）</p>
+          <p className="text-amber-700">雞蛋移至 15:30 下午點心與豌豆蛋白同食（蛋 6.3g + 豌豆 16g = 22.3g）</p>
         </div>
         <p className="text-emerald-600">牛肉日額外提供血基質鐵、B12、天然肌酸</p>
       </Detail>
@@ -638,10 +644,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
-          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：與午餐鈣間隔 10hr，避免殘餘鈣競爭 DMT1</p>
+          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與甘胺酸鎂競爭二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
@@ -652,7 +658,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-red-800">🚫 禁止睡前服用鈣片</p>
           <p className="text-red-700">鈣與鎂競爭 DMT1 載體，同服降低兩者吸收率</p>
           <p className="text-red-700">睡前已服用蘇糖酸鎂 + 甘胺酸鎂，再加鈣片會互相干擾</p>
-          <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 16:00 銅（牛肉日免補）→ 19:00 鋅（最後一口）</p>
+          <p className="text-red-700">09:05 碘鹽 → 12:00 午餐（鈣隨餐）→ 14:00-15:00 銅（牛肉日免補）→ 19:00 鋅（最後一口）</p>
         </div>
       </Detail>
     );
@@ -712,6 +718,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-bold text-red-800">🚫 Ashwagandha 禁忌</p>
           <p className="text-red-700">若正在服用抗憂鬱劑（SSRIs/SNRIs）或血清素藥物 → 禁用（血清素綜合徵風險）</p>
           <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
+          <p className="text-red-700 font-semibold">自體免疫疾病（橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等）→ 完全禁用</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">⚠️ eGFR &lt;90 分級處置（確認為真實腎功能下降後）</p>
