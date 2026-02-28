@@ -143,6 +143,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-emerald-600 font-semibold">✓ 僅週六/日（Zone 2 日）早晨 07:00-08:00 可執行</p>
           <p className="text-emerald-600">與 Zone 2 運動間隔 4hr 以上（例：07:00 冷水浴 → 11:00 Zone 2）</p>
         </div>
+        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-bold text-amber-800">⚠️ 三溫暖/熱暴露排程</p>
+          <p className="text-amber-700 font-semibold">三溫暖必須在重訓「之後」執行，或與重訓間隔 2 小時以上</p>
+          <p className="text-amber-700">高溫暴露後立即重訓 → 心率升高 + 血壓波動 + 脫水風險，增加心血管負擔</p>
+          <p className="text-amber-700">正確順序：重訓 → 休息/補水 → 三溫暖</p>
+          <p className="text-emerald-600">三溫暖本身不抑制 mTOR（與冷水浴不同），時序正確即安全</p>
+        </div>
       </Detail>
     );
   }
@@ -171,9 +178,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：鈣片隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅 → 19:00 晚餐最後一口鋅</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
           <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
+          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：午餐鈣 500mg 殘餘鈣競爭 DMT1，睡前與午餐鈣間隔 10hr 避免鈣鋅競爭</p>
           <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
         </div>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -202,6 +210,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>避免空腹服用引發噁心嘔吐（銅離子空腹刺激性高）</p>
         <p>不與鋅、鈣、鐵等礦物質補劑同服，避開午餐的魚油/D3/鈣鎂競爭</p>
         <p>12:00 午餐（鈣隨餐）→ 16:00 銅（間隔 4hr）→ 19:00 晚餐最後一口鋅</p>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
+          <p className="font-semibold text-red-800">🚫 16:00 小點心嚴格避開含鈣食物</p>
+          <p className="text-red-700">優格、牛奶、起司等含鈣食物會顯著抑制銅吸收（鈣銅共用 DMT1 轉運蛋白）</p>
+          <p className="text-red-700">正確選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾</p>
+        </div>
         <p className="text-amber-600 font-medium">⚠️ 牛肉日免補銅：牛肉 + 堅果已提供足夠銅，當日取消銅補劑避免逼近 UL 10mg/日</p>
         <Tip>遵從性優先：不再堅持「嚴格空腹」，搭配少量低鈣/低鐵食物可大幅改善遵從性且仍保有良好吸收率</Tip>
       </Detail>
@@ -217,6 +230,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
           <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 16:00 銅的時間距離）</p>
+          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：午餐鈣 500mg 殘餘鈣在腸道停留數小時競爭 DMT1，睡前與午餐鈣間隔 10hr 避免鈣鋅競爭</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
         <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
@@ -316,6 +330,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700 font-semibold">肝功能追蹤：新品牌開始後第 4 週、第 12 週各追蹤 ALT/AST（藥源性肝損傷多發於數週內）</p>
           <p className="text-red-700">若隔日晨間感到異常昏沉 → 優先暫停甘胺酸鎂或減量</p>
         </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
+          <p className="font-bold text-red-800">🚨 肝毒性實體症狀監測（DILI）— 不限品牌/批次</p>
+          <p className="text-red-700">服用期間出現以下任一症狀 → 立即停用並安排 ALT/AST 抽血：</p>
+          <p className="text-red-700 font-semibold">1. 異常疲累加重（排除訓練/睡眠因素）</p>
+          <p className="text-red-700 font-semibold">2. 食慾不振持續 2 天以上</p>
+          <p className="text-red-700 font-semibold">3. 皮膚或眼白微黃（黃疸前兆）</p>
+          <p className="text-red-700 font-semibold">4. 右上腹不適/隱痛</p>
+          <p className="text-red-700">⚠️ DILI 可發生在任何品牌、任何批次，不應僅依賴定期抽血排程</p>
+        </div>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">停用期 4 週替代方案</p>
           <p className="text-blue-700">甘胺酸鎂 + Cyclic Sighing 呼吸法維持睡眠品質</p>
@@ -349,6 +372,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">開始服用新品牌 Ashwagandha 後第 4 週及第 12 週各追蹤 ALT/AST</p>
           <p className="text-orange-700">藥源性肝損傷多發於服用後數週內，早期發現可避免惡化</p>
         </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
+          <p className="font-bold text-red-800">🚨 肝毒性實體症狀（DILI）— 不限品牌/批次</p>
+          <p className="text-red-700 font-semibold">異常疲累、食慾不振 ≥2天、皮膚/眼白微黃、右上腹不適</p>
+          <p className="text-red-700 font-bold">→ 任一出現即刻停用並抽血 ALT/AST（不必等排程）</p>
+        </div>
         <Tip>在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。每半年健檢確認肝功能 + 甲狀腺指標（TSH、Free T4）</Tip>
       </Detail>
     );
@@ -376,6 +404,11 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 兩次追蹤均正常</p>
           <p className="text-emerald-700">後續回歸每半年健檢即可</p>
+        </div>
+        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
+          <p className="font-bold text-red-800">🚨 重要：DILI 不限品牌/批次</p>
+          <p className="text-red-700">定期排程僅是基準線。服用期間出現疲累加重、食慾不振、皮膚/眼白微黃、右上腹不適</p>
+          <p className="text-red-700 font-bold">→ 不必等排程，立即安排抽血</p>
         </div>
         <Tip>在瓶身標記「第 4 週抽血日」與「第 12 週抽血日」</Tip>
       </Detail>
@@ -514,8 +547,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-bold text-red-800">🔴 eGFR 檢測流程</p>
           <p className="text-red-700 font-bold">1. 抽血前必須先停用肌酸 7 天 + 暫停高強度重訓 48-72hr（肌肉修復也會升高 Creatinine）</p>
-          <p className="text-red-700 font-bold">2. 取得真實 eGFR → 若仍 &lt;90 才啟動下修蛋白質</p>
-          <p className="text-red-700">→ 下修至 1.6g/kg（≈ 117g/day），每餐 ≤35g，永久停止肌酸</p>
+          <p className="text-red-700 font-bold">2. 建議加測 Cystatin C（不受肌肉量/肌酸影響，交叉驗證真實腎功能）</p>
+          <p className="text-red-700 font-bold">3. eGFR &lt;90 分級處置：</p>
+          <p className="text-red-700">首次 &lt;90 → 下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
+          <p className="text-red-700 font-semibold">連續兩次 &lt;90（間隔 3 個月）→ 強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 牛肉日蛋白質彈性</p>
@@ -603,9 +638,10 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-amber-800">⚠️ 確認需補鈣時：隨午餐服用</p>
           <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅 → 19:00 晚餐最後一口鋅</p>
+          <p className="text-amber-700">時間軸：12:00 午餐（鈣隨餐）→ 16:00 銅（避開含鈣點心）→ 19:00 晚餐最後一口鋅</p>
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
+          <p className="text-red-600 font-medium">⚠️ 補鈣日鋅改睡前（22:00）空腹服用：與午餐鈣間隔 10hr，避免殘餘鈣競爭 DMT1</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
@@ -644,6 +680,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">BUN（尿素氮）— 正常 7-20 mg/dL</p>
           <p className="text-red-700">Creatinine（肌酐）— 正常 0.7-1.3 mg/dL</p>
           <p className="text-red-700">eGFR（腎絲球過濾率）— 正常 &gt;90 mL/min</p>
+          <p className="text-red-700 font-semibold">建議加測 Cystatin C：不受肌肉量/肌酸影響，交叉驗證真實 eGFR</p>
         </div>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-orange-800">肝功能（補劑代謝負荷）</p>
@@ -651,6 +688,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">AST — 正常 10-40 U/L</p>
           <p className="text-orange-700 font-semibold">⚠️ Ashwagandha 肝功能追蹤：新品牌開始後第 4 週、第 12 週各加測 ALT/AST</p>
           <p className="text-orange-700">藥源性肝損傷多發於數週內，勿枯等半年健檢</p>
+          <p className="text-orange-700 font-bold">🚨 不限品牌/批次：疲累加重、食慾不振、皮膚微黃、右上腹不適 → 立即停用並抽血</p>
         </div>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-purple-800">甲狀腺功能（Ashwagandha 可能提升 T4）</p>
@@ -676,11 +714,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-red-700">甲亢或服用甲狀腺藥物者 → 禁用（可能提升 T4，甲狀腺風暴風險）</p>
         </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">⚠️ 若停用肌酸後 eGFR 仍 &lt;90（確認為真實腎功能下降）</p>
-          <p className="text-red-700">立即下修蛋白質至 1.6g/kg（≈ 117g/day），每餐 ≤35g</p>
-          <p className="text-red-700">永久停止肌酸補充（減少腎臟代謝負擔）</p>
+          <p className="font-bold text-red-800">⚠️ eGFR &lt;90 分級處置（確認為真實腎功能下降後）</p>
+          <p className="text-red-700 font-bold">首次 &lt;90：下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
+          <p className="text-red-700 font-bold">連續兩次 &lt;90（間隔 3 個月）：強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科追蹤</p>
           <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
-          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 + 暫停重訓 48-72hr → 取得真實 eGFR → 才啟動下修蛋白質</p>
+          <p className="text-red-700">建議搭配 Cystatin C 檢測（不受肌肉量/肌酸影響），交叉驗證 eGFR</p>
+          <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 + 暫停重訓 48-72hr → 取得真實 eGFR → 才啟動處置</p>
         </div>
       </Detail>
     );
