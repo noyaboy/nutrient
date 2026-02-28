@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Product } from '@/lib/types';
-import TimingTable, { TimingRow } from '@/components/TimingTable';
 
 interface ShoppingPageClientProps {
   costcoSupplements: Product[];
@@ -11,7 +10,36 @@ interface ShoppingPageClientProps {
   personalCare: Product[];
   equipment: Product[];
   convenienceDaily: Product[];
-  timingRows: TimingRow[];
+}
+
+function filterInventoryNotes(purchaseNote: string): string {
+  if (!purchaseNote) return '';
+
+  const medicalPatterns = [
+    /[⚠️🚫⛔🚨]\s*[^。]*?(冷藏：|必須|風險|變質|氧化|發煙點|甲狀腺|過敏|肝|腎|鈉超標|胃酸|便秘|脹氣|抽血|健檢|停用)[^。]*?。/g,
+    /⚠️[^。]*?。/g,
+    /每日\s*\d+[mgIUmcg顆錠粒g份]/g,
+    /\d{2}:\d{2}[^。]*/g,
+    /(避免|禁止|不可|不要)[^。]*?(過敏|疾病|患者|諮詢醫師)[^。]*?。/g,
+    /✅[^。]*?。/g,
+    /🔴[^。]*?。/g,
+    /📋[^。]*?。/g,
+  ];
+
+  let filtered = purchaseNote;
+
+  for (const pattern of medicalPatterns) {
+    filtered = filtered.replace(pattern, '');
+  }
+
+  filtered = filtered
+    .replace(/\s+。/g, '。')
+    .replace(/。+/g, '。')
+    .replace(/^\s*。\s*/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  return filtered;
 }
 
 function StoreTag({ store }: { store: string }) {
@@ -71,6 +99,7 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
         {items.map((item) => {
           const hasSpecs = item.specs && Object.keys(item.specs).length > 0;
           const hasNutrition = item.nutrition && Object.keys(item.nutrition).length > 0;
+          const filteredNote = item.purchase_note ? filterInventoryNotes(item.purchase_note) : '';
           return (
             <a
               key={item.id}
@@ -95,7 +124,6 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
                     </div>
                   </div>
                   <p className="text-sm text-gray-500">{item.description}</p>
-                  <p className="text-sm text-emerald-700 mt-1">{item.usage}</p>
 
                   {item.rating != null && (
                     <div className="mt-1">
@@ -117,8 +145,8 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
                     </div>
                   )}
 
-                  {item.purchase_note && (
-                    <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{item.purchase_note}</p>
+                  {filteredNote && (
+                    <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{filteredNote}</p>
                   )}
 
                   {item.sku && (
@@ -148,7 +176,6 @@ export default function ShoppingPageClient({
   personalCare,
   equipment,
   convenienceDaily,
-  timingRows,
 }: ShoppingPageClientProps) {
   const [search, setSearch] = useState('');
 
@@ -158,7 +185,6 @@ export default function ShoppingPageClient({
     return items.filter(item =>
       item.name.toLowerCase().includes(q) ||
       item.description.toLowerCase().includes(q) ||
-      item.usage.toLowerCase().includes(q) ||
       (item.purchase_note && item.purchase_note.toLowerCase().includes(q))
     );
   }
@@ -174,8 +200,6 @@ export default function ShoppingPageClient({
   return (
     <div className="space-y-8">
       <h1 className="text-xl font-bold text-gray-900">採購清單</h1>
-
-      <TimingTable rows={timingRows} />
 
       <div className="sticky top-12 z-[5] -mx-4 px-4 bg-gray-50 pb-3 pt-1">
         <input
