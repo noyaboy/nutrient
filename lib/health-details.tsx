@@ -80,8 +80,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-blue-800">⏰ 正確順序</p>
           <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（食品電子秤測量，~400mg 鈉）+ 檸檬汁</p>
-          <p className="text-blue-700">09:15 進食：香蕉（首選）或地瓜 + 乳清蛋白 + B群</p>
-          <p className="text-blue-700">先喝水再吃固體食物+B群，確保胃中有食物基質時 B群才進入</p>
+          <p className="text-blue-700">09:15 進食：香蕉（首選）或地瓜 + 乳清蛋白</p>
+          <p className="text-blue-700">先喝水再吃固體食物，確保胃中有適當水合狀態</p>
+          <p className="text-emerald-600 font-medium">✅ B群在 12:00 午餐隨餐服用（正餐完整食物基質 + 油脂最佳化吸收，避免訓練前少量流質狀態下服用引發噁心）</p>
           <p className="text-red-600 font-medium">⚠️ 下肢日（深蹲/硬舉/腿推）：45 分鐘消化固體地瓜極度不足，高強度訓練時血液集中於骨骼肌導致消化停滯，易引發胃脹、胃酸逆流甚至嘔吐。建議改用香蕉（消化快）或將地瓜提前至 08:00 食用（間隔 2hr）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -90,8 +91,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">⚠️ B群隨餐 + 地瓜 RS3 準備</p>
-          <p className="text-amber-700">B群水溶性，需食物基質提升吸收。推薦地瓜（前晚蒸好冷藏 → RS3），隔日室溫回溫 15 分鐘，或微波爐「解凍模式/低功率」30-40 秒（確保中心溫度微溫不燙口，避免超過 55°C 破壞抗性澱粉）</p>
+          <p className="font-medium text-amber-800">⚠️ 地瓜 RS3 準備</p>
+          <p className="text-amber-700">推薦地瓜（前晚蒸好冷藏 → RS3），隔日室溫回溫 15 分鐘，或微波爐「解凍模式/低功率」30-40 秒（確保中心溫度微溫不燙口，避免超過 55°C 破壞抗性澱粉）</p>
           <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
         <Tip>下肢大重量日（週二/週五）：地瓜需提前至訓練前 1.5-2 小時食用；若僅有 45 分鐘空檔，改用香蕉 + 乳清蛋白即可</Tip>
@@ -102,7 +103,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('咖啡') && title.includes('Theanine')) {
     return (
       <Detail>
-        <p className="text-amber-600">⚠️ 最早 11:15 飲用（與 09:15 B群間隔 2hr+，咖啡因利尿加速水溶性 B 群排出）</p>
+        <p className="text-amber-600">⚠️ 最早 11:15 飲用（訓練後 1hr+，讓身體自然回歸副交感狀態再攝入咖啡因）</p>
         <p className="text-emerald-600">✅ 無論當天是否飲用綠茶，只要喝咖啡就必須同步服用 L-Theanine 200mg（確保咖啡因即時得到緩衝）</p>
         <p className="text-gray-500">下午綠茶另含天然 L-Theanine 40-90mg，總計 ~300mg 仍安全無虞</p>
       </Detail>
@@ -132,14 +133,14 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>葉黃素 20mg</p>
           <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，為每日主要 Vit C 來源，搭配檸檬汁與蔬菜已遠超 RDA 100mg）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
-          <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
+          <p className="text-emerald-600">✅ B群 1 顆隨午餐服用（活化型態，搭配正餐油脂+蛋白質完整食物基質，吸收率最佳）</p>
         </div>
         <CalciumOxalateEducation />
         <p className="text-amber-600 font-medium mt-1">⚠️ 若當日需補鈣：鈣片隨午餐服用（完整規則詳見「鈣攝取」項目）</p>
         <p className="text-gray-500 mt-1">每日脂肪 80-90g：午餐橄欖油 1 匙 + 酪梨 ≈ 30g，晚餐橄欖油 2 匙 28g，加魚油/蛋/肉脂肪</p>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
-          <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 午餐可替換為菠菜或櫛瓜；晚餐為避開植酸干擾鋅吸收，僅能替換為去皮櫛瓜或大白菜。並將當餐蛋白質微調降至 30g</p>
+          <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 午餐可替換為菠菜或櫛瓜；晚餐可替換為菠菜（草酸對鋅影響弱）、去皮櫛瓜或大白菜。並將當餐蛋白質微調降至 30g</p>
         </div>
       </Detail>
     );
@@ -152,9 +153,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <div className="space-y-0.5">
           <p className="text-emerald-600 font-medium">✅ 維他命 C 已停用補劑 — 每日由午餐膠原蛋白肽（~160mg）+ 晨間檸檬汁 + 蔬菜天然攝取，遠超 RDA 100mg</p>
-          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服。補鈣日放棄補鋅（詳見「鈣攝取」）</p>
+          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，礦物質早已離開小腸吸收段，不存在 DMT1 競爭）</p>
         </div>
-        <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜。菠菜/優格安排在午餐或點心（植酸螯合鋅 + 鈣抑制鋅吸收，詳見「膳食纖維」）</p>
+        <p className="text-gray-500">晚餐蔬菜避開全穀類（糙米、燕麥含植酸干擾鋅吸收）。菠菜主要含草酸（非植酸），對鋅影響較弱，晚餐可適量食用。優格安排在午餐或點心（鈣抑制鋅吸收，與鋅間隔 2hr+）</p>
         <p className="text-amber-600 font-medium">⚠️ 晚餐碳水避開全穀類（糙米、燕麥）：糠皮含大量植酸，干擾 19:00 鋅吸收。改用白米、義大利麵或去皮馬鈴薯</p>
         <Tip>橄欖油 2 大匙入菜。脂溶性維他命皆在午餐服用</Tip>
         <BeefDayAdjustments context="egg" />
@@ -191,7 +192,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
   if (title.includes('22:30') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
-        <p>與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
+        <p>與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間。洗完熱水澡後立即服用效果最佳 — 熱水澡促進周邊血管擴張散熱，與甘胺酸降溫機制協同</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
@@ -349,9 +350,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-blue-800">菠菜安排策略</p>
-          <p className="text-blue-700">菠菜在午餐食用（有鈣質食物保護：鈣+草酸在腸道結合排出）</p>
-          <p className="text-blue-700">晚餐避免菠菜（植酸螯合鋅離子，削弱 19:00 鋅吸收）</p>
-          <p className="text-blue-700">晚餐選低植酸蔬菜：櫛瓜、大白菜、高麗菜、小白菜</p>
+          <p className="text-blue-700">菠菜主要含草酸（Oxalate），非植酸（Phytate）。草酸主要螯合鈣與鐵，對鋅的干擾相對較弱</p>
+          <p className="text-blue-700">午餐食用最佳（有鈣質食物保護：鈣+草酸在腸道結合排出，減少草酸吸收）</p>
+          <p className="text-blue-700">晚餐可適量食用菠菜（草酸對鋅影響有限）；真正干擾鋅吸收的植酸來自全穀類（糙米、燕麥），晚餐碳水已改用白米/義大利麵</p>
         </div>
       </Detail>
     );
@@ -386,7 +387,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-orange-800">脹氣優先監控</p>
           <p className="text-orange-700">若出現腹脹 → 當餐立即減少十字花科蔬菜份量</p>
           <p className="text-orange-700">增加低纖維碳水佔比（白米 &gt; 地瓜，義大利麵 &gt; 燕麥）</p>
-          <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，午餐改菠菜或櫛瓜；晚餐僅限去皮櫛瓜或大白菜（避開植酸干擾鋅吸收）</p>
+          <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，午餐改菠菜或櫛瓜；晚餐可用菠菜、去皮櫛瓜或大白菜（全穀類才是植酸主要來源，已於晚餐碳水避開）</p>
         </div>
       </Detail>
     );
@@ -414,7 +415,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <MineralTimingGuidance minerals={['calcium', 'zinc']} />
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
-          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：午餐鈣殘餘競爭 DMT1 載體，降低 19:00 晚餐鋅吸收。單日不補鋅不影響整體鋅營養狀態</p>
+          <p className="text-emerald-600 font-medium">✅ 補鈣日仍正常補鋅：12:00 午餐鈣至 19:00 晚餐鋅已間隔 7 小時，午餐鈣質早已通過小腸吸收段（胃排空 2-4hr + 小腸轉運 3-5hr），不會與晚餐鋅競爭 DMT1/ZIP 載體</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
