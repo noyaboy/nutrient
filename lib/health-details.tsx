@@ -87,12 +87,12 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入。每週固定 1 次紫菜/海苔微量攝取（1-2 片，每片僅 ~12-43mcg 碘）作為碘流失安全緩衝（昆布碘含量極高且變異大，不建議作為常規選項）</p>
+          <p className="text-amber-700">全日碘鹽（~2.5g）僅提供 ~50-82mcg 碘，不足 RDA 150mcg。主力碘來源：每週 2-3 次紫菜/海苔（每次 1-2g 乾重，每片 ~12-43mcg 碘）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入（昆布碘含量極高且變異大，不建議作為常規選項）</p>
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 地瓜 RS3 準備</p>
-          <p className="text-amber-700">推薦地瓜（前晚蒸好冷藏 → RS3），隔日室溫回溫 15 分鐘，或微波爐「解凍模式/低功率」30-40 秒（確保中心溫度微溫不燙口，避免超過 55°C 破壞抗性澱粉）</p>
+          <p className="text-amber-700">推薦地瓜（前晚蒸好冷藏 → RS3），隔日可放心微波加熱至好入口的熱度（中火 1-1.5 分鐘）。RS3 晶體結構熔解溫度高達 100-120°C 以上，日常微波加熱（70-80°C）不會破壞已形成的抗性澱粉</p>
           <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
         <Tip>下肢大重量日（週二/週五）：地瓜需提前至訓練前 1.5-2 小時食用；若僅有 45 分鐘空檔，改用香蕉 + 乳清蛋白即可</Tip>

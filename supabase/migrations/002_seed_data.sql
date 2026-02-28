@@ -16,16 +16,16 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   -- === Midday (12:00-15:00) ===
   ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆、D3 1000IU、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
-  ('13:00 綠茶 EGCG 2-3 杯', '午餐後 1hr+ 再飲用（~13:00），避免螯合鈣、鐵、鋅。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
+  ('14:00 綠茶 EGCG 2-3 杯', '午餐後 2hr+ 再飲用（~14:00），高脂高蛋白午餐胃排空需 2-4hr，1hr 仍會螯合鐵鋅鈣。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
   ('14:00-15:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）。避免空腹引發噁心嘔吐，不與鋅、鈣、鐵同服', 'daily', '補充品', 10, 1, false),
-  ('15:30 下午點心', 'Tryall 豌豆蛋白 22g 粉（≈16g 蛋白）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力', 'daily', '飲食', 11, 1, true),
+  ('15:30 下午點心', 'Tryall 豌豆蛋白 22g 粉（≈16g 蛋白）+ 雞蛋 1 顆（牛肉日從晚餐移入）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力。⚠️ 牛肉日：僅 1 顆蛋（6.3g 蛋白）+ 豌豆 16g = 22.3g，消化負擔輕，不影響 19:00 晚餐食慾', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。⚠️ 牛肉日：牛肉上限 150g，雞蛋強制移至 15:30 下午點心', 'daily', '飲食', 13, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。⚠️ 牛肉日：牛肉上限 150g，雞蛋 1-2 顆移至午餐、1 顆移至 15:30 下午點心', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
   ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳 — 熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡', 'daily', '補充品', 15, 1, true),
   ('Ashwagandha 週期管理（8 週用 / 4 週停）', '📋 8 週用 / 4 週停 週期。第 1-5 週正常服用 450mg/日（睡前）。第 6 週起每日自評情緒冷漠。第 8 週（第 56 天）準時進入停用期。停用 4 週：甘胺酸鎂 + Cyclic Sighing 替代', 'daily', '補充品', 16, 1, true),
@@ -83,7 +83,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
    '特級初榨橄欖油 2 大匙（28g）入菜或涼拌。支持每日脂肪目標 80-90g。晚餐較高脂肪有助於延緩胃排空、穩定血糖、增加飽足感',
    'daily', '脂肪', 28, 1, true),
   ('09:05 碘鹽 1g',
-   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內',
+   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內。⚠️ 全日碘鹽僅提供 ~50-82mcg 碘（不足 RDA 150mcg），主力碘來源為每週 2-3 次紫菜/海苔',
    'daily', '礦物質', 2, 1, true),
   ('藍莓 50g（抗氧化）',
    '每日 50g 新鮮或冷凍藍莓。富含花青素（Anthocyanins），A 級證據支持改善認知功能、血管健康、抗氧化。可加入燕麥碗、希臘優格、或作為下午點心（15:30）搭配豌豆蛋白',
@@ -152,7 +152,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '平飼雞蛋（全佑牧場 LL 規格）',
-  '晚餐蛋白質主力（常規日隨晚餐食用，牛肉日移至 15:30 下午點心）。富含亮氨酸 Leucine。冷藏平飼蛋，非籠飼。賣場限定商品',
+  '晚餐蛋白質主力（常規日隨晚餐食用，牛肉日 1-2 顆移至午餐、1 顆移至 15:30 下午點心）。富含亮氨酸 Leucine。冷藏平飼蛋，非籠飼。賣場限定商品',
   '每日 3-4 顆',
   '~NT$274 / 30 入',
   'https://www.costco.com.tw/Warehouse-Only/Food-Beverages/Chilled/QUAN-YOU-FARM-Cage-Free-Eggs-LL-30-Count/p/128970',
@@ -331,13 +331,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '紫菜 / 海苔',
   '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。每片紫菜/海苔僅 ~12-43mcg 碘，安全可控',
-  '每週固定 1 次微量攝取（紫菜/海苔 1-2 片），作為烹調碘流失的安全緩衝',
+  '每週固定 2-3 次微量攝取（紫菜/海苔 1-2 片），補足碘鹽無法覆蓋的每日碘缺口',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"紫菜（直接食用或入湯）、海苔（零食或配飯）","portion":"每次 1-2 片"}'::jsonb,
   '{"per_sheet":"碘 ~12-43mcg, 鈣 ~7mg, 鐵 ~0.2mg, 膳食纖維 ~0.3g"}'::jsonb,
-  '每週固定 1 次微量攝取（乾貨耐儲存）。紫菜/海苔每片僅 ~12-43mcg 碘，安全可控。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
+  '每週固定 2-3 次微量攝取（乾貨耐儲存，每次 1-2g 乾重即可）。紫菜/海苔每片僅 ~12-43mcg 碘，安全可控。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -446,20 +446,20 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '冷凍草飼牛肉片（澳洲）',
   '紅肉提供血基質鐵（吸收率 15-35%）、維他命 B12、天然肌酸。草飼牛肉 Omega-3 較高',
-  '每週 1-2 次晚餐（嚴格上限 150g/次），牛肉日雞蛋強制移至 15:30 下午點心',
+  '每週 1-2 次晚餐（嚴格上限 150g/次），牛肉日雞蛋分散至午餐（1-2 顆）與下午點心（1 顆）',
   'NT$600-800 / 1kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Frozen-Seafood-Meat/c/90701',
   'Costco', 'costco_food', NULL, '澳洲',
   '{"cut":"薄片火鍋肉片或牛排","fat":"選擇瘦部位（如菲力、後腿）","storage":"冷凍 -18°C"}'::jsonb,
   '{"protein_per_100g":"20-25g","iron":"2-3mg（血基質鐵）","b12":"豐富","creatine":"天然含有"}'::jsonb,
-  '每週 1-2 次作為紅肉來源（嚴格上限 150g/次）。牛肉日雞蛋移至下午點心。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
+  '每週 1-2 次作為紅肉來源（嚴格上限 150g/次）。牛肉日雞蛋分散至午餐與下午點心。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
   23
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '綠茶（茶葉/茶包）',
   'EGCG + L-theanine 天然組合，促進專注。多酚抗氧化',
-  '每日午餐後 2-3 杯（13:00-15:00）',
+  '每日午餐後 2-3 杯（14:00-15:00）',
   '~NT$200-400',
   'https://www.costco.com.tw/Food-Dining/Drinks/Tea/c/90811',
   'Costco', 'costco_food', NULL, NULL,
