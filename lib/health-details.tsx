@@ -85,7 +85,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g）+ 每週 2-3 次海帶/紫菜</p>
+          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。海帶/紫菜僅作偶爾配菜，不宜頻繁食用（3-5g 乾海帶含碘 1500-15000mcg，遠超 UL 1100mcg）</p>
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -199,7 +199,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     );
   }
 
-  if (title.includes('22:00') && title.includes('睡前') || title.includes('睡前補充品')) {
+  if (title.includes('22:30') && title.includes('睡前') || title.includes('睡前補充品')) {
     return (
       <Detail>
         <p>與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
