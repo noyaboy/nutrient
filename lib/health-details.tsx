@@ -344,7 +344,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
 
   // === All-day items ===
 
-  if (title.includes('蛋白質') && (title.includes('113') || title.includes('146'))) {
+  if (title.includes('蛋白質') && (title.includes('122') || title.includes('146'))) {
     return (
       <Detail>
         <p>每餐達亮氨酸門檻 2.5-3g（健康腎功能範圍）</p>
