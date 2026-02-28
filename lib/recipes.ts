@@ -475,7 +475,7 @@ export const dinnerRecipes: Recipe[] = [
     ingredients: [
       { name: '雞胸肉', amount: '100g' },
       { name: '冷凍綠花椰菜', amount: '100g' },
-      { name: '泡菜', amount: '80g' },
+      { name: '泡菜', amount: '30g（控鈉上限）' },
       { name: '菠菜', amount: '120g' },
       { name: '糙米', amount: '100g（生重）' },
       { name: '大蒜', amount: '2瓣' },
