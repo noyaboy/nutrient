@@ -11,17 +11,17 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:15 訓練前營養', '香蕉 1 根 + 乳清蛋白 ~30g 粉（≈27g 蛋白）。⚠️ 距訓練僅 45 分鐘，只吃流質乳清+好消化的香蕉。地瓜需 60-90 分鐘消化（含抗性澱粉），若要吃地瓜請提前至 08:00 進食', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
   ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘', 'daily', '運動', 5, 1, true),
-  ('11:15 咖啡 + L-Theanine', '起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應）。咖啡因 200-300mg + L-Theanine 200mg（1:1 A 級 nootropic 組合）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
+  ('11:15 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 150-200mg + L-Theanine 200mg（1:1 A 級 nootropic 組合，保護睡眠品質）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
   ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆、D3 1000IU、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
-  ('14:00 綠茶 EGCG 2-3 杯', '午餐後 2hr+ 再飲用（~14:00），高脂高蛋白午餐胃排空需 2-4hr，1hr 仍會螯合鐵鋅鈣。EGCG + L-theanine 天然組合促進專注。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
+  ('14:00 綠茶 EGCG 2-3 杯', '午餐後 2hr+ 再飲用（~14:00），高脂高蛋白午餐胃排空需 2-4hr，1hr 仍會螯合鐵鋅鈣。改用低咖啡因綠茶（白毫銀針或老白毫），配合 L-theanine 天然組合促進專注，同時避免晚間睡眠干擾。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
   ('14:00-15:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）。避免空腹引發噁心嘔吐，不與鋅、鈣、鐵同服', 'daily', '補充品', 10, 1, false),
-  ('15:30 下午點心', 'Tryall 豌豆蛋白 22g 粉（≈16g 蛋白）+ 雞蛋 1 顆（牛肉日從晚餐移入）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力。⚠️ 牛肉日：僅 1 顆蛋（6.3g 蛋白）+ 豌豆 16g = 22.3g，消化負擔輕，不影響 19:00 晚餐食慾', 'daily', '飲食', 11, 1, true),
+  ('15:30 下午點心', 'Tryall 豌豆蛋白 22g 粉（≈16g 蛋白）+ 雞蛋 1 顆（牛肉日從晚餐移入）。⚠️ 訓練日改用此組合。休息日可改為燕麥 80g + 藍莓 50g（避開訓練前高粘度膠狀纖維傷胃，避開午餐鈣吸收干擾）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力。⚠️ 牛肉日：僅 1 顆蛋（6.3g 蛋白）+ 豌豆 16g = 22.3g，消化負擔輕，不影響 19:00 晚餐食慾', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
@@ -83,7 +83,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
    '特級初榨橄欖油 2 大匙（28g）入菜或涼拌。支持每日脂肪目標 80-90g。晚餐較高脂肪有助於延緩胃排空、穩定血糖、增加飽足感',
    'daily', '脂肪', 28, 1, true),
   ('09:05 碘鹽 1g',
-   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內。⚠️ 全日碘鹽僅提供 ~50-82mcg 碘（不足 RDA 150mcg），主力碘來源為每週 2-3 次紫菜/海苔',
+   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內。⚠️ 全日碘鹽僅提供 ~20-33mcg 碘（台灣食鹽法規標準），必須搭配每日紫菜/海苔 1-2 片（另含約 15-85mcg）確保達 RDA 150mcg',
    'daily', '礦物質', 2, 1, true),
   ('藍莓 50g（抗氧化）',
    '每日 50g 新鮮或冷凍藍莓。富含花青素（Anthocyanins），A 級證據支持改善認知功能、血管健康、抗氧化。可加入燕麥碗、希臘優格、或作為下午點心（15:30）搭配豌豆蛋白',
@@ -142,7 +142,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   NULL, NULL, NULL, '155648', '台灣（品牌）/ 美國（乳源）',
   '{"ingredients":"分離乳清蛋白（美國乳源）","form":"無調味粉末","weight":"2kg","features":"無添加糖、甜味劑、人工色素、香料"}'::jsonb,
   '{"serving_size":"30g","calories":"~120kcal","protein":"~27g","fat":"~2g","carbs":"~3g","bcaa":"~5.3g","protein_pct":"約90%"}'::jsonb,
-  'Costco 線上可訂。每日 ~70g，2kg 約 28 天，每月補貨。無調味可搭配咖啡、黑芝麻粉等調味。',
+  'Costco 線上可訂。每日 ~30g（訓練前用量），2kg 約 2 個月。無調味可搭配咖啡、黑芝麻粉等調味。',
   4
 );
 
@@ -331,13 +331,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '紫菜 / 海苔',
   '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。每片紫菜/海苔僅 ~12-43mcg 碘，安全可控',
-  '每週固定 2-3 次微量攝取（紫菜/海苔 1-2 片），補足碘鹽無法覆蓋的每日碘缺口',
+  '每日隨餐食用 1-2 片（配飯或入湯），補足碘攝取至 RDA 150mcg',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"紫菜（直接食用或入湯）、海苔（零食或配飯）","portion":"每次 1-2 片"}'::jsonb,
   '{"per_sheet":"碘 ~12-43mcg, 鈣 ~7mg, 鐵 ~0.2mg, 膳食纖維 ~0.3g"}'::jsonb,
-  '每週固定 2-3 次微量攝取（乾貨耐儲存，每次 1-2g 乾重即可）。紫菜/海苔每片僅 ~12-43mcg 碘，安全可控。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
+  '每日隨餐攝取 1-2 片（乾貨耐儲存，每次 1-2g 乾重即可）。紫菜/海苔每片含 ~12-43mcg 碘。搭配晨間 1g 碘鹽（20-33mcg）+ 日常海苔，總碘攝入可達 RDA 150mcg。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -381,7 +381,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '有機燕麥（桂格有機大燕麥片 935g×2）',
   '澳洲有機燕麥，已完全煮熟。β-葡聚醣降膽固醇，優質碳水 + 膳食纖維 8g/份（GI~55，中升糖）',
-  '每日 1 份（80g），訓練後或早餐',
+  '休息日早/午餐每日 1 份（80g）；訓練日改置於 15:30 下午點心搭配豌豆蛋白 + 藍莓',
   'NT$439 / 935g×2',
   'https://www.costco.com.tw/Food-Dining/Drinks/Powdered-Drink-Mix-Cereal-Oats/Quaker-Organic-Whole-Oats-935-g-X-2-Count/p/116958',
   'Costco', 'costco_food', 'QUAKER 桂格', '澳洲（原料）/ 台灣（製造）',
@@ -420,8 +420,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '咖啡豆 / 研磨咖啡',
-  '起床 60-90 分鐘後飲用，咖啡因 200-300mg。多酚抗氧化、增強專注力',
-  '每日 1-2 杯，10:30-11:15 之間（起床後 90-135 分鐘）',
+  '起床 60-90 分鐘後飲用，咖啡因 150-200mg（減量以保護睡眠）。多酚抗氧化、增強專注力',
+  '每日 1-2 杯，09:30-10:15 之間（起床後 60-90 分鐘）',
   '~NT$399 / 1.13kg',
   'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
   'Costco', 'costco_food', NULL, NULL,
@@ -458,8 +458,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '綠茶（茶葉/茶包）',
-  'EGCG + L-theanine 天然組合，促進專注。多酚抗氧化',
-  '每日午餐後 2-3 杯（14:00-15:00）',
+  '低咖啡因白毫銀針或老白毫。EGCG + L-theanine 天然組合促進專注。多酚抗氧化。不含茶多酚氧化產物，溫和不傷腸胃',
+  '每日午餐後 1-2 杯低咖啡因版本（14:00-15:00）',
   '~NT$200-400',
   'https://www.costco.com.tw/Food-Dining/Drinks/Tea/c/90811',
   'Costco', 'costco_food', NULL, NULL,
