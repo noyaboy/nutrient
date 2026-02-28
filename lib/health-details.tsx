@@ -165,7 +165,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p>維他命 D3 1000 IU（<span className="text-emerald-600 font-bold">1 顆，已改 1000IU 規格免切</span>）<span className="text-amber-600 font-medium">⟵ 每日服用；血檢達標+晨光曝曬→可進一步減量</span></p>
           <p>K2（僅取 K2 引導鈣至骨骼，不額外疊加 D3 避免攝取過量）</p>
           <p>葉黃素 20mg</p>
-          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 每日 ~660mg，每日隨午餐服用）</p>
+          <p>膠原蛋白肽 10-15g（已含 Vit C ~160mg，晚餐再補 500mg = 補劑 ~660mg，每日隨午餐服用）</p>
           <p>CoQ10 Ubiquinol 200mg（脂溶性，與魚油同服，軟膠囊無法拆分故統一 200mg）</p>
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
@@ -224,6 +224,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500">進食順序：蔬菜 → 蛋白質/脂肪 → 碳水（降低血糖波動）</p>
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
+          <p className="text-gray-400 text-[10px]">⚠️ 補劑 ~660mg + 蔬菜/檸檬汁天然 Vit C 合計每日可達 800-900mg（仍安全，UL 2000mg）。若當日蔬菜攝取量極大，500mg 錠可改兩天一次以減少代謝負擔</p>
           <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 14:00-15:00 銅的時間距離 4-5hr）</p>
           <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 若改睡前 22:00 與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭二價陽離子載體 → 兩者皆降。單日不補鋅不影響整體鋅營養狀態</p>
         </div>
@@ -569,7 +570,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-orange-700">AST — 正常 10-40 U/L</p>
           <p className="text-orange-700 font-semibold">⚠️ Ashwagandha 肝功能追蹤：新品牌開始後第 4 週、第 12 週各加測 ALT/AST</p>
           <p className="text-orange-700">藥源性肝損傷多發於數週內，勿枯等半年健檢</p>
-          <p className="text-orange-700 font-bold">🚨 不限品牌/批次：疲累加重、食慾不振、皮膚微黃、右上腹不適 → 立即停用並抽血</p>
+          <p className="text-orange-700 font-bold">🚨 不限品牌/批次：疲累加重、食慾不振、皮膚微黃、右上腹不適（肝臟位置） → 立即停用並抽血</p>
         </div>
         <div className="bg-purple-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-purple-800">甲狀腺功能（Ashwagandha 可能提升 T4）</p>

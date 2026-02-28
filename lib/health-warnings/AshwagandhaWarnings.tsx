@@ -50,7 +50,7 @@ function DiliSymptoms() {
       <p className="text-red-700 font-semibold">1. 異常疲累加重（排除訓練/睡眠因素）</p>
       <p className="text-red-700 font-semibold">2. 食慾不振持續 2 天以上</p>
       <p className="text-red-700 font-semibold">3. 皮膚或眼白微黃（黃疸前兆）</p>
-      <p className="text-red-700 font-semibold">4. 右上腹不適/隱痛</p>
+      <p className="text-red-700 font-semibold">4. 右上腹不適/隱痛（肝臟位置）</p>
       <p className="text-red-700">⚠️ DILI 可發生在任何品牌、任何批次，不應僅依賴定期抽血排程</p>
     </div>
   );
@@ -112,7 +112,7 @@ function CycleDiliCompact() {
   return (
     <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
       <p className="font-bold text-red-800">🚨 肝毒性實體症狀（DILI）— 不限品牌/批次</p>
-      <p className="text-red-700 font-semibold">異常疲累、食慾不振 ≥2天、皮膚/眼白微黃、右上腹不適</p>
+      <p className="text-red-700 font-semibold">異常疲累、食慾不振 ≥2天、皮膚/眼白微黃、右上腹不適（肝臟位置）</p>
       <p className="text-red-700 font-bold">→ 任一出現即刻停用並抽血 ALT/AST（不必等排程）</p>
     </div>
   );
@@ -154,7 +154,7 @@ function LiverTrackingDetail() {
       </div>
       <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1 border border-red-200">
         <p className="font-bold text-red-800">🚨 重要：DILI 不限品牌/批次</p>
-        <p className="text-red-700">定期排程僅是基準線。服用期間出現疲累加重、食慾不振、皮膚/眼白微黃、右上腹不適</p>
+        <p className="text-red-700">定期排程僅是基準線。服用期間出現疲累加重、食慾不振、皮膚/眼白微黃、右上腹不適（肝臟位置）</p>
         <p className="text-red-700 font-bold">→ 不必等排程，立即安排抽血</p>
       </div>
     </>

@@ -16,9 +16,10 @@ export function EgfrProtocol({ context, showCreatineWashout = true }: EgfrProtoc
             <p className="text-red-700 font-bold">2. 建議加測 Cystatin C（不受肌肉量/肌酸影響，交叉驗證真實腎功能）</p>
           </>
         )}
-        <p className="text-red-700 font-bold">3. eGFR &lt;90 分級處置：</p>
-        <p className="text-red-700">首次 &lt;90 → 下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
+        <p className="text-red-700 font-bold">3. eGFR &lt;90 分級處置（確認洗出條件已達成後）：</p>
+        <p className="text-red-700">首次 &lt;90 → 停止肌酸、下修至 1.6g/kg（≈117g/day），每餐 ≤35g，3 個月後複檢</p>
         <p className="text-red-700 font-semibold">連續兩次 &lt;90（間隔 3 個月）→ 強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科</p>
+        <p className="text-red-700 text-[10px]">⚠️ 單次異常不宜貿然定義為「永久」—停用肌酸 + 3 個月複檢確認趨勢後再決定長期策略</p>
       </div>
     );
   }
@@ -37,12 +38,13 @@ export function EgfrProtocol({ context, showCreatineWashout = true }: EgfrProtoc
         <p className="text-red-700 font-semibold">建議加測 Cystatin C：不受肌肉量/肌酸影響，交叉驗證真實 eGFR</p>
       </div>
       <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-        <p className="font-bold text-red-800">⚠️ eGFR &lt;90 分級處置（確認為真實腎功能下降後）</p>
-        <p className="text-red-700 font-bold">首次 &lt;90：下修至 1.6g/kg（≈117g/day），每餐 ≤35g，永久停止肌酸，3 個月後複檢</p>
+        <p className="font-bold text-red-800">⚠️ eGFR &lt;90 分級處置（確認洗出條件已達成後）</p>
+        <p className="text-red-700 font-bold">首次 &lt;90：停止肌酸、下修至 1.6g/kg（≈117g/day），每餐 ≤35g，3 個月後複檢確認趨勢</p>
         <p className="text-red-700 font-bold">連續兩次 &lt;90（間隔 3 個月）：強制下修至 1.2g/kg（≈88g/day），每餐 ≤30g，轉介腎臟科追蹤</p>
         <p className="text-red-700">增加飲水、降低鈉攝取、密切監測 BUN/Creatinine</p>
         <p className="text-red-700">建議搭配 Cystatin C 檢測（不受肌肉量/肌酸影響），交叉驗證 eGFR</p>
         <p className="text-red-700 font-semibold">必須先停用肌酸 7 天 + 暫停重訓 48-72hr → 取得真實 eGFR → 才啟動處置</p>
+        <p className="text-red-700 text-[10px]">⚠️ 單次異常不宜貿然定義為「永久」—先確認前置條件已落實，再依複檢趨勢決定長期策略</p>
       </div>
     </>
   );
