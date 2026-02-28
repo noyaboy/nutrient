@@ -90,7 +90,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ B群隨餐 + 地瓜 RS3 準備</p>
-          <p className="text-amber-700">B群水溶性，需食物基質提升吸收。推薦地瓜（前晚蒸好冷藏 → RS3），隔日微波 30 秒即食</p>
+          <p className="text-amber-700">B群水溶性，需食物基質提升吸收。推薦地瓜（前晚蒸好冷藏 → RS3），隔日室溫回溫 15 分鐘，或微波爐「解凍模式/低功率」30-40 秒（確保中心溫度微溫不燙口，避免超過 55°C 破壞抗性澱粉）</p>
           <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
         <Tip>下肢大重量日若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
@@ -138,7 +138,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p className="text-gray-500 mt-1">每日脂肪 80-90g：午餐橄欖油 1 匙 + 酪梨 ≈ 30g，晚餐橄欖油 2 匙 28g，加魚油/蛋/肉脂肪</p>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
-          <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
+          <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 午餐可替換為菠菜或櫛瓜；晚餐為避開植酸干擾鋅吸收，僅能替換為去皮櫛瓜或大白菜。並將當餐蛋白質微調降至 30g</p>
         </div>
       </Detail>
     );
@@ -157,8 +157,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Tip>橄欖油 2 大匙入菜。脂溶性維他命皆在午餐服用</Tip>
         <BeefDayAdjustments context="egg" />
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 重訓日晚餐：零葉菜 + 零抗性澱粉</p>
-          <p className="text-red-700">僅保留熱白米飯/去皮馬鈴薯/義大利麵 + 少量去皮櫛瓜 50-100g</p>
+          <p className="font-semibold text-red-800">🚫 重訓日晚餐：零高纖/高FODMAP蔬菜 + 零抗性澱粉</p>
+          <p className="text-red-700">蔬菜僅限去皮櫛瓜、大白菜或高麗菜（50-100g）+ 熱白米飯/去皮馬鈴薯/義大利麵</p>
           <p className="text-red-700">禁冷卻米飯/地瓜：RS 發酵 + 纖維 + 睡前甘胺酸鎂三重疊加 → 夜間腹脹（詳見「碳水循環」）</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（⚠️ 優格須在 17:00 前食用，與 19:00 鋅間隔 2hr+）</p>
@@ -384,7 +384,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="font-semibold text-orange-800">脹氣優先監控</p>
           <p className="text-orange-700">若出現腹脹 → 當餐立即減少十字花科蔬菜份量</p>
           <p className="text-orange-700">增加低纖維碳水佔比（白米 &gt; 地瓜，義大利麵 &gt; 燕麥）</p>
-          <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，改全低 FODMAP 蔬菜</p>
+          <p className="text-orange-700">連續 2 天脹氣 → 暫停十字花科 3 天，午餐改菠菜或櫛瓜；晚餐僅限去皮櫛瓜或大白菜（避開植酸干擾鋅吸收）</p>
         </div>
       </Detail>
     );

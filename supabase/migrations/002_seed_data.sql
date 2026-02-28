@@ -21,7 +21,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
   ('14:00-15:00 銅 2mg 補充', '銅 2mg（Solaray Bisglycinate）隨低鈣/低鐵小點心服用（少量水果、幾片餅乾）。避免空腹引發噁心嘔吐，不與鋅、鈣、鐵同服', 'daily', '補充品', 10, 1, false),
-  ('15:30 下午點心', 'Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力', 'daily', '飲食', 11, 1, true),
+  ('15:30 下午點心', 'Tryall 豌豆蛋白 22g 粉（≈16g 蛋白）。非乳製植物蛋白，下午點心時段分散蛋白質攝取壓力', 'daily', '飲食', 11, 1, true),
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
@@ -683,14 +683,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '豌豆蛋白 Pea Protein（Tryall 1kg）',
   '台灣品牌 Tryall，非乳製植物蛋白，中速消化。下午點心時段服用，分散每日蛋白質攝取至 4-5 餐。無大豆、無乳製品、無麩質。與 Tryall 乳清同品牌，品質一致',
-  '下午點心 ~20g 粉（≈16g 蛋白），約 15:30',
+  '下午點心 22g 粉（≈16g 蛋白），約 15:30',
   '約 NT$800-1,000 / 1kg',
   'https://www.tryall.com.tw',
   'Costco', 'iherb_supplement', 'TRYALL',
   NULL, NULL, NULL, NULL,
   $${"ingredients":"豌豆蛋白分離物","form":"無調味粉末","weight":"1kg","brand":"Tryall"}$$::jsonb,
   $${"serving_size":"33g","protein":"~24g","fat":"~2g","carbs":"~1g"}$$::jsonb,
-  'Tryall 官網或 Costco 線上可訂。每日 ~20g，1kg 可用約 50 天。無調味可搭配少量蜂蜜或可可粉。與 Tryall 乳清同品牌，統一採購更方便',
+  'Tryall 官網或 Costco 線上可訂。每日 22g，1kg 可用約 45 天。無調味可搭配少量蜂蜜或可可粉。與 Tryall 乳清同品牌，統一採購更方便',
   33
 );
 
