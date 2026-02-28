@@ -102,7 +102,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_supplement', 'Kirkland Signature 科克蘭', '加拿大',
   $${"ingredients":"魚油(沙丁魚、鯷魚、鯖魚)、明膠(豬來源)、甘油、水、柑橘果膠、D-山梨醇(甜味劑)","form":"軟膠囊","count":"180粒","storage":"請置於陰涼乾燥處，開瓶後請旋緊瓶蓋，並避免陽光直射。","allergens":"本產品含魚可能導致過敏症狀。不添加乳糖、人工色素及麩質。"}$$::jsonb,
   $${"per_serving":"每1200毫克濃縮魚油","omega3_total":"約700毫克","epa":"419毫克","dha":"281毫克"}$$::jsonb,
-  '線上可訂（常溫配送）。每日 3 顆，180 顆可用 2 個月。⚠️ 開瓶後必須冷藏：魚油富含多元不飽和脂肪酸（EPA/DHA），室溫暴露加速氧化變質。開瓶後立即放入冰箱冷藏（2-8°C），每次取用後迅速旋緊瓶蓋。📋 在瓶身標註開瓶日期，開瓶後 60 天內用完或丟棄（即使剩餘也不再服用）。⚠️ 有腥味或苦味表示已氧化變質，立即丟棄。',
+  '線上可訂（常溫配送）。每日 3 顆，180 顆可用 2 個月。⚠️ 開瓶後必須冷藏（2-8°C），每次取用後迅速旋緊瓶蓋。📋 在瓶身標註開瓶日期，開瓶後 60 天內用完或丟棄（即使剩餘也不再服用）。⚠️ 有腥味或苦味表示已氧化變質，立即丟棄。',
   1
 );
 
@@ -115,7 +115,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_supplement', 'NATURE MADE 萊萃美', '美國',
   $${"ingredients":"碳酸鈣(碳酸鈣、麥芽糊精(玉米)、阿拉伯膠)、檸檬酸鈣、微結晶纖維素、維生素K2(麥芽糊精(玉米)、納豆脂質、維生素K2(Menaquinone-7))、羥丙基甲基纖維素、二氧化鈦(著色劑)、聚糊精、硬脂酸鎂、二氧化矽、交聯羧甲基纖維素鈉、滑石粉、麥芽糊精、維生素D3(辛烯基丁二酸鈉澱粉、糖、L-抗壞血酸鈉(抗氧化劑)、二氧化矽、中鏈三酸甘油酯、生育醇(抗氧化劑)、膽鈣化醇)、脂肪酸甘油酯(乳化劑)","form":"錠劑","count":"250錠","storage":"請置於陰涼乾燥處（錠劑常溫即可穩定保存）","allergens":"不添加麩質、防腐劑、化學色素及人工香料。"}$$::jsonb,
   $${"calcium":"500mg/錠","vitamin_d3":"3.75mcg (150IU)/錠","vitamin_k2":"10mcg (MK-7型)/錠"}$$::jsonb,
-  '線上可訂（常溫配送）。純鈣備用品（鈣從食物攝取為主），250 錠可用非常久。⚠️ 碳酸鈣需胃酸解離：必須隨餐服用（午餐），空腹吸收率極低且易脹氣便秘。✅ 補鈣當日注意：本品每錠含 D3 150IU，午餐獨立 D3 1000IU 仍正常服用（總計 1150IU 安全低於 UL 4000IU/日）。碳酸鈣+檸檬酸鈣錠劑常溫陰涼處即可穩定保存。',
+  '線上可訂（常溫配送）。250 錠可用非常久。碳酸鈣+檸檬酸鈣錠劑常溫陰涼處即可穩定保存。',
   2
 );
 
@@ -128,7 +128,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
   $${"ingredients":"抗壞血酸(維生素C)","form":"錠劑","count":"100錠","storage":"請存放於乾燥陰涼處，開封後請旋緊瓶蓋。"}$$::jsonb,
   $${"vitamin_c":"500mg/錠"}$$::jsonb,
-  'iHerb 直送。✅ 每日 1 錠（500mg），免切免切藥器。100 錠可用約 3 個月。午餐膠原蛋白已含 ~160mg Vit C，晚餐 1 錠 500mg，每日總計 ~660mg。✅ VitC 與鈣同餐不增加結石風險：鈣在腸道與草酸結合排出，VitC 代謝產生的少量草酸同理。開瓶後標記日期，6 個月內用完。',
+  'iHerb 直送。✅ 每日 1 錠（500mg），免切免切藥器。100 錠可用約 3 個月。開瓶後標記日期，6 個月內用完。',
   3
 );
 
@@ -185,7 +185,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   '傳統市場 / 全聯 / 頂好', 'costco_food', NULL, '台灣',
   '{"storage":"冷藏3-4天","preparation":"切碎靜置40分鐘最大化蘿蔔硫素","portion":"每次2-3顆"}'::jsonb,
   '{}'::jsonb,
-  '每週補貨 2 次，每次買 3-4 顆（每顆約 300-400g，支撐午餐每日一份約 150g，每週需 ~1kg）。切成小朵後靜置 40 分鐘（最大化蘿蔔硫素），裝入有瀝水網底的長方形保鮮盒，冷藏可放 3-4 天。小冰箱用戶不建議買 Costco 冷凍版（454g×4 佔冷凍 3L 直接爆倉）',
+  '每週補貨 2 次，每次買 3-4 顆（每顆約 300-400g）。裝入有瀝水網底的長方形保鮮盒，冷藏可放 3-4 天。小冰箱用戶不建議買 Costco 冷凍版（454g×4 佔冷凍 3L 直接爆倉）',
   6
 );
 
@@ -222,7 +222,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '統一生機', '西班牙',
   $${"ingredients":"日曬海鹽、碘化鉀","weight":"2公斤","storage":"常溫","allergens":"本產品與其它含有芒果、大豆、奶類、含麩質之穀物、魚、堅果、芝麻、蕎麥及甲殼類的產品於同一工廠生產，食物過敏者請留意。","notes":"不添加抗結塊劑，若有輕微結塊，品質無虞請安心食用。"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（常溫配送）。2kg 約可用 6 個月以上（晨間僅 1g/日 + 烹調用鹽）。⚠️ 務必確認為「加碘」版本（包裝標示「碘化鉀」成分）。海鹽/玫瑰鹽碘含量極低。⚠️ 晨間碘鹽僅 1g（電子秤測量），碘攝取主力仰賴午晚餐海帶/紫菜 + 烹調碘鹽，避免晨間高鹽水引發噁心及鈉超標。',
+  '線上可訂（常溫配送）。2kg 約可用 6 個月以上。⚠️ 務必確認為「加碘」版本（包裝標示「碘化鉀」成分）。海鹽/玫瑰鹽碘含量極低。',
   9
 );
 
@@ -298,7 +298,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   '傳統市場 / 全聯 / 頂好', 'costco_food', NULL, '台灣',
   '{"storage":"冷藏3-5天","preparation":"墊廚房紙巾吸濕","portion":"每週300-400g"}'::jsonb,
   '{}'::jsonb,
-  '每週補貨 2 次，每次買 400-500g（支撐每日 100-150g 入菜量，每週需 700-1050g）。放入大保鮮袋、裡面墊一張廚房紙巾吸濕，平放於保鮮抽屜底部，3-5 天內用完。小冰箱用戶不建議買 Costco 冷凍版（500g×6 佔冷凍室 70%）',
+  '每週補貨 2 次，每次買 400-500g。放入大保鮮袋、裡面墊一張廚房紙巾吸濕，平放於保鮮抽屜底部，3-5 天內用完。小冰箱用戶不建議買 Costco 冷凍版（500g×6 佔冷凍室 70%）',
   15
 );
 
@@ -311,7 +311,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', NULL, '美國/加拿大',
   '{"storage":"冷藏 5-7 天，不要水洗後再冷藏","preparation":"切片或切丁入菜、涼拌皆可","portion":"每次 100-150g"}'::jsonb,
   '{"per_100g":"17kcal, 蛋白質 1.2g, 碳水 3.1g, 纖維 1.0g, 鉀 261mg"}'::jsonb,
-  '每週補貨 1-2 次，每次買 500-700g（支撐晚餐每日 100-150g 入菜，每週需 700-1050g）。選外表光滑無軟爛。裝入大保鮮袋平放保鮮抽屜，5-7 天內用完。低FODMAP首選，腸胃敏感者必備。',
+  '每週補貨 1-2 次，每次買 500-700g。選外表光滑無軟爛。裝入大保鮮袋平放保鮮抽屜，5-7 天內用完。',
   16
 );
 
@@ -324,7 +324,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   '傳統市場 / 全聯 / 頂好', 'costco_food', NULL, '台灣',
   '{"storage":"冷藏 3-5 天","varieties":"大白菜（整顆較大，切半使用）、高麗菜（耐儲存 5-7 天）、小白菜（保存期短 2-3 天）"}'::jsonb,
   '{"per_100g":"大白菜 13kcal, 蛋白質 1.1g, 鉀 176mg, 草酸 ~20mg；高麗菜 25kcal, 蛋白質 1.3g；小白菜 13kcal, 蛋白質 1.5g, 鈣 105mg"}'::jsonb,
-  '每週補貨 1-2 次。高麗菜最耐儲存（5-7 天），大白菜次之（3-5 天切半保鮮膜包），小白菜最短（2-3 天墊廚房紙巾）。晚餐蔬菜首選：低草酸+低植酸，不干擾鋅吸收。菠菜留給午餐（有鈣質同餐保護 + 不影響鋅）。',
+  '每週補貨 1-2 次。高麗菜最耐儲存（5-7 天），大白菜次之（3-5 天切半保鮮膜包），小白菜最短（2-3 天墊廚房紙巾）。',
   16
 );
 
@@ -337,7 +337,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"昆布（煮湯用）、海帶芽（涼拌用）、紫菜/海苔（直接食用或入湯）","portion":"每次 3-5g 乾重"}'::jsonb,
   '{"per_5g_dry":"碘 1500-15000mcg, 鈣 ~35mg, 鐵 ~0.5mg, 膳食纖維 ~1.5g"}'::jsonb,
-  '每月購買 1-2 包即可（乾貨耐儲存）。碘來源首選：3-5g 乾海帶已大幅超過 RDA 150mcg。⚠️ 甲狀腺疾病患者應諮詢醫師後再食用（碘攝取過量亦有風險）。常溫密封保存，開封後放密封袋/罐。',
+  '每月購買 1-2 包即可（乾貨耐儲存）。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -350,7 +350,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   '全聯 / 傳統市場 / 便利商店', 'convenience_daily', NULL, '台灣',
   '{"storage":"冷藏 3-5 天，開封後浸水每日換水","varieties":"板豆腐（硬，適合煎炒）、嫩豆腐（軟，適合湯品）","portion":"每次 100-150g"}'::jsonb,
   '{"per_100g":"76kcal, 蛋白質 8.1g, 鈣 150mg, 鐵 1.5mg, 脂肪 4.8g"}'::jsonb,
-  '每週補貨 2-3 次（保質期短）。板豆腐鈣含量高（~150mg/100g），是補鈣日的理想蛋白質來源（低鐵低鋅，不受高劑量鈣 500mg 的吸收抑制影響）。建議午餐搭配：板豆腐 150g（~12g 蛋白 + ~225mg 鈣）+ 蔬菜 + 碳水。',
+  '每週補貨 2-3 次（保質期短）。',
   18
 );
 
@@ -361,7 +361,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, pur
   'NT$50-150 / 盒',
   'https://www.costco.com.tw/Health-Beauty/Oral-Care/Dental-Floss/c/90401',
   'Costco / 全聯 / 便利商店', 'personal_care',
-  '每 2-3 個月購買 1 盒。Costco 有大包裝（3 入組更划算）。建議選含蠟牙線（滑順不易卡牙縫）。每日睡前刷牙後使用。',
+  '每 2-3 個月購買 1 盒。Costco 有大包裝（3 入組更划算）。建議選含蠟牙線（滑順不易卡牙縫）。',
   42
 );
 
@@ -374,7 +374,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco / 全聯', 'convenience_daily', NULL, NULL,
   '{"蜂蜜":"每次 5-10g（~15-30kcal），選台灣產龍眼蜜或百花蜜","可可粉":"每次 5g，選無糖純可可粉（如 Hersheys Unsweetened）"}'::jsonb,
   '{"蜂蜜_per_10g":"30kcal, 碳水 8g","可可粉_per_5g":"10kcal, 膳食纖維 1.7g, 鎂 25mg"}'::jsonb,
-  '蜂蜜常溫保存（永不過期）；可可粉開封後密封保存 6 個月。每日用量極少（5-10g），一罐可用數月。可可粉額外提供鎂 25mg/5g 及黃酮類抗氧化物。',
+  '蜂蜜常溫保存（永不過期）；可可粉開封後密封保存 6 個月。每日用量極少（5-10g），一罐可用數月。',
   19
 );
 
@@ -426,7 +426,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://www.costco.com.tw/Coffee-Beans/c/hero_coffeebean',
   'Costco', 'costco_food', NULL, NULL,
   '{}'::jsonb, '{}'::jsonb,
-  '賣場咖啡專區。Kirkland 深焙豆 1.13kg 約 $399 最經濟，可用 1-2 個月。開封後密封或冷凍保存。⚠️ 搭配 L-Theanine 200mg（iHerb NOW Foods）一起服用，構成 A 級 nootropic 組合。⚠️ 綠茶日停用 L-Theanine 補劑。',
+  '賣場咖啡專區。Kirkland 深焙豆 1.13kg 約 $399 最經濟，可用 1-2 個月。開封後密封或冷凍保存。',
   21
 );
 
@@ -439,7 +439,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '西班牙',
   $${"ingredients":"100% 特級初榨橄欖油","volume":"2公升","storage":"陰涼避光處，開封後 3-6 個月內用完"}$$::jsonb,
   $${"fat_per_15ml":"14g","mufa":"約10g","calories":"約126kcal"}$$::jsonb,
-  '線上可訂（常溫配送）。每日 42g（午餐 14g + 晚餐 28g），2L（≈1840g）約 1.5 個月用完。⚠️ 建議每 1.5 個月補貨，或趁 Costco 促銷時一次購入 2 瓶（3 個月份）。避免高溫油炸（發煙點 ~190°C），涼拌或中低溫烹調最佳。開封後陰涼避光處保存，3-6 個月內用完。',
+  '線上可訂（常溫配送）。每日 42g，2L（≈1840g）約 1.5 個月用完。⚠️ 建議每 1.5 個月補貨，或趁 Costco 促銷時一次購入 2 瓶（3 個月份）。開封後陰涼避光處保存，3-6 個月內用完。',
   22
 );
 
@@ -452,7 +452,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', NULL, '澳洲',
   '{"cut":"薄片火鍋肉片或牛排","fat":"選擇瘦部位（如菲力、後腿）","storage":"冷凍 -18°C"}'::jsonb,
   '{"protein_per_100g":"20-25g","iron":"2-3mg（血基質鐵）","b12":"豐富","creatine":"天然含有"}'::jsonb,
-  '每週 1-2 次作為紅肉來源，替代 1-2 餐雞胸肉（150-180g/次 ≈ 30-36g 蛋白）。⚠️ 牛肉日晚餐取消雞蛋（牛肉已接近單餐上限 ≤45g），雞蛋移至 15:30 下午點心。⚠️ 牛肉日取消鋅補劑（牛肉 150-180g 已含鋅 6-9mg）。補充血基質鐵（植物鐵吸收率僅 2-20%）與 B12。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
+  '每週 1-2 次作為紅肉來源，替代 1-2 餐雞胸肉（150-180g/次）。草飼優於穀飼。瘦部位脂肪 <10g/100g。',
   23
 );
 
@@ -464,7 +464,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://www.costco.com.tw/Food-Dining/Drinks/Tea/c/90811',
   'Costco', 'costco_food', NULL, NULL,
   '{}'::jsonb, '{}'::jsonb,
-  'Costco 茶飲區或超市購買。散裝綠茶葉 CP 值最高。午餐後 1hr+ 再飲用避免螯合鈣鐵鋅，15:00 前喝完（咖啡因 cutoff）。',
+  'Costco 茶飲區或超市購買。散裝綠茶葉 CP 值最高。',
   23
 );
 
@@ -477,7 +477,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', NULL, '美國/加拿大/智利',
   '{"storage":"新鮮冷藏3-5天，冷凍版-18°C長期保存"}'::jsonb,
   '{"anthocyanins":"花青素豐富","fiber":"約2.4g/100g","vitamin_c":"約10mg/100g"}'::jsonb,
-  '新鮮藍莓在 Costco 蔬果區（季節性）。小冰箱建議買新鮮版每週 1 盒（510g），放保鮮抽屜 3-5 天用完。若買冷凍版（Nature''s Touch 600g），僅佔冷凍約 0.5L 可接受。每日取 50-100g 加入燕麥碗或優格。',
+  '新鮮藍莓在 Costco 蔬果區（季節性）。小冰箱建議買新鮮版每週 1 盒（510g），放保鮮抽屜 3-5 天用完。若買冷凍版（Nature''s Touch 600g），僅佔冷凍約 0.5L 可接受。',
   24
 );
 
@@ -490,7 +490,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
    'Costco', 'costco_food', '銀川', '台灣（花蓮）',
    '{"ingredients":"有機白米","weight":"3公斤"}'::jsonb,
    '{"fiber":"低纖維（<1g/100g）","gi":"中高GI（約73）"}'::jsonb,
-   '線上可訂（常溫配送）。與糙米混合購買：糙米為基礎，白米作為訓練日高碳日補充。3kg約3-6週（取決於訓練頻率）。開封後密封避免蟲害，夏天建議冷藏。',
+   '線上可訂（常溫配送）。3kg約3-6週。開封後密封避免蟲害，夏天建議冷藏。',
    25),
 
   ('義大利麵（Garofalo 500g×6）',
@@ -501,7 +501,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
    'Costco', 'costco_food', 'Garofalo', '義大利',
    '{"ingredients":"杜蘭小麥粉","weight":"3公斤","count":"500g × 6包","storage":"常溫陰涼乾燥處"}'::jsonb,
    '{"fiber":"低纖維（約2-3g/100g乾麵）","protein":"約12g/100g","gi":"中GI（約55-65，視煮熟度）"}'::jsonb,
-   '線上可訂（常溫配送）。500g×6共3kg，每週訓練日1-2餐使用，可用1-2個月。開封後每包密封防潮。常溫存放不佔冰箱空間。Costco另有其他品牌（Barilla, De Cecco）可替換。',
+   '線上可訂（常溫配送）。500g×6共3kg，可用1-2個月。開封後每包密封防潮。常溫存放不佔冰箱空間。Costco另有其他品牌（Barilla, De Cecco）可替換。',
    26),
 
   ('馬鈴薯（美國/加拿大）',
@@ -512,7 +512,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
    'Costco', 'costco_food', NULL, '美國/加拿大',
    '{"storage":"陰涼通風處，勿冷藏（會轉甜並影響質地）","notes":"發芽或變綠的馬鈴薯含有毒素（龍葵鹼），務必丟棄"}'::jsonb,
    '{"potassium":"約800mg/顆","fiber":"去皮後低纖維（約1g/100g）","gi":"中高GI（約85-90，視烹調法）"}'::jsonb,
-   '賣場蔬果區散裝，約NT$199/3kg（6-8顆）。選外皮光滑無發芽。常溫通風處可放2-3週，勿冷藏。去皮後煮、蒸或烤，冷卻後作為訓練日碳水。每週補1次約可用7-10天。',
+   '賣場蔬果區散裝，約NT$199/3kg（6-8顆）。選外皮光滑無發芽。常溫通風處可放2-3週，勿冷藏。每週補1次約可用7-10天。',
    27);
 
 ------------------------------------------------------------
@@ -530,7 +530,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 29306, 'CGN-01059',
   $${"ingredients":"一水肌酸","form":"無調味粉末","weight":"454g"}$$::jsonb,
   $${"serving_size":"5g","creatine_monohydrate":"5g"}$$::jsonb,
-  'iHerb 直送。每日 5g，454g 可用 90 天（3 個月）。⚠️ 建議設定每 3 個月定期補貨提醒，避免斷供影響肌力維持。🔴 抽血絕對前提：健檢前 7 天必須停用肌酸 + 48-72 小時暫停高強度重訓（肌肉修復也會升高 Creatinine，與肌酸偽陽性疊加 → eGFR 嚴重低估），否則可能誤判腎功能異常。只有停用+休息後的 eGFR 才能反映真實腎功能。CGN 自有品牌常有額外折扣。搭配其他 iHerb 品項湊免運。',
+  'iHerb 直送。每日 5g，454g 可用 90 天（3 個月）。⚠️ 建議設定每 3 個月定期補貨提醒。CGN 自有品牌常有額外折扣。搭配其他 iHerb 品項湊免運。',
   22
 );
 
@@ -545,7 +545,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 30061, 'NOW-01289',
   $${"form":"錠劑","count":"180錠","chelate_type":"TRAACS™ 甘氨酸鎂"}$$::jsonb,
   $${"serving_size":"2錠","magnesium":"200mg（提取自2000mg甘氨酸鎂）"}$$::jsonb,
-  'iHerb 直送。每日睡前 1 錠（100mg），180 錠可用 6 個月。⚠️ 產品標示 serving size 為 2 錠 200mg，但本計畫僅用 1 錠（減半策略，避免總鎂過高致腹瀉）。',
+  'iHerb 直送。180 錠可用 6 個月。⚠️ 產品標示 serving size 為 2 錠 200mg，但本計畫僅用 1 錠。',
   23
 );
 
@@ -560,7 +560,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 45894, 'CGN-01403',
   $${"ingredients":"葉黃素（來自萬壽菊提取物）（花）、玉米黃質（來自萬壽菊提取物）（花）","form":"素食軟膠囊","count":"120顆","source":"mGold™ 萬壽菊花提取物"}$$::jsonb,
   $${"serving_size":"1顆","lutein":"20mg","zeaxanthin":"含玉米黃質"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。CGN 自有品牌 CP 值高。需隨含油脂餐食服用。',
+  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。CGN 自有品牌 CP 值高。',
   24
 );
 
@@ -575,7 +575,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 46833, 'NOW-01552',
   $${"form":"錠劑","count":"120錠","chelate_type":"吡啶甲酸鋅"}$$::jsonb,
   $${"serving_size":"1錠","zinc":"15mg"}$$::jsonb,
-  'iHerb 直送。✅ 15mg 錠劑（非 50mg 膠囊），可精確控量。每日 1 錠，120 錠可用 4 個月。含飲食鋅（蛋 ~5mg + 肉 ~5-12mg）每日總鋅攝取 25-32mg，安全低於 UL 40mg。⚠️ 晚餐「最後一口」吞服：非隨餐混吃，最大化與 14:00-15:00 銅的時間距離（4-5hr）。⚠️ 鋅吸收關鍵：晚餐（含鋅餐）嚴禁菠菜等高植酸蔬菜（螯合鋅離子），改用櫛瓜、大白菜等低植酸品種。⚠️ 牛肉日豁免：牛肉 150-180g 已含鋅 6-9mg，當晚不服鋅補劑。🚫 補鈣日豁免：當日補鈣者晚餐不補鋅（鈣殘餘+睡前鎂競爭二價陽離子載體）',
+  'iHerb 直送。✅ 15mg 錠劑（非 50mg 膠囊），可精確控量。每日 1 錠，120 錠可用 4 個月。',
   25
 );
 
@@ -590,7 +590,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 17219, 'SOR-45931',
   $${"form":"素食膠囊","count":"100顆","chelate_type":"銅氨基酸螯合物"}$$::jsonb,
   $${"serving_size":"1顆","copper":"2mg"}$$::jsonb,
-  'iHerb 直送。非紅肉日每日 1 顆，100 顆可用 4 個月+（因牛肉日免補）。⚠️ 14:00-15:00 隨小點心服用（非嚴格空腹）：銅離子空腹刺激性高，易引發噁心嘔吐。⚠️ 嚴格避開優格/牛奶等含鈣食物，鈣與銅共用 DMT1 競爭吸收。⚠️ 牛肉日免補銅：牛肉 150-180g 含銅 ~0.1-0.2mg + 堅果一把含銅 ~0.3-0.5mg + 飲食其他來源，當日銅攝取已足夠，額外補 2mg 可能逼近 UL 10mg/日。與晚餐鋅間隔 4-5hr',
+  'iHerb 直送。非紅肉日每日 1 顆，100 顆可用 4 個月+（因牛肉日免補）。',
   26
 );
 
@@ -605,7 +605,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, NULL, 'NOW-00375',
   $${"form":"軟凝膠","count":"180顆"}$$::jsonb,
   $${"serving_size":"1顆","vitamin_d3":"25微克（1000IU）"}$$::jsonb,
-  'iHerb 直送。✅ 每日 1 顆（1000IU），無需切割。180 顆可用 6 個月。脂溶性，務必隨含油脂午餐服用。',
+  'iHerb 直送。✅ 每日 1 顆（1000IU），無需切割。180 顆可用 6 個月。',
   27
 );
 
@@ -619,7 +619,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now00993/g/86.jpg', 4.8, NULL, 'NOW-00993',
   $${"form":"素食膠囊","count":"120顆","source":"MK-7（納豆來源）"}$$::jsonb,
   $${"serving_size":"1顆","vitamin_k2":"100mcg（MK-7型）"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。MK-7 型半衰期長（~72hr），每日 1 顆即可維持穩定血中濃度。取代 Nature Made 鈣片複方中僅 10mcg 的不足 K2。',
+  'iHerb 直送。每日 1 顆，120 顆可用 4 個月。',
   28
 );
 
@@ -634,7 +634,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.7, 16952, 'NOW-00148',
   $${"form":"素食膠囊","count":"120顆"}$$::jsonb,
   $${"serving_size":"1顆","l_theanine":"200mg"}$$::jsonb,
-  'iHerb 直送。Double Strength 200mg 素食膠囊。每日 1 顆隨 10:30-11:15 咖啡服用。⚠️ 綠茶日一律停用整顆（200mg 膠囊無法精準減半，拆開估量誤差大且粉末易受潮）。60 顆約可用 2 個月。搭配其他 iHerb 品項湊免運。',
+  'iHerb 直送。Double Strength 200mg 素食膠囊。60 顆約可用 2 個月。搭配其他 iHerb 品項湊免運。',
   29
 );
 
@@ -648,7 +648,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01033/g/255.jpg', 4.7, NULL, 'CGN-01033',
   $${"ingredients":"水解海洋膠原蛋白肽、玻尿酸、維他命C","form":"無調味粉末","weight":"206g"}$$::jsonb,
   $${"serving_size":"6.5g","collagen_peptides":"5.1g","hyaluronic_acid":"18mg","vitamin_c":"80mg"}$$::jsonb,
-  'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。已內含維他命 C（~160mg/份），與晚餐 500mg Vit C 合計每日 ~660mg（充足且不過量）。✅ 草酸鈣正確觀念：VitC 與鈣同餐攝取不會增加結石風險（腸道結合排出），因此膠原蛋白無需與鈣片錯開時間。搭配其他 iHerb 品項湊免運。',
+  'iHerb 直送。每日 10-15g，206g 約可用 2-3 週。搭配其他 iHerb 品項湊免運。',
   30
 );
 
@@ -662,7 +662,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now03144/g/38.jpg', 4.8, NULL, 'NOW-03144',
   $${"form":"軟膠囊","count":"60顆"}$$::jsonb,
   $${"serving_size":"1顆","ubiquinol":"200mg"}$$::jsonb,
-  'iHerb 直送。每日 1 顆，60 顆可用 2 個月。脂溶性，務必隨含油脂餐食服用。',
+  'iHerb 直送。每日 1 顆，60 顆可用 2 個月。',
   31
 );
 
@@ -676,7 +676,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now00420/g/74.jpg', 4.7, NULL, 'NOW-00427',
   $${"form":"素食膠囊","count":"60顆","type":"Coenzyme（活化型態）"}$$::jsonb,
   $${"serving_size":"1顆","b12":"甲鈷胺 Methylcobalamin","folate":"5-MTHF（非 Folic Acid）","b6":"P5P（活化型態）"}$$::jsonb,
-  'iHerb 必買品項。✅ 活化型態（Coenzyme）優於普通合成 B-50：甲鈷胺 B12（非氰鈷胺）、5-MTHF 葉酸（非 Folic Acid，應對 MTHFR 基因變異）、P5P B6。每日 1 顆隨 09:15 早餐，60 顆可用 2 個月。水溶性需隨餐服用（地瓜推薦，或香蕉），尿液變黃為正常現象（B2 代謝）',
+  'iHerb 必買品項。✅ 活化型態（Coenzyme）優於普通合成 B-50：甲鈷胺 B12（非氰鈷胺）、5-MTHF 葉酸（非 Folic Acid，應對 MTHFR 基因變異）、P5P B6。60 顆可用 2 個月。',
   32
 );
 
@@ -690,7 +690,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   NULL, NULL, NULL, NULL,
   $${"ingredients":"豌豆蛋白分離物","form":"無調味粉末","weight":"1kg","brand":"Tryall"}$$::jsonb,
   $${"serving_size":"33g","protein":"~24g","fat":"~2g","carbs":"~1g"}$$::jsonb,
-  'Tryall 官網或 Costco 線上可訂。每日 ~20g，1kg 可用約 50 天。無調味可搭配少量蜂蜜或可可粉。下午 15:30 服用，分散蛋白質攝取。與 Tryall 乳清同品牌，統一採購更方便',
+  'Tryall 官網或 Costco 線上可訂。每日 ~20g，1kg 可用約 50 天。無調味可搭配少量蜂蜜或可可粉。與 Tryall 乳清同品牌，統一採購更方便',
   33
 );
 
@@ -718,7 +718,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now02390/g/50.jpg', 4.8, NULL, 'NOW-02390',
   $${"form":"素食膠囊","count":"90顆"}$$::jsonb,
   $${"serving_size":"3顆","magnesium_l_threonate":"2000mg","elemental_magnesium":"144mg"}$$::jsonb,
-  'iHerb 直送。每日 3 顆，90 顆僅可用 30 天（⚠️ 每月必須補貨）。建議與甘胺酸鎂（180 錠/3 個月）合併訂購以節省運費：每 3 個月訂 3 罐蘇糖酸鎂 + 1 罐甘胺酸鎂。與甘胺酸鎂搭配使用，注意總鎂量。',
+  'iHerb 直送。每日 3 顆，90 顆僅可用 30 天（⚠️ 每月必須補貨）。建議與甘胺酸鎂（180 錠/3 個月）合併訂購以節省運費：每 3 個月訂 3 罐蘇糖酸鎂 + 1 罐甘胺酸鎂。',
   35
 );
 
@@ -732,7 +732,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now04603/g/83.jpg', 4.7, NULL, 'NOW-04603',
   $${"form":"素食膠囊","count":"90顆","extract":"KSM-66 全譜根部萃取"}$$::jsonb,
   $${"serving_size":"1顆","ashwagandha_extract":"450mg"}$$::jsonb,
-  'iHerb 直送。⚠️ 8 週用期（56 天）每日 1 顆，每瓶 90 顆可完成 1 個完整週期（56 顆用 + 剩 34 顆留下一輪）。建議在瓶身標記「開始日」與「第 56 天停用日」，並設定手機鬧鐘提醒。停用期 4 週替代：甘胺酸鎂 + Cyclic Sighing。⛔ 情緒冷漠（Anhedonia）= 強制停用信號：即使未滿 8 週也必須立即停用，每日自評情緒冷漠/麻木/早晨無力起床，任一「是」連續 2 天即停。⚠️ 第 6 週起留意情緒冷漠 → 立即停用。若 ALT/AST 異常 → 首位停用本品。⚠️ 肝功能追蹤：新品牌開始後第 4 週、第 12 週各追蹤 ALT/AST（藥源性肝損傷多發於數週內）。🚫 自體免疫疾病完全禁用：橋本氏甲狀腺炎、類風濕性關節炎、紅斑性狼瘡等。🚫 甲狀腺即時停用：若 TSH/Free T4 異常 → 立即停用並就醫。🚫 血清素藥物禁忌（SSRIs/SNRIs）→ 禁用。🚫 感冒/免疫啟動時立即暫停，待康復後再恢復。🚨 肝毒性實體症狀（不限品牌/批次）：異常疲累、食慾不振 ≥2天、皮膚/眼白微黃、右上腹不適（肝臟位置） → 任一出現即刻停用並抽血 ALT/AST。',
+  'iHerb 直送。每瓶 90 顆可完成 1 個完整週期（56 顆用 + 剩 34 顆留下一輪）。建議在瓶身標記「開始日」與「第 56 天停用日」。',
   36
 );
 
@@ -746,7 +746,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01402/g/75.jpg', 4.5, NULL, 'CGN-01402',
   $${"form":"沖泡粉末","count":"20包"}$$::jsonb,
   $${"serving_size":"1包","sodium":"250mg","potassium":"150mg"}$$::jsonb,
-  'iHerb 直送。有氧日每次 1 包，每週 2 次（週六/日），20 包約 10 週。每年需約 5-6 盒。💡 建議一次購入 3 盒（半年份），匹配每半年一次的體檢與補劑調整週期，避免有氧日斷貨。CGN 自有品牌有折扣，3 盒同購可湊 iHerb 免運門檻。',
+  'iHerb 直送。20 包約 10 週。每年需約 5-6 盒。💡 建議一次購入 3 盒（半年份）。CGN 自有品牌有折扣，3 盒同購可湊 iHerb 免運門檻。',
   37
 );
 

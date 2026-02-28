@@ -12,36 +12,6 @@ interface ShoppingPageClientProps {
   convenienceDaily: Product[];
 }
 
-function filterInventoryNotes(purchaseNote: string): string {
-  if (!purchaseNote) return '';
-
-  const medicalPatterns = [
-    /[⚠️🚫⛔🚨]\s*[^。]*?(冷藏：|必須|風險|變質|氧化|發煙點|甲狀腺|過敏|肝|腎|鈉超標|胃酸|便秘|脹氣|抽血|健檢|停用)[^。]*?。/g,
-    /⚠️[^。]*?。/g,
-    /每日\s*\d+[mgIUmcg顆錠粒g份]/g,
-    /\d{2}:\d{2}[^。]*/g,
-    /(避免|禁止|不可|不要)[^。]*?(過敏|疾病|患者|諮詢醫師)[^。]*?。/g,
-    /✅[^。]*?。/g,
-    /🔴[^。]*?。/g,
-    /📋[^。]*?。/g,
-  ];
-
-  let filtered = purchaseNote;
-
-  for (const pattern of medicalPatterns) {
-    filtered = filtered.replace(pattern, '');
-  }
-
-  filtered = filtered
-    .replace(/\s+。/g, '。')
-    .replace(/。+/g, '。')
-    .replace(/^\s*。\s*/, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  return filtered;
-}
-
 function StoreTag({ store }: { store: string }) {
   const colors: Record<string, string> = {
     Costco: 'bg-red-100 text-red-700',
@@ -99,7 +69,6 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
         {items.map((item) => {
           const hasSpecs = item.specs && Object.keys(item.specs).length > 0;
           const hasNutrition = item.nutrition && Object.keys(item.nutrition).length > 0;
-          const filteredNote = item.purchase_note ? filterInventoryNotes(item.purchase_note) : '';
           return (
             <a
               key={item.id}
@@ -145,8 +114,8 @@ function ShoppingSection({ title, items }: { title: string; items: Product[] }) 
                     </div>
                   )}
 
-                  {filteredNote && (
-                    <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{filteredNote}</p>
+                  {item.purchase_note && (
+                    <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 rounded px-2 py-1">{item.purchase_note}</p>
                   )}
 
                   {item.sku && (
