@@ -85,7 +85,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。海帶/紫菜僅作偶爾配菜，不宜頻繁食用（3-5g 乾海帶含碘 1500-15000mcg，遠超 UL 1100mcg）</p>
+          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入。每週固定 1 次海帶/紫菜微量攝取（1-2g 乾重）作為碘流失安全緩衝</p>
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -154,6 +154,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服。補鈣日放棄補鋅（詳見「鈣攝取」）</p>
         </div>
         <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜。菠菜/優格安排在午餐或點心（植酸螯合鋅 + 鈣抑制鋅吸收，詳見「膳食纖維」）</p>
+        <p className="text-amber-600 font-medium">⚠️ 晚餐碳水避開全穀類（糙米、燕麥）：糠皮含大量植酸，干擾 19:00 鋅吸收。改用白米、義大利麵或去皮馬鈴薯</p>
         <Tip>橄欖油 2 大匙入菜。脂溶性維他命皆在午餐服用</Tip>
         <BeefDayAdjustments context="egg" />
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">

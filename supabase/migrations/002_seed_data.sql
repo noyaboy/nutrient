@@ -152,7 +152,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '平飼雞蛋（全佑牧場 LL 規格）',
-  '高蛋白第一餐，富含亮氨酸 Leucine。冷藏平飼蛋，非籠飼。賣場限定商品',
+  '晚餐蛋白質主力（常規日隨晚餐食用，牛肉日移至 15:30 下午點心）。富含亮氨酸 Leucine。冷藏平飼蛋，非籠飼。賣場限定商品',
   '每日 3-4 顆',
   '~NT$274 / 30 入',
   'https://www.costco.com.tw/Warehouse-Only/Food-Beverages/Chilled/QUAN-YOU-FARM-Cage-Free-Eggs-LL-30-Count/p/128970',
@@ -191,8 +191,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '地瓜',
-  '原型碳水來源。訓練前能量補充，晚餐助色氨酸→血清素→褪黑激素。冷卻後產生抗性澱粉（益生元）',
-  '訓練前/晚餐適量',
+  '原型碳水來源。訓練前能量補充（前晚蒸好冷藏 → RS3）。冷卻後產生抗性澱粉（益生元）。⚠️ 重訓日晚餐禁用冷卻地瓜（RS 發酵 + 睡前甘胺酸鎂 → 夜間腹脹）；限非重訓日晚餐或日間攝取',
+  '訓練前（推薦）/ 非重訓日晚餐',
   '~NT$135 / 2.8kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
   'Costco', 'costco_food', NULL, NULL,
@@ -222,7 +222,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   'Costco', 'costco_food', '統一生機', '西班牙',
   $${"ingredients":"日曬海鹽、碘化鉀","weight":"2公斤","storage":"常溫","allergens":"本產品與其它含有芒果、大豆、奶類、含麩質之穀物、魚、堅果、芝麻、蕎麥及甲殼類的產品於同一工廠生產，食物過敏者請留意。","notes":"不添加抗結塊劑，若有輕微結塊，品質無虞請安心食用。"}$$::jsonb,
   '{}'::jsonb,
-  '線上可訂（常溫配送）。2kg 約可用 6 個月以上。⚠️ 務必確認為「加碘」版本（包裝標示「碘化鉀」成分）。海鹽/玫瑰鹽碘含量極低。',
+  '線上可訂（常溫配送）。2kg 約可用 6 個月以上。⚠️ 務必確認為「加碘」版本（包裝標示「碘化鉀」成分）。海鹽/玫瑰鹽碘含量極低。🔥 碘在高溫烹調易昇華流失：碘鹽應於起鍋後撒上，或確保隨湯汁/菜汁完整攝入。',
   9
 );
 
@@ -330,14 +330,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '乾海帶（昆布）/ 紫菜',
-  '偶爾食用的配菜，提供鈣、鐵、膳食纖維。⚠️ 每 3-5g 乾海帶含碘 1500-15000mcg，遠超 UL 1100mcg/日，日常已用碘鹽達 RDA，海帶不宜作為主力碘來源',
-  '偶爾配菜（每週 0-1 次）：海帶味噌湯（1-2g 乾昆布）或涼拌紫菜（1 片）',
+  '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。⚠️ 每 3-5g 乾海帶含碘 1500-15000mcg，遠超 UL 1100mcg/日，嚴格控制份量',
+  '每週固定 1 次微量攝取：海帶味噌湯（1-2g 乾昆布）或涼拌紫菜（1 片），作為烹調碘流失的安全緩衝',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"昆布（煮湯用）、海帶芽（涼拌用）、紫菜/海苔（直接食用或入湯）","portion":"每次 1-2g 乾重（控制碘攝取）"}'::jsonb,
   '{"per_5g_dry":"碘 1500-15000mcg, 鈣 ~35mg, 鐵 ~0.5mg, 膳食纖維 ~1.5g"}'::jsonb,
-  '偶爾購買即可（乾貨耐儲存）。⚠️ 已用碘鹽者不需頻繁食用海帶補碘，過量碘（>UL 1100mcg/日）有甲狀腺風險，尤其與 Ashwagandha 併用時需格外注意。常溫密封保存，開封後放密封袋/罐。',
+  '每週固定 1 次微量攝取（乾貨耐儲存）。碘鹽在高溫烹調中會流失，海帶作為安全緩衝。⚠️ 每次僅 1-2g 乾重，嚴格控量，過量碘（>UL 1100mcg/日）有甲狀腺風險，尤其與 Ashwagandha 併用時需格外注意。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -407,7 +407,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '有機糙米（銀川有機一等糙米 3kg）',
-  '花蓮產有機糙米。基礎碳水來源，冷卻後產生抗性澱粉（益生元）。提供膳食纖維與鎂',
+  '花蓮產有機糙米。基礎碳水來源，冷卻後產生抗性澱粉（益生元）。提供膳食纖維與鎂。⚠️ 糙米糠皮含大量植酸，晚餐（19:00 補鋅）應改用白米/義大利麵/去皮馬鈴薯等低植酸精緻澱粉',
   '每日適量，訓練日增加碳水攝取',
   'NT$359 / 3kg',
   'https://www.costco.com.tw/Food-Dining/Groceries/Rice-Noodles/Greenme-Organic-Brown-Rice-3-kg/p/124095',
