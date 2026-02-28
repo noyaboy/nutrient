@@ -191,7 +191,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '地瓜',
-  '原型碳水來源。訓練前能量補充（前晚蒸好冷藏 → RS3）。冷卻後產生抗性澱粉（益生元）。⚠️ 重訓日晚餐禁用冷卻地瓜（RS 發酵 + 睡前甘胺酸鎂 → 夜間腹脹）；限非重訓日晚餐或日間攝取',
+  '原型碳水來源。訓練前能量補充（前晚蒸好冷藏 → RS3）。冷卻後產生抗性澱粉（益生元）。非重訓日晚餐可食用（色氨酸→血清素→褪黑激素，助眠）。⚠️ 重訓日晚餐禁用冷卻地瓜（RS 發酵 + 睡前甘胺酸鎂 → 夜間腹脹）',
   '訓練前（推薦）/ 非重訓日晚餐',
   '~NT$135 / 2.8kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
@@ -330,14 +330,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '乾海帶（昆布）/ 紫菜',
-  '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。⚠️ 每 3-5g 乾海帶含碘 1500-15000mcg，遠超 UL 1100mcg/日，嚴格控制份量',
-  '每週固定 1 次微量攝取：海帶味噌湯（1-2g 乾昆布）或涼拌紫菜（1 片），作為烹調碘流失的安全緩衝',
+  '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。⚠️ 首選紫菜/海苔（每片僅 ~12-43mcg 碘，安全）；昆布碘含量極高（1-2g 乾重 = 300-6000mcg，高端達 UL 5.5 倍），避免使用昆布作為常規碘補充',
+  '每週固定 1 次微量攝取（首選紫菜/海苔 1-2 片），作為烹調碘流失的安全緩衝。⚠️ 昆布碘含量變異極大，不建議作為每週常規選項',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"昆布（煮湯用）、海帶芽（涼拌用）、紫菜/海苔（直接食用或入湯）","portion":"每次 1-2g 乾重（控制碘攝取）"}'::jsonb,
   '{"per_5g_dry":"碘 1500-15000mcg, 鈣 ~35mg, 鐵 ~0.5mg, 膳食纖維 ~1.5g"}'::jsonb,
-  '每週固定 1 次微量攝取（乾貨耐儲存）。碘鹽在高溫烹調中會流失，海帶作為安全緩衝。⚠️ 每次僅 1-2g 乾重，嚴格控量，過量碘（>UL 1100mcg/日）有甲狀腺風險，尤其與 Ashwagandha 併用時需格外注意。常溫密封保存，開封後放密封袋/罐。',
+  '每週固定 1 次微量攝取（乾貨耐儲存）。首選紫菜/海苔（每片 ~12-43mcg 碘，安全可控）。⚠️ 昆布碘含量極高且變異大（1-2g = 300-6000mcg），不建議作為每週常規選項。過量碘（>UL 1100mcg/日）有甲狀腺風險，尤其與 Ashwagandha 併用時需格外注意。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 

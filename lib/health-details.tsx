@@ -85,7 +85,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入。每週固定 1 次海帶/紫菜微量攝取（1-2g 乾重）作為碘流失安全緩衝</p>
+          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g，合計已達 RDA）。⚠️ 碘在高溫烹調易昇華流失，碘鹽應於起鍋後撒上或隨湯汁完整攝入。每週固定 1 次紫菜/海苔微量攝取（1-2 片，每片僅 ~12-43mcg 碘）作為碘流失安全緩衝（昆布碘含量極高且變異大，不建議作為常規選項）</p>
           <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
