@@ -291,7 +291,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '新鮮菠菜（傳統市場/超市）',
-  '低 FODMAP 蔬菜，鉀、鎂、鐵、葉酸來源。搭配維他命C增強鐵吸收',
+  '低 FODMAP 蔬菜，鉀、鎂、葉酸、膳食纖維來源。⚠️ 草酸極高，鈣與鐵的生物利用率極低，不宜作為鈣鐵來源',
   '每日 100-150g 入菜',
   'NT$30-50 / 300-400g',
   'https://www.pxmart.com.tw',
@@ -329,15 +329,15 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 );
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
-  '乾海帶（昆布）/ 紫菜',
-  '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。⚠️ 首選紫菜/海苔（每片僅 ~12-43mcg 碘，安全）；昆布碘含量極高（1-2g 乾重 = 300-6000mcg，高端達 UL 5.5 倍），避免使用昆布作為常規碘補充',
-  '每週固定 1 次微量攝取（首選紫菜/海苔 1-2 片），作為烹調碘流失的安全緩衝。⚠️ 昆布碘含量變異極大，不建議作為每週常規選項',
+  '紫菜 / 海苔',
+  '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。每片紫菜/海苔僅 ~12-43mcg 碘，安全可控',
+  '每週固定 1 次微量攝取（紫菜/海苔 1-2 片），作為烹調碘流失的安全緩衝',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
-  '{"storage":"常溫密封保存 6-12 個月","varieties":"昆布（煮湯用）、海帶芽（涼拌用）、紫菜/海苔（直接食用或入湯）","portion":"每次 1-2g 乾重（控制碘攝取）"}'::jsonb,
-  '{"per_5g_dry":"碘 1500-15000mcg, 鈣 ~35mg, 鐵 ~0.5mg, 膳食纖維 ~1.5g"}'::jsonb,
-  '每週固定 1 次微量攝取（乾貨耐儲存）。首選紫菜/海苔（每片 ~12-43mcg 碘，安全可控）。⚠️ 昆布碘含量極高且變異大（1-2g = 300-6000mcg），不建議作為每週常規選項。過量碘（>UL 1100mcg/日）有甲狀腺風險，尤其與 Ashwagandha 併用時需格外注意。常溫密封保存，開封後放密封袋/罐。',
+  '{"storage":"常溫密封保存 6-12 個月","varieties":"紫菜（直接食用或入湯）、海苔（零食或配飯）","portion":"每次 1-2 片"}'::jsonb,
+  '{"per_sheet":"碘 ~12-43mcg, 鈣 ~7mg, 鐵 ~0.2mg, 膳食纖維 ~0.3g"}'::jsonb,
+  '每週固定 1 次微量攝取（乾貨耐儲存）。紫菜/海苔每片僅 ~12-43mcg 碘，安全可控。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -919,7 +919,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
    54),
 
   ('新鮮菠菜（沙拉包）',
-   '便利超商預洗菠菜沙拉包 100-150g。低 FODMAP 蔬菜，鉀、鎂、鐵來源',
+   '便利超商預洗菠菜沙拉包 100-150g。低 FODMAP 蔬菜，鉀、鎂、葉酸、膳食纖維來源（草酸高，不宜作為鈣鐵來源）',
    '每週 2-3 次，每次 100-150g',
    'NT$30-50 / 100-150g',
    'https://www.7-11.com.tw',

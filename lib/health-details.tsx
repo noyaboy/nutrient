@@ -80,8 +80,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-blue-800">⏰ 正確順序</p>
           <p className="text-blue-700">09:05 補水：500ml 室溫水 + 碘鹽 1g（食品電子秤測量，~400mg 鈉）+ 檸檬汁</p>
-          <p className="text-blue-700">09:15 進食：地瓜/香蕉 + 乳清蛋白 + B群</p>
+          <p className="text-blue-700">09:15 進食：香蕉（首選）或地瓜 + 乳清蛋白 + B群</p>
           <p className="text-blue-700">先喝水再吃固體食物+B群，確保胃中有食物基質時 B群才進入</p>
+          <p className="text-red-600 font-medium">⚠️ 下肢日（深蹲/硬舉/腿推）：45 分鐘消化固體地瓜極度不足，高強度訓練時血液集中於骨骼肌導致消化停滯，易引發胃脹、胃酸逆流甚至嘔吐。建議改用香蕉（消化快）或將地瓜提前至 08:00 食用（間隔 2hr）</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
@@ -93,7 +94,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-amber-700">B群水溶性，需食物基質提升吸收。推薦地瓜（前晚蒸好冷藏 → RS3），隔日室溫回溫 15 分鐘，或微波爐「解凍模式/低功率」30-40 秒（確保中心溫度微溫不燙口，避免超過 55°C 破壞抗性澱粉）</p>
           <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
-        <Tip>下肢大重量日若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
+        <Tip>下肢大重量日（週二/週五）：地瓜需提前至訓練前 1.5-2 小時食用；若僅有 45 分鐘空檔，改用香蕉 + 乳清蛋白即可</Tip>
       </Detail>
     );
   }
@@ -397,12 +398,13 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">主要鈣來源（食物優先）</p>
           <p>希臘優格 200-300g — ~200-300mg</p>
-          <p>深綠蔬菜（菠菜、花椰菜）— ~100-150mg</p>
+          <p>低草酸深綠蔬菜（花椰菜、小白菜、高麗菜）— ~100-150mg</p>
+          <p className="text-red-600">⚠️ 菠菜草酸極高（~750mg/100g），鈣生物利用率僅 ~5%，不計入每日鈣質總和。菠菜視為膳食纖維、鉀、葉酸來源</p>
           <p>豆腐（板豆腐）100g — ~150mg</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 飲食鈣優先原則</p>
-          <p className="text-emerald-700">若已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜（~200mg）≥ 500mg → 可不補鈣片</p>
+          <p className="text-emerald-700">若已攝取希臘優格 300g（~300mg）+ 豆腐/低草酸蔬菜（~200mg）≥ 500mg → 可不補鈣片</p>
           <p className="text-emerald-700">避免不必要的高劑量鈣抑制午餐鐵鋅吸收</p>
         </div>
         <CalciumOxalateEducation />
@@ -412,7 +414,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <MineralTimingGuidance minerals={['calcium', 'zinc']} />
           <p className="text-amber-700 font-medium">⚠️ 補鈣日午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），避免紅肉/蛋</p>
           <p className="text-amber-700">高劑量鈣 500mg 明顯抑制非血基質鐵及鋅吸收</p>
-          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與甘胺酸鎂競爭二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
+          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：午餐鈣殘餘競爭 DMT1 載體，降低 19:00 晚餐鋅吸收。單日不補鋅不影響整體鋅營養狀態</p>
         </div>
         <div className="bg-emerald-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-semibold text-emerald-800">✅ 補鈣當日維持 D3 1000IU</p>
