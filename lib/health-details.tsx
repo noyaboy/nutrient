@@ -89,24 +89,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-amber-800">⚠️ 碘攝取策略（RDA 150mcg/日）</p>
-          <p className="text-amber-700">晨間碘鹽僅 1g（~20-33mcg 碘），碘攝取主力仰賴食物：</p>
-          <p className="text-amber-700">• 午晚餐烹調碘鹽（每餐 1-2g）</p>
-          <p className="text-amber-700">• 每週 2-3 次海帶味噌湯 / 涼拌紫菜（3-5g 乾海帶即超過 RDA）</p>
-          <p className="text-amber-700">⚠️ 為何不用 3-5g？5g 鹽 / 500ml = 1%（高於生理食鹽水 0.9%），空腹易噁心/腹瀉；且 5g = 2000mg 鈉，加烹調鹽必超 WHO 上限</p>
-          <p className="text-amber-700">使用食品電子秤（精度 0.1g）精確測量</p>
+          <p className="text-amber-700">晨間碘鹽 1g 僅 ~20-33mcg，主力仰賴午晚餐烹調碘鹽（每餐 1-2g）+ 每週 2-3 次海帶/紫菜</p>
+          <p className="text-amber-700">不用 3-5g：5g/500ml 高於生理食鹽水 0.9%，空腹易噁心；5g = 2000mg 鈉加烹調鹽超 WHO 上限</p>
         </div>
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">⚠️ B群需隨餐服用</p>
-          <p className="text-amber-700">水溶性維生素需食物基質減緩胃排空以提升吸收</p>
-          <p className="text-amber-700">推薦：地瓜（前晚蒸好冷藏產生抗性澱粉 RS3）</p>
+          <p className="font-medium text-amber-800">⚠️ B群隨餐 + 地瓜 RS3 準備</p>
+          <p className="text-amber-700">B群水溶性，需食物基質提升吸收。推薦地瓜（前晚蒸好冷藏 → RS3），隔日微波 30 秒即食</p>
           <p className="text-amber-700">替代：香蕉（快速碳水 + 鉀）</p>
         </div>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">抗性澱粉 RS3 落實</p>
-          <p className="text-blue-700">地瓜建議前晚用電子鍋蒸好冷藏（產生抗性澱粉 RS3）</p>
-          <p className="text-blue-700">隔日微波 30 秒加溫即可食用，抗性澱粉仍保留大部分</p>
-        </div>
-        <Tip>下肢大重量日（深蹲/硬舉）若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
+        <Tip>下肢大重量日若腸胃不適，可提前至訓練前 60-90 分鐘進食或減量</Tip>
       </Detail>
     );
   }
@@ -117,16 +108,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <Label>咖啡因 + L-Theanine（11:15+）</Label>
         <p>起床後 90-135 分鐘再喝（避免干擾皮質醇覺醒反應）</p>
         <p>1:1 比例：咖啡因 200-300mg + L-Theanine 200mg（NOW Foods Double Strength 200mg，iHerb），A 級 nootropic 組合</p>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">⚠️ B群吸收保護：與 09:15 B群間隔 2hr+</p>
-          <p className="text-amber-700">咖啡因利尿作用加速水溶性 B 群（尤其 B1）排出</p>
-          <p className="text-amber-700">最早 11:15 飲用（09:15 + 2hr = 11:15）</p>
-        </div>
-        <div className="bg-blue-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-blue-800">⚠️ 綠茶日規定</p>
-          <p className="text-blue-700">凡飲用綠茶之日，一律停用 L-Theanine 補劑</p>
-          <p className="text-blue-700">綠茶 2-3 杯已提供天然 L-Theanine 40-90mg，200mg 膠囊無法精準減半</p>
-        </div>
+        <p className="text-amber-600 mt-1">⚠️ 最早 11:15 飲用（與 09:15 B群間隔 2hr+，咖啡因利尿加速水溶性 B 群排出）</p>
+        <p className="text-blue-600">⚠️ 綠茶日停用 L-Theanine 補劑（綠茶 2-3 杯已含天然 L-Theanine 40-90mg）</p>
         <p className="text-red-600 font-medium">15:00 前為咖啡因截止時間（保護睡眠品質）</p>
       </Detail>
     );
@@ -144,11 +127,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <p>週六/日：Zone 2 有氧 45-60 分鐘</p>
         <ColdBathRules context="exercise" />
         <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-amber-800">⚠️ 三溫暖/熱暴露排程</p>
-          <p className="text-amber-700 font-semibold">三溫暖必須在重訓「之後」執行，或與重訓間隔 2 小時以上</p>
-          <p className="text-amber-700">高溫暴露後立即重訓 → 心率升高 + 血壓波動 + 脫水風險，增加心血管負擔</p>
-          <p className="text-amber-700">正確順序：重訓 → 休息/補水 → 三溫暖</p>
-          <p className="text-emerald-600">三溫暖本身不抑制 mTOR（與冷水浴不同），時序正確即安全</p>
+          <p className="font-semibold text-amber-800">⚠️ 三溫暖排程</p>
+          <p className="text-amber-700">必須在重訓後或間隔 2hr+（重訓 → 補水 → 三溫暖）。不抑制 mTOR，時序正確即安全</p>
         </div>
       </Detail>
     );
@@ -170,25 +150,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
           <p className="text-gray-400">※ B群在 09:15 訓練前營養餐隨餐服用（非午餐）</p>
         </div>
         <CalciumOxalateEducation />
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 若當日需補鈣：鈣片隨午餐服用</p>
-          <p className="text-amber-700">碳酸鈣需充足胃酸解離吸收，空腹服用吸收率極低且易脹氣便秘</p>
-          <MineralTimingGuidance minerals={['calcium', 'copper', 'zinc']} />
-          <p className="text-amber-700 font-medium">⚠️ 飲食鈣優先：若當日已攝取希臘優格 300g（~300mg）+ 豆腐/蔬菜 → 可不補鈣片</p>
-          <p className="text-amber-700">⚠️ 若必須補鈣：午餐蛋白質改選低鐵/低鋅來源（魚肉、豆腐），高劑量鈣 500mg 抑制非血基質鐵鋅吸收</p>
-          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 睡前鋅與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭同一二價陽離子載體。單日不補鋅不影響整體鋅營養狀態</p>
-          <p className="text-emerald-700 font-medium">✅ 補鈣當日維持 D3 1000IU：總計 1150IU（鈣片 150 + 獨立 1000）安全低於 UL 4000IU/日</p>
-        </div>
-        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-gray-800">蛋白質目標：1.5-1.7g/kg（MPS 最大化 + 腎負荷平衡）</p>
-          <p>午晚餐各 35-40g（單餐 ≤40g）、每日 4-5 餐均勻分配</p>
-        </div>
-        <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-gray-800">每日脂肪目標：80-90g（22-25% 總熱量）</p>
-          <p>午餐：橄欖油 1 大匙（14g）+ 酪梨半顆（~15g）≈ 30g</p>
-          <p>晚餐：橄欖油 2 大匙（28g）</p>
-          <p className="text-gray-500">加上魚油、蛋、肉類烹調脂肪，每日輕鬆達 80-90g</p>
-        </div>
+        <p className="text-amber-600 font-medium mt-1">⚠️ 若當日需補鈣：鈣片隨午餐服用（完整規則詳見「鈣攝取」項目）</p>
+        <p className="text-gray-500 mt-1">每日脂肪 80-90g：午餐橄欖油 1 匙 + 酪梨 ≈ 30g，晚餐橄欖油 2 匙 28g，加魚油/蛋/肉脂肪</p>
         <div className="bg-orange-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
           <p className="font-medium text-orange-800">腸胃負荷管理</p>
           <p className="text-orange-700">十字花科蔬菜（花椰菜、西蘭花）若有脹氣或消化變慢 → 立刻替換為菠菜、櫛瓜等低 FODMAP 蔬菜，並將當餐蛋白質微調降至 30g</p>
@@ -225,30 +188,15 @@ export function getHealthDetails(title: string): React.ReactNode | null {
         <div className="space-y-0.5">
           <p>維他命 C 500mg（<span className="text-emerald-600 font-bold">1 錠，已改 500mg 規格免切，每日服用</span>）</p>
           <p className="text-gray-400 text-[10px]">⚠️ 補劑 ~660mg + 蔬菜/檸檬汁天然 Vit C 合計每日可達 800-900mg（仍安全，UL 2000mg）。若當日蔬菜攝取量極大，500mg 錠可改兩天一次以減少代謝負擔</p>
-          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（非隨餐混吃，最大化與 14:00-15:00 銅的時間距離 4-5hr）</p>
-          <p className="text-red-600 font-medium">🚫 補鈣日當晚放棄補鋅：鈣殘餘競爭 DMT1 + 若改睡前 22:00 與 22:30 甘胺酸鎂（Mg²⁺）僅隔 30 分鐘競爭二價陽離子載體 → 兩者皆降。單日不補鋅不影響整體鋅營養狀態</p>
+          <p className="text-amber-600 font-medium">鋅 15mg 在晚餐「最後一口」吞服（與銅間隔 4-5hr）。補鈣日放棄補鋅（詳見「鈣攝取」）</p>
         </div>
-        <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜（菠菜安排在午餐，有鈣質保護且不影響鋅）</p>
-        <Tip>橄欖油 2 大匙（28g）入菜或涼拌。脂溶性維他命皆在午餐服用，晚餐脂肪支持整體每日 80-90g 目標</Tip>
+        <p className="text-gray-500">晚餐蔬菜選低植酸品種：櫛瓜、大白菜、高麗菜、小白菜。菠菜/優格安排在午餐或點心（植酸螯合鋅 + 鈣抑制鋅吸收，詳見「膳食纖維」）</p>
+        <Tip>橄欖油 2 大匙入菜。脂溶性維他命皆在午餐服用</Tip>
         <BeefDayAdjustments context="egg" />
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 鋅吸收注意：晚餐避免高植酸食物</p>
-          <p className="text-amber-700">菠菜、豆類等高植酸食物的植酸+草酸強力螯合游離鋅離子，大幅削弱 15mg 鋅吸收率</p>
-          <p className="text-amber-700">晚餐蔬菜優先：櫛瓜、大白菜、高麗菜、小白菜（低植酸）</p>
-          <p className="text-amber-700">菠菜安排在午餐（有鈣質保護 + 不影響鋅吸收）</p>
-        </div>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-amber-800">⚠️ 鋅鈣競爭：晚餐嚴禁優格</p>
-          <p className="text-amber-700">希臘優格鈣 200-300mg 會抑制鋅 15mg 吸收，必須間隔 2hr+</p>
-          <p className="text-amber-700">優格安排在午餐或 15:30 點心（15:30 → 19:00 鋅 = 3.5hr 間隔 ✓）</p>
-        </div>
         <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-semibold text-red-800">🚫 重訓日（一二四五）晚餐零葉菜 + 零抗性澱粉</p>
-          <p className="text-red-700">高碳水日嚴格執行：僅保留新鮮熱白米飯/去皮馬鈴薯/義大利麵</p>
-          <p className="text-emerald-700 font-medium">✅ 保留少量煮熟去皮櫛瓜 50-100g（微量纖維緩衝血糖波動，不產氣）</p>
-          <p className="text-red-700 font-bold">禁止冷卻米飯/地瓜：抗性澱粉在腸道後段發酵產氣比葉菜纖維更強</p>
-          <p className="text-red-700">纖維 + 抗性澱粉 + 睡前甘胺酸鎂（高滲透壓）三重疊加 → 夜間滲透性腹脹干擾睡眠</p>
-          <p className="text-emerald-700">抗性澱粉保留在午餐（冷卻再加熱米飯），晚餐以新鮮熱食為主</p>
+          <p className="font-semibold text-red-800">🚫 重訓日晚餐：零葉菜 + 零抗性澱粉</p>
+          <p className="text-red-700">僅保留熱白米飯/去皮馬鈴薯/義大利麵 + 少量去皮櫛瓜 50-100g</p>
+          <p className="text-red-700">禁冷卻米飯/地瓜：RS 發酵 + 纖維 + 睡前甘胺酸鎂三重疊加 → 夜間腹脹（詳見「碳水循環」）</p>
         </div>
         <p>最後正餐在睡前 2-3 小時完成（⚠️ 優格須在 17:00 前食用，與 19:00 鋅間隔 2hr+）</p>
         <Tip>社交聚餐時允許打破 19:00 限制，零罪惡感享受當下（人際關係品質對壽命影響 &gt; 飲食與運動）</Tip>
@@ -273,14 +221,9 @@ export function getHealthDetails(title: string): React.ReactNode | null {
     return (
       <Detail>
         <Label>15:30 下午點心</Label>
-        <p>Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）— 台灣品牌，非乳製植物蛋白，中速消化</p>
-        <p>下午點心時段服用，分散蛋白質攝取壓力。與 Tryall 乳清同品牌，品質一致</p>
-        <div className="bg-amber-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-medium text-amber-800">為何從 20:00 移至 15:30？</p>
-          <p className="text-amber-700">避免 19:00 晚餐 45-50g + 20:00 再補 16g = 1.5hr 內超過 60g 蛋白質</p>
-          <p className="text-amber-700">單次消化壓力過大，可能造成腹脹、消化不良</p>
-        </div>
-        <Tip>無調味可搭配少量蜂蜜或可可粉調味。Tryall 官網或 Costco 線上可訂</Tip>
+        <p>Tryall 豌豆蛋白 ~20g 粉（≈16g 蛋白）— 非乳製植物蛋白，分散蛋白質攝取壓力</p>
+        <p className="text-amber-600">安排在 15:30 而非 20:00：避免晚餐 45g + 再補 16g = 1.5hr 內超 60g 蛋白致消化壓力</p>
+        <Tip>無調味可搭配蜂蜜或可可粉。Tryall 官網或 Costco 線上可訂</Tip>
       </Detail>
     );
   }
@@ -290,11 +233,7 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       <Detail>
         <Label>22:30 睡前補充品（洗完熱水澡後）</Label>
         <p>⏰ 嚴格 22:30 後服用（洗完熱水澡後），確保與 19:00 晚餐蛋白質間隔 3.5hr+（甘胺酸與蛋白質共用氨基酸載體，間隔不足會降低甘胺酸降溫效果），同時為腎臟保留排尿緩衝時間</p>
-        <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
-          <p className="font-bold text-red-800">⚠️ 甘胺酸 vs 熱水澡：必須先洗澡再服用</p>
-          <p className="text-red-700">熱水澡短暫升高核心體溫，甘胺酸降低核心體溫 → 兩者同時進行會互相抵消</p>
-          <p className="text-red-700">正確流程：21:30-22:15 洗澡 → 22:30 服用甘胺酸 → 散熱 60-90min → 00:00 入睡</p>
-        </div>
+        <p className="text-red-600 font-medium mt-1">⚠️ 先洗澡再服用（熱水澡升溫 vs 甘胺酸降溫互相抵消）。流程：21:30 洗澡 → 22:30 服用 → 00:00 入睡</p>
         <div className="bg-gray-50 rounded-lg px-3 py-2 space-y-0.5">
           <p className="font-medium text-gray-800">補充品堆疊</p>
           <p>甘胺酸 3g — 降低核心體溫、促進深層睡眠</p>
