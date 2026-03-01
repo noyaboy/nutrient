@@ -14,7 +14,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('11:15 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 150-200mg + L-Theanine 200mg（1:1 A 級 nootropic 組合，保護睡眠品質）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆、D3 1000IU、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆（鮭魚日減為 2 顆）、D3 2000IU（2 顆）、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
   ('14:00 綠茶 EGCG 2-3 杯', '午餐後 2hr+ 再飲用（~14:00），高脂高蛋白午餐胃排空需 2-4hr，1hr 仍會螯合鐵鋅鈣。改用低咖啡因綠茶（白毫銀針或老白毫），配合 L-theanine 天然組合促進專注，同時避免晚間睡眠干擾。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
@@ -27,7 +27,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   -- === Evening (19:00+) ===
   ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。⚠️ 牛肉日：牛肉上限 150g，雞蛋 1-2 顆移至午餐、1 顆移至 15:30 下午點心', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
-  ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 100mg + Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳 — 熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡', 'daily', '補充品', 15, 1, true),
+  ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 200mg（2 錠）+ Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳 — 熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡', 'daily', '補充品', 15, 1, true),
   ('Ashwagandha 週期管理（8 週用 / 4 週停）', '📋 8 週用 / 4 週停 週期。第 1-5 週正常服用 450mg/日（睡前）。第 6 週起每日自評情緒冷漠。第 8 週（第 56 天）準時進入停用期。停用 4 週：甘胺酸鎂 + Cyclic Sighing 替代', 'daily', '補充品', 16, 1, true),
   ('Ashwagandha 肝功能追蹤（第4/12週）', '⚠️ 開始服用新品牌 Ashwagandha 後，第 4 週及第 12 週各安排一次 ALT/AST 抽血。藥源性肝損傷多發於數週內，早期發現可避免惡化', 'daily', '補充品', 16, 1, true),
   ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）。白天：娛樂螢幕 <2hr、社群媒體 <30min、專注時段手機勿擾模式', 'daily', '睡眠', 17, 1, true),
@@ -44,7 +44,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('全天 碳水循環：訓練日 vs 休息日', '重訓日 5-6g/kg (360-430g)、有氧日 3-4g/kg (215-290g)、休息日 2-3g/kg (145-215g)。重訓日熱量目標 3,100-3,400 kcal。⚠️ 高碳水日嚴格執行低纖維替換', 'daily', '飲食', 24, 1, true),
   ('全天 週末睡眠一致性（±30 分鐘）', '週末起床/睡覺時間與平日偏差不超過 30 分鐘。社交時差（Social Jetlag）影響認知、情緒與代謝，A 級證據', 'daily', '睡眠', 25, 1, false),
   ('全天 數位衛生', '娛樂螢幕 <2hr、社群媒體 <30min。23:00 後無螢幕、專注時段手機勿擾模式', 'daily', '心理', 26, 1, false),
-  ('全天 鈣攝取確認（目標 1000mg）', '每日確認鈣攝取是否達標 1000mg。主要來源：希臘優格 200-300g（無植酸，補鈣日首選）+ 深綠蔬菜 + 板豆腐（100g ~150mg 鈣）。午餐板豆腐的植酸在 7hr 後已進入大腸，不影響 19:00 鋅吸收。食物鈣優先，不足時鈣片隨午餐服用', 'daily', '飲食', 25, 1, true),
+  ('全天 鈣攝取確認（目標 1000mg）', '每日確認鈣攝取是否達標 1000mg。主要來源：希臘優格 300g（必須，~280mg 鈣）+ 深綠蔬菜 + 板豆腐（100g ~150mg 鈣）。非板豆腐日鈣片 1 錠隨午餐服用（+500mg）。午餐板豆腐的植酸在 7hr 後已進入大腸，不影響 19:00 鋅吸收。⚠️ 優格 300g + 板豆腐日 ≈ 430-580mg，仍需搭配深綠蔬菜（~150-200mg）。非板豆腐日：優格 300mg + 鈣片 500mg + 蔬菜 150mg ≈ 930mg', 'daily', '飲食', 25, 1, true),
   ('全天 飲水 3-3.5L', '尿液淡黃色為適當水合指標。💧 補鈣日飲水目標 3.5L+（維持良好水合，支持腎臟代謝）', 'daily', '飲食', 26, 1, true);
 
 ------------------------------------------------------------
@@ -83,7 +83,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
    '特級初榨橄欖油 2 大匙（28g）入菜或涼拌。支持每日脂肪目標 80-90g。晚餐較高脂肪有助於延緩胃排空、穩定血糖、增加飽足感',
    'daily', '脂肪', 28, 1, true),
   ('09:05 碘鹽 1g',
-   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內。⚠️ 全日碘鹽僅提供 ~20-33mcg 碘（台灣食鹽法規標準），必須搭配每日紫菜/海苔 1-2 片（另含約 15-85mcg）確保達 RDA 150mcg',
+   '500ml 室溫水 + 碘鹽 1g（電子秤測量 0.1g 精度）+ 檸檬汁。碘鹽取代海鹽確保碘攝取。⚠️ 全日鈉預算（WHO <2400mg/日）：晨間 1g（~400mg 鈉）+ 午晚餐烹調碘鹽合計 1-1.5g（~400-600mg 鈉）+ 泡菜 30g（~200mg 鈉）+ 茶葉蛋 1 顆（~250mg 鈉）+ 食物天然鈉 ~500mg ≈ 總計 1750-1950mg。⚠️ 午晚餐烹調碘鹽嚴格控制在合計 1-1.5g 內。⚠️ 全日碘鹽僅提供 ~20-33mcg 碘（台灣食鹽法規標準），必須搭配每日紫菜/海苔 3-4 片（另含約 36-172mcg）確保穩定達 RDA 150mcg',
    'daily', '礦物質', 2, 1, true),
   ('藍莓 50g（抗氧化）',
    '每日 50g 新鮮或冷凍藍莓。富含花青素（Anthocyanins），A 級證據支持改善認知功能、血管健康、抗氧化。可加入燕麥碗、希臘優格、或作為下午點心（15:30）搭配豌豆蛋白',
@@ -96,7 +96,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '緩釋魚油（Kirkland 新型緩釋 Omega-3）',
   '每 1200mg 魚油含 Omega-3 約 700mg（EPA 419mg + DHA 281mg）。沙丁魚、鯷魚、鯖魚來源，緩釋不打嗝。產地加拿大',
-  '每日隨餐 3 顆（EPA+DHA 共 2100mg）',
+  '每日隨餐 3 顆（EPA+DHA 共 2100mg）。⚠️ 鮭魚日減為 2 顆（1400mg + 鮭魚 ~1200mg ≈ 2600mg，避免超過 3000mg）',
   'NT$579 / 180 顆',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Kirkland-Signature-Enteric-Omega-3-Fish-Oil-180-Softgel/p/240669',
   'Costco', 'costco_supplement', 'Kirkland Signature 科克蘭', '加拿大',
@@ -108,8 +108,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '鈣片備用（Nature Made Ca+D3+K2 250 錠）',
-  '碳酸鈣 + 檸檬酸鈣雙鈣源。純粹作為鈣質備用品。注意：本品含 D3 150IU/錠，與獨立 D3 1000IU 疊加風險低但需留意。K2 僅 10mcg/錠（不足日需量，已改用獨立 K2 MK-7 100mcg）。鈣質食物優先策略：優先從希臘優格等原型食物攝取鈣',
-  '備用品：僅在當日飲食鈣攝取確認嚴重不足時才服用 1 錠。日常 K2 已改用獨立 K2 MK-7 產品',
+  '碳酸鈣 + 檸檬酸鈣雙鈣源。非板豆腐日常規使用（非僅備用）。注意：本品含 D3 150IU/錠，與獨立 D3 2000IU 疊加後總計 2150IU 仍在安全範圍。K2 僅 10mcg/錠（不足日需量，已改用獨立 K2 MK-7 100mcg）',
+  '非板豆腐日隨午餐服用 1 錠（+500mg 鈣）。日常 K2 已改用獨立 K2 MK-7 產品',
   'NT$759 / 250 錠',
   'https://www.costco.com.tw/Health-Beauty/Supplements/Supplements-Digestive-Support/Nature-Made-Calcium-500-mg-with-D3-K2-250-Tablets/p/228453',
   'Costco', 'costco_supplement', 'NATURE MADE 萊萃美', '美國',
@@ -121,8 +121,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 C（NOW Foods 500mg × 100 錠）',
-  '⛔ 已停用 — 夜間高劑量 Vit C 代謝為草酸有腎結石風險。每日 Vit C 改由膠原蛋白肽（~160mg）+ 檸檬汁 + 蔬菜天然攝取，遠超 RDA 100mg',
-  '已停用。若未來需要恢復，可每日 1 錠隨午餐（非晚餐）',
+  '午餐備用 Vit C。僅在未服用膠原蛋白肽的日子隨午餐服用 1 錠（500mg）。⚠️ 嚴禁晚餐服用（夜間高劑量 Vit C 代謝為草酸有腎結石風險）。膠原蛋白肽日已提供 ~160mg Vit C，無需額外補充',
+  '備用：未服用膠原蛋白肽日隨午餐 1 錠（500mg）',
   'NT$250-350 / 100 錠',
   'https://tw.iherb.com/pr/now-foods-c-500-100-tablets/690',
   'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
@@ -254,13 +254,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '希臘優格（Kirkland 零脂 907g×2）',
   '5 種活菌（保加利亞乳桿菌、嗜熱鏈球菌、嗜酸乳桿菌、雙歧桿菌、乾酪乳桿菌）。零脂，每 100g 含 9.4g 蛋白質。賣場限定商品',
-  '每日 200-300g',
+  '每日 300g（必須）',
   'NT$479 / 907g×2',
   'https://www.costco.com.tw/Warehouse-Only/Food-Beverages/Chilled/Kirkland-Signature-Chilled-Nonfat-Greek-Yogurt-907-g-X-2-Count/p/599369',
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '美國',
   $${"ingredients":"巴氏殺菌發酵脫脂牛奶(巴氏殺菌脫脂牛奶,乳酸菌), 乳酸菌(Lactobacillus bulgaricus, Streptococcus thermophilus, Lactobacillus acidophilus, Bifidobacterium lactis, Lactobacillus casei)","weight":"907公克 X 2入","storage":"冷藏 4°C 以下，開封後請盡速食用完畢","allergens":"本產品含牛奶，食物過敏者請留意","warehouse_only":true,"notes":"無防腐劑、無色素、無麩質、無人工香料、無添加糖"}$$::jsonb,
   $${"protein_per_100g":"9.4g"}$$::jsonb,
-  '賣場限定，無法線上訂。每日 200-300g，907g×2 約 6-9 天，每週補貨。兩罐圓筒無法改形狀，緊靠冷藏室最上層深處放置（最低溫區），前方空間留給泡菜疊放。',
+  '賣場限定，無法線上訂。每日 300g（必須），907g×2 約 6 天，每週補貨。兩罐圓筒無法改形狀，緊靠冷藏室最上層深處放置（最低溫區），前方空間留給泡菜疊放。',
   12
 );
 
@@ -331,13 +331,13 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '紫菜 / 海苔',
   '碘流失安全緩衝 + 配菜。提供鈣、鐵、膳食纖維。每片紫菜/海苔僅 ~12-43mcg 碘，安全可控',
-  '每日隨餐食用 1-2 片（配飯或入湯），補足碘攝取至 RDA 150mcg',
+  '每日隨餐食用 3-4 片（配飯或入湯），確保碘攝取達 RDA 150mcg',
   'NT$50-150 / 包',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/c/90901',
   '全聯 / 傳統市場 / Costco', 'convenience_daily', NULL, '日本/韓國/台灣',
   '{"storage":"常溫密封保存 6-12 個月","varieties":"紫菜（直接食用或入湯）、海苔（零食或配飯）","portion":"每次 1-2 片"}'::jsonb,
   '{"per_sheet":"碘 ~12-43mcg, 鈣 ~7mg, 鐵 ~0.2mg, 膳食纖維 ~0.3g"}'::jsonb,
-  '每日隨餐攝取 1-2 片（乾貨耐儲存，每次 1-2g 乾重即可）。紫菜/海苔每片含 ~12-43mcg 碘。搭配晨間 1g 碘鹽（20-33mcg）+ 日常海苔，總碘攝入可達 RDA 150mcg。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
+  '每日隨餐攝取 3-4 片（乾貨耐儲存，每次 2-4g 乾重）。紫菜/海苔每片含 ~12-43mcg 碘，3-4 片 ≈ 36-172mcg。搭配晨間 1g 碘鹽（20-33mcg），總碘攝入可穩定達 RDA 150mcg。⚠️ 不購買昆布：碘含量極高且變異大（1-2g = 300-6000mcg），與精確碘鹽控制策略衝突。常溫密封保存，開封後放密封袋/罐。',
   17
 );
 
@@ -537,7 +537,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '甘胺酸鎂 Mg Glycinate（NOW Foods 100mg × 180 錠）',
   '甘胺酸是抑制性神經傳導物質，降低核心體溫助眠。高吸收率',
-  '睡前 1 錠（100mg）',
+  '睡前 2 錠（200mg）',
   'NT$399 / 180 錠',
   'https://tw.iherb.com/pr/now-foods-magnesium-glycinate-180-tablets-100-mg-per-tablet/88819',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -545,7 +545,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, 30061, 'NOW-01289',
   $${"form":"錠劑","count":"180錠","chelate_type":"TRAACS™ 甘氨酸鎂"}$$::jsonb,
   $${"serving_size":"2錠","magnesium":"200mg（提取自2000mg甘氨酸鎂）"}$$::jsonb,
-  'iHerb 直送。180 錠可用 6 個月。⚠️ 產品標示 serving size 為 2 錠 200mg，但本計畫僅用 1 錠。',
+  'iHerb 直送。180 錠可用 3 個月。產品標示 serving size 為 2 錠 200mg，本計畫每日 2 錠（200mg 元素鎂）。',
   23
 );
 
@@ -596,8 +596,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   '維他命 D3 1000IU（NOW Foods 180 顆）',
-  '每日服用 1 顆（1000 IU）。目標血清 25(OH)D 40-60 ng/mL。血檢達標+每日晨光曝曬→可進一步減量。✅ 1000IU 軟凝膠，每日 1 顆免切',
-  '每日 1 顆（1000 IU）隨訓練後餐（需搭配油脂吸收）',
+  '每日服用 2 顆（2000 IU）。Endocrine Society 建議 1500-2000 IU/日，目標血清 25(OH)D 40-60 ng/mL。血檢達標+每日晨光曝曬→可進一步減量。✅ 1000IU 軟凝膠，每日 2 顆',
+  '每日 2 顆（2000 IU）隨訓練後餐（需搭配油脂吸收）',
   'NT$300-400 / 180 顆',
   'https://tw.iherb.com/pr/now-foods-vitamin-d-3-high-potency-1-000-iu-180-softgels/10421',
   'iHerb', 'iherb_supplement', 'NOW Foods',
@@ -605,7 +605,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   4.8, NULL, 'NOW-00375',
   $${"form":"軟凝膠","count":"180顆"}$$::jsonb,
   $${"serving_size":"1顆","vitamin_d3":"25微克（1000IU）"}$$::jsonb,
-  'iHerb 直送。✅ 每日 1 顆（1000IU），無需切割。180 顆可用 6 個月。',
+  'iHerb 直送。✅ 每日 2 顆（2000IU），無需切割。180 顆可用 3 個月。',
   27
 );
 
