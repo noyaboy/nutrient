@@ -1,0 +1,44 @@
+[
+  {
+    "product_name": "採購清單",
+    "source": "Costco",
+    "quantity": "180粒",
+    "serving_size": "5g",
+    "key_nutrients": {
+      "epa": {
+        "amount": "419",
+        "unit": "mg"
+      },
+      "dha": {
+        "amount": "281",
+        "unit": "mg"
+      },
+      "calcium": {
+        "amount": "105",
+        "unit": "mg"
+      },
+      "magnesium": {
+        "amount": "25",
+        "unit": "mg"
+      },
+      "zinc": {
+        "amount": "15",
+        "unit": "mg"
+      }
+    },
+    "brand": "Kirkland",
+    "price": "NT$579",
+    "storage_note": "請置於陰涼乾燥處，開瓶後請旋緊瓶蓋，並避免陽光"
+  },
+  {
+    "product_name": "iHerb — 專業補充品維他命 C（NOW Foods 500mg × 100 錠） iHerbNOW Foods · 加拿⼤ NT$250-350 / 100 錠",
+    "source": "iHerb",
+    "quantity": "454g",
+    "serving_size": "",
+    "key_nutrients": {},
+    "brand": "NOW Foods",
+    "description": "— 專業補充品維他命 C（NOW Foods 500mg × 100 錠） NOW Foods · 加拿⼤ NT$250-350 / 100 錠",
+    "price": "NT$250",
+    "storage_note": "請存放於乾燥陰涼處，開封後請旋緊瓶蓋"
+  }
+]
