@@ -14,9 +14,9 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('11:15 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 150-200mg + L-Theanine 200mg（1:1 A 級 nootropic 組合，保護睡眠品質）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆（鮭魚日減為 2 顆）、D3 2000IU（2 顆）、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐完整蛋白質，不含膠原蛋白——膠原蛋白缺乏色氨酸且亮氨酸極低，無法有效刺激肌肉蛋白合成 MPS，單餐建議 ≤45g）+ 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆（鮭魚日減為 2 顆）、D3 2000IU（2 顆）、K2、葉黃素 20mg、膠原蛋白肽 10-15g（額外，不計入蛋白質目標）、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
-  ('14:30 綠茶 EGCG 2-3 杯', '午餐後 2.5hr+ 再飲用（~14:30），高脂高蛋白午餐胃排空需 2-4hr，2hr 內 EGCG 仍會螯合鐵鋅鈣，2.5hr 為安全下限。改用低咖啡因綠茶（白毫銀針或老白毫），配合 L-theanine 天然組合促進專注，同時避免晚間睡眠干擾。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
+  ('15:00 綠茶 EGCG 2-3 杯', '午餐後 3hr+ 再飲用（~15:00），高脂高蛋白午餐胃排空需 3-4hr，3hr 內 EGCG 仍會螯合鐵鋅鈣（尤其午餐 500mg 鈣片仍在小腸吸收中）。改用低咖啡因綠茶（白毫銀針或老白毫），配合 L-theanine 天然組合促進專注，同時避免晚間睡眠干擾。15:30 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
   -- === Afternoon (15:00-18:59) ===
   ('15:00 NSDR', '使用引導式 Yoga Nidra 音檔（非單純休息）。11 分鐘有 RCT 支持，促進深度放鬆與多巴胺恢復', 'daily', '心理', 9, 1, true),
@@ -25,7 +25,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('17:00 高質量社交對話', '至少與一位親友進行非公事的深度對話。每週安排 1 次面對面社交活動。戶外自然接觸 120+ 分鐘/週（可結合有氧）。哈佛研究：人際關係品質對壽命影響高於飲食與運動', 'daily', '心理', 12, 1, true),
 
   -- === Evening (19:00+) ===
-  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。⚠️ 牛肉日：牛肉上限 150g，雞蛋 1-2 顆移至午餐、1 顆移至 15:30 下午點心。⚠️ 膽鹼（Choline）注意：牛肉日雞蛋減至 2-3 顆（~290-440mg 膽鹼），牛肉 150g 另補 ~80mg，仍可能低於 AI 550mg。建議牛肉日額外食用蛋黃或添加 1 大匙卵磷脂（~120mg 膽鹼）', 'daily', '飲食', 13, 1, true),
+  ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。🔴 牛肉日取消鋅補劑：牛肉 150g 含鋅 6-9mg + 飲食鋅 ~10mg，補充品 15mg 會使總計逼近 UL 40mg。⚠️ 牛肉日：牛肉上限 150g，雞蛋 1-2 顆移至午餐、1 顆移至 15:30 下午點心。⚠️ 膽鹼（Choline）注意：牛肉日雞蛋減至 2-3 顆（~290-440mg 膽鹼），牛肉 150g 另補 ~80mg，建議額外食用 1 大匙卵磷脂（~120mg 膽鹼）或多加 1 顆蛋黃，確保達 AI 550mg', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
   ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 200mg（2 錠）+ Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳——熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡。⚠️ 鎂 UL 監控：補充品鎂合計 ~344mg（甘胺酸鎂 200mg + 蘇糖酸鎂 144mg），接近 IOM 補充品 UL 350mg。若出現腹瀉或腸胃不適，優先將甘胺酸鎂減為 1 錠（100mg），總計降至 244mg', 'daily', '補充品', 15, 1, true),
   ('Ashwagandha 週期管理（8 週用 / 4 週停）', '📋 8 週用 / 4 週停 週期。第 1-5 週正常服用 450mg/日（睡前）。第 6 週起每日自評情緒冷漠。第 8 週（第 56 天）準時進入停用期。停用 4 週：甘胺酸鎂 + Cyclic Sighing 替代', 'daily', '補充品', 16, 1, true),
@@ -47,7 +47,9 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('全天 鈣攝取確認（目標 1000mg）', '每日確認鈣攝取是否達標 1000mg。主要來源：希臘優格 300g（必須，~280mg 鈣）+ 深綠蔬菜（~150-200mg）。🔴 每日午餐均需服用鈣片 1 錠（+500mg），不分板豆腐日或非板豆腐日——板豆腐日：優格 280mg + 板豆腐 150-225mg + 鈣片 500mg + 蔬菜 150mg ≈ 1080-1155mg ✅。非板豆腐日：優格 280mg + 鈣片 500mg + 蔬菜 150mg ≈ 930mg（搭配強化食品補足）。午餐板豆腐的植酸在 7hr 後已進入大腸，不影響 19:00 鋅吸收', 'daily', '飲食', 25, 1, true),
   ('全天 飲水 3-3.5L', '尿液淡黃色為適當水合指標。💧 補鈣日飲水目標 3.5L+（維持良好水合，支持腎臟代謝）', 'daily', '飲食', 26, 1, true),
   ('全天 維他命A攝取確認（目標 900mcg RAE）', '每日確認維他命A攝取。主要來源：橘色地瓜 100g（~700mcg RAE β-胡蘿蔔素）+ 雞蛋 3-4 顆（~270-360mcg RAE）= 總計 ~970-1060mcg RAE。⚠️ 地瓜必須選橘色品種（台農 57 號），白肉/紫肉地瓜β-胡蘿蔔素極低。搭配油脂烹調或隨餐食用（β-胡蘿蔔素為脂溶性）。無地瓜日可用胡蘿蔔 50g（~400mcg RAE）或南瓜 100g（~200mcg RAE）替代', 'daily', '飲食', 27, 1, true),
-  ('全天 鉀攝取確認（目標 3400mg）', '每日確認鉀攝取達 AI 3400mg。主力來源：酪梨半顆（~350mg）+ 馬鈴薯 1 顆（~800mg）+ 香蕉 1 根（~400mg）+ 希臘優格 300g（~300mg）+ 菠菜/蔬菜（~400mg）+ 鮭魚/肉類（~400mg）+ 其他（~300mg）≈ 2950-3450mg。⚠️ 酪梨與馬鈴薯為核心，缺一不可', 'daily', '飲食', 28, 1, true);
+  ('全天 鉀攝取確認（目標 3400mg）', '每日確認鉀攝取達 AI 3400mg。主力來源：酪梨半顆（~350mg）+ 馬鈴薯 1 顆（~800mg）+ 香蕉 1 根（~400mg）+ 希臘優格 300g（~300mg）+ 菠菜/蔬菜（~400mg）+ 鮭魚/肉類（~400mg）+ 其他（~300mg）≈ 2950-3450mg。⚠️ 酪梨與馬鈴薯為核心，缺一不可', 'daily', '飲食', 28, 1, true),
+  ('全天 膽鹼攝取確認（目標 AI 550mg）', '每日確認膽鹼攝取達 AI 550mg。主力來源：雞蛋 3-4 顆（~420-560mg，蛋黃為核心）。⚠️ 牛肉日雞蛋僅 2-3 顆（~280-420mg），需額外補充：卵磷脂 1 大匙（~120mg）或多 1 顆蛋黃（+140mg）。膽鹼對肝臟脂肪代謝、神經傳導、甲基化代謝至關重要。缺乏膽鹼可導致脂肪肝與肌肉損傷', 'daily', '飲食', 29, 1, true),
+  ('訓練日 洋車前子殼 5g（纖維補充）', '重訓日低纖維碳水替換（白米/義大利麵/去皮馬鈴薯）會使膳食纖維降至 20-25g，距目標 35g+ 缺口 10-15g。午餐前沖泡洋車前子殼（Psyllium Husk）5g 於 250ml 水中飲用，補回纖維缺口。⚠️ 必須搭配充足水分（250ml+），否則可能引起腸阻塞。⚠️ 僅訓練日使用——休息日正常飲食纖維已達標 35g+，無需額外補充', 'daily', '飲食', 23, 1, true);
 
 ------------------------------------------------------------
 -- 每週計畫項目 (3 active + 3 semi-active/inactive)
@@ -61,7 +63,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('鋅 25mg 補充', '每週 1-2 次服用鋅 25mg（Zinc Picolinate 半顆），建議週二、週六隨晚餐服用。與銅間隔 4hr+。降低長期高劑量風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 2, false),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
-  ('【每半年】健康檢測', '每半年一次全面健康檢查。🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72 小時暫停高強度重訓。必檢：腎功能（BUN/Creatinine/eGFR/Cystatin C）、肝功能（ALT/AST）、甲狀腺（TSH/Free T4/Free T3——Ashwagandha 週期中特別注意 Free T3 偏高=亞臨床甲亢）、尿碘（Urinary Iodine，目標 100-199mcg/L，監控碘攝取是否穩定達 RDA）、銅代謝（血清銅 + 銅藍蛋白 Ceruloplasmin，監控長期鋅補充是否導致銅耗竭——⚠️ 銅藍蛋白 <20mg/dL 或血清銅 <70mcg/dL 立即補充銅 1mg/日）、鐵代謝（血清鐵蛋白 Ferritin，目標 50-150 ng/mL，>200 則減少紅肉頻率）、維他命D（25(OH)D，目標 40-60 ng/mL）', 'weekly', '一般', 6, 0, true),
+  ('【每半年】健康檢測', '每半年一次全面健康檢查。🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72 小時暫停高強度重訓。必檢：腎功能（BUN/Creatinine/eGFR/Cystatin C）、肝功能（ALT/AST）、甲狀腺（TSH/Free T4/Free T3——Ashwagandha 週期中特別注意 Free T3 偏高=亞臨床甲亢）、尿碘（Urinary Iodine，目標 100-199mcg/L，監控碘攝取是否穩定達 RDA）、銅代謝（血清銅 + 銅藍蛋白 Ceruloplasmin，監控長期鋅補充是否導致銅耗竭——⚠️ 銅藍蛋白 <20mg/dL 或血清銅 <70mcg/dL 立即補充銅 1mg/日）、鐵代謝（血清鐵蛋白 Ferritin，目標 50-150 ng/mL，>200 則減少紅肉頻率）、維他命D（25(OH)D，目標 40-60 ng/mL）、硒（血清硒，目標 70-150 ng/mL，>200 則減少巴西堅果）。📋 自我檢查：B6 周邊神經病變篩查——手腳有無持續性麻木、刺痛、灼熱感（P5P 50mg/日長期服用需監控），若有症狀立即停用 B-complex 並就醫', 'weekly', '一般', 6, 0, true),
   ('【每季】FMD 斷食模擬飲食（5 天）', '每 3-4 月執行 5 天低蛋白/低糖/高脂飲食。清除衰老細胞、重啟免疫系統。FMD 期間停用：肌酸、魚油、NMN、白藜蘆醇', 'weekly', '飲食', 9, 1, false);
 
 ------------------------------------------------------------
@@ -71,7 +73,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
   ('鋅 25mg 每日補充', '每日隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。與每日銅 2mg 維持 12.5:1 鋅銅比例，防止長期銅缺乏導致貧血與神經損傷。與 14:00-15:00 銅間隔 4-5hr', 'daily', '補充品', 27, 1, false),
   ('鋅 25mg 每兩天補充', '每兩天隨晚餐服用鋅 25mg（Zinc Picolinate 半顆）。平均每日鋅攝入 12.5mg + 銅 2mg/日 = 鋅銅比約 6.25:1（加上飲食鋅可達 10:1 以上）。與 14:00-15:00 銅間隔 4-5hr。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150-180g 已含鋅 6-9mg，無需額外補充', 'daily', '補充品', 27, 1, false),
-  ('鋅 15mg 每日補充', '每日隨晚餐服用鋅 15mg（Picolinate 錠劑 1 錠）。補充品 15mg + 飲食鋅 ~10-15mg = 每日總計 25-30mg（安全低於 UL 40mg/日）。15mg 屬安全生理劑量，銅由堅果/可可粉/黑巧克力天然提供。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150g 已含鋅 6-9mg。⚠️ 銅監控：每半年驗血清銅+銅藍蛋白。若銅藍蛋白 <20mg/dL，立即加回銅 1mg/日補充品。每日必吃黑巧克力 20g（~0.5mg 銅）+ 堅果 30g（~0.3-0.5mg 銅）+ 可可粉 5g（~0.2mg 銅）確保飲食銅 ≥0.9mg', 'daily', '補充品', 27, 1, true);
+  ('鋅 15mg 每日補充', '每日隨晚餐服用鋅 15mg（Picolinate 錠劑 1 錠）。補充品 15mg + 飲食鋅 ~10-15mg = 每日總計 25-30mg（安全低於 UL 40mg/日）。15mg 屬安全生理劑量，銅由堅果/可可粉/黑巧克力天然提供。⚠️ 牛肉日豁免：草飼牛肉日（每週 1-2 次）當晚取消鋅補劑，牛肉 150g 已含鋅 6-9mg + 飲食鋅 ~10mg = 總計 16-19mg，無需額外補充且避免逼近 UL 40mg。⚠️ 銅監控：每半年驗血清銅+銅藍蛋白。若銅藍蛋白 <20mg/dL，立即加回銅 1mg/日補充品。每日必吃黑巧克力 20g（~0.5mg 銅）+ 堅果 30g（~0.3-0.5mg 銅）+ 可可粉 5g（~0.2mg 銅）確保飲食銅 ≥0.9mg', 'daily', '補充品', 27, 1, true);
 
 ------------------------------------------------------------
 -- 追蹤項目：油、鹽、藍莓 (4 items)
@@ -242,14 +244,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '綜合堅果（Kirkland 1.13kg）',
-  '（每日必須）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅、維他命E（~7mg/30g，占 RDA 47%）、硒（巴西堅果嚴格限 1 顆/日 = 68-91mcg，已超過 RDA 55mcg）來源。⚠️ 不可省略：搭配橄欖油（~6mg）+ 酪梨（~2mg）= 每日維他命E ~15mg 恰好達 RDA。⚠️ 巴西堅果嚴格 1 顆/日上限——含硒量變異極大（6-91mcg/顆），2 顆高硒堅果可能逼近 UL 400mcg',
+  '（每日必須）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅、維他命E（~7mg/30g，占 RDA 47%）、硒（巴西堅果嚴格限 1 顆/日 = 68-91mcg，已超過 RDA 55mcg）來源。⚠️ 不可省略：搭配橄欖油（~6mg）+ 酪梨（~2mg）= 每日維他命E ~15mg 恰好達 RDA。⚠️ 巴西堅果嚴格 1 顆/日上限——含硒量變異極大（6-91mcg/顆），2 顆高硒堅果可能逼近 UL 400mcg。⚠️ 硒總量注意：雞蛋 3-4 顆（~45-60mcg）+ 鮭魚（~40mcg/份）的飲食基線已達 RDA 55mcg。加上巴西堅果 1 顆後總計可達 150-190mcg/日（3x RDA）。鮭魚日建議跳過巴西堅果，避免慢性硒過量（SELECT 試驗：>200mcg/日與第二型糖尿病風險增加相關）',
   '每日一把（30g，必須）',
   'NT$599 / 1.13kg',
   'https://www.costco.com.tw/Food-Dining/Snacks/Nuts-Jerky/Kirkland-Signature-Mixed-Nuts-113-kg/p/1669722',
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '越南',
   $${"ingredients":"腰果,杏仁,開心果,夏威夷果仁,巴西堅果,花生油,海鹽","weight":"1.13公斤","storage":"未開封時請存放於陰涼乾燥處,開封後請冷藏並請儘速食用完畢","allergens":"本產品含有花生及堅果類製品，食物過敏者請留意","notes":"可能含有堅果碎殼，食用時請小心"}$$::jsonb,
   '{}'::jsonb,
-  '每日必須 30g（非可選）。線上可訂（常溫配送）。1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意。🥜 硒（Selenium）：每日嚴格限 1 顆巴西堅果（每顆 ~68-91mcg 硒，RDA 55mcg）。⚠️ 勿超過 1 顆/日——巴西堅果硒含量變異極大，2 顆高硒堅果可逼近 UL 400mcg',
+  '每日必須 30g（非可選）。線上可訂（常溫配送）。1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意。🥜 硒（Selenium）：每日嚴格限 1 顆巴西堅果（每顆 ~68-91mcg 硒，RDA 55mcg）。⚠️ 鮭魚日跳過巴西堅果——飲食硒基線（雞蛋+鮭魚）已達 100-140mcg，加巴西堅果恐超 200mcg。非鮭魚日 1 顆即可',
   11
 );
 
@@ -683,7 +685,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'B群 活化型態（NOW Foods B-50 Coenzyme 60 顆）',
-  '✓ iHerb 必買。活化型態 B 群複方：甲鈷胺（Methylcobalamin B12）、5-MTHF 葉酸（非合成 Folic Acid）、P5P（活化 B6）。應對 MTHFR 基因變異風險，確保 B 群被有效利用。水溶性，需隨餐服用以利能量代謝、神經系統與紅血球生成。⚠️ 收到後驗證標籤：確認 5-MTHF 葉酸含量 ≥400mcg DFE（成人 RDA）。若 <400mcg 則需從深綠蔬菜額外補充（菠菜 100g ≈ 194mcg DFE）',
+  '✓ iHerb 必買。活化型態 B 群複方：甲鈷胺（Methylcobalamin B12）、5-MTHF 葉酸（非合成 Folic Acid）、P5P（活化 B6）。應對 MTHFR 基因變異風險，確保 B 群被有效利用。水溶性，需隨餐服用以利能量代謝、神經系統與紅血球生成。⚠️ 收到後驗證標籤：確認 5-MTHF 葉酸含量 ≥400mcg DFE（成人 RDA）。若 <400mcg 則需從深綠蔬菜額外補充（菠菜 100g ≈ 194mcg DFE）。⚠️ B6（P5P）50mg/日長期安全性：UL 為 100mg/日，P5P 形式比吡哆醇（Pyridoxine）安全性更高，但仍建議每半年自我檢查有無手腳麻木/刺痛感（周邊神經病變早期徵兆）。若出現症狀立即停用並就醫',
   '每日 1 顆隨 12:00 午餐服用（搭配魚油、橄欖油等完整正餐油脂+蛋白質，吸收率最佳。避免訓練前空腹服用引發噁心）',
   'NT$450-550 / 60 顆',
   'https://tw.iherb.com/pr/now-foods-coenzyme-b-complex-60-veg-capsules/14804',
@@ -763,6 +765,32 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
   $${"serving_size":"1包","sodium":"250mg","potassium":"150mg"}$$::jsonb,
   'iHerb 直送。20 包約 10 週。每年需約 5-6 盒。💡 建議一次購入 3 盒（半年份）。CGN 自有品牌有折扣，3 盒同購可湊 iHerb 免運門檻。',
   37
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
+  '卵磷脂顆粒（NOW Foods Sunflower Lecithin 454g）',
+  '向日葵卵磷脂（非大豆），富含磷脂醯膽鹼（Phosphatidylcholine）。牛肉日膽鹼補充主力，每大匙（~10g）含 ~120mg 膽鹼。非基改、無大豆過敏風險',
+  '牛肉日 1 大匙（~10g）隨餐，或每日加入燕麥/優格',
+  'NT$400-500 / 454g',
+  'https://tw.iherb.com/pr/now-foods-sunflower-lecithin-pure-powder-1-lb-454-g/72188',
+  'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
+  $${"ingredients":"向日葵卵磷脂","form":"顆粒粉末","weight":"454g","features":"非基改、無大豆"}$$::jsonb,
+  $${"serving_size":"10g (1大匙)","phosphatidylcholine":"~1200mg","choline":"~120mg"}$$::jsonb,
+  'iHerb 直送。454g 約 45 份。牛肉日必用（每週 1-2 次），非牛肉日可選用。顆粒可直接拌入燕麥碗或優格，口感中性。常溫保存。',
+  38
+);
+
+INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
+  '洋車前子殼粉（NOW Foods Psyllium Husk Powder 340g）',
+  '天然水溶性膳食纖維，吸水膨脹形成凝膠促進腸道蠕動。訓練日纖維補充主力，每 5g 含 ~4g 膳食纖維',
+  '訓練日午餐前 5g 沖 250ml 水',
+  'NT$250-350 / 340g',
+  'https://tw.iherb.com/pr/now-foods-psyllium-husk-powder-12-oz-340-g/1041',
+  'iHerb', 'iherb_supplement', 'NOW Foods', NULL,
+  $${"ingredients":"洋車前子殼粉","form":"粉末","weight":"340g"}$$::jsonb,
+  $${"serving_size":"5g","dietary_fiber":"~4g","soluble_fiber":"~3g"}$$::jsonb,
+  'iHerb 直送。訓練日使用（每週 4-5 天），340g 約可用 2-3 個月。⚠️ 沖泡後立即飲用（放置會凝固成膠狀難以吞嚥）。搭配 250ml+ 水，避免腸阻塞。',
+  39
 );
 
 ------------------------------------------------------------
