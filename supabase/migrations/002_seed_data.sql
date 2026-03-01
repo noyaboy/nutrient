@@ -8,13 +8,13 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('09:00 起床 & 晨光曝曬', '起床後 30 分鐘內到戶外曬太陽 10-20 分鐘（陰天久一點）。不戴太陽眼鏡。校正晝夜節律、降低皮質醇、促進維他命D合成', 'daily', '睡眠', 1, 1, true),
   ('09:05 補水 & 電解質', '起床後盡快補水。500ml 室溫水 + 碘鹽 1g（食品電子秤測量 0.1g 精度，約 400mg 鈉）+ 檸檬汁。可搭配晨光曝曬同時進行。⚠️ Zone 2 日（週六/日）改用電解質粉沖泡 500ml（CGN Sport Hydration），碘鹽併入其他餐次', 'daily', '飲食', 2, 1, true),
   ('09:15 NMN + TMG（空腹）', '香蕉/地瓜 + 乳清蛋白 ~30g 粉（≈27g 蛋白）', 'daily', '補充品', 2, 1, false),
-  ('09:15 訓練前營養', '香蕉 1 根 + 乳清蛋白 ~30g 粉（≈27g 蛋白）。⚠️ 距訓練僅 45 分鐘，只吃流質乳清+好消化的香蕉。地瓜需 60-90 分鐘消化（含抗性澱粉），若要吃地瓜請提前至 08:00 進食', 'daily', '飲食', 3, 1, true),
+  ('09:15 訓練前營養', '香蕉 1 根 + 乳清蛋白 ~30g 粉（≈27g 蛋白）+ 肌酸 5g（溶於乳清一起沖泡）。⚠️ 距訓練僅 45 分鐘，只吃流質乳清+好消化的香蕉。地瓜需 60-90 分鐘消化（含抗性澱粉），若要吃地瓜請提前至 08:00 進食', 'daily', '飲食', 3, 1, true),
   ('09:45 穩定性訓練暖身', 'RAMP 暖身含穩定性訓練共 15 分鐘（升溫→激活→活動度→增強）：反伸展、反旋轉、單腳 RDL、肩胛穩定、抗側屈（行李箱負重走）', 'daily', '運動', 4, 1, true),
   ('10:00 運動', '一上半身A/二下半身A/四上半身B/五下半身B。三 VO2 Max 間歇。六/日 Zone 2 有氧 45-60 分鐘', 'daily', '運動', 5, 1, true),
   ('11:15 咖啡 + L-Theanine', '起床後 60-90 分鐘再喝。咖啡因 150-200mg + L-Theanine 200mg（1:1 A 級 nootropic 組合，保護睡眠品質）。15:00 後禁止咖啡因。✅ 無論當天是否飲用綠茶，喝咖啡就必須同步服用 L-Theanine', 'daily', '飲食', 6, 1, true),
 
   -- === Midday (12:00-15:00) ===
-  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 肌酸 5g + 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆（鮭魚日減為 2 顆）、D3 2000IU（2 顆）、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
+  ('12:00 午餐 + 訓練後補充品', '蛋白質 35-40g（正餐食物，單餐建議 ≤45g）+ 蔬菜（建議使用冷卻再加熱米飯以保留抗性澱粉 RS3）。隨餐服用：魚油 3 顆（鮭魚日減為 2 顆）、D3 2000IU（2 顆）、K2、葉黃素 20mg、膠原蛋白肽 10-15g、CoQ10 200mg、B群 1 顆（活化型態，隨正餐油脂+蛋白質完整食物基質服用，吸收率最佳）', 'daily', '飲食', 7, 1, true),
   ('14:00-15:00 午餐補銅 2mg', '銅 2mg（Solgar）隨午後小點心服用。與鋅間隔 4-5+ 小時（鋅在晚餐 19:00）。鋅銅比維持 10-15:1，防止長期鋅補充導致銅缺乏。⚠️ 14:00-15:00 小點心嚴格避開含鈣食物（優格、牛奶、起司）：鈣與銅共用 DMT1 轉運蛋白，高鈣食物會顯著抑制銅吸收。點心選擇：少量水果（蘋果/香蕉片）或幾片低鈣餅乾', 'daily', '補充品', 8, 1, false),
   ('14:00 綠茶 EGCG 2-3 杯', '午餐後 2hr+ 再飲用（~14:00），高脂高蛋白午餐胃排空需 2-4hr，1hr 仍會螯合鐵鋅鈣。改用低咖啡因綠茶（白毫銀針或老白毫），配合 L-theanine 天然組合促進專注，同時避免晚間睡眠干擾。15:00 前喝完（咖啡因 cutoff）。綠茶天然 L-Theanine（40-90mg）為額外放鬆紅利，不影響早晨 L-Theanine 補劑的服用', 'daily', '飲食', 8, 1, true),
 
@@ -27,7 +27,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   -- === Evening (19:00+) ===
   ('19:00 晚餐 + 低 FODMAP 蔬菜', '蛋白質 35-40g（單餐建議 ≤45g）+ 低 FODMAP 蔬菜（十字花科留給午餐）。順序：纖維→蛋白→碳水。鋅 15mg 在晚餐「最後一口」吞服（每日固定，含補鈣日 — 午餐鈣至 19:00 已間隔 7hr，不存在吸收競爭）。⚠️ 晚餐避開全穀類（糙米、燕麥）的植酸干擾鋅吸收；菠菜主要含草酸（非植酸），對鋅影響較弱，可適量食用。⚠️ 牛肉日：牛肉上限 150g，雞蛋 1-2 顆移至午餐、1 顆移至 15:30 下午點心', 'daily', '飲食', 13, 1, true),
   ('19:30 餐後散步 15 分鐘', '控制餐後血糖最有效的方法，降低胰島素峰值。輕快步行即可，不需高強度。午餐後也建議散步 10-15 分鐘。可結合戶外自然接觸（每週目標 120+ 分鐘）', 'daily', '運動', 14, 1, true),
-  ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 200mg（2 錠）+ Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳 — 熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡', 'daily', '補充品', 15, 1, true),
+  ('22:30 睡前補充品', '甘胺酸 3g + 蘇糖酸鎂 + 甘胺酸鎂 200mg（2 錠）+ Ashwagandha 450mg（KSM-66，嚴格 8 週用 / 4 週停，在瓶身標記開始日與第 56 天停用日）。洗完熱水澡後立即服用效果最佳 — 熱水澡與甘胺酸皆促進周邊血管擴張降低核心體溫，兩者協同加速入睡。⚠️ 鎂 UL 監控：補充品鎂合計 ~344mg（甘胺酸鎂 200mg + 蘇糖酸鎂 144mg），接近 IOM 補充品 UL 350mg。若出現腹瀉或腸胃不適，優先將甘胺酸鎂減為 1 錠（100mg），總計降至 244mg', 'daily', '補充品', 15, 1, true),
   ('Ashwagandha 週期管理（8 週用 / 4 週停）', '📋 8 週用 / 4 週停 週期。第 1-5 週正常服用 450mg/日（睡前）。第 6 週起每日自評情緒冷漠。第 8 週（第 56 天）準時進入停用期。停用 4 週：甘胺酸鎂 + Cyclic Sighing 替代', 'daily', '補充品', 16, 1, true),
   ('Ashwagandha 肝功能追蹤（第4/12週）', '⚠️ 開始服用新品牌 Ashwagandha 後，第 4 週及第 12 週各安排一次 ALT/AST 抽血。藥源性肝損傷多發於數週內，早期發現可避免惡化', 'daily', '補充品', 16, 1, true),
   ('22:00 藍光管理', '調暗燈光或佩戴防藍光眼鏡（琥珀色鏡片）。白天：娛樂螢幕 <2hr、社群媒體 <30min、專注時段手機勿擾模式', 'daily', '睡眠', 17, 1, true),
@@ -45,7 +45,9 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('全天 週末睡眠一致性（±30 分鐘）', '週末起床/睡覺時間與平日偏差不超過 30 分鐘。社交時差（Social Jetlag）影響認知、情緒與代謝，A 級證據', 'daily', '睡眠', 25, 1, false),
   ('全天 數位衛生', '娛樂螢幕 <2hr、社群媒體 <30min。23:00 後無螢幕、專注時段手機勿擾模式', 'daily', '心理', 26, 1, false),
   ('全天 鈣攝取確認（目標 1000mg）', '每日確認鈣攝取是否達標 1000mg。主要來源：希臘優格 300g（必須，~280mg 鈣）+ 深綠蔬菜 + 板豆腐（100g ~150mg 鈣）。非板豆腐日鈣片 1 錠隨午餐服用（+500mg）。午餐板豆腐的植酸在 7hr 後已進入大腸，不影響 19:00 鋅吸收。⚠️ 優格 300g + 板豆腐日 ≈ 430-580mg，仍需搭配深綠蔬菜（~150-200mg）。非板豆腐日：優格 300mg + 鈣片 500mg + 蔬菜 150mg ≈ 930mg', 'daily', '飲食', 25, 1, true),
-  ('全天 飲水 3-3.5L', '尿液淡黃色為適當水合指標。💧 補鈣日飲水目標 3.5L+（維持良好水合，支持腎臟代謝）', 'daily', '飲食', 26, 1, true);
+  ('全天 飲水 3-3.5L', '尿液淡黃色為適當水合指標。💧 補鈣日飲水目標 3.5L+（維持良好水合，支持腎臟代謝）', 'daily', '飲食', 26, 1, true),
+  ('全天 維他命A攝取確認（目標 900mcg RAE）', '每日確認維他命A攝取。主要來源：橘色地瓜 100g（~700mcg RAE β-胡蘿蔔素）+ 雞蛋 3-4 顆（~270-360mcg RAE）= 總計 ~970-1060mcg RAE。⚠️ 地瓜必須選橘色品種（台農 57 號），白肉/紫肉地瓜β-胡蘿蔔素極低。搭配油脂烹調或隨餐食用（β-胡蘿蔔素為脂溶性）。無地瓜日可用胡蘿蔔 50g（~400mcg RAE）或南瓜 100g（~200mcg RAE）替代', 'daily', '飲食', 27, 1, true),
+  ('全天 鉀攝取確認（目標 3400mg）', '每日確認鉀攝取達 AI 3400mg。主力來源：酪梨半顆（~350mg）+ 馬鈴薯 1 顆（~800mg）+ 香蕉 1 根（~400mg）+ 希臘優格 300g（~300mg）+ 菠菜/蔬菜（~400mg）+ 鮭魚/肉類（~400mg）+ 其他（~300mg）≈ 2950-3450mg。⚠️ 酪梨與馬鈴薯為核心，缺一不可', 'daily', '飲食', 28, 1, true);
 
 ------------------------------------------------------------
 -- 每週計畫項目 (3 active + 3 semi-active/inactive)
@@ -59,7 +61,7 @@ INSERT INTO plan_items (title, description, frequency, category, sort_order, tar
   ('鋅 25mg 補充', '每週 1-2 次服用鋅 25mg（Zinc Picolinate 半顆），建議週二、週六隨晚餐服用。與銅間隔 4hr+。降低長期高劑量風險，維持鋅銅比 10-15:1', 'weekly', '補充品', 12, 2, false),
   ('Quercetin + Fisetin 抗氧化抗發炎', '每週集中 2-3 天服用，抗氧化與抗發炎，輔助清除衰老細胞', 'weekly', '補充品', 5, 1, false),
   ('每週回顧與調整', '記錄：1.早晨精神狀態 2.下午能量水平 3.運動後恢復速度 4.體重 7 日均值（目標每月 +0.5-1kg）5.主要複合動作進步。異常時優先調整睡眠與熱量', 'weekly', '一般', 5, 1, false),
-  ('【每半年】健康檢測', '每半年一次全面健康檢查。🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72 小時暫停高強度重訓。必檢：腎功能（BUN/Creatinine/eGFR/Cystatin C）、肝功能（ALT/AST）、甲狀腺（TSH/Free T4）', 'weekly', '一般', 6, 0, true),
+  ('【每半年】健康檢測', '每半年一次全面健康檢查。🔴 絕對前提：抽血前 7 天停用肌酸 + 48-72 小時暫停高強度重訓。必檢：腎功能（BUN/Creatinine/eGFR/Cystatin C）、肝功能（ALT/AST）、甲狀腺（TSH/Free T4）、銅代謝（血清銅 + 銅藍蛋白 Ceruloplasmin，監控長期鋅補充是否導致銅耗竭）、鐵代謝（血清鐵蛋白 Ferritin，目標 50-150 ng/mL，>200 則減少紅肉頻率）、維他命D（25(OH)D，目標 40-60 ng/mL）', 'weekly', '一般', 6, 0, true),
   ('【每季】FMD 斷食模擬飲食（5 天）', '每 3-4 月執行 5 天低蛋白/低糖/高脂飲食。清除衰老細胞、重啟免疫系統。FMD 期間停用：肌酸、魚油、NMN、白藜蘆醇', 'weekly', '飲食', 9, 1, false);
 
 ------------------------------------------------------------
@@ -191,7 +193,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '地瓜',
-  '原型碳水來源。訓練前能量補充（前晚蒸好冷藏 → RS3）。冷卻後產生抗性澱粉（益生元）。非重訓日晚餐可食用（色氨酸→血清素→褪黑激素，助眠）。⚠️ 重訓日晚餐禁用冷卻地瓜（RS 發酵 + 睡前甘胺酸鎂 → 夜間腹脹）',
+  '原型碳水來源 + 維他命A主力（橘色品種）。訓練前能量補充（前晚蒸好冷藏 → RS3）。冷卻後產生抗性澱粉（益生元）。⚠️ 必選台農 57 號等橘色品種：每 100g 含 ~700mcg RAE β-胡蘿蔔素，是全計畫唯一高效維他命A來源。白肉/紫肉地瓜β-胡蘿蔔素極低，不可替代。非重訓日晚餐可食用（色氨酸→血清素→褪黑激素，助眠）。⚠️ 重訓日晚餐禁用冷卻地瓜（RS 發酵 + 睡前甘胺酸鎂 → 夜間腹脹）',
   '訓練前（推薦）/ 非重訓日晚餐',
   '~NT$135 / 2.8kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
@@ -240,14 +242,14 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '綜合堅果（Kirkland 1.13kg）',
-  '（可選品項）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅來源',
-  '每日一把',
+  '（每日必須）腰果、杏仁、開心果、夏威夷豆、巴西堅果。健康脂肪、鎂、鋅、維他命E（~7mg/30g，占 RDA 47%）、硒（巴西堅果 1-2 顆 = 68-91mcg）來源。⚠️ 不可省略：搭配橄欖油（~6mg）+ 酪梨（~2mg）= 每日維他命E ~15mg 恰好達 RDA',
+  '每日一把（30g，必須）',
   'NT$599 / 1.13kg',
   'https://www.costco.com.tw/Food-Dining/Snacks/Nuts-Jerky/Kirkland-Signature-Mixed-Nuts-113-kg/p/1669722',
   'Costco', 'costco_food', 'Kirkland Signature 科克蘭', '越南',
   $${"ingredients":"腰果,杏仁,開心果,夏威夷果仁,巴西堅果,花生油,海鹽","weight":"1.13公斤","storage":"未開封時請存放於陰涼乾燥處,開封後請冷藏並請儘速食用完畢","allergens":"本產品含有花生及堅果類製品，食物過敏者請留意","notes":"可能含有堅果碎殼，食用時請小心"}$$::jsonb,
   '{}'::jsonb,
-  '（可選）線上可訂（常溫配送）。每日 30g，1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意',
+  '每日必須 30g（非可選）。線上可訂（常溫配送）。1.13kg 約 5-6 週。⚠️ 含花生油，過敏者注意。🥜 硒（Selenium）：每日確保吃到 1-2 顆巴西堅果（每顆 ~68-91mcg 硒，RDA 55mcg）。勿超過 3 顆/日（UL 400mcg）',
   11
 );
 
@@ -279,8 +281,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, origin, specs, nutrition, purchase_note, sort_order) VALUES (
   '酪梨',
-  '修復鉀缺口（每顆 ~700mg 鉀）+ 健康單元不飽和脂肪 + 膳食纖維 7g',
-  '每日半顆至一顆',
+  '修復鉀缺口（每顆 ~700mg 鉀）+ 健康單元不飽和脂肪 + 膳食纖維 7g。⚠️ 每日必須食用半顆至一顆，不可省略——鉀是全計畫最大缺口（AI 3400mg vs 現行 ~2500-3000mg）',
+  '每日半顆至一顆（必須）',
   '~NT$329 / 1.3kg',
   'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
   'Costco', 'costco_food', NULL, NULL,
@@ -505,8 +507,8 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
    26),
 
   ('馬鈴薯（美國/加拿大）',
-   '去皮後低纖維碳水，訓練日30-40%替代地瓜。富含鉀（每顆~800mg），冷卻後產生抗性澱粉。選擇黃皮或紅皮較甜',
-   '訓練日適量（去皮烹調）',
+   '去皮後低纖維碳水 + 鉀質主力（每顆 ~800mg 鉀）。與酪梨共同修復鉀缺口。訓練日 30-40% 替代地瓜。冷卻後產生抗性澱粉。選擇黃皮或紅皮較甜',
+   '每日 1 顆（去皮烹調），訓練日作為低纖維碳水選項',
    '~NT$199 / 3kg',
    'https://www.costco.com.tw/Food-Dining/Frozen-Fresh-Food/Chilled-Fresh-Food/c/90901',
    'Costco', 'costco_food', NULL, '美國/加拿大',
@@ -668,7 +670,7 @@ INSERT INTO products (name, description, usage, price, url, store, category, bra
 
 INSERT INTO products (name, description, usage, price, url, store, category, brand, image_url, rating, review_count, sku, specs, nutrition, purchase_note, sort_order) VALUES (
   'B群 活化型態（NOW Foods B-50 Coenzyme 60 顆）',
-  '✓ iHerb 必買。活化型態 B 群複方：甲鈷胺（Methylcobalamin B12）、5-MTHF 葉酸（非合成 Folic Acid）、P5P（活化 B6）。應對 MTHFR 基因變異風險，確保 B 群被有效利用。水溶性，需隨餐服用以利能量代謝、神經系統與紅血球生成',
+  '✓ iHerb 必買。活化型態 B 群複方：甲鈷胺（Methylcobalamin B12）、5-MTHF 葉酸（非合成 Folic Acid）、P5P（活化 B6）。應對 MTHFR 基因變異風險，確保 B 群被有效利用。水溶性，需隨餐服用以利能量代謝、神經系統與紅血球生成。⚠️ 收到後驗證標籤：確認 5-MTHF 葉酸含量 ≥400mcg DFE（成人 RDA）。若 <400mcg 則需從深綠蔬菜額外補充（菠菜 100g ≈ 194mcg DFE）',
   '每日 1 顆隨 12:00 午餐服用（搭配魚油、橄欖油等完整正餐油脂+蛋白質，吸收率最佳。避免訓練前空腹服用引發噁心）',
   'NT$450-550 / 60 顆',
   'https://tw.iherb.com/pr/now-foods-coenzyme-b-complex-60-veg-capsules/14804',
