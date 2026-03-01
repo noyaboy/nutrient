@@ -104,7 +104,7 @@ function AllDayItem({ item, targetDate, details }: { item: PlanItemWithCompletio
           onClick={() => details && setExpanded(!expanded)}
           className={`flex-1 text-left ${details ? 'cursor-pointer' : 'cursor-default'}`}
         >
-          <span className={`text-sm font-medium leading-tight ${isCompleted ? 'line-through text-gray-400' : 'text-gray-700'}`}>
+          <span className={`text-sm font-medium leading-tight ${isCompleted ? 'line-through text-gray-400' : 'text-gray-800'}`}>
             {shortTitle}
           </span>
         </button>
@@ -160,7 +160,7 @@ export default function DailySection({ items, targetDate, recipes }: DailySectio
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
-                <span className="text-sm font-semibold text-gray-500">{group.label}</span>
+                <span className="text-sm font-semibold text-gray-600">{group.label}</span>
               </div>
               <span className={`text-xs font-medium ${allDone ? 'text-emerald-600' : 'text-gray-400'}`}>
                 {completed}/{total}

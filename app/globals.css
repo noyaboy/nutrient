@@ -9,6 +9,13 @@ body {
   font-family: var(--font-sans), "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Better line-height for dense content */
+.health-content p,
+.detail-content p {
+  line-height: 1.65;
 }
 
 @keyframes slide-up {

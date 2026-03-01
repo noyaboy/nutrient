@@ -55,12 +55,12 @@ export default function BottomNav() {
             <Link
               key={href}
               href={href}
-              className={`flex-1 flex flex-col items-center pt-2 pb-1 transition-colors ${
+              className={`flex-1 flex flex-col items-center pt-2.5 pb-1.5 transition-colors ${
                 isActive ? 'text-emerald-600' : 'text-gray-400'
               }`}
             >
-              <Icon className="w-6 h-6" />
-              <span className="text-[10px] mt-0.5 font-medium">{label}</span>
+              <Icon className="w-7 h-7" />
+              <span className="text-xs mt-1 font-medium">{label}</span>
             </Link>
           );
         })}

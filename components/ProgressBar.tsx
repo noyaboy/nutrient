@@ -10,8 +10,8 @@ export default function ProgressBar({ completed, total, label }: ProgressBarProp
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between text-sm">
-        <span className="font-medium text-gray-700">{label}</span>
-        <span className="text-gray-500">
+        <span className="font-medium text-gray-800">{label}</span>
+        <span className="text-gray-600">
           {completed}/{total} 已完成
           <span className="ml-1.5 text-emerald-600 font-medium">{percentage}%</span>
         </span>

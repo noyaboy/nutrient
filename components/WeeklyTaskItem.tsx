@@ -45,10 +45,10 @@ export default function WeeklyTaskItem({ item, weekDates, today, details }: Week
             )}
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
-            <span className={`text-sm font-bold ${isGoalMet ? 'text-emerald-600' : 'text-gray-400'}`}>
+            <span className={`text-base font-bold ${isGoalMet ? 'text-emerald-600' : 'text-gray-400'}`}>
               {completedCount}/{item.targetCount}
             </span>
-            <span className={`text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
+            <span className={`text-sm px-2.5 py-1 rounded-full ${getCategoryColor(item.category)}`}>
               {item.category}
             </span>
             {details && (
@@ -68,7 +68,7 @@ export default function WeeklyTaskItem({ item, weekDates, today, details }: Week
           </div>
         </div>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1.5">
           {weekDates.map((date, i) => {
             const isDone = completedDates.has(date);
             const isToday = date === today;
@@ -80,17 +80,17 @@ export default function WeeklyTaskItem({ item, weekDates, today, details }: Week
                 type="button"
                 onClick={() => handleDayToggle(date)}
                 disabled={isPending || isFuture}
-                className={`flex flex-col items-center gap-1 flex-1 py-1.5 rounded-lg transition-all ${
+                className={`flex flex-col items-center gap-1.5 flex-1 py-2 rounded-lg transition-all ${
                   isFuture ? 'cursor-not-allowed' : 'active:scale-95'
                 } ${isToday ? 'ring-2 ring-emerald-400 ring-offset-1' : ''}`}
               >
-                <span className={`text-xs font-medium ${
-                  isToday ? 'text-emerald-700' : isFuture ? 'text-gray-300' : 'text-gray-500'
+                <span className={`text-sm font-medium ${
+                  isToday ? 'text-emerald-800' : isFuture ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   {DAY_LABELS[i]}
                 </span>
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                  className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
                     isDone
                       ? 'bg-emerald-500'
                       : isToday
@@ -101,7 +101,7 @@ export default function WeeklyTaskItem({ item, weekDates, today, details }: Week
                   }`}
                 >
                   {isDone && (
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <svg className="w-4.5 h-4.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   )}

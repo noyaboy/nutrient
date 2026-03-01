@@ -15,20 +15,20 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       <button
         type="button"
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center gap-3 p-3 text-left"
+        className="w-full flex items-center gap-3 p-4 text-left"
       >
         <span className="text-lg flex-shrink-0">
           {recipe.cookingMethod === '免煮' ? '🥣' : '🍚'}
         </span>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-amber-900">{recipe.name}</p>
-          <p className="text-xs text-amber-700 mt-0.5">
+          <p className="text-sm text-amber-800 mt-1 leading-relaxed">
             P {recipe.macros.protein}g · C {recipe.macros.carbs}g · F {recipe.macros.fat}g
-            <span className="ml-1.5 text-amber-500">{recipe.macros.calories} kcal</span>
+            <span className="ml-1.5 text-amber-600">{recipe.macros.calories} kcal</span>
           </p>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
-          <span className="text-xs text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">
+          <span className="text-sm text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">
             {recipe.cookingMethod}
           </span>
           <svg
@@ -41,16 +41,16 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       </button>
 
       {expanded && (
-        <div className="px-3 pb-3 space-y-3 border-t border-amber-200/60">
-          <p className="text-xs text-amber-600 pt-2">
+        <div className="px-4 pb-4 space-y-3 border-t border-amber-200/60">
+          <p className="text-sm text-amber-700 pt-2 leading-relaxed">
             準備時間：約 {recipe.prepTime} 分鐘
           </p>
 
           <div>
-            <p className="text-xs font-semibold text-amber-800 mb-1">食材</p>
+            <p className="text-sm font-semibold text-amber-900 mb-1.5">食材</p>
             <div className="flex flex-wrap gap-1.5">
               {recipe.ingredients.map((ing, i) => (
-                <span key={i} className="text-xs bg-white/80 text-amber-800 px-2 py-1 rounded border border-amber-200">
+                <span key={i} className="text-sm bg-white/80 text-amber-900 px-2.5 py-1.5 rounded border border-amber-200">
                   {ing.name} {ing.amount}
                 </span>
               ))}
@@ -58,11 +58,11 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           </div>
 
           <div>
-            <p className="text-xs font-semibold text-amber-800 mb-1">步驟</p>
-            <ol className="space-y-1">
+            <p className="text-sm font-semibold text-amber-900 mb-1.5">步驟</p>
+            <ol className="space-y-1.5">
               {recipe.steps.map((step, i) => (
-                <li key={i} className="text-xs text-amber-900 flex gap-2">
-                  <span className="text-amber-400 font-medium flex-shrink-0">{i + 1}.</span>
+                <li key={i} className="text-sm text-amber-900 flex gap-2.5">
+                  <span className="text-amber-500 font-medium flex-shrink-0">{i + 1}.</span>
                   <span>{step}</span>
                 </li>
               ))}
@@ -70,7 +70,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           </div>
 
           {recipe.tips && (
-            <p className="text-xs text-amber-600 bg-amber-100/60 rounded-lg px-2.5 py-1.5">
+            <p className="text-sm text-amber-700 bg-amber-100/60 rounded-lg px-3 py-2 leading-relaxed">
               {recipe.tips}
             </p>
           )}

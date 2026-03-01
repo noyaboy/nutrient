@@ -38,12 +38,12 @@ export default function TaskItem({ item, targetDate, details }: TaskItemProps) {
           className="flex-shrink-0 active:scale-90 transition-transform"
         >
           <div
-            className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
+            className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-colors ${
               isCompleted ? 'bg-emerald-500 border-emerald-500' : 'border-gray-300'
             }`}
           >
             {isCompleted && (
-              <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             )}
@@ -59,7 +59,7 @@ export default function TaskItem({ item, targetDate, details }: TaskItemProps) {
             {item.title}
           </p>
         </button>
-        <span className={`flex-shrink-0 text-xs px-2 py-1 rounded-full ${getCategoryColor(item.category)}`}>
+        <span className={`flex-shrink-0 text-sm px-2.5 py-1 rounded-full ${getCategoryColor(item.category)}`}>
           {item.category}
         </span>
         {(item.description || details) && (
@@ -78,8 +78,8 @@ export default function TaskItem({ item, targetDate, details }: TaskItemProps) {
         )}
       </div>
       {expanded && (item.description || details) && (
-        <div className="px-4 pb-3 pl-[52px] space-y-2">
-          {item.description && <p className="text-sm text-gray-500">{item.description}</p>}
+        <div className="px-4 pb-4 pl-[60px] space-y-2.5">
+          {item.description && <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>}
           {details}
         </div>
       )}
