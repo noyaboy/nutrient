@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 -- 每日計畫項目 (23 active + 8 inactive = 31 items)
--- Matches live DB state as of 2026-03-01
+-- Matches live DB state as of 2026-03-01 (migrations 003-080 applied incrementally on live DB)
 ------------------------------------------------------------
 
 INSERT INTO plan_items (title, description, frequency, category, sort_order, target_count, is_active) VALUES
