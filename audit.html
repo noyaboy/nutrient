@@ -2580,7 +2580,7 @@
     <div class="flex bg-gray-100 rounded-xl p-1 mb-4" id="audit-tabs">
       <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-emerald-700 shadow-sm" onclick="switchAuditTab(this,'nutrients')">營養總計</button>
       <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500" onclick="switchAuditTab(this,'timeline')">時間軸</button>
-      <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500" onclick="switchAuditTab(this,'issues')">問題檢查<span class="ml-1 inline-flex items-center justify-center w-5 h-5 text-xs rounded-full bg-amber-500 text-white">3</span></button>
+      <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500" onclick="switchAuditTab(this,'issues')">問題檢查<span class="ml-1 inline-flex items-center justify-center w-5 h-5 text-xs rounded-full bg-emerald-500 text-white">0</span></button>
     </div>
     <div id="audit-panel-nutrients">
       <div class="grid grid-cols-2 gap-3"><div class="rounded-xl border p-3 bg-emerald-50 border-emerald-200 text-emerald-700">
@@ -2621,12 +2621,12 @@
     </div>
 <div class="rounded-xl border p-3 bg-emerald-50 border-emerald-200 text-emerald-700">
       <div class="text-xs font-medium opacity-70">鎂</div>
-      <div class="text-lg font-bold mt-0.5">360<span class="text-xs font-normal ml-0.5">mg</span></div>
+      <div class="text-lg font-bold mt-0.5">500<span class="text-xs font-normal ml-0.5">mg</span></div>
       <div class="text-xs opacity-60 mt-0.5">RDA 400mg</div>
       <div class="mt-2 h-1.5 rounded-full bg-white/50 overflow-hidden">
-        <div class="h-full rounded-full bg-emerald-500" style="width: 90%;"></div>
+        <div class="h-full rounded-full bg-emerald-500" style="width: 100%;"></div>
       </div>
-      <div class="text-xs mt-1 font-medium">90%</div>
+      <div class="text-xs mt-1 font-medium">125%</div>
     </div>
 <div class="rounded-xl border p-3 bg-emerald-50 border-emerald-200 text-emerald-700">
       <div class="text-xs font-medium opacity-70">纖維</div>
@@ -2721,6 +2721,14 @@
 <div class="relative pl-6 mb-4">
       <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
       <div class="absolute left-[-4px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"></div>
+      <div class="text-sm font-bold text-emerald-700 mb-1.5">13:30</div>
+      <div class="bg-white rounded-lg border border-gray-100 p-2 px-2.5 text-sm mb-1.5">
+        <div class="font-medium text-gray-800">Magtein 蘇糖酸鎂 144mg（空腹）</div>
+      </div>
+    </div>
+<div class="relative pl-6 mb-4">
+      <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+      <div class="absolute left-[-4px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"></div>
       <div class="text-sm font-bold text-emerald-700 mb-1.5">15:00</div>
       <div class="bg-white rounded-lg border border-gray-100 p-2 px-2.5 text-sm mb-1.5">
         <div class="font-medium text-gray-800">綠茶 EGCG 2-3 杯</div>
@@ -2742,6 +2750,9 @@
       <div class="absolute left-[-4px] top-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white"></div>
       <div class="text-sm font-bold text-emerald-700 mb-1.5">17:00</div>
       <div class="bg-white rounded-lg border border-gray-100 p-2 px-2.5 text-sm mb-1.5">
+        <div class="font-medium text-gray-800">鈣片 500mg + 小口柑橘</div>
+      </div>
+<div class="bg-white rounded-lg border border-gray-100 p-2 px-2.5 text-sm mb-1.5">
         <div class="font-medium text-gray-800">高質量社交對話</div>
       </div>
     </div>
@@ -2889,41 +2900,41 @@
     </div></div>
     <div id="audit-panel-issues" style="display:none"><div class="flex gap-2 text-sm mb-3">
         <span class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-medium">0 嚴重</span>
-        <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">0 重要（1 已修復）</span>
-        <span class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-medium">3 一般</span>
+        <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">0 重要（4 已修復）</span>
+        <span class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-medium">0 一般</span>
       </div><div class="rounded-xl border p-3 mb-2 bg-emerald-50 border-emerald-200">
           <div class="flex items-start gap-2">
             <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-emerald-500 text-white">FIXED</span>
             <div>
-              <div class="text-sm font-medium text-emerald-800">鎂已調整：360mg / 400mg（90%）— 甘胺酸鎂從 150mg 增至 200mg</div>
-              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">已達 RDA 90%，加上飲食鎂（堅果、酪梨、優格）實際超過 400mg</div>
+              <div class="text-sm font-medium text-emerald-800">鎂已調整：~500mg / 400mg（125%）— 補充品 344mg + 飲食鎂 ~156mg</div>
+              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">補充品鎂 344mg（甘胺酸鎂 200mg + Magtein 144mg，低於 UL 350mg）+ 飲食鎂（南瓜籽 35g ~192mg、其他堅果 ~120mg、酪梨 ~29mg、優格 ~33mg 等）。儀表板已修正為含飲食來源之總攝取量</div>
             </div>
           </div>
         </div>
-<div class="rounded-xl border p-3 mb-2 bg-sky-50 border-sky-200">
+<div class="rounded-xl border p-3 mb-2 bg-emerald-50 border-emerald-200">
           <div class="flex items-start gap-2">
-            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-sky-500 text-white">MEDIUM</span>
+            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-emerald-500 text-white">FIXED</span>
             <div>
-              <div class="text-sm font-medium text-sky-700">產品「平飼雞蛋（全佑牧場 LL 規格）」未被任何計畫項目引用</div>
-              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">active 產品但在計畫描述中找不到相關引用</div>
+              <div class="text-sm font-medium text-emerald-800">雞蛋：已在 15:30 點心（雞蛋 1 顆）及 19:00 晚餐（4 顆雞蛋）中引用</div>
+              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">誤報：產品名稱與計畫描述用詞不同但實際已引用</div>
             </div>
           </div>
         </div>
-<div class="rounded-xl border p-3 mb-2 bg-sky-50 border-sky-200">
+<div class="rounded-xl border p-3 mb-2 bg-emerald-50 border-emerald-200">
           <div class="flex items-start gap-2">
-            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-sky-500 text-white">MEDIUM</span>
+            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-emerald-500 text-white">FIXED</span>
             <div>
-              <div class="text-sm font-medium text-sky-700">產品「新鮮綠花椰菜（傳統市場/超市）」未被任何計畫項目引用</div>
-              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">active 產品但在計畫描述中找不到相關引用</div>
+              <div class="text-sm font-medium text-emerald-800">花椰菜：已在「午餐 花椰菜烹調法」計畫項目中引用</div>
+              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">誤報：產品名稱「綠花椰菜」與計畫用詞「花椰菜」不同但實際已引用</div>
             </div>
           </div>
         </div>
-<div class="rounded-xl border p-3 mb-2 bg-sky-50 border-sky-200">
+<div class="rounded-xl border p-3 mb-2 bg-emerald-50 border-emerald-200">
           <div class="flex items-start gap-2">
-            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-sky-500 text-white">MEDIUM</span>
+            <span class="text-xs px-1.5 py-0.5 rounded font-bold shrink-0 bg-emerald-500 text-white">FIXED</span>
             <div>
-              <div class="text-sm font-medium text-sky-700">產品「有機燕麥（桂格有機大燕麥片 935g×2）」未被任何計畫項目引用</div>
-              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">active 產品但在計畫描述中找不到相關引用</div>
+              <div class="text-sm font-medium text-emerald-800">燕麥：已在 15:30 休息日替代方案「燕麥 80g」中引用</div>
+              <div class="text-xs text-gray-500 mt-1 whitespace-pre-line">誤報：產品名稱與計畫描述用詞不同但實際已引用</div>
             </div>
           </div>
         </div></div></div>
