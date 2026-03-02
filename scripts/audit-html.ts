@@ -150,7 +150,7 @@ ${css}
         </div>
 
         <!-- Nutrients -->
-        <div id="panel-nutrients" class="panel">
+        <div id="panel-nutrients">
           <div class="grid grid-cols-2 gap-3">
 ${nutrientCards}
           </div>
@@ -181,12 +181,13 @@ ${issuesHtml}
   </div>
   <script>
     function switchTab(btn, name) {
-      document.querySelectorAll('.panel').forEach(p => p.style.display = 'none');
-      document.querySelectorAll('.flex.bg-gray-100 button').forEach(t => {
+      ['nutrients','timeline','issues'].forEach(function(n) {
+        document.getElementById('panel-' + n).style.display = (n === name) ? '' : 'none';
+      });
+      document.querySelectorAll('.flex.bg-gray-100 button').forEach(function(t) {
         t.className = 'flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500';
       });
       btn.className = 'flex-1 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-emerald-700 shadow-sm';
-      document.getElementById('panel-' + name).style.display = '';
     }
   </script>
 </body>
