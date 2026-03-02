@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface Props {
+interface ColdBathRulesProps {
   context: 'exercise' | 'zone2' | 'vo2max' | 'general';
 }
 
-export function ColdBathRules({ context }: Props) {
+export function ColdBathRules({ context }: ColdBathRulesProps) {
   if (context === 'exercise') {
     return (
       <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -38,6 +38,7 @@ export function ColdBathRules({ context }: Props) {
     );
   }
 
+  // general context (for HealthNotes in page.tsx)
   return (
     <div>
       <p className="font-semibold text-blue-700 mb-1">冷水浴（2-4 次/週，休息日）</p>

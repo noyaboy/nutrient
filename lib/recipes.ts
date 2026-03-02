@@ -1,5 +1,8 @@
 import type { Recipe, DailyRecipes } from './types';
 
+// ─── 訓練後食譜（碳水為主，搭配乳清蛋白搖搖杯）───
+// 巨量營養素不含乳清蛋白（另外用搖搖杯喝）
+
 export const postWorkoutRecipes: Recipe[] = [
   {
     id: 'pw-sweet-potato-oats',
@@ -156,6 +159,9 @@ export const postWorkoutRecipes: Recipe[] = [
     tips: '前晚準備，訓練後零等待。優格提供額外蛋白質和益生菌',
   },
 ];
+
+// ─── 午餐食譜（高蛋白 + 十字花科蔬菜）───
+// 糙米為生重（100g 生重 ≈ 300g 熟飯）
 
 export const lunchRecipes: Recipe[] = [
   {
@@ -324,6 +330,8 @@ export const lunchRecipes: Recipe[] = [
   },
 ];
 
+// ─── 晚餐食譜（高蛋白 + 纖維→蛋白→碳水順序）───
+
 export const dinnerRecipes: Recipe[] = [
   {
     id: 'dinner-chicken-broccoli-rice',
@@ -484,17 +492,20 @@ export const dinnerRecipes: Recipe[] = [
   },
 ];
 
+// ─── 輪替邏輯 ───
+
 function getDayOfYear(dateStr: string): number {
   const date = new Date(dateStr + 'T00:00:00');
   const startOfYear = new Date(date.getFullYear(), 0, 0);
-  return Math.floor((date.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
+  const diff = date.getTime() - startOfYear.getTime();
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
 }
 
 export function getTodayRecipes(dateStr: string): DailyRecipes {
-  const day = getDayOfYear(dateStr);
+  const dayOfYear = getDayOfYear(dateStr);
   return {
-    postWorkout: postWorkoutRecipes[day % postWorkoutRecipes.length],
-    lunch: lunchRecipes[day % lunchRecipes.length],
-    dinner: dinnerRecipes[day % dinnerRecipes.length],
+    postWorkout: postWorkoutRecipes[dayOfYear % postWorkoutRecipes.length],
+    lunch: lunchRecipes[dayOfYear % lunchRecipes.length],
+    dinner: dinnerRecipes[dayOfYear % dinnerRecipes.length],
   };
 }

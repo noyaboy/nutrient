@@ -1,12 +1,14 @@
 import React from 'react';
 
-interface Props {
+interface BeefDayAdjustmentsProps {
   context: 'zinc' | 'protein' | 'egg' | 'summary';
 }
 
-export function BeefDayAdjustments({ context }: Props) {
+export function BeefDayAdjustments({ context }: BeefDayAdjustmentsProps) {
   if (context === 'zinc') {
-    return <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150g，當晚無需額外補鋅</p>;
+    return (
+      <p className="text-amber-700">牛肉日取消鋅補劑：牛肉富含鋅 6-9mg/150g，當晚無需額外補鋅</p>
+    );
   }
 
   if (context === 'protein') {
@@ -30,6 +32,7 @@ export function BeefDayAdjustments({ context }: Props) {
     );
   }
 
+  // summary context
   return (
     <>
       <p className="text-amber-700">草飼牛肉嚴格上限 150g（≈30-37.5g 蛋白），雞蛋 1-2 顆移午餐、1 顆移 15:30 下午點心</p>

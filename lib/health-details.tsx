@@ -10,6 +10,10 @@ function Detail({ children }: { children: React.ReactNode }) {
   return <div className="text-sm text-gray-700 space-y-2.5 leading-relaxed">{children}</div>;
 }
 
+function Label({ children }: { children: React.ReactNode }) {
+  return <p className="text-sm font-semibold text-gray-900 mb-1">{children}</p>;
+}
+
 function Tip({ children }: { children: React.ReactNode }) {
   return <p className="text-sm text-amber-800 bg-amber-50 rounded-lg px-3 py-2.5 leading-relaxed">{children}</p>;
 }
@@ -55,6 +59,7 @@ function getHeartRateZones() {
 }
 
 export function getHealthDetails(title: string): React.ReactNode | null {
+  // Match by key phrase in title
   if (title.includes('起床') && title.includes('曝曬')) {
     return (
       <Detail>
@@ -140,6 +145,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       </Detail>
     );
   }
+
+  // 銅 2mg 已停用 — 15mg 鋅不會觸發金屬硫蛋白阻斷銅吸收，銅由堅果/可可粉/全穀類天然提供
 
   if (title.includes('晚餐') && !title.includes('銅')) {
     return (
@@ -258,40 +265,54 @@ export function getHealthDetails(title: string): React.ReactNode | null {
             </div>
           ))}
         </div>
+
         <div className="space-y-3 mt-3">
-          <ExerciseTable title="Upper A — 週一（力量）~65 分鐘" exercises={[
-            { name: '槓鈴臥推 Bench Press', sets: '4×5-8', rest: '3-4 min' },
-            { name: '槓鈴划船 Bent-Over Row', sets: '4×6-8', rest: '3 min' },
-            { name: '肩推 Overhead Press', sets: '3×6-10', rest: '2-3 min' },
-            { name: '負重引體向上 Weighted Chin-Up', sets: '3×6-10', rest: '2-3 min' },
-            { name: '斜板彎舉 Incline DB Curl', sets: '3×8-12', rest: '90 sec' },
-            { name: '過頭三頭伸展 Overhead Tricep Extension', sets: '3×10-12', rest: '90 sec' },
-            { name: '面拉 Face Pull', sets: '3×15-20', rest: '60 sec' },
-          ]} />
-          <ExerciseTable title="Lower A — 週二（力量）~60 分鐘" exercises={[
-            { name: '槓鈴深蹲 Back Squat', sets: '4×5-8', rest: '3-4 min' },
-            { name: '羅馬尼亞硬舉 Romanian Deadlift', sets: '3×8-10', rest: '2-3 min' },
-            { name: '保加利亞分腿蹲 Bulgarian Split Squat', sets: '3×8-12', rest: '90 sec' },
-            { name: '坐姿腿彎舉 Seated Leg Curl', sets: '3×10-12', rest: '90 sec' },
-            { name: '站姿小腿推舉 Standing Calf Raise', sets: '4×10-15', rest: '60 sec' },
-          ]} />
-          <ExerciseTable title="Upper B — 週四（肌肥大）~65 分鐘" exercises={[
-            { name: '上斜啞鈴臥推 Incline DB Press', sets: '3×8-12', rest: '2-3 min' },
-            { name: '纜繩飛鳥 Cable Fly', sets: '3×12-15', rest: '90 sec' },
-            { name: '胸靠划船 Chest-Supported Row', sets: '4×8-12', rest: '2 min' },
-            { name: '滑輪下拉 Lat Pulldown', sets: '3×10-12', rest: '2 min' },
-            { name: '側平舉 Lateral Raise', sets: '4×12-15', rest: '60 sec' },
-            { name: '槓鈴彎舉 Barbell Curl', sets: '3×8-12', rest: '90 sec' },
-            { name: '纜繩下壓 Cable Pushdown', sets: '3×10-15', rest: '90 sec' },
-          ]} />
-          <ExerciseTable title="Lower B — 週五（肌肥大）~60 分鐘" exercises={[
-            { name: '腿推 Leg Press', sets: '4×8-12', rest: '2-3 min' },
-            { name: '槓鈴臀推 Barbell Hip Thrust', sets: '3×8-12', rest: '2 min' },
-            { name: '走路弓步 Walking Lunge', sets: '3×10-12', rest: '90 sec' },
-            { name: '俯臥腿彎舉 Lying Leg Curl', sets: '3×10-12', rest: '90 sec' },
-            { name: '坐姿小腿推舉 Seated Calf Raise', sets: '4×12-15', rest: '60 sec' },
-          ]} />
+          <ExerciseTable
+            title="Upper A — 週一（力量）~65 分鐘"
+            exercises={[
+              { name: '槓鈴臥推 Bench Press', sets: '4×5-8', rest: '3-4 min' },
+              { name: '槓鈴划船 Bent-Over Row', sets: '4×6-8', rest: '3 min' },
+              { name: '肩推 Overhead Press', sets: '3×6-10', rest: '2-3 min' },
+              { name: '負重引體向上 Weighted Chin-Up', sets: '3×6-10', rest: '2-3 min' },
+              { name: '斜板彎舉 Incline DB Curl', sets: '3×8-12', rest: '90 sec' },
+              { name: '過頭三頭伸展 Overhead Tricep Extension', sets: '3×10-12', rest: '90 sec' },
+              { name: '面拉 Face Pull', sets: '3×15-20', rest: '60 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Lower A — 週二（力量）~60 分鐘"
+            exercises={[
+              { name: '槓鈴深蹲 Back Squat', sets: '4×5-8', rest: '3-4 min' },
+              { name: '羅馬尼亞硬舉 Romanian Deadlift', sets: '3×8-10', rest: '2-3 min' },
+              { name: '保加利亞分腿蹲 Bulgarian Split Squat', sets: '3×8-12', rest: '90 sec' },
+              { name: '坐姿腿彎舉 Seated Leg Curl', sets: '3×10-12', rest: '90 sec' },
+              { name: '站姿小腿推舉 Standing Calf Raise', sets: '4×10-15', rest: '60 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Upper B — 週四（肌肥大）~65 分鐘"
+            exercises={[
+              { name: '上斜啞鈴臥推 Incline DB Press', sets: '3×8-12', rest: '2-3 min' },
+              { name: '纜繩飛鳥 Cable Fly', sets: '3×12-15', rest: '90 sec' },
+              { name: '胸靠划船 Chest-Supported Row', sets: '4×8-12', rest: '2 min' },
+              { name: '滑輪下拉 Lat Pulldown', sets: '3×10-12', rest: '2 min' },
+              { name: '側平舉 Lateral Raise', sets: '4×12-15', rest: '60 sec' },
+              { name: '槓鈴彎舉 Barbell Curl', sets: '3×8-12', rest: '90 sec' },
+              { name: '纜繩下壓 Cable Pushdown', sets: '3×10-15', rest: '90 sec' },
+            ]}
+          />
+          <ExerciseTable
+            title="Lower B — 週五（肌肥大）~60 分鐘"
+            exercises={[
+              { name: '腿推 Leg Press', sets: '4×8-12', rest: '2-3 min' },
+              { name: '槓鈴臀推 Barbell Hip Thrust', sets: '3×8-12', rest: '2 min' },
+              { name: '走路弓步 Walking Lunge', sets: '3×10-12', rest: '90 sec' },
+              { name: '俯臥腿彎舉 Lying Leg Curl', sets: '3×10-12', rest: '90 sec' },
+              { name: '坐姿小腿推舉 Seated Calf Raise', sets: '4×12-15', rest: '60 sec' },
+            ]}
+          />
         </div>
+
         <div className="bg-gray-50 rounded-lg px-3 py-2.5 space-y-1.5 mt-2">
           <p className="font-medium text-gray-900">漸進式超負荷（雙重遞增法）</p>
           <p className="text-gray-800 leading-relaxed">以處方次數下限開始 → 每次多做 1-2 次 → 所有組數完成上限次數時加重量</p>
@@ -310,6 +331,8 @@ export function getHealthDetails(title: string): React.ReactNode | null {
       </Detail>
     );
   }
+
+  // === All-day items ===
 
   if (title.includes('蛋白質') && (title.includes('122') || title.includes('146'))) {
     return (

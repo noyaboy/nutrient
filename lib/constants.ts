@@ -11,6 +11,7 @@ export const UI = {
   dashboard: {
     dailyTitle: '今日計畫',
     weeklyTitle: '本週目標',
+    progress: '今日進度',
     empty: '尚未設定計畫項目',
     addFirst: '前往設定新增計畫',
   },
@@ -26,9 +27,18 @@ export const UI = {
     titleLabel: '標題',
     descriptionLabel: '說明（選填）',
     categoryLabel: '分類',
+    frequencyLabel: '頻率',
   },
   categories: ['運動', '飲食', '睡眠', '心理', '補充品', '一般'] as const,
+  frequency: {
+    daily: '每日',
+    weekly: '每週',
+  },
   nav: {
+    dashboard: '首頁',
+    history: '歷史',
+    shopping: '採購',
+    settings: '設定',
     logout: '登出帳號',
   },
 } as const;

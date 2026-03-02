@@ -2,7 +2,6 @@
 
 import { supabase } from '@/lib/supabase';
 import { revalidatePath } from 'next/cache';
-
 export async function createPlanItem(formData: FormData) {
   const title = formData.get('title') as string;
   const description = (formData.get('description') as string) || '';
@@ -18,12 +17,14 @@ export async function createPlanItem(formData: FormData) {
     .limit(1)
     .single();
 
+  const sortOrder = (maxOrder?.sort_order ?? 0) + 1;
+
   await supabase.from('plan_items').insert({
     title,
     description,
     frequency,
     category,
-    sort_order: (maxOrder?.sort_order ?? 0) + 1,
+    sort_order: sortOrder,
     ...(frequency === 'weekly' ? { target_count: targetCount } : {}),
   });
 
@@ -53,8 +54,16 @@ export async function updatePlanItem(id: string, formData: FormData) {
 }
 
 export async function deletePlanItem(id: string) {
-  await supabase.from('completions').delete().eq('plan_item_id', id);
-  await supabase.from('plan_items').delete().eq('id', id);
+  await supabase
+    .from('completions')
+    .delete()
+    .eq('plan_item_id', id);
+
+  await supabase
+    .from('plan_items')
+    .delete()
+    .eq('id', id);
+
   revalidatePath('/settings');
   revalidatePath('/');
 }
@@ -69,15 +78,18 @@ export async function movePlanItem(id: string, frequency: string, direction: 'up
 
   if (!items) return;
 
-  const idx = items.findIndex(item => item.id === id);
-  if (idx === -1) return;
+  const currentIndex = items.findIndex(item => item.id === id);
+  if (currentIndex === -1) return;
 
-  const swapIdx = direction === 'up' ? idx - 1 : idx + 1;
-  if (swapIdx < 0 || swapIdx >= items.length) return;
+  const swapIndex = direction === 'up' ? currentIndex - 1 : currentIndex + 1;
+  if (swapIndex < 0 || swapIndex >= items.length) return;
+
+  const currentOrder = items[currentIndex].sort_order;
+  const swapOrder = items[swapIndex].sort_order;
 
   await Promise.all([
-    supabase.from('plan_items').update({ sort_order: items[swapIdx].sort_order }).eq('id', items[idx].id),
-    supabase.from('plan_items').update({ sort_order: items[idx].sort_order }).eq('id', items[swapIdx].id),
+    supabase.from('plan_items').update({ sort_order: swapOrder }).eq('id', items[currentIndex].id),
+    supabase.from('plan_items').update({ sort_order: currentOrder }).eq('id', items[swapIndex].id),
   ]);
 
   revalidatePath('/settings');

@@ -1,18 +1,29 @@
 import type { PlanItem, Product, AuditIssue, NutrientData, TimeSlot } from './types';
 
-interface FallbackRule {
-  titleMatch: string;
-  pattern?: RegExp;
-  fixed?: number;
-}
+// --- Nutrient parsing ---
+// Uses a "target item" approach: find the specific plan_item whose title declares
+// the daily target (e.g. "全天 蛋白質 191-203g") and parse the target from there.
+// Falls back to known-intake summation from individual meal items.
 
 interface NutrientDef {
   key: keyof NutrientData;
   unit: string;
   rda: number;
+  // Patterns to find the "target" plan item by title
   titlePattern: RegExp;
+  // Extract the number(s) from the matched title
   titleExtract: RegExp;
+  // Fallback: sum contributions from individual items' descriptions
   fallbackRules: FallbackRule[];
+}
+
+interface FallbackRule {
+  // Match item by title substring
+  titleMatch: string;
+  // Extract value from description (first capture group = number)
+  pattern?: RegExp;
+  // Or use a fixed known amount
+  fixed?: number;
 }
 
 function extractRange(text: string, pattern: RegExp): number {
@@ -25,11 +36,13 @@ function extractRange(text: string, pattern: RegExp): number {
 
 const NUTRIENT_DEFS: NutrientDef[] = [
   {
-    key: 'protein', unit: 'g', rda: 197,
+    key: 'protein',
+    unit: 'g',
+    rda: 197,
     titlePattern: /蛋白質\s*\d/,
     titleExtract: /(\d+)[-.~～](\d+)\s*g/,
     fallbackRules: [
-      { titleMatch: '訓練前營養', pattern: /乳清蛋白.*?(\d+)\s*g\s*蛋白/ },
+      { titleMatch: '訓練前營養', pattern: /乳清蛋白.*?(\d+)\s*g\s*蛋白/  },
       { titleMatch: '午餐', pattern: /蛋白質\s*(\d+)[-.~～](\d+)\s*g/ },
       { titleMatch: '下午點心', pattern: /豌豆蛋白.*?(\d+)\s*g\s*蛋白/ },
       { titleMatch: '晚餐', pattern: /蛋白質\s*(\d+)[-.~～](\d+)\s*g/ },
@@ -37,50 +50,70 @@ const NUTRIENT_DEFS: NutrientDef[] = [
     ],
   },
   {
-    key: 'calcium', unit: 'mg', rda: 1000,
+    key: 'calcium',
+    unit: 'mg',
+    rda: 1000,
     titlePattern: /鈣攝取確認/,
     titleExtract: /目標\s*(\d+)\s*mg/,
     fallbackRules: [
       { titleMatch: '下午點心', pattern: /~(\d+)\s*mg\s*鈣/ },
-      { titleMatch: '17:00', fixed: 500 },
+      { titleMatch: '17:00', fixed: 500 }, // calcium tablet
       { titleMatch: '酪蛋白', pattern: /鈣含量僅\s*~(\d+)[-.~～](\d+)\s*mg/ },
     ],
   },
   {
-    key: 'iron', unit: 'mg', rda: 8,
+    key: 'iron',
+    unit: 'mg',
+    rda: 8,
     titlePattern: /鐵吸收最佳化/,
     titleExtract: /RDA\s*(\d+)\s*mg/,
     fallbackRules: [
+      // Eggs: 4 eggs/day × ~0.9mg each
       { titleMatch: '膽鹼攝取', fixed: 3.6 },
+      // Lunch meat/fish ~2-3mg
       { titleMatch: '午餐 +', fixed: 2.5 },
+      // Dinner meat ~2-3mg
       { titleMatch: '晚餐', fixed: 2.5 },
+      // Spinach/veggies ~1-2mg
       { titleMatch: '菠菜', fixed: 1.5 },
     ],
   },
   {
-    key: 'zinc', unit: 'mg', rda: 11,
+    key: 'zinc',
+    unit: 'mg',
+    rda: 11,
     titlePattern: /鋅/,
     titleExtract: /鋅\s*(\d+)\s*mg/,
     fallbackRules: [
+      // Eggs 4 × ~0.5mg = 2mg
       { titleMatch: '膽鹼攝取', fixed: 2.0 },
+      // Nuts/seeds: pumpkin seeds 35g ~2.9mg + mixed nuts 45g ~1.5mg + others ~1mg
       { titleMatch: '下午點心', fixed: 5.5 },
+      // Meat/fish at dinner ~3-5mg
       { titleMatch: '晚餐', fixed: 4.0 },
     ],
   },
   {
-    key: 'magnesium', unit: 'mg', rda: 400,
+    key: 'magnesium',
+    unit: 'mg',
+    rda: 400,
     titlePattern: /鎂攝取/,
     titleExtract: /(\d+)\s*mg/,
     fallbackRules: [
+      // Mg glycinate 150mg
       { titleMatch: '睡前補充品', fixed: 150 },
+      // Magtein 144mg
       { titleMatch: 'Magtein', fixed: 144 },
+      // Nuts/seeds ~80mg, spinach/veggies ~50mg, yogurt ~30mg, other food ~40mg
       { titleMatch: '下午點心', fixed: 80 },
       { titleMatch: '晚餐', fixed: 50 },
       { titleMatch: '希臘優格', fixed: 30 },
     ],
   },
   {
-    key: 'fiber', unit: 'g', rda: 38,
+    key: 'fiber',
+    unit: 'g',
+    rda: 38,
     titlePattern: /膳食纖維/,
     titleExtract: /(\d+)[-.~～](\d+)\s*g/,
     fallbackRules: [
@@ -91,29 +124,39 @@ const NUTRIENT_DEFS: NutrientDef[] = [
     ],
   },
   {
-    key: 'vitaminD', unit: 'IU', rda: 2000,
+    key: 'vitaminD',
+    unit: 'IU',
+    rda: 2000,
     titlePattern: /D3 補充/,
     titleExtract: /(\d+)\s*IU/,
     fallbackRules: [
+      // Lunch: D3 2000IU (2 capsules)
       { titleMatch: '午餐 + 訓練後', pattern: /D3\s*(\d+)\s*IU/ },
     ],
   },
   {
-    key: 'omega3', unit: 'mg', rda: 1400,
+    key: 'omega3',
+    unit: 'mg',
+    rda: 1400,
     titlePattern: /omega|Omega|魚油/i,
     titleExtract: /EPA\+DHA\s*(?:共\s*)?(\d+)\s*mg/,
     fallbackRules: [
+      // Lunch: fish oil 2 caps × 700mg = 1400mg EPA+DHA
       { titleMatch: '午餐 + 訓練後', fixed: 1400 },
+      // Chia seeds 15g: ~2.5g ALA (but not EPA/DHA, count separately)
       { titleMatch: '訓練前營養', fixed: 0 },
     ],
   },
 ];
 
 export function calculateDailyNutrients(planItems: PlanItem[]): NutrientData {
-  const activeDaily = planItems.filter(i => i.is_active && i.frequency === 'daily');
+  const active = planItems.filter(i => i.is_active);
+  const activeDaily = active.filter(i => i.frequency === 'daily');
+
   const result = {} as NutrientData;
 
   for (const def of NUTRIENT_DEFS) {
+    // Strategy 1: Find a "target" plan item whose title declares the daily goal
     const targetItem = activeDaily.find(i => def.titlePattern.test(i.title));
     if (targetItem) {
       const text = `${targetItem.title} ${targetItem.description}`;
@@ -124,6 +167,7 @@ export function calculateDailyNutrients(planItems: PlanItem[]): NutrientData {
       }
     }
 
+    // Strategy 2: Sum known contributions from individual meal items
     let total = 0;
     for (const rule of def.fallbackRules) {
       const item = activeDaily.find(i => i.title.includes(rule.titleMatch));
@@ -131,7 +175,8 @@ export function calculateDailyNutrients(planItems: PlanItem[]): NutrientData {
       if (rule.fixed !== undefined) {
         total += rule.fixed;
       } else if (rule.pattern) {
-        total += extractRange(item.description, rule.pattern);
+        const val = extractRange(item.description, rule.pattern);
+        total += val;
       }
     }
     result[def.key] = { value: total, unit: def.unit, rda: def.rda };
@@ -139,6 +184,8 @@ export function calculateDailyNutrients(planItems: PlanItem[]): NutrientData {
 
   return result;
 }
+
+// --- Timeline extraction ---
 
 export function extractTimeline(planItems: PlanItem[]): TimeSlot[] {
   const active = planItems.filter(i => i.is_active);
@@ -160,13 +207,26 @@ export function extractTimeline(planItems: PlanItem[]): TimeSlot[] {
     .map(([time, items]) => ({ time, items }));
 }
 
+// --- Audit checks ---
+
 export function runAuditChecks(planItems: PlanItem[], products: Product[]): AuditIssue[] {
   const issues: AuditIssue[] = [];
+
+  // 1. Duplicate time-slot items
   checkDuplicates(planItems, issues);
+
+  // 2. Stale products
   checkStaleProducts(products, issues);
+
+  // 3. Timing conflicts
   checkTimingConflicts(planItems, issues);
+
+  // 4. Orphaned products
   checkOrphanedProducts(planItems, products, issues);
+
+  // 5. Nutrient totals vs RDA
   checkNutrientTotals(planItems, issues);
+
   return issues.sort((a, b) => {
     const order: Record<string, number> = { CRITICAL: 0, HIGH: 1, MEDIUM: 2 };
     return order[a.severity] - order[b.severity];
@@ -186,69 +246,79 @@ function checkDuplicates(items: PlanItem[], issues: AuditIssue[]) {
   }
 
   for (const [key, group] of byTimeAndCategory) {
-    if (group.length <= 1) continue;
-    const [time, category] = key.split('|');
-    const titles = group.map(i => i.title.replace(/^\d{2}:\d{2}\s*/, ''));
-    const seen = new Set<string>();
-    const dupes: PlanItem[] = [];
-
-    for (let i = 0; i < titles.length; i++) {
-      const normalized = titles[i].slice(0, 10);
-      if (seen.has(normalized)) {
-        dupes.push(group[i]);
-      } else {
-        seen.add(normalized);
-        for (let j = 0; j < i; j++) {
-          if (titles[i].includes(titles[j].slice(0, 8)) || titles[j].includes(titles[i].slice(0, 8))) {
-            dupes.push(group[i]);
-            break;
+    if (group.length > 1) {
+      const [time, category] = key.split('|');
+      // Check for genuinely duplicate content (similar titles)
+      const titles = group.map(i => i.title.replace(/^\d{2}:\d{2}\s*/, ''));
+      const seen = new Set<string>();
+      const dupes: PlanItem[] = [];
+      for (let i = 0; i < titles.length; i++) {
+        const normalized = titles[i].slice(0, 10);
+        if (seen.has(normalized)) {
+          dupes.push(group[i]);
+        } else {
+          seen.add(normalized);
+          // Check if any previous title is very similar
+          for (let j = 0; j < i; j++) {
+            if (titles[i].includes(titles[j].slice(0, 8)) || titles[j].includes(titles[i].slice(0, 8))) {
+              dupes.push(group[i]);
+              break;
+            }
           }
         }
       }
-    }
-
-    if (dupes.length > 0) {
-      issues.push({
-        severity: 'HIGH',
-        category: '重複項目',
-        title: `${time} ${category} 有疑似重複項目`,
-        detail: group.map(i => `- ${i.title}`).join('\n'),
-        itemIds: group.map(i => i.id),
-      });
+      if (dupes.length > 0) {
+        issues.push({
+          severity: 'HIGH',
+          category: '重複項目',
+          title: `${time} ${category} 有疑似重複項目`,
+          detail: group.map(i => `- ${i.title}`).join('\n'),
+          itemIds: group.map(i => i.id),
+        });
+      }
     }
   }
 }
 
 function checkStaleProducts(products: Product[], issues: AuditIssue[]) {
-  for (const p of products.filter(p => p.is_active)) {
-    if (p.description.includes('已停用') || p.description.includes('⛔') || p.purchase_note.includes('已停用')) {
-      issues.push({
-        severity: 'CRITICAL',
-        category: '過期產品',
-        title: `產品「${p.name}」標記已停用但仍為 active`,
-        detail: `description 包含停用標記，但 is_active=true`,
-        itemIds: [p.id],
-      });
-    }
+  const stale = products.filter(p => p.is_active && (
+    p.description.includes('已停用') ||
+    p.description.includes('⛔') ||
+    p.purchase_note.includes('已停用')
+  ));
+
+  for (const p of stale) {
+    issues.push({
+      severity: 'CRITICAL',
+      category: '過期產品',
+      title: `產品「${p.name}」標記已停用但仍為 active`,
+      detail: `description 包含停用標記，但 is_active=true`,
+      itemIds: [p.id],
+    });
   }
 }
 
 function parseTime(title: string): number | null {
   const m = title.match(/^(\d{2}):(\d{2})/);
-  return m ? parseInt(m[1]) * 60 + parseInt(m[2]) : null;
+  if (!m) return null;
+  return parseInt(m[1]) * 60 + parseInt(m[2]);
 }
 
 function checkTimingConflicts(items: PlanItem[], issues: AuditIssue[]) {
   const active = items.filter(i => i.is_active);
 
+  // Find calcium items
   const calciumItems = active.filter(i =>
     i.title.includes('鈣') || i.description.includes('鈣片') || i.description.includes('500mg 鈣')
   );
+
+  // Find iron meal items
   const ironItems = active.filter(i =>
     (i.title.includes('午餐') || i.title.includes('晚餐')) &&
     (i.description.includes('鐵') || i.description.includes('鐵質'))
   );
 
+  // Calcium <2hr from iron meals
   for (const ca of calciumItems) {
     const caTime = parseTime(ca.title);
     if (caTime === null) continue;
@@ -268,6 +338,7 @@ function checkTimingConflicts(items: PlanItem[], issues: AuditIssue[]) {
     }
   }
 
+  // EGCG <3hr from mineral supplements
   const egcgItems = active.filter(i => i.title.includes('綠茶') || i.description.includes('EGCG'));
   const mineralItems = active.filter(i =>
     (i.description.includes('鎂') || i.description.includes('鋅') || i.description.includes('鐵')) &&
@@ -295,12 +366,18 @@ function checkTimingConflicts(items: PlanItem[], issues: AuditIssue[]) {
 }
 
 function checkOrphanedProducts(items: PlanItem[], products: Product[], issues: AuditIssue[]) {
+  const activeProducts = products.filter(p => p.is_active);
   const allText = items.filter(i => i.is_active).map(i => `${i.title} ${i.description}`).join('\n');
 
-  for (const p of products.filter(p => p.is_active)) {
-    const name = p.name.replace(/[（）()]/g, ' ').trim();
-    const keywords = name.split(/[\s/×]+/).filter(w => w.length >= 2);
+  for (const p of activeProducts) {
+    // Extract meaningful keywords from product name
+    const name = p.name.replace(/[（）\(\)]/g, ' ').trim();
+    const keywords = name.split(/[\s\/×]+/).filter(w => w.length >= 2);
+
+    // Check if any keyword appears in plan items
     const mentioned = keywords.some(kw => allText.includes(kw));
+
+    // Also check category-level mentions
     const categoryMentioned = allText.includes(p.brand || '') ||
       (p.category === 'equipment' || p.category === 'personal_care');
 
@@ -318,26 +395,28 @@ function checkOrphanedProducts(items: PlanItem[], products: Product[], issues: A
 
 function checkNutrientTotals(items: PlanItem[], issues: AuditIssue[]) {
   const nutrients = calculateDailyNutrients(items);
-  const labels: Record<string, string> = {
-    protein: '蛋白質', calcium: '鈣', iron: '鐵', zinc: '鋅',
-    magnesium: '鎂', fiber: '纖維', vitaminD: '維他命D', omega3: 'Omega-3',
-  };
 
   for (const [key, data] of Object.entries(nutrients)) {
     const { value, unit, rda } = data as { value: number; unit: string; rda: number };
-    if (value === 0) continue;
+    if (value === 0) continue; // Skip if we couldn't parse
+
     const ratio = value / rda;
-    const label = labels[key] || key;
+    const label = {
+      protein: '蛋白質', calcium: '鈣', iron: '鐵', zinc: '鋅',
+      magnesium: '鎂', fiber: '纖維', vitaminD: '維他命D', omega3: 'Omega-3',
+    }[key] || key;
 
     if (ratio < 0.7) {
       issues.push({
-        severity: 'CRITICAL', category: '營養缺口',
+        severity: 'CRITICAL',
+        category: '營養缺口',
         title: `${label} 嚴重不足：${value}${unit} / ${rda}${unit}（${Math.round(ratio * 100)}%）`,
         detail: `低於 RDA 70%，需立即補充`,
       });
     } else if (ratio < 0.9) {
       issues.push({
-        severity: 'HIGH', category: '營養缺口',
+        severity: 'HIGH',
+        category: '營養缺口',
         title: `${label} 略有不足：${value}${unit} / ${rda}${unit}（${Math.round(ratio * 100)}%）`,
         detail: `低於 RDA 90%，建議調整`,
       });
