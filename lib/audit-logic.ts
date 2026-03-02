@@ -1,94 +1,187 @@
 import type { PlanItem, Product, AuditIssue, NutrientData, TimeSlot } from './types';
 
 // --- Nutrient parsing ---
+// Uses a "target item" approach: find the specific plan_item whose title declares
+// the daily target (e.g. "全天 蛋白質 191-203g") and parse the target from there.
+// Falls back to known-intake summation from individual meal items.
 
-interface NutrientPattern {
+interface NutrientDef {
   key: keyof NutrientData;
-  patterns: RegExp[];
   unit: string;
   rda: number;
+  // Patterns to find the "target" plan item by title
+  titlePattern: RegExp;
+  // Extract the number(s) from the matched title
+  titleExtract: RegExp;
+  // Fallback: sum contributions from individual items' descriptions
+  fallbackRules: FallbackRule[];
 }
 
-const NUTRIENT_PATTERNS: NutrientPattern[] = [
+interface FallbackRule {
+  // Match item by title substring
+  titleMatch: string;
+  // Extract value from description (first capture group = number)
+  pattern: RegExp;
+  // Or use a fixed known amount
+  fixed?: number;
+}
+
+function extractRange(text: string, pattern: RegExp): number {
+  pattern.lastIndex = 0;
+  const m = pattern.exec(text);
+  if (!m) return 0;
+  if (m[2]) return (parseFloat(m[1]) + parseFloat(m[2])) / 2;
+  return parseFloat(m[1]);
+}
+
+const NUTRIENT_DEFS: NutrientDef[] = [
   {
     key: 'protein',
-    patterns: [/蛋白質?\s*(\d+)[-.~～](\d+)\s*g/g, /蛋白質?\s*(\d+)\s*g/g, /蛋白\s*(\d+)\s*g/g, /(\d+)\s*g\s*蛋白/g],
     unit: 'g',
-    rda: 197, // midpoint of 191-203
+    rda: 197,
+    titlePattern: /蛋白質\s*\d/,
+    titleExtract: /(\d+)[-.~～](\d+)\s*g/,
+    fallbackRules: [
+      { titleMatch: '訓練前營養', pattern: /乳清蛋白.*?(\d+)\s*g\s*蛋白/  },
+      { titleMatch: '午餐', pattern: /蛋白質\s*(\d+)[-.~～](\d+)\s*g/ },
+      { titleMatch: '下午點心', pattern: /豌豆蛋白.*?(\d+)\s*g\s*蛋白/ },
+      { titleMatch: '晚餐', pattern: /蛋白質\s*(\d+)[-.~～](\d+)\s*g/ },
+      { titleMatch: '酪蛋白', pattern: /(\d+)\s*g\s*蛋白質/ },
+    ],
   },
   {
     key: 'calcium',
-    patterns: [/鈣\s*(\d+)[-.~～](\d+)\s*mg/g, /鈣\s*(\d+)\s*mg/g, /(\d+)\s*mg\s*鈣/g],
     unit: 'mg',
     rda: 1000,
+    titlePattern: /鈣攝取確認/,
+    titleExtract: /目標\s*(\d+)\s*mg/,
+    fallbackRules: [
+      { titleMatch: '下午點心', pattern: /~(\d+)\s*mg\s*鈣/ },
+      { titleMatch: '17:00', fixed: 500 }, // calcium tablet
+      { titleMatch: '酪蛋白', pattern: /鈣含量僅\s*~(\d+)[-.~～](\d+)\s*mg/ },
+    ],
   },
   {
     key: 'iron',
-    patterns: [/鐵\s*(\d+)[-.~～](\d+)\s*mg/g, /鐵\s*(\d+)\s*mg/g],
     unit: 'mg',
     rda: 8,
+    titlePattern: /鐵吸收最佳化/,
+    titleExtract: /RDA\s*(\d+)\s*mg/,
+    fallbackRules: [
+      // Eggs: 4 eggs/day × ~0.9mg each
+      { titleMatch: '膽鹼攝取', fixed: 3.6 },
+      // Lunch meat/fish ~2-3mg
+      { titleMatch: '午餐 +', fixed: 2.5 },
+      // Dinner meat ~2-3mg
+      { titleMatch: '晚餐', fixed: 2.5 },
+      // Spinach/veggies ~1-2mg
+      { titleMatch: '菠菜', fixed: 1.5 },
+    ],
   },
   {
     key: 'zinc',
-    patterns: [/鋅\s*(\d+)[-.~～](\d+)\s*mg/g, /鋅\s*(\d+)\s*mg/g],
     unit: 'mg',
     rda: 11,
+    titlePattern: /鋅/,
+    titleExtract: /鋅\s*(\d+)\s*mg/,
+    fallbackRules: [
+      // Eggs 4 × ~0.5mg = 2mg
+      { titleMatch: '膽鹼攝取', fixed: 2.0 },
+      // Nuts/seeds: pumpkin seeds 35g ~2.9mg + mixed nuts 45g ~1.5mg + others ~1mg
+      { titleMatch: '下午點心', fixed: 5.5 },
+      // Meat/fish at dinner ~3-5mg
+      { titleMatch: '晚餐', fixed: 4.0 },
+    ],
   },
   {
     key: 'magnesium',
-    patterns: [/鎂\s*(\d+)[-.~～](\d+)\s*mg/g, /鎂\s*(\d+)\s*mg/g],
     unit: 'mg',
     rda: 400,
+    titlePattern: /鎂攝取/,
+    titleExtract: /(\d+)\s*mg/,
+    fallbackRules: [
+      // Mg glycinate 150mg
+      { titleMatch: '睡前補充品', fixed: 150 },
+      // Magtein 144mg
+      { titleMatch: 'Magtein', fixed: 144 },
+      // Nuts/seeds ~80mg, spinach/veggies ~50mg, yogurt ~30mg, other food ~40mg
+      { titleMatch: '下午點心', fixed: 80 },
+      { titleMatch: '晚餐', fixed: 50 },
+      { titleMatch: '希臘優格', fixed: 30 },
+    ],
   },
   {
     key: 'fiber',
-    patterns: [/纖維\s*(\d+)[-.~～](\d+)\s*g/g, /纖維\s*(\d+)\s*g/g],
     unit: 'g',
     rda: 38,
+    titlePattern: /膳食纖維/,
+    titleExtract: /(\d+)[-.~～](\d+)\s*g/,
+    fallbackRules: [
+      { titleMatch: '奇亞籽', fixed: 5 },
+      { titleMatch: '洋車前子殼', pattern: /共\s*(\d+)\s*g\s*纖維/ },
+      { titleMatch: '酪梨', fixed: 7 },
+      { titleMatch: '下午點心', fixed: 5 },
+    ],
   },
   {
     key: 'vitaminD',
-    patterns: [/D3?\s*(\d+)[-.~～](\d+)\s*IU/g, /D3?\s*(\d+)\s*IU/g],
     unit: 'IU',
     rda: 2000,
+    titlePattern: /D3 補充/,
+    titleExtract: /(\d+)\s*IU/,
+    fallbackRules: [
+      // Lunch: D3 2000IU (2 capsules)
+      { titleMatch: '午餐 + 訓練後', pattern: /D3\s*(\d+)\s*IU/ },
+    ],
   },
   {
     key: 'omega3',
-    patterns: [/EPA\+DHA\s*(?:共\s*)?(\d+)\s*mg/g, /[Oo]mega.?3\s*(?:約\s*)?(\d+)\s*mg/g],
     unit: 'mg',
     rda: 1400,
+    titlePattern: /omega|Omega|魚油/i,
+    titleExtract: /EPA\+DHA\s*(?:共\s*)?(\d+)\s*mg/,
+    fallbackRules: [
+      // Lunch: fish oil 2 caps × 700mg = 1400mg EPA+DHA
+      { titleMatch: '午餐 + 訓練後', fixed: 1400 },
+      // Chia seeds 15g: ~2.5g ALA (but not EPA/DHA, count separately)
+      { titleMatch: '訓練前營養', fixed: 0 },
+    ],
   },
 ];
 
-function parseNumber(text: string, patterns: RegExp[]): number {
-  let total = 0;
-  for (const pattern of patterns) {
-    pattern.lastIndex = 0;
-    let match;
-    while ((match = pattern.exec(text)) !== null) {
-      if (match[2]) {
-        // Range: use midpoint
-        total += (parseFloat(match[1]) + parseFloat(match[2])) / 2;
-      } else {
-        total += parseFloat(match[1]);
-      }
-    }
-  }
-  return total;
-}
-
 export function calculateDailyNutrients(planItems: PlanItem[]): NutrientData {
-  const activeDaily = planItems.filter(i => i.is_active && i.frequency === 'daily');
-  const combined = activeDaily.map(i => `${i.title} ${i.description}`).join('\n');
+  const active = planItems.filter(i => i.is_active);
+  const activeDaily = active.filter(i => i.frequency === 'daily');
 
   const result = {} as NutrientData;
-  for (const np of NUTRIENT_PATTERNS) {
-    result[np.key] = {
-      value: parseNumber(combined, np.patterns),
-      unit: np.unit,
-      rda: np.rda,
-    };
+
+  for (const def of NUTRIENT_DEFS) {
+    // Strategy 1: Find a "target" plan item whose title declares the daily goal
+    const targetItem = activeDaily.find(i => def.titlePattern.test(i.title));
+    if (targetItem) {
+      const text = `${targetItem.title} ${targetItem.description}`;
+      const val = extractRange(text, def.titleExtract);
+      if (val > 0) {
+        result[def.key] = { value: val, unit: def.unit, rda: def.rda };
+        continue;
+      }
+    }
+
+    // Strategy 2: Sum known contributions from individual meal items
+    let total = 0;
+    for (const rule of def.fallbackRules) {
+      const item = activeDaily.find(i => i.title.includes(rule.titleMatch));
+      if (!item) continue;
+      if (rule.fixed !== undefined) {
+        total += rule.fixed;
+      } else if (rule.pattern) {
+        const val = extractRange(item.description, rule.pattern);
+        total += val;
+      }
+    }
+    result[def.key] = { value: total, unit: def.unit, rda: def.rda };
   }
+
   return result;
 }
 
