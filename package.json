@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit": "npx tsx scripts/audit.ts",
-    "seed:regen": "npx tsx scripts/regenerate-seed.ts"
+    "audit": "npx tsx --env-file=.env.local scripts/audit.ts",
+    "seed:regen": "npx tsx --env-file=.env.local scripts/regenerate-seed.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
