@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audit": "npx tsx scripts/audit.ts",
+    "seed:regen": "npx tsx scripts/regenerate-seed.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
@@ -23,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4",
     "typescript": "^5"
   }
 }

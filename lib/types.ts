@@ -57,6 +57,33 @@ export interface DailyRecipes {
   dinner: Recipe;
 }
 
+// Audit types
+export type AuditSeverity = 'CRITICAL' | 'HIGH' | 'MEDIUM';
+
+export interface AuditIssue {
+  severity: AuditSeverity;
+  category: string;
+  title: string;
+  detail: string;
+  itemIds?: string[];
+}
+
+export interface NutrientData {
+  protein: { value: number; unit: string; rda: number };
+  calcium: { value: number; unit: string; rda: number };
+  iron: { value: number; unit: string; rda: number };
+  zinc: { value: number; unit: string; rda: number };
+  magnesium: { value: number; unit: string; rda: number };
+  fiber: { value: number; unit: string; rda: number };
+  vitaminD: { value: number; unit: string; rda: number };
+  omega3: { value: number; unit: string; rda: number };
+}
+
+export interface TimeSlot {
+  time: string;
+  items: PlanItem[];
+}
+
 export interface Product {
   id: string;
   name: string;
