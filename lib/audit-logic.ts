@@ -21,7 +21,7 @@ interface FallbackRule {
   // Match item by title substring
   titleMatch: string;
   // Extract value from description (first capture group = number)
-  pattern: RegExp;
+  pattern?: RegExp;
   // Or use a fixed known amount
   fixed?: number;
 }
