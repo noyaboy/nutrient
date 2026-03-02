@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "audit": "npx tsx --env-file=.env.local scripts/audit.ts",
+    "audit:html": "npx tsx --env-file=.env.local scripts/generate-site.ts",
+    "site": "npx tsx --env-file=.env.local scripts/generate-site.ts",
     "seed:regen": "npx tsx --env-file=.env.local scripts/regenerate-seed.ts"
   },
   "dependencies": {
