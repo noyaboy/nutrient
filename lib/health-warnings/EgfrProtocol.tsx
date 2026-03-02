@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface EgfrProtocolProps {
+interface Props {
   context: 'protein-section' | 'health-check';
   showCreatineWashout?: boolean;
 }
 
-export function EgfrProtocol({ context, showCreatineWashout = true }: EgfrProtocolProps) {
+export function EgfrProtocol({ context, showCreatineWashout = true }: Props) {
   if (context === 'protein-section') {
     return (
       <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5 mt-1">
@@ -24,7 +24,6 @@ export function EgfrProtocol({ context, showCreatineWashout = true }: EgfrProtoc
     );
   }
 
-  // health-check context: full kidney function section + eGFR protocol
   return (
     <>
       <div className="bg-red-50 rounded-lg px-3 py-2 space-y-0.5">

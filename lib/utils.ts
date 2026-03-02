@@ -1,22 +1,21 @@
-const TIMEZONE = 'Asia/Taipei';
+const TZ = 'Asia/Taipei';
 
 export function getToday(): string {
-  return new Date().toLocaleDateString('sv-SE', { timeZone: TIMEZONE });
+  return new Date().toLocaleDateString('sv-SE', { timeZone: TZ });
 }
 
 export function getMondayOfWeek(dateStr?: string): string {
   const date = dateStr ? new Date(dateStr + 'T00:00:00') : new Date();
-  const taipeiDate = new Date(date.toLocaleString('en-US', { timeZone: TIMEZONE }));
+  const taipeiDate = new Date(date.toLocaleString('en-US', { timeZone: TZ }));
   const day = taipeiDate.getDay();
-  const diff = day === 0 ? -6 : 1 - day;
-  taipeiDate.setDate(taipeiDate.getDate() + diff);
+  taipeiDate.setDate(taipeiDate.getDate() + (day === 0 ? -6 : 1 - day));
   return taipeiDate.toLocaleDateString('sv-SE');
 }
 
 export function formatDateChinese(dateStr?: string): string {
   const date = dateStr ? new Date(dateStr + 'T00:00:00') : new Date();
   return date.toLocaleDateString('zh-TW', {
-    timeZone: TIMEZONE,
+    timeZone: TZ,
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -25,9 +24,9 @@ export function formatDateChinese(dateStr?: string): string {
 }
 
 export function getSundayOfWeek(mondayStr: string): string {
-  const date = new Date(mondayStr + 'T00:00:00');
-  date.setDate(date.getDate() + 6);
-  return date.toLocaleDateString('sv-SE');
+  const d = new Date(mondayStr + 'T00:00:00');
+  d.setDate(d.getDate() + 6);
+  return d.toLocaleDateString('sv-SE');
 }
 
 export function getWeekDates(mondayStr: string): string[] {
@@ -57,21 +56,6 @@ export function getWeeklyTargetCount(title: string): number {
   return 1;
 }
 
-export function extractTime(title: string): string {
-  const match = title.match(/^\d{2}:\d{2}[^&]*/);
-  return match ? match[0].trim() : title;
-}
-
-export function condenseDescription(description: string): string {
-  const sentences = description.split('。');
-  let result = sentences[0];
-
-  const warnings = description.match(/[⚠️🚫✅⛔][^。]*/g);
-  if (warnings) result += ' ' + warnings.join(' ');
-
-  return result.length > 150 ? result.slice(0, 147) + '...' : result;
-}
-
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
     '運動': 'bg-green-100 text-green-800',
@@ -82,4 +66,9 @@ export function getCategoryColor(category: string): string {
     '一般': 'bg-gray-100 text-gray-800',
   };
   return colors[category] || colors['一般'];
+}
+
+export function parseTimeMinutes(title: string): number | null {
+  const m = title.match(/^(\d{2}):(\d{2})/);
+  return m ? parseInt(m[1]) * 60 + parseInt(m[2]) : null;
 }

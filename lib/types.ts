@@ -40,12 +40,7 @@ export interface Recipe {
   mealSlot: 'post-workout' | 'lunch' | 'dinner';
   cookingMethod: '電子鍋' | '免煮';
   prepTime: number;
-  macros: {
-    protein: number;
-    carbs: number;
-    fat: number;
-    calories: number;
-  };
+  macros: { protein: number; carbs: number; fat: number; calories: number };
   ingredients: RecipeIngredient[];
   steps: string[];
   tips?: string;
@@ -57,7 +52,6 @@ export interface DailyRecipes {
   dinner: Recipe;
 }
 
-// Audit types
 export type AuditSeverity = 'CRITICAL' | 'HIGH' | 'MEDIUM';
 
 export interface AuditIssue {
