@@ -1502,11 +1502,7 @@
     <p class="no-results text-center text-gray-400 py-8" style="display:none">找不到符合的品項</p></div>
       <div id="page-audit" style="display:none">
     <h1 class="text-xl font-bold text-gray-800 mb-4">審計儀表板</h1>
-    <div class="flex bg-gray-100 rounded-xl p-1 mb-4" id="audit-tabs">
-      <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-emerald-700 shadow-sm" onclick="switchAuditTab(this,'nutrients')">營養總計</button>
-      <button class="flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500" onclick="switchAuditTab(this,'issues')">問題檢查<span class="ml-1 inline-flex items-center justify-center w-5 h-5 text-xs rounded-full bg-amber-500 text-white">1</span></button>
-    </div>
-    <div id="audit-panel-nutrients">
+    <div>
       <div class="grid grid-cols-2 gap-3"><div class="rounded-xl border p-3 bg-emerald-50 border-emerald-200 text-emerald-700">
       <div class="text-xs font-medium opacity-70">蛋白質</div>
       <div class="text-lg font-bold mt-0.5">197<span class="text-xs font-normal ml-0.5">g</span></div>
@@ -1580,12 +1576,6 @@
       <div class="text-xs mt-1 font-medium">100%</div>
     </div></div>
     </div>
-    <div id="audit-panel-issues" style="display:none"><div class="flex gap-2 text-sm mb-3">
-        <span class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 font-medium">0 嚴重</span>
-        <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">0 重要</span>
-        <span class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 font-medium">0 一般</span>
-      </div><p class="text-center text-sm text-gray-400 py-8">沒有發現問題</p>
-</div></div>
     </main>
     <nav class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md border-t border-gray-200 z-10 pb-safe">
       <div class="max-w-lg mx-auto flex">
@@ -1608,16 +1598,6 @@
           (p === name ? 'text-emerald-600' : 'text-gray-400');
       });
       window.scrollTo(0, 0);
-    }
-
-    function switchAuditTab(btn, name) {
-      ['nutrients','issues'].forEach(function(n) {
-        document.getElementById('audit-panel-' + n).style.display = (n === name) ? '' : 'none';
-      });
-      document.querySelectorAll('#audit-tabs button').forEach(function(t) {
-        t.className = 'flex-1 py-2 text-sm font-medium rounded-lg transition-colors text-gray-500';
-      });
-      btn.className = 'flex-1 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-emerald-700 shadow-sm';
     }
 
     function filterProducts(query) {
